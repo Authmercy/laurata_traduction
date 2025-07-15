@@ -5,8 +5,7 @@ import Image from "next/image";
 import UseLanguageService from "@/service/language_switch";
 export default function NavbarZoom() {
   
-    const [activeLink, setActiveLink] = useState('#french');
-
+    
  const {
 
         changeLanguage, locale
@@ -29,8 +28,8 @@ export default function NavbarZoom() {
                     </div>
 
 
-                    <div className="text-white text-2xl font-bold">
-                        <p>ZOOM SUR</p>
+                    <div className="text-white uppercase text-2xl font-bold">
+                        <p> {locale === 'en' ? 'Focus' : 'Zoom sur'} </p>
                     </div>
 
 

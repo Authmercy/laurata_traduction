@@ -32,7 +32,7 @@ export default function NavbarActu() {
 
 
                     <div className="text-white text-2xl uppercase font-bold">
-                        <p>Actualités</p>
+                        <p>     {locale === 'en' ? 'News' : 'Actualités'}</p>
                     </div>
 
 

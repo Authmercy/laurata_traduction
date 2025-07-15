@@ -8,13 +8,16 @@ export default function Actualite() {
         router.push("/actualite");
     };
 
+      const { locale } = router;
     return (
         <div  >
 
 
 
             <button onClick={() => handleClick()} className="text-center text-white w-full px-5 py-2 hover:bg-[#A87A38] bg-[#4A62AA]">
-                <h1 className="font-bold uppercase"> Actualités </h1>
+                <h1 className="font-bold uppercase"> 
+                      {locale === 'en' ? 'News' : 'Actualités'}
+                       </h1>
             </button>
         </div>
     );

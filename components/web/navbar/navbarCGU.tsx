@@ -14,7 +14,7 @@ export default function NavbarCGU() {
         setIsMobileMenuOpen(!isMobileMenuOpen);
     };
 
-    const [activeLink, setActiveLink] = useState('#french');
+ 
  const {
 
         changeLanguage, locale
@@ -69,8 +69,9 @@ export default function NavbarCGU() {
                     </div>
 
 
-                    <div className="text-white text-2xl font-bold">
-                        <p>CONDITIONS GÉNÉRALES D’UTILISATION</p>
+                    <div className="text-white uppercase text-2xl font-bold">
+                        <p>{locale === 'en' ? 'Terms of use' : 'CONDITIONS GÉNÉRALES D’UTILISATION'}</p>
+                         
                     </div>
 
 

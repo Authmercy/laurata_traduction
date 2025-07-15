@@ -15,7 +15,7 @@ export default function NavbarPresentation() {
    
 
 
-    const [activeLink, setActiveLink] = useState('#french');
+
 
     return (
         <nav className="w-full">
@@ -31,7 +31,9 @@ export default function NavbarPresentation() {
 
 
                     <div className="text-white uppercase text-2xl font-bold">
-                        <p>À PROPOS</p>
+                        <p>
+                             {locale === 'en' ? 'About US' : 'À PROPOS'} 
+                        </p>
                     </div>
 
 

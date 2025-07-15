@@ -30,8 +30,10 @@ export default function NavbarMention() {
                     </div>
 
 
-                    <div className="text-white text-2xl font-bold">
-                        <p>MENTIONS LÉGALES</p>
+                    <div className="text-white text-2xl uppercase font-bold">
+                        <p>
+                                    {locale === 'en' ? 'Legal Notice' : 'MENTIONS LÉGALES'} 
+                        </p>
                     </div>
 
 
