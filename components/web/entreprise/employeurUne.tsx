@@ -73,7 +73,7 @@ export default function EmployeurALaUNe() {
             onChange={handleSelectChange}
             className="p-4 text-white text-center font-bold bg-[#A87A38] rounded-md shadow-sm"
         >
-            <option value="" disabled selected className="hidden">Sélectionner un employeur</option>
+            <option value="" disabled selected className="hidden ">Sélectionner un employeur</option>
             {companies.map((company) => (
                 <option key={company.id} value={company.id}>
                     {company.name}

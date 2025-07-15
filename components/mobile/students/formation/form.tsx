@@ -119,15 +119,15 @@ export default function OffreFormationMobile() {
           <div className="grid grid-cols sm:flex  sm:flex-col text-[#4A62AA] md:grid-cols-8 gap-1 p-6 pb-2">
             <input
               type="text"
-                  placeholder="Mot clé (ex : décentralisation)"
+                  placeholder="Mot clé "
                   name="school"
               value={filters.school}
     onChange={handleChange}
-              className="bg-white/70  placeholder-[#4A62AA] required:  p-2 px-6 "
+              className="bg-white/70 required:  placeholder-[#4A62AA] text-sm  p-2 px-6 "
             />
   <div className="relative  bg-white/70 p-2 text-[#4A62AA]">
                   <div className="w-full flex justify-between  items-center cursor-pointer " onClick={() => handleToggle(4)}>
-                       <span className="truncate w-full px-6 text-sm" title={
+                       <span className="truncate w-full px-4 text-sm" title={
                       selectedDegreeLevels
                         .map(k => degreeLevels.find(c => c.key === k)?.text || k)
                         .join(', ')
@@ -214,7 +214,7 @@ export default function OffreFormationMobile() {
     placeholder="Ville"
     value={filters.city}
     onChange={handleChange}
-      className="bg-white/70  placeholder-[#4A62AA] required:  p-2 px-6 "
+      className="bg-white/70  text-sm placeholder-[#4A62AA] required:  p-2 px-6 "
   />
       {errorMessage && (
                 <div className="text-red-600 text-center w-full py-4 bg-red-100 border border-red-300 rounded relative">
@@ -233,7 +233,7 @@ export default function OffreFormationMobile() {
     disabled={isFormEmpty()}
                     className={`w-[62%] sm:w-[50%]       
                             font-bold rounded-md py-1 transition-transform  duration-200 
-          ${clicked ? 'bg-[#4A62AA]  text-white border-white' : ' '}
+          ${clicked ? 'bg-[#4A62AA]  text-[#293c75] border-white' : ' '}
            ${isFormEmpty()
                     ? "bg-gray-400 cursor-not-allowed"
                     : " bg-white  text-[#293c75] hover:text-white"
@@ -251,7 +251,7 @@ export default function OffreFormationMobile() {
         </form>
 
        
-        <div className="flex  my-10 bg-white items-center justify-center  ">
+        <div className="flex  mt-48 bg-white items-center justify-center  ">
           {brand.map((item, index) => (
             <div
               key={index}
@@ -267,7 +267,7 @@ export default function OffreFormationMobile() {
                     alt={item.name}
                         width={200}
             height={150}
-            className="flex  mt-10 justify-center  "
+            className="flex  my-10 justify-center  "
                   /> </a>
               </div></div>
           ))}

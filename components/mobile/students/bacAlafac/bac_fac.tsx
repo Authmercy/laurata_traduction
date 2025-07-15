@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Navbar from "../../navbar/navbar";
 import FooterMobile from "../../footer/footerEnd";
+import { Brand } from "@/service/Brand";
 
 
 export default function BacAlaFacMobile() {
@@ -13,7 +14,25 @@ export default function BacAlaFacMobile() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isMobileMenuOpen2, setIsMobileMenuOpen2] = useState(false);
 
+   const [brand, setBrand] = useState<Brand[]>([]);
+    useEffect(() => {
+        const fetchsetBrand = async () => {
+            const brand: Brand[] = [
+               
+                {
+                    id: 1,
+                    name: "Medicare",
+                    url: "",
+                    path: "/images/logo/medicare.png"
+                },
+              
 
+            ];
+            setBrand(brand);
+        };
+
+        fetchsetBrand();
+    }, []);
 
     return (
         <div>
@@ -106,7 +125,27 @@ export default function BacAlaFacMobile() {
 
 
                 </div>
+                  <div className="flex  mt-36 bg-white items-center justify-center  ">
+          {brand.map((item, index) => (
+            <div
+              key={index}
+              className="flex items-center justify-center "
+            >
+              <div className="flex  items-center   justify-center  ">
+
+
+                <a href={item.path}>
                 
+                  <img
+                    src={item.path}
+                    alt={item.name}
+                        width={200}
+            height={150}
+            className="flex  my-10 justify-center  "
+                  /> </a>
+              </div></div>
+          ))}
+        </div>
             </div>
  <footer className="w-full bg-blue-900    text-white text-center">
                                                         <FooterMobile />

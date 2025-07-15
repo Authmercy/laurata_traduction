@@ -81,7 +81,7 @@ export default function FormulaireFormation() {
                 <input
                   type="text"
                   name="school"
-                  placeholder="Mot clé (ex : décentralisation)"
+                  placeholder="Mot clé "
                   value={filters.school}
                   onChange={handleChange}
                   className="text-center border-2 border-[#7b92d6] placeholder-[#717172] p-2"

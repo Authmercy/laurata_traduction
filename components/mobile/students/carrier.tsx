@@ -3,6 +3,7 @@ import React, { useRef } from "react";
 import { useEffect, useState } from "react";
 import Navbar from "../navbar/navbar";
 import FooterMobile from "../footer/footerEnd";
+import { Brand } from "@/service/Brand";
 
 export default function CarrierComponentMobile() {
 
@@ -14,12 +15,30 @@ export default function CarrierComponentMobile() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isMobileMenuOpen2, setIsMobileMenuOpen2] = useState(false);
 
+    const [brand, setBrand] = useState<Brand[]>([]);
+    useEffect(() => {
+        const fetchsetBrand = async () => {
+            const brand: Brand[] = [
 
+                {
+                    id: 1,
+                    name: "Medicare",
+                    url: "",
+                    path: "/images/logo/medicare.png"
+                },
+
+
+            ];
+            setBrand(brand);
+        };
+
+        fetchsetBrand();
+    }, []);
 
     return (
         <div>
-              <div className="min-h-screen   bg-[#34538C]  overflow-auto  w-screen bg-cover  text-justify bg-center bg-no-repeat "  >
-         
+            <div className="min-h-screen   bg-[#34538C]  overflow-auto  w-screen bg-cover  text-justify bg-center bg-no-repeat "  >
+
                 <Navbar
                     isMobileMenuOpen={isMobileMenuOpen}
                     setIsMobileMenuOpen={setIsMobileMenuOpen}
@@ -63,11 +82,11 @@ export default function CarrierComponentMobile() {
                                             <p className=" p-3  py-2"><b> Le secteur informel </b> est le plus grand pourvoyeur d’emplois ( <b>  90,5%</b> de l’emploi en 2018. Source : 3ème enquête sur l’emploi et le secteur informel 2018, INS).
                                             </p>
                                             <p className="bg-[#f1d9b6] p-3  py-2">
-                                            <b>Nombre d’agents publics employés par l’État  en</b> fin 2024 : 411 750. Source : MINFOPRA.
+                                                <b>Nombre d’agents publics employés par l’État  en</b> fin 2024 : 411 750. Source : MINFOPRA.
 
                                             </p>
                                             <p className=" p-3  py-2">
-                                              <b>  Nombre de salariés employés par le secteur privé </b>formel en 2023: <b> 1 178 043 </b> répartis dans 438 893 unités économiques.  (Source : 3ème Recensement Général des Entreprises,2023).
+                                                <b>  Nombre de salariés employés par le secteur privé </b>formel en 2023: <b> 1 178 043 </b> répartis dans 438 893 unités économiques.  (Source : 3ème Recensement Général des Entreprises,2023).
 
 
 
@@ -344,7 +363,7 @@ export default function CarrierComponentMobile() {
                                         <div className="space-y-4 p-4 text-black">
 
                                             <p>
-                                              <b>  Les organisations et entreprises, publiques comme privées, recherchent des diplômés possédant des compétences</b>, autrement dit un mix :
+                                                <b>  Les organisations et entreprises, publiques comme privées, recherchent des diplômés possédant des compétences</b>, autrement dit un mix :
                                             </p>
                                             <p>
                                                 <span className="text-[#4A62AA] ml-6  ">■ </span>de connaissances théoriques ou académiques dans un domaine précis : les  <b className="text-[#9b6e0f] ">  savoirs  </b>(exemple : connaissances en informatique, en droit, etc.) ;
@@ -420,7 +439,7 @@ export default function CarrierComponentMobile() {
                         </div>
 
                     </div>
-  <div className="mt-2 space-y-4">
+                    <div className="mt-2 space-y-4">
                         <div>
 
                             <div className="flex flex-col sm:flex-row gap-1">
@@ -439,7 +458,7 @@ export default function CarrierComponentMobile() {
                                 <div className="bg-white/60 text-justify ">
                                     <div className="w-full  text-black space-y-2">
                                         <p className="bg-[#b3c2ee] p-3">
-                                            <span className="text-[#4A62AA] ">■ </span> Méfiez-vous des offres trop attractives ou des annonces contenant une pléthore de fautes d’orthographe. 
+                                            <span className="text-[#4A62AA] ">■ </span> Méfiez-vous des offres trop attractives ou des annonces contenant une pléthore de fautes d’orthographe.
                                         </p>
                                         <p className="bg-[#f1d9b6] p-3 ">
                                             <span className="text-[#4A62AA] ">■</span>&nbsp; Méfiez-vous d’un mail ou d’un appel proposant un emploi provenant d’un recruteur ou d'une agence de recrutement que vous n’avez jamais contacté(e).
@@ -457,7 +476,7 @@ export default function CarrierComponentMobile() {
 
                                         <p className="bg-[#f1d9b6] p-3">
                                             <span className="text-[#4A62AA]  ">■ </span> &nbsp; &nbsp; Ne transmettez jamais vos données personnelles ou bancaires avant un entretien formel et la signature du contrat de travail.
-                                        
+
                                         </p>
 
                                     </div>
@@ -585,10 +604,31 @@ export default function CarrierComponentMobile() {
                     </div>
 
                 </div>
+                <div className="flex  mt-24 bg-white items-center justify-center  ">
+                    {brand.map((item, index) => (
+                        <div
+                            key={index}
+                            className="flex items-center justify-center "
+                        >
+                            <div className="flex  items-center   justify-center  ">
+
+
+                                <a href={item.path}>
+
+                                    <img
+                                        src={item.path}
+                                        alt={item.name}
+                                        width={200}
+                                        height={150}
+                                        className="flex  my-10 justify-center  "
+                                    /> </a>
+                            </div></div>
+                    ))}
+                </div>
             </div>
-      <footer className="w-full bg-blue-900    text-white text-center">
-                                            <FooterMobile />
-                                          </footer>
+            <footer className="w-full bg-blue-900    text-white text-center">
+                <FooterMobile />
+            </footer>
         </div>
 
     );

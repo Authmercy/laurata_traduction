@@ -1,0 +1,46 @@
+
+{
+   "searchForm": {
+    "internship": "’m looking for an internship",
+    "firstJob": "Je cherche un premier emploi (débutant)",
+    "keyword": "Keyword",
+    "sector": "Secteur",
+    "level": "Niveau",
+    "duration": "Durée",
+    "employer": "Employeur",
+    "contract": "Contrat",
+    "publication": "Publication",
+    "city": "Ville",
+    "submit": "Lancer ma recherche"
+  },
+  "searchResult": {
+    "result": "RESULTAT DE LA RECHERCHE",
+    "published": " Publié le ",
+    "nexSearch": " Nouvelle recherche",
+    "description": "    Descriptif du poste",
+    "sur": "sur",
+    "found": "Offre(s) trouvée(s)",
+    "filter": "Appliquer les filtres",
+    
+    "load": "Chargement en cours",
+    "noData":"       Aucune offre ne correspond à vos critères de recherche. <br />  Vous pouvez déposer votre CV pour recevoir les nouvelles annonces automatiquement ! "
+  },
+  "searchDescription":{
+        "descriptif":"     Descriptif du poste",
+    "presentation":"     Présentation de l'employeur ",
+    "mission":"     Vos Missions ",
+"diplome":"     Diplôme ",
+"profil":" Profil & Compétences recherchés",
+"competence":" Compétences",
+"payement":"Rémunération & Avantages divers ",
+"debut":"Date de debut ",
+"dLimite":"Date limite de candidature ",
+"Retour":"  Retour aux résultats",
+"Postuler":"     Postuler"
+
+  },
+  "postuler":"  POstuler au poste"
+
+
+}
+

@@ -439,9 +439,9 @@ export default function OffreStageMobile() {
                     disabled={isFormEmpty()}
                     className={`w-[62%] sm:w-[50%]       
                             font-bold rounded-md py-1 transition-transform  duration-200 
-          ${clicked ? 'bg-[#4A62AA]  text-[#293c75] border-white' : ' '}
+  ${clicked ? 'bg-orange-400  text-[#293c75] border-white' : ''}
            ${isFormEmpty()
-                        ? "bg-gray-400 cursor-not-allowed"
+                        ? "bg-gray-400  cursor-not-allowed"
                         : " bg-white  text-[#293c75] hover:text-white"
                       }
          ] '`}

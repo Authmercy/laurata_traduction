@@ -18,16 +18,14 @@ export default function FooterMobile() {
 
 
                     <div className="flex flex-row justify-center text-lg">
-                        <Link href="/misc/presentaionDuSite "><p
-                            className={` 
-            ${clickedLink
-                                    ? " text-[#bd7a1d] " : "text-white  "
-                                }
+                        <Link href="/misc/presentaionDuSite  "                 className={`  ${clickedLink ? " text-[#bd7a1d] " : "text-white  " }
+           `}><p
+                            className={`  ${clickedLink ? " text-[#bd7a1d] " : "text-white  " }
            `}
                         > À propos </p> </Link>
-                        <span className="fond-bold text-[#f0b026] text-xl">  &nbsp;|&nbsp; </span> <Link href="/misc/nous_contacter"> <p className={` 
-            ${clickedLink
-                                ? " text-[#bd7a1d] " : "text-white  "
+                        <span className="fond-bold text-[#f0b026] text-xl">  &nbsp;|&nbsp; </span> <Link href="/misc/nous_contacter"                 className={`  ${clickedLink ? " text-[#bd7a1d] " : "text-white  " }
+           `}> <p className={` 
+            ${clickedLink ? " text-[#bd7a1d] " : "text-white  "
                             }
            `}> Contact</p></Link>
                     </div>

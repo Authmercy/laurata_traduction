@@ -18,7 +18,9 @@ export default function EmployeurALaUNeMobile() {
             errorMessage,
             handleSelectChange,
             selectedCompany,
-            setErrorMessage
+            setErrorMessage,
+             nextSlide,
+        prevSlide,
     
     
         } = UseEntrepriseUneService()
@@ -36,6 +38,8 @@ export default function EmployeurALaUNeMobile() {
 
 
    
+
+    const [currentIndex, setCurrentIndex] = useState(0);
     const handleClick3 = () => {
         router.push("/entreprise/poster/#editer");
     };
@@ -138,7 +142,39 @@ export default function EmployeurALaUNeMobile() {
                              
 
 
-
+    <div className="flex flex-col lg:flex-row gap-1">
+        <div className="flex-1">
+          <div className="flex flex-col justify-center text-center">
+            <div className="slider-container relative bg-white h-96 my-8 border-2 border-[#4A62AA] rounded-2xl">
+              {images.length > 0 ? (
+                <>
+                  <img
+                    src={images[currentIndex]}
+                    alt="slider"
+                    className="w-full h-full rounded-lg"
+                  />
+                  <button
+                    onClick={prevSlide}
+                    className="absolute top-1/2 left-4 transform -translate-y-1/2 text-white text-2xl bg-black bg-opacity-50 p-2 rounded-full"
+                  >
+                    &#10094;
+                  </button>
+                  <button
+                    onClick={nextSlide}
+                    className="absolute top-1/2 right-4 transform -translate-y-1/2 text-white text-2xl bg-black bg-opacity-50 p-2 rounded-full"
+                  >
+                    &#10095;
+                  </button>
+                </>
+              ) : (
+                <div className="w-full h-full flex items-center justify-center text-gray-500">
+                  Aucune image disponible
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
                                <div id="presentation" className=" p-4 mt-2  bg-white/70">
                                 <h1 className="text-[#4A62AA] font-bold">PRÉSENTATION</h1>
                                 <div className="flex  flex-col gap-1">

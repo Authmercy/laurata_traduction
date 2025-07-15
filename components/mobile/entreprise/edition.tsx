@@ -120,7 +120,7 @@ export default function EditionOffreMobile() {
                   <span className="truncate " title={selectedOrgTypes.map(k => status.find(s => s.key === k)?.text).join(', ')}>
         {selectedOrgTypes.length
           ? status.filter(s => selectedOrgTypes.includes(s.key)).map(s => s.text).join(', ')
-          : 'Status'}
+          : 'Statut'}
       </span>
                   <span className="text-xl">{open === 4 ? "▲" : "▼"}</span>
                 </div>

@@ -47,7 +47,7 @@ export default function MRegister() {
           } ${isMobileMenuOpen2 ? "blur-sm " : ""
           } `}>
           <div className="justify-center p-2 text-center text-xl font-bold uppercase bg-[#9b6e0f] text-white">
-            <p>S'inscrire</p>
+            <p>S'inscrire (Gratuit)</p>
           </div>
 
 

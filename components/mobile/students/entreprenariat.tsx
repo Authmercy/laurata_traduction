@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import Navbar from "../navbar/navbar";
 import FooterMobile from "../footer/footerEnd";
+import { Brand } from "@/service/Brand";
 
 export default function EntrepreunariatMobile() {
 
@@ -15,7 +16,25 @@ export default function EntrepreunariatMobile() {
     };
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isMobileMenuOpen2, setIsMobileMenuOpen2] = useState(false);
+   const [brand, setBrand] = useState<Brand[]>([]);
+    useEffect(() => {
+        const fetchsetBrand = async () => {
+            const brand: Brand[] = [
+               
+                {
+                    id: 1,
+                    name: "Medicare",
+                    url: "",
+                    path: "/images/logo/medicare.png"
+                },
+              
 
+            ];
+            setBrand(brand);
+        };
+
+        fetchsetBrand();
+    }, []);
 
 
     return (
@@ -257,24 +276,7 @@ export default function EntrepreunariatMobile() {
 
 
 
-                                                <div className=" grid grid-cols-1 md:grid-cols-[1fr_3fr] gap-2 md:gap-8 p-2">
-                                                    <div className="font-bold text-start text-[#4A62AA]">
-                                                        Être créatif
-                                                    </div>
-                                                    <div>
-                                                        <p>Listez les langues maîtrisées en indiquant le niveau de pratique ;</p>
-                                                    </div>
-                                                </div>
-
-
-                                                <div className=" bg-[#a2b0db]/70 grid grid-cols-1 md:grid-cols-[1fr_3fr] gap-2 md:gap-8 p-2">
-                                                    <div className="font-bold text-start text-[#4A62AA]">
-                                                        Divers
-                                                    </div>
-                                                    <div>
-                                                        <p>Cette rubrique peut contenir plusieurs sous-rubriques à savoir « Centres d'intérêts » comme la lecture, les jeux de société..., « Sport », « Engagement associatif », etc.</p>
-                                                    </div>
-                                                </div>
+                                                
                                             </div>
                                         </div>
                                     </div>
@@ -986,6 +988,27 @@ export default function EntrepreunariatMobile() {
                     </div>
 
                 </div>
+                             <div className="flex  mt-24 bg-white items-center justify-center  ">
+          {brand.map((item, index) => (
+            <div
+              key={index}
+              className="flex items-center justify-center "
+            >
+              <div className="flex  items-center   justify-center  ">
+
+
+                <a href={item.path}>
+                
+                  <img
+                    src={item.path}
+                    alt={item.name}
+                        width={200}
+            height={150}
+            className="flex  my-10 justify-center  "
+                  /> </a>
+              </div></div>
+          ))}
+        </div>
             </div>
       <footer className="w-full bg-blue-900    text-white text-center">
                                             <FooterMobile />

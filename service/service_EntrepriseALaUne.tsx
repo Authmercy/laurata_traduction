@@ -107,9 +107,26 @@ export default function UseEntrepriseUneService() {
         setOpen(open === index ? null : index);
     };
 
+   
+ const images = [
+        "/images/background.png",
+        "/images/backgroundEtudiant.jpeg",
+        "/images/image.png",
+    ];
+    const nextSlide = () => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    };
+
+    const prevSlide = () => {
+        setCurrentIndex(
+            (prevIndex) => (prevIndex - 1 + images.length) % images.length
+        );
+    };
+
     return {
 
-
+ nextSlide,
+  prevSlide,
         companies,
         errorMessage,
         handleSelectChange,

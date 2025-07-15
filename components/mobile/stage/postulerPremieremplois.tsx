@@ -118,7 +118,7 @@ export default function PremierEmploisMobile() {
 
                                                 <div className=" text-[#A87A38] text-center  ">  Annonces d’emplois </div>
                                                 <div className="max-w-4xl">
-                                                    <p> Consultez la liste des annonces dans notre section  <a href="/students/offresStage" className="text-[#4A62AA] font-bold ">« Offres de stage »</a> ou lisez le quotidien Cameroun Tribune.</p>
+                                                    <p> Consultez la liste des annonces dans notre section  <a href="/students/offresStage" className="text-[#4A62AA] font-bold ">« Offres de stage »</a> ou lisez le quotidien CameroonTribune.</p>
 
                                                 </div>
                                             </div>

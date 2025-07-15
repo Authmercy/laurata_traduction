@@ -3,8 +3,9 @@
 
 import Navbar from "../navbar/navbar";
 import FooterMobile from "../footer/footerEnd";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import UseClassementService from "@/service/service_classement";
+import { Brand } from "@/service/Brand";
 
 
 
@@ -26,6 +27,25 @@ export default function ClassementComponentMobile() {
    handleCategoryClick
  
  } = UseClassementService()
+   const [brand, setBrand] = useState<Brand[]>([]);
+   useEffect(() => {
+     const fetchsetBrand = async () => {
+       const brand: Brand[] = [
+ 
+         {
+           id: 1,
+           name: "Medicare",
+           url: "",
+           path: "/images/logo/medicare.png"
+         },
+ 
+ 
+       ];
+       setBrand(brand);
+     };
+ 
+     fetchsetBrand();
+   }, []);
  
   const [currentIndex, setCurrentIndex] = useState(0);
    const maxImages = 3;
@@ -34,7 +54,7 @@ export default function ClassementComponentMobile() {
 
   return (
     <div>
-      <div className="min-h-screen h-auto overflow-auto  w-screen bg-cover  text-justify bg-center bg-no-repeat " style={{ backgroundImage: "url('/images/backgroundmobile.jpeg')" }}>
+      <div className="min-h-screen   bg-[#34538C]  overflow-auto  w-screen bg-cover  text-justify bg-center bg-no-repeat "  >
 
         <Navbar
           isMobileMenuOpen={isMobileMenuOpen}
@@ -191,10 +211,29 @@ export default function ClassementComponentMobile() {
     </div>
   </div>
 </div>
-          <div className="mt-6 bg-white/70">
+          
 
-          </div>
+        </div>
+        <div className="flex  mt-36 bg-white items-center justify-center  ">
+          {brand.map((item, index) => (
+            <div
+              key={index}
+              className="flex items-center justify-center "
+            >
+              <div className="flex  items-center   justify-center  ">
 
+
+                <a href={item.path}>
+
+                  <img
+                    src={item.path}
+                    alt={item.name}
+                    width={200}
+                    height={150}
+                    className="flex  my-10 justify-center  "
+                  /> </a>
+              </div></div>
+          ))}
         </div>
       </div>
       <footer className="w-full bg-blue-900    text-white text-center">

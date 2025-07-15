@@ -3,7 +3,6 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/students/offresStage": "pages/students/offresStage.js",
-  "/students/resultatRecherche": "pages/students/resultatRecherche.js",
   "/": "pages/index.js",
-  "/students/formations": "pages/students/formations.js"
+  "/moreInfos": "pages/moreInfos.js"
 }
