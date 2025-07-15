@@ -13,11 +13,6 @@
   "rootMainFiles": [],
   "rootMainFilesTree": {},
   "pages": {
-    "/": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/index.js"
-    ],
     "/_app": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
@@ -28,15 +23,15 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/students/formations": [
+    "/students/bourses": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/students/formations.js"
+      "static/chunks/pages/students/bourses.js"
     ],
-    "/students/offresStage": [
+    "/students/concours": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/students/offresStage.js"
+      "static/chunks/pages/students/concours.js"
     ]
   },
   "ampFirstPages": []
