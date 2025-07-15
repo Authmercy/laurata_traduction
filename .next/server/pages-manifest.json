@@ -2,7 +2,8 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/students/metier/fichesMetier": "pages/students/metier/fichesMetier.js",
   "/students/offresStage": "pages/students/offresStage.js",
-  "/students/classements": "pages/students/classements.js"
+  "/students/metier/metierSansFormation": "pages/students/metier/metierSansFormation.js",
+  "/zoom": "pages/zoom.js",
+  "/zoom/[id]": "pages/zoom/[id].js"
 }

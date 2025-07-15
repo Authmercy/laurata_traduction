@@ -20,15 +20,25 @@ self.__BUILD_MANIFEST = {
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/students/classements": [
+    "/students/metier/metierSansFormation": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/students/classements.js"
+      "static/chunks/pages/students/metier/metierSansFormation.js"
     ],
     "/students/offresStage": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/students/offresStage.js"
+    ],
+    "/zoom": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/zoom.js"
+    ],
+    "/zoom/[id]": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/zoom/[id].js"
     ]
   },
   "ampFirstPages": []

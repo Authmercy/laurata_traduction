@@ -3,7 +3,9 @@ import { URLS } from "@/service/url";
 import Link from "next/link";
 import router from "next/router";
 import React, { useEffect, useRef, useState } from "react";
-
+import en from '../../../../i18/en/student/metier.json';
+import fr from '../../../../i18/fr/student/metier.json';
+import { useRouter } from "next/router";
 
 type Metier = {
   id: number;
@@ -48,6 +50,14 @@ export default function MetierSansDeboucheComponent() {
 
     fetchMetier();
   }, []);
+
+
+    const router = useRouter();
+
+    const { locale } = router;
+    const t = locale === 'en' ? en : fr;
+
+
   const handleClick = (letter: string) => {
 
     router.push(`/students/metier/${letter}`);
@@ -56,12 +66,12 @@ export default function MetierSansDeboucheComponent() {
     <div className="flex flex-col p-2  mt-8 after:md:pl-8 text-black">
       <div className="flex w-full gap-2 ml-12  text-white font-bold">
         <div className="p-2 px-2  uppercase  w-[35%] text-2xl text-center bg-[#9C824A]  hover:bg-[#a19478] h-20 flex items-center justify-center">
-          <Link href="/students/metier/metier"> MÉTIERS</Link>
+          <Link href="/students/metier/metier"> {t.professions} </Link>
         </div>
 
 
         <div className="p-3 px-8  text-xl text-center bg-[#A87A38] h-12 mt-4 uppercase flex items-center justify-center">
-          Métiers sans débouchés
+          {t.jobsWithoutProspects}
         </div>
 
 
@@ -85,8 +95,7 @@ export default function MetierSansDeboucheComponent() {
 
             <div className="mt-6 bg-white text-black p-4 w-full flex-grow">
               <p>
-                De nombreux secteurs et métiers n’offrent quasiment pas d’opportunités d’emplois au Cameroun car inexistants ou très peu développés : énergie nucléaire, nanotechnologies, beaux-arts, etc. Pensez-y avant de choisir votre métier, en particulier si vous envisagez de travailler au Cameroun après vos études.
-              </p>
+           {t.jobsWithoutProspectsIntro} </p>
 
 
               <div className="mt-6">

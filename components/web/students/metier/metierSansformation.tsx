@@ -3,6 +3,9 @@ import { URLS } from "@/service/url";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 
+import en from '../../../../i18/en/student/metier.json';
+import fr from '../../../../i18/fr/student/metier.json';
+import { useRouter } from "next/router";
 
 type Metier = {
   id: number;
@@ -48,18 +51,23 @@ export default function MetierComponentFormation() {
     fetchMetier();
   }, []);
 
+    const router = useRouter();
+
+    const { locale } = router;
+    const t = locale === 'en' ? en : fr;
+
   return (
     <div className="flex flex-col p-2  mt-8 after:md:pl-8 text-black">
       <div className="flex w-full gap-2 ml-12  text-white font-bold">
         <div className="p-2 px-2  uppercase  w-[35%] text-2xl text-center bg-[#9C824A]  hover:bg-[#a19478] h-20 flex items-center justify-center">
 
-          <Link href="/students/metier/metier"> MÉTIERS</Link>
+          <Link href="/students/metier/metier">  {t.professions}</Link>
         </div>
 
 
         <div className="p-3 px-8 w-[60%] text-xl text-center uppercase bg-[#A87A38] h-12 mt-4 flex items-center justify-center">
 
-          Métiers sans offres de formation
+         {t.jobsWithoutTraining}
         </div>
 
 
@@ -82,9 +90,7 @@ export default function MetierComponentFormation() {
 
 
             <div className="mt-6 bg-white/70 text-black p-4 w-full flex-grow">
-              <p>
-                Vous souhaitez devenir <b>  contrôleur de la circulation aérienne </b> ou   <b> orthophoniste </b> ? Pour ces deux métiers comme pour beaucoup d’autres, le Cameroun n’abrite aucune école de formation, il faudra vous rendre à l’étranger. Informez-vous et préparez-vous en conséquence le cas échéant.
-              </p>
+            <p dangerouslySetInnerHTML={{ __html: t.jobsWithoutTrainingIntro }} /> 
 
 
               <div className="m-6">
