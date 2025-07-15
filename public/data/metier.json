@@ -1,0 +1,59 @@
+[
+    {
+      "id": 1,
+      "name": "Architecte",
+      "description": "Conçoit des bâtiments et supervise leur construction.",
+      "competence": ["Dessin technique", "Créativité", "Gestion de projet"],
+      "debouche": ["Cabinet d'architecture", "Urbanisme", "BTP"],
+      "formation": ["Diplôme d'architecte", "Master en architecture"]
+    },
+    {
+      "id": 2,
+      "name": "Avocat",
+      "description": "Défend les intérêts de ses clients en justice.",
+      "competence": ["Plaidoyer", "Analyse juridique", "Négociation"],
+      "debouche": ["Cabinet d'avocats", "Entreprise", "Fonction publique"],
+      "formation": ["Doctorat en droit", "École d'avocats"]
+    },
+    {
+      "id": 3,
+      "name": "Biologiste",
+      "description": "Étude des organismes vivants et de leur environnement.",
+      "competence": ["Analyse scientifique", "Expérimentation", "Biologie moléculaire"],
+      "debouche": ["Laboratoire", "Recherche", "Industrie pharmaceutique"],
+      "formation": ["Master en biologie", "Doctorat"]
+    },
+    {
+      "id": 4,
+      "name": "Comptable",
+      "description": "Gère les comptes et les finances d'une organisation.",
+      "competence": ["Comptabilité", "Fiscalité", "Analyse financière"],
+      "debouche": ["Cabinet comptable", "Entreprise", "Administration"],
+      "formation": ["DCG", "DSCG", "Expertise comptable"]
+    },
+    {
+      "id": 5,
+      "name": "Dentiste",
+      "description": "Soigne les problèmes bucco-dentaires.",
+      "competence": ["Odontologie", "Chirurgie dentaire", "Prothèse"],
+      "debouche": ["Cabinet dentaire", "Hôpital", "Clinique"],
+      "formation": ["Doctorat en chirurgie dentaire"]
+    },
+    {
+      "id": 6,
+      "name": "Électricien",
+      "description": "Installe et entretient des systèmes électriques.",
+      "competence": ["Électricité bâtiment", "Lecture de plans", "Sécurité électrique"],
+      "debouche": ["BTP", "Industrie", "Maintenance"],
+      "formation": ["CAP électricien", "Bac Pro électrotechnique"]
+    },
+    {
+      "id": 7,
+      "name": "Formateur",
+      "description": "Enseigne des compétences professionnelles.",
+      "competence": ["Pédagogie", "Conception de formation", "Animation"],
+      "debouche": ["Organisme de formation", "Entreprise", "Éducation nationale"],
+      "formation": ["Licence pro formation", "Master en sciences de l'éducation"]
+    }
+
+  ]

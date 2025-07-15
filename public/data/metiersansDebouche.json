@@ -1,0 +1,626 @@
+[
+    {
+        "metier": "Accastilleur ",
+        "description": " L’accastilleur habille le pont du bateau et pose les matériels d'équipements, de manœuvre et de navigation sur les bateaux de plaisance. "
+      },
+      {
+        "metier": "Aérodynamicien ",
+        "description": "L’aérodynamicien est un ingénieur dont la mission est d’accroître les performances techniques et énergétiques des avions, hélicoptères, navettes spatiales, etc. Il conçoit ces engins et effectue les tests.  "
+      }
+      ,
+      {
+        "metier": " Archéologue",
+        "description": " L’archéologue travaille soit dans des chantiers programmés, où le but est de rechercher et d’étudier toutes les traces laissées par les civilisations anciennes soit en amont lors de la construction d’un bâtiment ou d’une route aux fins d’examiner le terrain pour prévenir toute destruction d’éventuels vestiges ou alors en laboratoire où il analyse le résultat de ses fouilles et met par écrit ses découvertes et réflexions. "
+      }
+      ,
+      {
+        "metier": "Armurier ",
+        "description": "Armurier regroupe aussi bien ceux qui interviennent dans l’une des opérations de fabrication des armes que ceux qui les commercialisent au détail (en général, des armes de chasse, de tir sportif, des armes anciennes de collection). Source : cidj.com  "
+      }
+      ,
+      {
+        "metier": " Astronome",
+        "description": "L’astronome observe et étudie l’origine et l'évolution de l'univers, fait de la recherche fondamentale et peut enseigner. Source : cidj.com  "
+      }
+      ,
+      {
+        "metier": "Chargé d’intégration en robotique industrielle ",
+        "description": " L’intégrateur robotique réalise l’étude, l’intégration et la mise au point de solutions robotisées sur des process de fabrication existants ou en développement. Source : cidj.com "
+      },
+      {
+        "metier": " Chef d’orchestre",
+        "description": " Le chef d’orchestre coordonne l’exécution et l’interprétation d’une œuvre en fonction des instruments de l’orchestre. Il est le chef des interprètes. Source : studyrama.com "
+      },
+      {
+        "metier": " Chef de produit jeu vidéo et e-sport",
+        "description": " Il veille tout au long de la production et de la commercialisation, à ce qu’un jeu vidéo ou un événement esport réponde bien à la cible définie en amont. "
+      },
+      {
+        "metier": "Coboticien ",
+        "description": " Les ingénieurs en cobotique conçoivent, développent et assurent la maintenance des robots collaboratifs c’est-à-dire des robots qui interagissent avec l’homme à l’aide de bras articulés ou robotisés. Source : cidj.com "
+      },
+      {
+        "metier": "Conservateur de patrimoine ",
+        "description": "Il est le gardien des œuvres d’art, chaque conservateur a une spécialité : archéologie, archives, monuments historiques, musées, etc.  "
+      },
+      {
+        "metier": " Créateur parfumeur",
+        "description": " Aussi appelé créateur de fragrance, il compose et élabore de fragrances pour le compte de ses clients. "
+      },
+      {
+        "metier": "Domoticien ",
+        "description": " Spécialiste de l’électronique et de l’informatique appliquées au domaine de l’habitat, professionnel de la programmation et des commandes à distance, le domoticien a plusieurs champs d’application : sécurité, confort, gestion d’énergie, télécommunications. Source : cidj.com "
+      },
+      {
+        "metier": "Éducateur de chiens guides d’aveugles ",
+        "description": " Le travail de ce professionnel consiste à éduquer des chiens, la plupart du temps des labradors, qui viendront en aide aux personnes non-voyantes ou malvoyantes. Source : studyrama.com "
+      },
+      {
+        "metier": "Galériste ",
+        "description": "  Directeur d’une galerie d’art ancien ou contemporain, il s’occupe du choix des artistes, de préparer les expositions, d’organiser les vernissages et de vendre les œuvres."
+      },
+      {
+        "metier": "Guide de haute montagne ",
+        "description": "  Le guide de haute montagne conduit et accompagne des personnes dans des excursions ou des ascensions."
+      },
+      {
+        "metier": "Hydrothérapeute pour chien ",
+        "description": "  L’hydrothérapeute pour chien propose, sous prescription du vétérinaire, des exercices aquatiques lui permettant de faire fonctionner ses muscles et le remettre en forme. Source : studyrama.com"
+      },
+      {
+        "metier": " Ingénieur en réalité virtuelle",
+        "description": " L'ingénieur en réalité virtuelle / réalité augmentée crée un monde qui nous permet d'interagir avec des images de synthèse en 3 dimensions comme dans la vie réelle. Source : cidj.com "
+      },
+      {
+        "metier": "Maître de chai ",
+        "description": " En viticulture, le maître de chai est le responsable de la cave. Il supervise la fabrication du vin de l’arrivée du raisin à la mise en bouteille. Source : Studyrama.com "
+      },
+      {
+        "metier": " Moniteur de plongée",
+        "description": "Il encadre et enseigne la pratique de la plongée auprès de plongeurs amateurs ou confirmés. Source : cidj.com  "
+      },
+      {
+        "metier": "Moniteur d’escalade ",
+        "description": "Le moniteur d’escalade encadre des jeunes ou des adultes de tout niveau (loisir ou compétition) sur des sites naturels ou artificiels. Il ou elle leur enseigne les techniques de grimpe dans le respect des consignes de sécurité.  "
+      },
+      {
+        "metier": "Ostéopathe pour animaux ",
+        "description": "Il prend en charge toutes les espèces vertébrées, après avoir procédé à un diagnostic permettant d’éliminer toute pathologie relevant strictement de la médecine vétérinaire (pathologies organiques qui nécessitent une intervention thérapeutique, médicale, chirurgicale, médicamenteuse ou par des agents physiques). Source : Studyrama.com "
+      },
+      {
+        "metier": "Paléontologue ",
+        "description": "  Le paléontologue est un enseignant-chercheur qui étudie l’évolution biologique des êtres vivants."
+      },
+      {
+        "metier": "Professeur de musique (conservatoire) ",
+        "description": " Spécialiste qui enseigne un instrument, duquel il joue lui-même parfaitement, ou qu’un style de musique. Source : studyrama.com "
+      },
+      {
+        "metier": "Programmeur Gameplay ",
+        "description": " Dans le processus de création d’un jeu vidéo, le programmeur gameplay, il est le garant de la qualité et du confort du jeu que l’utilisateur final aura entre les mains. En charge de concevoir et programmer l’expérience utilisateur. Source : L’étudiant.fr "
+      },
+      {
+        "metier": " Psychocriminologue (Profiler)",
+        "description": "Sa mission est de décrypter un passage à l’acte criminel pour saisir la personnalité de celui qui l’a commis, afin d’aider les enquêteurs à le retrouver.  "
+      },
+      {
+        "metier": " Relieur-doreur",
+        "description": "Le relieur-doreur est un artisan d'art dont le métier est très ancien. Il réalise la fabrication manuelle d'un livre à partir de feuilles imprimées, ou bien restaure des livres anciens. Brochure, reliure et dorure demandent un excellent savoir-faire. Source : cidj.com  "
+      },
+      {
+        "metier": " Restaurateur d’œuvres d’art",
+        "description": "Il remet en état les œuvres d’art abîmées, cassées ou décolorées.  "
+      },
+      {
+        "metier": " Spéléologue",
+        "description": " Scientifique qui étudie les cavités souterraines (gouffres, cavernes, etc.) "
+      },
+      {
+        "metier": " Spécialistes de l’industrie du Nucléaire",
+        "description": "Métiers du secteur de l’industrie nucléaire :  technicien, soudeur, robinetier, ingénieur développement, etc.  "
+      },
+      {
+        "metier": "Taxidermiste ",
+        "description": " Le taxidermiste rend l’apparence du vivant à la dépouille d’un animal dans un but artistique, scientifique ou pédagogique. Les animaux ainsi empaillés sont voués à la conservation ou à l’exposition. Source : studyrama.com "
+      },
+      {
+        "metier": "Terminologue ",
+        "description": " Le terminologue aide à nommer un nouveau concept, un nouvel objet, à préciser le sens d’un mot, ou à traduire une notion d’une langue à une autre. "
+      },
+      {
+        "metier": " Technicien en radioprotection",
+        "description": "  Sur un chantier nucléaire, le technicien en radioprotection veille à prévenir les risques radiologiques en amont des travaux et pendant la phase de réalisation."
+      },
+      {
+        "metier": "Toiletteur pour animaux de compagnie ",
+        "description": " Il se charge comme son nom l’indique de s’assurer de la toilette et du bien-être des animaux de compagnie (chiens, chats, etc.) "
+      },
+      {
+        "metier": " Tonnelier",
+        "description": " Il fabrique ou répare des fûts en bois de toutes formes et de toutes dimensions qui servent à l’élevage des vins et des alcools. "
+      },
+      {
+        "metier": " Vigneron",
+        "description": "  Agriculteur spécialisé dans les vignes et la production de vins. Il cultive et s’occupe continuellement de ses vignes pour assurer des productions viticoles de qualité. Source : studyrama.com"
+      },
+      {
+        "metier": " Viticulteur",
+        "description": " Agriculteur spécialisé dans la culture de la vigne, le viticulteur supervise la production, de la plantation des ceps à la vendange du raisin. Il se charge aussi de la transformation, puisqu’il élabore le vin qu’il vend en direct sur l’exploitation ou par l’intermédiaire d’un négociant. "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      },
+      {
+        "metier": " ",
+        "description": "  "
+      }
+]

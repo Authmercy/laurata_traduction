@@ -1,0 +1,22 @@
+import Link from "next/link";
+import { useRouter } from "next/router";
+
+export default function Zoom() {
+    const router = useRouter();
+
+
+    const handleClick = () => {
+
+        router.push(`/zoom`);
+    };
+
+    return (
+        <div >
+
+
+            <button onClick={() => handleClick()} className="text-center hover:bg-[#A87A38] text-white w-full px-5 py-2  bg-[#4A62AA]">
+                <h1 className="font-bold uppercase"> Zoom sur </h1>
+            </button>
+        </div>
+    );
+}

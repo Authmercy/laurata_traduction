@@ -1,0 +1,22 @@
+{
+  "jpo": {
+    "title": "Open House Days",
+    "heading": "Are you a (future) high school graduate, student or parent?",
+    "description": "Open House Days (JPO) are an excellent way to discover an institution and its facilities and, where appropriate, to meet and exchange with teaching staff or enrolled students. They will certainly allow you to better assess whether the institution is right for you or meets your expectations.",
+    "noResults": "No results found.",
+    "eventDetails": {
+      "time": "Time",
+      "location": "Location",
+      "website": "Website"
+    }
+  },
+  
+  "searchForm": {
+    "datePlaceholder": "Select dates",
+    "institutionPlaceholder": "Search Institution",
+    "submitButton": "Show",
+    "loadingText": "Loading...",
+    "dateFormat": "MM/DD/YYYY"
+  }
+
+}

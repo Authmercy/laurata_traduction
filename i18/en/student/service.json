@@ -1,0 +1,35 @@
+{
+  
+    "title": " Services",
+  "quote": "Vous devez soit modifier vos rêves ou améliorer vos compétences.",
+    "author": "Jim Rohn",
+    "subtitle": "Know yourself better to make the right career choices and prepare for professional integration",
+    "description": "A team of professionals dedicated to helping you choose your study path and facilitating your professional integration.",
+    "services": {
+      "orientation": {
+        "title": "ACADEMIC ADVISING",
+        "description": "Our experts will help you identify and choose the study program(s) and careers best suited to your skills, goals and personality "
+      },
+      "thesis": {
+        "title": "PROOFREADING",
+        "description": "Proofreading  of theses, essays, dissertations,  etc by senior linguists and editord  (English, French, German and Spanish.)"
+      },
+      "international": {
+        "title": "INTERNATIONAL STUDENTS",
+        "description": "Assistance in: Application, Visa, Administrative procedures, Accommodation, etc."
+      },
+      "professionals": {
+        "title": "MEET WITH EXPERTS ",
+        "description": "Discover job profiles through  professionals in these fields."
+      },
+      "mentoring": {
+        "title": "MENTORING ",
+        "description": "Whether as future employee or entrepreuneur, our experts will support you each step of the way (skill assessment, job search strategy, business plans, etc.)."
+      },
+      "germany": {
+        "title": "STUDY IN GERMANY",
+        "description": "Our experts trained in Germany will give you pratical advice on successfully applying and preparing for studies at German universities or vocational colleges."
+      }
+    },
+    "contact": "Contact us for more information or to make a special request."
+  }

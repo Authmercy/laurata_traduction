@@ -1,0 +1,244 @@
+[
+  
+      {
+        "metier": " Analyste SOC (security operation center) ",
+        "description": " Il a pour mission la surveillance du système d'information d'une entreprise au sens large afin de détecter toutes les activités suspectes ou malveillantes. Il/elle intervient aussi en amont pour faire de la prévention. Source : L’étudiant.fr"
+      },
+      {
+        "metier": " Analyste financier ",
+        "description": "Conseiller qui évalue les sociétés cotées en bourse, étudie les informations issues des banques de données financières et la presse économique et intervient sur les marchés. "
+      },
+      {
+        "metier": "Apiculteur  ",
+        "description": "L’apiculteur élève des abeilles pour recueillir le miel et la gelée royale qu'elles produisent. Pour cela, il possède des ruches où logent les colonies. Source : onisep.fr "
+      },
+      {
+        "metier": " Aquaculteur ",
+        "description": "L’aquaculteur élève des poissons (poissons de mer ou d’eau douce), des coquillages (huitres, moules, palourdes), des crustacés ou des alevins. Il peut également cultiver des algues. Sa production est immergée (dans la mer, dans un étang ou dans un bassin). "
+      },
+      {
+        "metier": "Architecte en cybersécurité  ",
+        "description": " Il protège les institutions, les entreprises pour prévenir les cyberattaques, les ralentir, voire les stopper, etc. Il définit une stratégie de protection informatique que l’entreprise ou la structure applique ensuite. Source : L’étudiant.fr"
+      },
+      {
+        "metier": "  Auditeur financier",
+        "description": "Il contrôle les comptes de l’entreprise. Il peut travailler au sein d’une entreprise, ou dans un cabinet d’audit. "
+      },
+      {
+        "metier": "BIM Manager  ",
+        "description": " Aussi appelé Ingénieur BIM (Building Information Modeling), il fédère tous les métiers autour d’un projet de construction. À l’aide d’un logiciel de représentation en 3D, il suit chaque étape ainsi que l’évolution d’un chantier."
+      },
+      {
+        "metier": "Bio-informaticien  ",
+        "description": " Aussi appelé bio-statisticien, il fait parler les datas pour faire avancer la recherche expérimentale sur les sciences du vivant."
+      },
+      {
+        "metier": "Charpentier de marine  ",
+        "description": "Le charpentier de marine est un spécialiste de la construction navale légère (plaisance et pêche). Il réalise et assemble les membrures d’une coque, travaille à la fixation des bordées sur ce squelette de bois et aux aménagements intérieurs du navire. Source : cidj.com "
+      },
+      {
+        "metier": "Chef de mission humanitaire  ",
+        "description": " En mission humanitaire, il est à la tête d’une équipe réunissant parfois plusieurs dizaines de volontaires et de bénévoles. Après avoir analysé la situation du pays d’intervention (contexte politique, humanitaire, social, économique), il propose à son association un plan d’action, celle-ci le valide. Source : L’étudiant.fr"
+      },
+      {
+        "metier": "  Community Manager",
+        "description": " Aussi appelé Social media manager, sa mission est de parler et surtout faire parler d’un produit ou d’un événement via les réseaux sociaux les plus adaptés à sa cible."
+      },
+      {
+        "metier": " Contrôleur de gestion ",
+        "description": "Il aide l’entreprise à optimiser ses coûts et à choisir une bonne stratégie de développement en faisant une analyse rigoureuse et minutieuse des finances de l’entreprise. "
+      },
+      {
+        "metier": " Conducteur d’engins ",
+        "description": " Aux commandes d’une pelle mécanique, d'un bulldozer ou d’une chargeuse, le conducteur ou la conductrice d’engins du BTP effectue sur les chantiers les travaux de creusement, de déblaiement, de nivellement ou de terrassement."
+      },
+      {
+        "metier": "Cyber-enquêteur  ",
+        "description": "Le cyber-enquêteur est un policier ou un gendarme spécialisé dans les technologies numériques. Il analyse les supports informatiques et participe à des enquêtes cyber. Source : cidj.com "
+      },
+      {
+        "metier": " Data Scientist ",
+        "description": " Personne responsable de la récolte et de l’analyse des données pour l’entreprise."
+      },
+      {
+        "metier": "Délégué à la protection de données (DPO)  ",
+        "description": "Le DPO est chargé de mettre en œuvre la conformité au règlement européen sur la protection des données au sein de l’organisme qui l’a désigné s’agissant de l’ensemble des traitements mis en œuvre par cet organisme. "
+      },
+      {
+        "metier": "Designer en expérience utilisateur (Designer UX)  ",
+        "description": "Le designer UX (user eXperience) et le designer UI (user interface) est une évolution et une spécialisation récente du métier de web designer. Le premier s’intéresse à l’expérience utilisateur, le second à la conception de l’interface produit. Source : cidj.com "
+      },
+      {
+        "metier": "Dessinateur industriel  ",
+        "description": "Le dessinateur industriel représente l’objet à fabriquer : pièce mécanique, outil, circuit électronique... Il ou elle intervient dans tous les secteurs industriels. "
+      },
+      {
+        "metier": " Éducateur technique spécialisé ",
+        "description": "L’éducateur technique spécialisé s’occupe des personnes en situation de handicap (malentendants, autistes, etc.) dans des établissements et services sanitaires, sociaux… des secteurs public et privé. "
+      },
+      {
+        "metier": "Expert-comptable  ",
+        "description": "Il établit les comptes annuels en matière de gestion, de droit des affaires, de droit fiscal, de droit social et conseille le chef d'entreprise. "
+      },
+      {
+        "metier": "Expert en panneaux solaires et photovoltaïque : installation et maintenance  ",
+        "description": "Il est chargé d’installer, de mettre en service, de veiller à l’entretien et la réparation de panneaux photovoltaïques. "
+      },
+      {
+        "metier": " Gestionnaire d’exploitation agricole ",
+        "description": "Il s’agit d’un agriculteur qui est le chef de l'exploitation ; à ce titre, il a les mêmes préoccupations que tous les chefs d'entreprise. "
+      },
+      {
+        "metier": "Gestionnaire de crise en cybersécurité  ",
+        "description": " Il gère l’organisation de la réponse aux cyberattaques délibérées ayant endommagé le système informatique d’une entreprise (ordinateurs, serveurs, imprimantes, téléphones mobiles, tablettes, etc.), mais aussi des malveillances internes à l’entreprise."
+      },
+      {
+        "metier": " Gestionnaire d’e-réputation",
+        "description": "Aussi appelé responsable e-réputation, c’est un spécialiste de la communication sur le web, un expert polyvalent qui s’occupe de l’image d’une entreprise, d’un groupe ou d’un individu sur le web. "
+      },
+      {
+        "metier": "Géomètre – Topographe  ",
+        "description": " Il réalise des relevés topographiques et élabore des plans et dessins qui nécessitent DAO et calculs. Le repérage satellite (GPS) est, désormais, un outil indispensable à ce métier."
+      },
+     
+      {
+        "metier": " Géomètre - Expert foncier ",
+        "description": " Le géomètre-expert intervient afin de définir les limites d'un bien foncier, sécuriser une transaction immobilière ou encore aménager une. Source : StudyramaAussi appelé administrateur de biens, il gère, pour le compte de particuliers ou d’entreprises, la location de leur appartement ou de leur maison."
+      },
+       {
+        "metier": " Gérant d’immeuble ",
+        "description": " Aussi appelé administrateur de biens, il gère, pour le compte de particuliers ou d’entreprises, la location de leur appartement ou de leur maison."
+      },
+      {
+        "metier": "  Hydrobiologiste",
+        "description": " Aussi appelé ingénieur hydrologue, il s’intéresse à la biologie des milieux aquatiques. Grâce à des prélèvements, il analyse l’eau en continu ou en cas de problème. Il est fait appel à l’hydrobiologiste pour des conseils en amont des projets d’aménagement."
+      },
+      {
+        "metier": "Imprimeur 3D  ",
+        "description": "L'imprimeur 3D se charge de donner vie à un objet à l'aide de la modélisation tridimensionnelle. Source : studyrama "
+      },
+      {
+        "metier": " Ingénieur Cloud Computing ",
+        "description": "L’ingénieur cloud computing est en charge du déploiement, du stockage et de la gestion des données sur des serveurs situés hors de l’entreprise, dans des data centers. C’est un spécialiste des algorithmes, de l’architecture de logiciels et réseaux, de la sécurisation des données sensibles dématérialisées et de l’optimisation des consommations d’énergie des data centers. "
+      },
+      {
+        "metier": "  Ingénieur éco-conception",
+        "description": "L’ingénieur éco-conception prend part à la conception de produits industriels en tenant compte de leurs impacts sur l’environnement à chaque étape de leur vie. Oriane.fr "
+      },
+      {
+        "metier": "Ingénieur en énergies renouvelables  ",
+        "description": "L'ingénieur en énergies renouvelables est un spécialiste de la transition énergétique et des nouvelles énergies dites renouvelables. Il travaille sur des projets liés à la biomasse, à l'éolien, à l'hydraulique, au solaire et à la géothermie. Le plus souvent, il spécialisé dans l'une d'entre-elles. Source : cidj.com "
+      },
+      {
+        "metier": " Ingénieur en efficacité énergétique ",
+        "description": " L'ingénieur efficacité énergétique du bâtiment réalise des études permettant de diminuer la consommation d'énergie ou d'intégrer les énergies renouvelables dans un édifice. Il travaille avec les maîtres d'ouvrage avant ou après la construction. Onisep.fr"
+      },
+      {
+        "metier": "Ingénieur agroalimentaire  ",
+        "description": "Il gère la transformation des biens agricoles en produits destinés à la transformation. "
+      },
+      {
+        "metier": " Ingénieur Big Data ",
+        "description": " L’ingénieur Big Data a pour rôle de concevoir et de développer les « tuyaux » de données pour l’entreprise. Il est responsable de mettre en place les systèmes de capture de données en provenance de différentes sources, pour les mettre à disposition des analystes de données. Source : datascientest.com"
+      },
+      {
+        "metier": "  Ingénieur forestier",
+        "description": "Il gère les projets d'aménagement et d'exploitation des forêts sur un territoire donné, tout en respectant l'environnement. "
+      },
+      {
+        "metier": "  Ingénieur Production Industrie pétrolière",
+        "description": "Il supervise l’acheminement du pétrole et du gaz et optimise les méthodes de production. "
+      },
+      {
+        "metier": " Ingénieur en Intelligence artificielle ",
+        "description": "L'ingénieur en intelligence artificielle conçoit des programmes informatiques capables de raisonner comme l'homme afin de répondre à des tâches complexes. Source : cidj.com "
+      },
+      {
+        "metier": "  Ingénieur IoT (Internet of Things)",
+        "description": "Aussi appelé développeur internet des objets connectés, il imagine et déploie des services innovants utiles aux utilisateurs pour recueillir des informations, contrôler et piloter à distance. "
+      },
+      {
+        "metier": " Intégrateur de solutions de sécurité ",
+        "description": "L'intégrateur de solutions de sécurité participe à la conception et à l'intégration de la solution informatique la plus adaptée à l'architecture système de l'entreprise. Source : cidj.com "
+      },
+      {
+        "metier": " Logisticien ",
+        "description": "Le logisticien ou responsable logistique a sous sa responsabilité tout un lot de marchandises à livrer en temps et en heure à ses clients. "
+      },
+      {
+        "metier": "  Logisticien humanitaire",
+        "description": "Aussi appelé, coordonnateur ou responsable logistique, le logisticien humanitaire est un polyvalent, débrouillard qui organise l’acheminement sur le terrain du matériel et des approvisionnements, mais aussi le transport des personnes. "
+      },
+      {
+        "metier": " Manutentionnaire ",
+        "description": "Il est chargé de la manutention des marchandises stockées dans le dépôt d'une entreprise. Il déplace, porte et emballe les produits grâce à des engins non motorisés. Source : cidj.com "
+      },
+      {
+        "metier": " Mécanicien poids lourds ",
+        "description": " Il répare les dysfonctionnements et pannes sur les camions."
+      },
+      {
+        "metier": " Mécatronicien ",
+        "description": "Spécialiste de l’électronique embarqué dans les véhicules, il établit les diagnostics des pannes à l’aide d’outils informatiques. "
+      },
+      {
+        "metier": " Pépiniériste ",
+        "description": "Le pépiniériste produit et élève des végétaux d’extérieur, surtout des arbres et arbustes (fruitiers, forestiers, d’ornement). Il peut se spécialiser dans un type de plantations. "
+      },
+      {
+        "metier": "  Pilote de drone",
+        "description": "Dans le civil ou à l’armée, le ou la pilote de drone télécommande les déplacements d’un drone en fonction de la mission assignée (prise de vue, surveillance...). Source : cidj.com "
+      },
+      {
+        "metier": " Responsable du Computer du Security Incident Response Team (CSIRT) – Centre d’alerte et de réactions aux attaques informatiques ",
+        "description": "Manager d'une équipe de réponse aux incidents de sécurité ciblant les systèmes d'information de l'organisation. Il s'assure de la bonne exécution des investigations et de la coordination des parties prenantes lors d'un incident de sécurité. Source : guardia.school.com "
+      },
+      {
+        "metier": " Responsable de la sécurité des systèmes d’information ",
+        "description": " Il est le garant de la sécurité informatique d'une organisation."
+      },
+      {
+        "metier": " Risk manager ",
+        "description": " Il conseille la direction générale sur la meilleure manière de gérer les risques. Pour cela il anticipe sans cesse des problèmes de toutes sortes (juridiques, financiers, commerciaux…)"
+      },
+      {
+        "metier": "  Roboticien",
+        "description": " Le roboticien conçoit des prototypes d'appareils (robots) faisant appel à des technologies de pointe en mécanique, électrotechnique, électronique, automatique, informatique, vision numérique… source : onisep.fr"
+      },
+      {
+        "metier": "  Spécialiste en cybercriminalité",
+        "description": " Il aide les entreprises dans leur stratégie pour sécuriser leur système d’information et parer à d’éventuelles cyberattaques "
+      },
+      {
+        "metier": " Spécialiste SEO (Search Engine Optimization) ",
+        "description": " Sa mission consiste à améliorer le référencement naturel (SEO, ou Search Engine Optimization) d'un site web, autrement dit sa visibilité. Il est donc chargé de positionner un site web dans les premiers résultats des moteurs de recherche afin de créer du trafic."
+      },
+      {
+        "metier": " Technicien d’analyse biomédicale ",
+        "description": " Parfois appelé laborantin, il effectue les analyses qui permettent au médecin d'établir un diagnostic, de préconiser un traitement ou d'éviter un accident d'anesthésie."
+      },
+      {
+        "metier": " Technicien d’exploitation agricole ",
+        "description": "Il s'occupe essentiellement des travaux de production (semer, récolter…), gérer le bien-être des animaux, veiller au bon état des équipements et des installations et s'assurer de la bonne organisation logistique, commerciale et financière de l'exploitation. "
+      },
+      {
+        "metier": "Technicien jumeau numérique  ",
+        "description": "Attiré par les nouvelles technologies, il maîtrise le fonctionnement des clones virtuels de pièces, d’équipements ou de systèmes d’une usine complète. Son rôle consiste à tester le matériel original, à le corriger ou à être capable de concevoir de nouveaux équipements pour son industrie. Il ou elle compare la pièce et anticipe les problèmes qu’elle pourrait rencontrer ou essaie de l’améliorer pour augmenter sa productivité. Source : L’étudiant.fr "
+      },
+      {
+        "metier": "  Technicien de maintenance en éolien",
+        "description": "Le technicien participe à la maintenance des éoliennes, machines qui utilisent la force du vent pour produire de l’énergie ou pour pomper de l’eau. "
+      },
+      {
+        "metier": "  Technicien de traitement des déchets",
+        "description": "Il effectue des prélèvements, analyse des échantillons de déchets pour organiser leur tri et détermine vers quel site (de tri, de recyclage, de stockage) ils doivent être orientés. Source : L’étudiant.fr "
+      },
+      {
+        "metier": " Traffic manager ",
+        "description": "Aussi appelé responsable gestion de trafic ou responsable web analytics, le traffic manager analyse vos comportements sur un site : temps passé, téléchargements, etc. "
+      },
+      {
+        "metier": " UX-Designer ",
+        "description": " Aussi appelé designer graphique ou designer web mobile, le User experience (UX) designer, conçoit le design et parcours d'un utilisateur sur un site ou une appli."
+      }
+]

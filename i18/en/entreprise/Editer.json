@@ -1,0 +1,25 @@
+
+{
+    "title": " EDIT YOUR ANNOUNCEMENT ",
+    "Employeur": " Employer",
+    "Ville": " City",
+    "Poste": " Position",
+    "Secteur": "Sector ",
+    "Ref": " Reference",
+  
+     "Contrat": "Contract type ",
+    "Niveau": " Level",
+    "Duration": " Length",
+    "Dpublication": "Published on ",
+    "Logo": "Logo ",
+    "Presentation": "Company’s Presentation ",
+    "missions": "Your duties",
+    "Profil": " Profile & Requirements",
+    "Payement": " Salary & other benefits",
+    "dLimite": " Deadline",
+    "Instructions": " Precise how to send the application’s file ",
+  "InstructionPlaceholder": "Tell how to send application file (via email or link or at the office). If necessary, write the name and phone number of the contact person.",
+    "Modifier": "Update ",
+    "Valider": " Send",
+    "Annuler": " Cancel"
+}

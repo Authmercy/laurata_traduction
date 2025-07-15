@@ -1,0 +1,11 @@
+{
+  "title": "S'inscrire",
+  "subtitle": "Rejoignez LAURATA dès aujourd'hui !",
+  "username": "Nom d'utilisateur",
+  "email": "Email",
+  "password": "Mot de passe",
+  "confirmPassword": "Confirmer le mot de passe",
+  "alreadyHaveAccount": "Vous avez déjà un compte ?",
+  "login": "Connectez-vous",
+  "submit": "S'inscrire"
+}

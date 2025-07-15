@@ -1,0 +1,35 @@
+{
+
+    "title": "Services aux étudiants",
+    "quote": "Vous devez soit modifier vos rêves ou améliorer vos compétences.",
+    "author": "Jim Rohn",
+    "subtitle": "Mieux se connaitre pour bien s'orienter et mieux préparer son insertion professionnelle",
+    "description": "Une équipe de professionnels dédiée à vous accompagner dans le choix de la filière d'étude et à faciliter votre insertion professionnelle.",
+    "services": {
+      "orientation": {
+        "title": "ORIENTATION",
+        "description": "Nos conseillers en orientation vous aident à identifier et à choisir la(les) filière(s) ou le(s) métier(s) selon le mieux vos compétences, vos objectifs et votre personnalité."
+      },
+      "thesis": {
+        "title": "MÉMOIRES & THÈSES",
+        "description": "Relecture et révision des mémoires de fin d'études, thèses et autres travaux par des linguistes et rédacteurs chevronnés en langue anglaise, française, allemande ou espagnole."
+      },
+      "international": {
+        "title": "ÉTUDIANTS ÉTRANGERS",
+        "description": "Assistance pour les démarches concernant : la pré-inscription, l'obtention d'un visa étudiant ; l'installation : recherche de logement, etc."
+      },
+      "professionals": {
+        "title": "RENCONTRES AVEC DES PROFESSIONNELS",
+        "description": "Découvre les métiers qui t'intéressent et échange avec des professionnels qui les exercent."
+      },
+      "mentoring": {
+        "title": "MENTORAT & INSERTION PROFESSIONNELLE",
+        "description": "Nos experts vous accompagnent dans la réalisation de votre projet professionnel (techniques de recherche d'emploi, plan d'affaires, etc.)."
+      },
+      "germany": {
+        "title": "ÉTUDIER EN ALLEMAGNE",
+        "description": "Notre réseau de professionnels formés en Allemagne vous donne tous les conseils pour postuler et bien préparer vos études dans les universités et écoles d'ingénieurs allemandes."
+      }
+    },
+    "contact": "Contactez-nous pour plus d'informations ou pour faire part d'une requête particulière."
+  }

@@ -1,0 +1,20 @@
+{
+  "jpo": {
+    "title": "Journées Portes Ouvertes",
+    "heading": "Vous êtes un (futur) bachelier, une étudiante ou un parent ?",
+    "description": "Les Journées Portes Ouvertes (JPO) constituent un excellent moyen d'aller à la découverte d'une institution et de ses infrastructures et, le cas échéant, de rencontrer et échanger avec les équipes pédagogiques ou avec des étudiants inscrits. Elles vous permettront assurément de mieux apprécier si l'institution est faite pour vous ou correspond à vos attentes.",
+    "noResults": "Aucun résultat trouvé.",
+    "eventDetails": {
+      "time": "Heure",
+      "location": "Localisation",
+      "website": "Site web"
+    }
+  },
+   "searchForm": {
+    "datePlaceholder": "Sélectionner des dates",
+    "institutionPlaceholder": "Rechercher Institution",
+    "submitButton": "Afficher",
+    "loadingText": "Chargement...",
+    "dateFormat": "DD/MM/YYYY"
+  }
+}

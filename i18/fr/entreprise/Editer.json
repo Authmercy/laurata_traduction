@@ -1,0 +1,23 @@
+{
+    "title": " ÉDITER VOTRE OFFRE ",
+    "Employeur": " Employeur",
+    "Ville": " Ville",
+    "Poste": " Intitulé du poste",
+    "Secteur": "Secteur ",
+    "Ref": " Référence de l’offre",
+     "Contrat": " Contrat",
+    "Niveau": " Niveau",
+    "Duration": " Durée",
+    "Dpublication": "Date de publication ",
+    "Logo": "Logo ",
+    "Presentation": "Présentation de l'employeur ",
+    "missions": " Vos missions",
+    "Profil": " Profil & Compétences recherchés",
+    "Payement": " Rémunération et autres avantages",
+    "dLimite": " Date limite de candidature",
+    "Instructions": "Instructions pour postuler ",
+   "InstructionPlaceholder": "Indiquez comment postuler (ex : dossier physique, via mail ou lien url) et, le cas échéant, le nom et les coordonnées de la personne à contacter.",
+    "Modifier": "Modifier ",
+    "Valider": " Valider",
+    "Annuler": " Annuler"
+}

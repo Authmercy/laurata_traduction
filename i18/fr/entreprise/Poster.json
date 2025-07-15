@@ -1,0 +1,24 @@
+{
+    "title": "POSTER UN STAGE",
+    "heading": "Trois principales raisons de déposer vos offres de stage sur notre plateforme",
+    "reasons": {
+      "free": {
+        "title": "PUBLICATION GRATUITE",
+        "text": "de vos offres de stage ou de premiers emplois"
+      },
+      "contribute": {
+        "title": "CONTRIBUER À LA RÉALISATION DES ODD 4 ET 10 DE L'ONU",
+        "text": "En garantissant un accès transparent et équitable à vos offres de stage en ligne"
+      },
+      "visibility": {
+        "title": "VISIBILITÉ MAXIMALE",
+        "text": "et illimitée à vos offres de stage et de premiers emplois auprès de leurs cibles"
+      }
+    },
+    "how_to": {
+      "title": "COMMENT FAIRE PUBLIER VOS OFFRES ?",
+      "step1": "Envoyez votre annonce au format PDF, Word ou JPEG à",
+      "email": "info@laurata.com",
+      "step2": "Éditez vous-même votre annonce à l'aide du formulaire ci-dessous"
+    }
+  }

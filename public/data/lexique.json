@@ -1,0 +1,374 @@
+{
+    "A": [
+      {
+        "word": "Admission",
+        "definition": "Processus administratif et académique consistant à vérifier qu’un étudiant remplit les critères l’autorisant à entreprendre un cycle d’études déterminé et à en définir les conditions complémentaires éventuelles."
+      },
+      {
+        "word": "Alternance ",
+        "definition": "Enseignements qui se déroulent alternativement en entreprise et en centre de formation. "
+      },
+      {
+        "word": "Alumni ",
+        "definition": " Anciens élèves (pluriel du latin Alumnus qui signifie « élève »)."
+      },
+      {
+        "word": "Amphithéâtre ",
+        "definition": " L’amphithéâtre (amphi) est une salle de cours de grande dimension pouvant accueillir plusieurs dizaines ou centaines d’étudiants. Il est généralement utilisé pour dispenser les cours magistraux ou pour les conférences."
+      },
+      {
+        "word": "Année académique ",
+        "definition": "Cycle dans l’organisation des missions d’enseignement qui commence en octobre et se termine au mois de juin suivant. "
+      },
+      {
+        "word": "Apprenant ",
+        "definition": " Toute personne, de l’enfant à l’adulte, engagée dans le processus d’acquisition de connaissances et de compétences."
+      }
+      ,
+      {
+        "word": " Apprentissage (par la pratique)",
+        "definition": "En anglais « Learning by doing », Méthode d’acquisition de capacités professionnelles par leur mise en œuvre sur le terrain. "
+      }
+
+    ],
+    "B": [
+        
+      {
+        "word": "Barème ",
+        "definition": "Échelle de notation. Dans le sous-système éducatif francophone les notes sont attribuées sur une échelle de 0 à 20. Dans le sous-système éducatif anglophone les notes sont attribuées sur une échelle de F à A. "
+      },
+        {
+          "word": "Bilan (de compétences) ",
+          "definition": " Le bilan de compétences est un document dans lequel vous retracez tous les jalons de votre parcours : formation, activités extra-professionnelles, centres d’intérêts, stages effectués, postes occupés, réalisations dans les différents postes, connaissances et compétences acquises. Ce document devrait vous rendre apte à citer vos principales compétences et qualités utiles à un employeur potentiel ainsi que les points saillants de votre parcours."
+        },
+        {
+          "word": "Bourse ",
+          "definition": "Aide financière dont bénéficie un étudiant pendant une période donnée de ses études. "
+        },
+        {
+          "word": "Brevet de Technicien Supérieur (BTS) ",
+          "definition": "Le Brevet de Technicien Supérieur forme des spécialistes d’un domaine professionnel, capables d’occuper des postes de collaborateurs d’ingénieur ou de chef de service ; il se prépare en 2 ans après le bac. "
+        }
+    ],
+    "C": [
+        
+     
+        {
+          "word": "Campus ",
+          "definition": " Site universitaire regroupant des lieux d’enseignement, de recherche, de restauration et une bibliothèque, etc."
+        },
+        {
+          "word": "Classes préparatoires aux grandes écoles (CPGE) ou Prépas ",
+          "definition": "En France, les Prépas sont un cursus de deux ans effectués dans des lycées prestigieux (Henri IV, Louis-le-Grand, etc.) et destinés à préparer les étudiants aux concours d’accès aux grandes écoles d’ingénieurs, de commerce, etc.Au Cameroun, seule une poignée d’IPES (Prépa VOGT, UCAC, Prépa Saint Jean, etc.) proposent ce parcours en partenariat avec des grandes écoles d’ingénieurs étrangères, majoritairement françaises "
+        },
+        {
+          "word": " Contrôle continu (CC)",
+          "definition": " Évaluation d’un enseignement par deux épreuves ou plus. Le contrôle continu peut être effectué sous forme d’examen écrit ou oral, compte rendu, devoir à remettre à l’enseignant, exposé…  Il a lieu en dehors des sessions d’examens."
+        },
+        {
+          "word": " Convention de stage",
+          "definition": " Document formalisant l'affectation d'un étudiant à un stage. Ce document, paramétrable par l’établissement, consigne les devoirs du stagiaire et de l'établissement d'accueil du stagiaire."
+        },
+        {
+          "word": "Cours magistral ",
+          "definition": "Cours dans lequel la matière est présentée oralement à une classe et qui exige une participation minimale de la part des étudiants. "
+        },
+        {
+          "word": "Crédits ECTS ",
+          "definition": " Les crédits ECTS (European Credits Transfer System ou en français Système européen de transfert et d’accumulation de crédits) récompensent la validation d’une unité d’enseignement (UE). Ils permettent d’améliorer la transparence et la comparaison entre les programmes d’études et les diplômes. Un semestre = 30 ECTS, une année d'étude = 60 ECTS."
+        },
+        {
+          "word": " Cursus",
+          "definition": "Ensemble cohérent d’un ou plusieurs cycles d’études constituant une formation initiale déterminée ; au sein d’un cursus, les grades intermédiaires peuvent être « de transition », donc avoir pour finalité principale la préparation au cycle suivant, et le grade final est « professionnalisant ». "
+        },
+        {
+          "word": " Cycle",
+          "definition": "Études menant à l’obtention d’un grade académique. L’enseignement supérieur camerounais est organisé en trois cycles (Licence-Master-Doctorat). "
+        }
+    ],
+    "D": [
+        
+      
+        {
+          "word": "Décrochage ",
+          "definition": "Abandon, par un élève ou un étudiant en difficulté, d’une formation ou d’une qualification avant son terme. "
+        },
+        {
+          "word": "Diplôme Universitaire de Technologie (DUT) ",
+          "definition": "Le Diplôme Universitaire de Technologie, plus généraliste que le BTS, forme des professionnels polyvalents dans un large domaine d’activité pour s’adapter à une famille d’emplois ; il se prépare en 2 ans après le bac. "
+        },
+        {
+          "word": "Distance (à) ",
+          "definition": "Qui ne nécessite pas la présence des personnes concernées. Par opposition à « en présence ». Bien que très répandue, la forme « en distanciel » n’est pas recommandée par l’Académie Française. "
+        },
+        {
+          "word": "Doctorat ",
+          "definition": " Diplôme de niveau Bac + 8, accessible aux titulaires d'un master recherche, il sanctionne un travail de recherche original dans une équipe de recherche et atteste de l'aptitude à mener des recherches de haut niveau."
+        },
+        {
+          "word": "Domaine de formation ",
+          "definition": "Regroupement de disciplines dans un ensemble large et cohérent. Exemple : « Sciences & Technologie » "
+        },
+        {
+          "word": "Doyen ",
+          "definition": " Le doyen est un enseignant élu ou nommé directeur de son UFR ou de sa faculté."
+        }
+    ],
+    "E": [
+        
+        {
+          "word": "E-learning ",
+          "definition": " Terme anglais pour e-formation. Utilisation des nouvelles technologies multimédias et de l’Internet, pour améliorer la qualité de l’apprentissage en facilitant l’accès à des ressources et des services, ainsi que les échanges et la collaboration à distance (source : Commission européenne, 2000)."
+        },
+        {
+          "word": " Équivalence",
+          "definition": "Reconnaissance d’un cours réussi dans un autre établissement d’enseignement comme faisant partie d’un programme d’études dans l’Université sollicitée. "
+        }
+        
+    ],
+    "F": [
+        {
+            "word": "Filière ",
+            "definition": "Dans le système LMD, les formations sont regroupées en filière ou mentions. Exemple : Biochimie, Biologie végétale, etc. "
+          },
+          {
+            "word": "Finalité ",
+            "definition": "Option consacrée à des études à caractère fondamental qui permettent la poursuite d’études plus approfondies vers le Master ou le Doctorat. "
+          },
+          {
+            "word": " Formation académique",
+            "definition": " Option consacrée à des études à caractère fondamental qui permettent la poursuite d’études plus approfondies vers le Master ou le Doctorat."
+          },
+          {
+            "word": "Formation à distance ",
+            "definition": "La formation à distance désigne traditionnellement les situations pédagogiques et les systèmes de formation où la présence de l’enseignant ou du formateur n’est pas nécessaire à l’activité d’apprentissage. La formation à distance fait appel à des moyens de communication électroniques. "
+          },
+          {
+            "word": " Formation continue",
+            "definition": "Ce type de formation s'adresse aux personnes ayant déjà travaillé et qui sont donc en reprises d'étude, dans l’objectif de se spécialiser. "
+          },
+          {
+            "word": "Formation en alternance ",
+            "definition": "Succession de périodes de formation organisées entre le centre de formation et en entreprise. "
+          },
+          {
+            "word": " Formation initiale",
+            "definition": " Cursus menant à la délivrance d’un grade académique. Ce type de formation s'adresse aux étudiantes et étudiants qui poursuivent leurs études après l'obtention de leur baccalauréat."
+          },
+          {
+            "word": " Formation professionnelle",
+            "definition": "Option consacrée à des études à caractère professionnel qui permettent l’insertion dans le monde socioéconomique. "
+          }
+    ],
+    "G": [
+        
+    
+        {
+          "word": " Grade académique",
+          "definition": "Titre sanctionnant la réussite d’un cycle d’études correspondant à un niveau de certification, reconnu par ce décret et attesté par un diplôme. "
+        }
+    ],
+    "H": [
+        
+
+        {
+          "word": " Habilitation à diriger des recherches (HDR)",
+          "definition": "L’habilitation à diriger des recherches (HDR) est la plus haute qualification universitaire. Diplôme national de l’enseignement supérieur pouvant être obtenu après un doctorat. "
+        }
+    ],
+    "I": [
+        
+       
+        {
+          "word": "Institut Universitaire de Technologie (IUT) ",
+          "definition": " Établissements intégrés aux universités qui préparent au DUT et dispensent une formation dans un secteur professionnel."
+        }
+    ],
+    "J": [
+        
+        
+      
+        {
+          "word": "Jury ",
+          "definition": "Instance académique chargée, à titre principal, de l’admission aux études, du suivi des étudiants, de l’évaluation des acquis d’apprentissage, de leur certification et de l’organisation des épreuves correspondantes. "
+        }
+    ],
+    "L": [
+        
+        {
+          "word": "L1, L2, L3 ",
+          "definition": " On désigne ainsi les trois années de formation successives de la Licence."
+        }
+    
+    ],
+    "M": [
+        
+      
+        {
+          "word": " Massive Open Online Course (MOOC)",
+          "definition": "Formations en ligne ouvert à tous. "
+        },
+        {
+          "word": " M1, M2",
+          "definition": "On désigne ainsi les deux années successives de formation du Master. "
+        },
+        {
+          "word": " Mention",
+          "definition": "À l'intérieur d'un domaine de formation, les licences et masters se déclinent en mentions correspondant aux enseignements fondamentaux. Exemples : Arts du spectacle, Sciences du langage, etc. "
+        },
+        {
+          "word": "Moyenne Générale Pondérée (MGP) ",
+          "definition": " Autorisation accordée à un étudiant ayant partiellement validé un niveau de formation à s’inscrire l’année suivante à toutes les UEs non validées du niveau inférieur et aux UEs du niveau supérieur sous conditions."
+        }
+    ],
+    "N": [
+        
+    
+        {
+          "word": "Numerus Clausus ",
+          "definition": "« Nombre restreint » en français ; désigne le nombre d’étudiants, fixé par arrêté ministériel, autorisé à poursuivre chaque année leurs études dans une filière précise. "
+        }
+    ],
+    "O": [
+        
+     
+    ],
+    "P": [
+        
+        
+        {
+          "word": "Parcours ou Spécialité ",
+          "definition": " Les mentions se subdivisent en spécialités ou parcours. Un parcours correspond à une offre de formation sanctionnée par un diplôme."
+        },
+        {
+          "word": "Partiels ",
+          "definition": " Évaluations de fin de semestre."
+        },
+        {
+          "word": "Passerelle ",
+          "definition": "Possibilité offerte à l’étudiant de changer de parcours, pour rectifier son choix initial, tout en conservant les acquis (unités d’enseignement acquises). "
+        },
+        {
+          "word": " Plagiat",
+          "definition": "Action qui consiste à s’emparer, délibérément ou par omission, des mots ou des idées de quelqu’un d’autre et de les présenter comme siens. "
+        },
+        {
+          "word": "Présence (en) ",
+          "definition": "Se dit d’un enseignement ou d’une formation qui met en présence enseignants et apprenants. Bien que très répandue, la forme « en présentiel » n’est pas recommandée par l’Académie Française. "
+        },
+        {
+          "word": " Primo-étudiant / Primant",
+          "definition": "Étudiant de première année inscrit pour la première fois. "
+        }
+    ], 
+     "Q": [
+        
+        {
+          "word": "Q.C.M., acronyme de « Question à Choix Multiples » ",
+          "definition": " Sert à désigner les travaux donnés aux étudiants sous forme de liste de questions pour lesquelles plusieurs réponses sont proposées et parmi lesquelles les étudiants doivent préciser leur choix. En anglais : M.C.Q. pour « Multiple Choice Question »."
+        }
+    ],
+    "S": [
+        
+      
+        {
+          "word": " Savoir-être",
+          "definition": "Terme communément employé pour définir un savoir-faire relationnel, c'est-à-dire, des comportements et attitudes attendus dans une situation donnée. "
+        },
+        {
+          "word": "Savoir-faire ",
+          "definition": "Mise en œuvre d'un savoir et d'une habileté pratique maîtrisée dans une réalisation spécifique. "
+        },
+        {
+          "word": "Semestre ",
+          "definition": " L'année universitaire dans le système LMD est divisée en deux semestres. Chaque semestre validé vaut 30 crédits."
+        },
+        {
+          "word": " Spécialité ou Parcours",
+          "definition": "Les mentions se subdivisent en spécialités ou parcours. L'identification des spécialités et des parcours vise à l'affinement et à la diversification des contenus de formation. "
+        },
+        {
+          "word": "Syllabus ",
+          "definition": " Descriptif du contenu du cours."
+        }
+    ],
+    "T": [
+        
+        {
+          "word": "Télé-enseignement ",
+          "definition": " Forme particulière d'enseignement à distance ; c'est une application adaptée notamment à l'enseignement spécialisé, soit dans les universités, permettant de bénéficier des meilleurs cours existants, soit comme une option à bas coût pour la formation continue des professionnels, en utilisant des outils de télécommunication."
+        },
+        {
+          "word": " Titre",
+          "definition": "Diplôme ou autre certificat délivré par une autorité compétente attestant que des acquis de formation spécifiques ont été atteint, en règle générale suite à l’accomplissement réussi d’un cursus d’études reconnu. "
+        },
+        {
+          "word": "T.O.E.F.L. ",
+          "definition": "Test of English as a Foreign Language, test de niveau de langue anglaise. "
+        },
+        {
+          "word": " T.O.I.E.C.",
+          "definition": "Test of English for International Communication, test de niveau langue anglaise. "
+        },
+        {
+          "word": "Travaux dirigés ",
+          "definition": " Les travaux dirigés (TD) sont un type d'enseignement qui permet d'appliquer les connaissances apprises pendant les cours théoriques ou d'introduire des notions nouvelles. Dans un groupe restreint, les étudiants travaillent individuellement sur des exercices d'application ou de découverte, en présence du professeur, qui intervient pour aider et pour corriger les exercices."
+        },
+        {
+          "word": "Travaux pratiques ",
+          "definition": "Les travaux pratiques (TP) sont un type d'enseignement fondé sur l'apprentissage pratique avec en particulier la réalisation d'expériences permettant de vérifier et compléter les connaissances dispensées dans les cours théoriques. "
+        },
+        {
+          "word": "Tronc commun ",
+          "definition": " Ensemble des enseignements obligatoires communs à tous les étudiants quel que soit le choix de l’enseignement optionnel en 1ère année ou de l’option de 2ème année. "
+        },
+        {
+          "word": "Tuteur (pédagogique) ",
+          "definition": "Enseignant qui accompagne l’étudiant pendant son stage. "
+        },
+        {
+          "word": " Tutorat",
+          "definition": " Le tutorat apparaît dans la formation avec l'alternance formation/travail en situation d'entreprise (ex : chantier école). Dans ces situations, le tuteur est l'homme chargé de suivre l'individu en formation, de l'assister dans son parcours."
+        }
+    ],
+    "U": [
+        
+        {
+          "word": " Unité d’enseignement (UE)",
+          "definition": "Activité d’apprentissage ou ensemble d’activités d’apprentissage qui sont regroupées parce qu’elles poursuivent des objectifs communs et constituent un ensemble pédagogique au niveau des acquis d’apprentissage attendus. "
+        },
+        {
+          "word": "Unité de Formation et de Recherche (UFR) ",
+          "definition": "C’est la composante d’enseignement de l’université. L’UFR est parfois appelée « Faculté » et le directeur d’UFR est parfois appelé « Doyen ». "
+        }
+       
+    ],
+    "V": [
+        
+        {
+          "word": " Validation des acquis de l’expérience (VAE) ",
+          "definition": " Processus d’évaluation et de reconnaissance des acquis d’apprentissage issus de l’expérience ou de la formation et des compétences d’un candidat dans le contexte d’une admission aux études."
+        }
+    ],
+    "W": [
+        
+        {
+          "word": "Webinar ",
+          "definition": " Conférence organisée en ligne à laquelle les participants peuvent assister en direct."
+        }
+    ],
+    "X": [
+        
+       
+    ],
+    "Y": [
+        
+      
+    ],
+    "Z": [
+        
+  
+    ]
+   
+  }
+  

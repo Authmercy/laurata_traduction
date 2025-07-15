@@ -1,0 +1,11 @@
+{
+  "title": "Sign Up",
+  "subtitle": "Join LAURATA today!",
+  "username": "Username",
+  "email": "Email",
+  "password": "Password",
+  "confirmPassword": "Confirm Password",
+  "alreadyHaveAccount": "Already have an account?",
+  "login": "Login",
+  "submit": "Sign Up"
+}

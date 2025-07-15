@@ -1,0 +1,286 @@
+{
+    "1": [
+        { "id": 1,
+            "question": " Lorsque vous êtes/étiez à la recherche d’un stage, comment procédez-vous/ avez-vous procédé ?",
+            "type": "mcq",
+            "rule":" ",
+            "answers": [
+                {
+                    "A": " En parcourant les annonces en ligne ",
+                    "B": " En envoyant des candidatures spontanées ",
+                    "C": "En passant par mes contacts ",
+                    "D": " Autres"
+                 
+                }
+            ]
+        },
+         { "id": 2,
+        "question": "  Quelle est/a été la durée de votre stage ?",
+        "type": "mcq",
+        "rule":" ",
+        "answers": [
+            {
+                "A": "1 à 2 mois ",
+                "B": "3 à 4 mois ",
+                "C": "6 mois ",
+                "D": "Plus de 6 mois "
+            }
+        ]
+    },
+    { "id": 3,
+    "question": "Votre stage était-il rémunéré ou receviez-vous un forfait pour couvrir les frais de transport ?",
+    "type": "mcq",
+    "rule":" ",
+    "answers": [
+        {
+            "A": "Oui ",
+            "B": " Non"
+        }
+    ]
+},
+{ "id": 4,
+"question": "Votre arrivée (accueil par un responsable et présentation au personnel) au sein de la structure a-t-elle été bien préparée par cette dernière ? ",
+"type": "mcq",
+"rule":" ",
+"answers": [
+    {
+          "A": "Oui ",
+            "B": " Non"
+    }
+]
+},
+{ "id": 5,
+"question": "En matière d’organisation : aviez-vous un espace à vous, reçu de la documentation sur la structure, un maître de stage désigné ? ",
+"type": "mcq",
+"rule":" ",
+"answers": [
+    {
+        
+        "A": "Oui ",
+        "B": " Non"
+    }
+]
+},
+{ "id": 6,
+"question": "Quels types de tâches avez-vous menés sous la supervision de votre maître de stage ?",
+"type": "text",
+"rule":" "
+},
+{ "id": 7,
+"question": "Avez-vous été satisfait(e) de la qualité du mentorat de votre maître de stage ",
+"type": "mcq",
+"rule":" (A-t-il pu apporter des explications à vos questions, était-il relativement disponible quand vous le sollicitiez, a-t-il été d’un grand support dans la rédaction de votre rapport de stage) ",
+"answers": [
+    {
+        "A": " Oui, très satisfait(e) ",
+        "B": " Oui, moyennement",
+        "C": "Non "
+    }
+]
+},
+{ "id": 8,
+"question": "Votre stage vous a-t-il permis de développer vos compétences ? ",
+"type": "mcq",
+"rule":" ",
+"answers": [
+    {
+         "A": "Oui ",
+        "B": " Non"
+    }
+]
+},
+{ "id": 9,
+"question": "Quels aspects avez-vous le plus apprécié pendant votre stage ? ",
+"type": "text",
+"rule":" "
+},
+
+{ "id": 10,
+"question": " Quels aspects avez-vous le moins apprécié pendant votre stage ? ",
+"type": "text",
+"rule":" "
+
+},
+{ "id": 11,
+"question": "Avez-vous noué des contacts professionnels ? ",
+"type": "mcq",
+"rule":" ",
+"answers": [
+    {
+         "A": "Oui ",
+        "B": " Non"
+    }
+]
+},   
+{ "id": 12,
+"question": " Avez-vous atteint les objectifs du stage ? ",
+"type": "mcq",
+"rule":" ",
+"answers": [
+    {
+        "A": "Oui ",
+        "B": " Non"
+    }
+]
+},   
+{ "id": 1,
+"question": "Recommanderiez-vous un stage dans cette structure ? ",
+"type": "mcq",
+"rule":" ",
+"answers": [
+    {
+        "A": "Oui ",
+        "B": " Non"
+    }
+]
+
+}
+
+
+],
+
+"2":[
+   
+        { "id": 1,
+"question": " Selon vous l’obtention d’un diplôme d’études supérieures apporte-t-il un réel avantage pour l’insertion professionnelle ?",
+"type": "mcq",
+"rule":" ",
+"answers": [
+    {
+        "A": "Oui ",
+        "B": " Non",
+            "C": " Je ne sais pas"
+    }
+]
+
+},
+{ "id": 2,
+"question": " Quel rôle ont joué (joueront) vos parents dans votre orientation académique ou professionnelle ?",
+"type": "mcq",
+"rule":" ",
+"answers": [
+    {
+        "A": "Déterminant ",
+        "B": " Important",
+        "C": " Négligeable",
+        "D": " Aucun"
+    }
+]
+
+},
+    
+{ "id": 3,
+"question": "Quel critère par ordre d’importance compte (a) le plus (compté) dans le choix de l’institution pour vos études supérieures ? ",
+"type": "mcq",
+"rule":" ",
+"answers": [
+    {
+        "A": "Sa réputation ",
+        "B": " Le coût de la formation",
+        "C": "La ville ",
+        "D":"Ses infrastructures "
+    }
+]
+
+},
+    
+{ "id": 4,
+"question": "Quel critère par ordre d’importance compte (a) le plus (compté) dans le choix de l’institution pour vos études supérieures ? ",
+"type": "mcq",
+"rule":" ",
+"answers": [
+    {
+        "A": "Sa réputation ",
+        "B": " Le coût de la formation",
+        "C": " La ville",
+        "D": " Ses infrastructures"
+    }
+]
+
+},
+    
+{ "id": 5,
+"question": "Dans vos démarches relatives à la poursuite de vos études post-secondaires, comment vous êtes-vous renseigné ? ",
+"type": "mcq",
+"rule":"(Plusieurs réponses possibles) ",
+"answers": [
+    {
+        "A": "Portes ouvertes des institutions ",
+        "B": " Conseiller d’orientation",
+         "C": "Recherches sur Internet ",
+        "D": " Amis, proches ou famille",
+         "E": "Articles de journaux ",
+        "F": " Émissions télé",
+         "G": "Autres "
+      
+    }
+]
+
+},
+    
+{ "id": 6,
+"question": "Pour quelle(s) raison (s) avez-vous choisi votre filière d’études ?  ",
+"type": "mcq",
+"rule":" ",
+"answers": [
+    {
+        "A": "Intérêt pour la discipline ",
+        "B": " Elle vous a été recommandée par un conseiller",
+         "C": "Par défaut faute de mieux ",
+        "D": " La famille a insisté pour que vous le fassiez",
+         "E": "Vous avez un projet professionnel précis ",
+        "F": "Par curiosité",
+         "G": "Vous pensez qu’elle vous permettra d’obtenir un emploi ",
+               "I": "Parce que vous réussissez dans cette discipline "
+      
+    }
+]
+
+},
+    
+{ "id": 7,
+"question": "Comment vous préparez-vous aux concours aux grandes écoles ? ",
+"type": "mcq",
+"rule":" ",
+"answers": [
+    {
+        "A": "Prépa ",
+        "B": " En groupe",
+        "C": "Seul.e", 
+        "D": "En binôme" 
+    }
+]
+
+},
+    
+{ "id": 8,
+"question": " Travaillez-vous parallèlement à vos études ?",
+"type": "mcq",
+"rule":" ",
+"answers": [
+    {
+        "A": "Oui ",
+        "B": " Non"
+    }
+]
+
+}
+
+
+
+
+]
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

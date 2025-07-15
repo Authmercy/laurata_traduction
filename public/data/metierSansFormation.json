@@ -1,0 +1,200 @@
+[
+    {
+      "metier": "       Accastilleur   ",
+      "description": "  L’accastilleur habille le pont du bateau et pose les matériels d'équipements, de manœuvre et de navigation sur les bateaux de plaisance.       "
+    },
+    {
+      "metier": " Acupuncteur  ",
+      "description": " L’acupuncteur est un médecin spécialiste de la médecine traditionnelle chinoise. À l'aide de fines aiguilles qu'il insère sous la peau, il stimule des points physiologiques (tissus sous-cutanés ou muqueuses) du corps pour traiter des problèmes et des pathologies tant psychiques que psychiques. Source : cidj.com  "
+    },
+    {
+        "metier": "    Agent de joueur      ",
+        "description": "       L’agent de joueur est un intermédiaire qui conseille les sportifs (joueur ou entraîneur) dans le choix d'un club et négocie le montant et les conditions de leur contrat.  "
+      },
+      {
+        "metier": "  Architecte Big Data ",
+        "description": " Il conçoit des solutions techniques capables de gérer et de stocker de gros volumes de données. Son rôle est d’organiser la récupération, la gestion et le stockage des données brutes.  "
+      },
+      {
+        "metier": "    Astronaute      ",
+        "description": "    Généralement recruté par une agence spatiale (NASA, ESA, etc.), l’astronaute est un spécialiste pluridisciplinaire qui mène des missions scientifiques dans l’espace.     "
+      },
+      {
+        "metier": " Astronome  ",
+        "description": " L’astronome observe et étudie l’origine et l'évolution de l'univers, fait de la recherche fondamentale et peut enseigner. Source : cidj.com  "
+      },
+      {
+        "metier": "      Audioprothésiste    ",
+        "description": "  L’audioprothésiste effectue, sur prescription médicale, le choix, l’adaptation et le contrôle d’efficacité des appareils. Il explique, avec pédagogie, leur fonctionnement et leur entretien à des patients souvent très handicapés par leur déficience. Source : studyrama.com       "
+      },
+      {
+        "metier": " Bijoutier-joaillier  ",
+        "description": "  Le bijoutier-joaillier fabrique bagues, bracelets, colliers, broches en utilisant l’or, l’argent, le platine souvent agrémentés de pierres précieuses. Il ou elle crée, transforme ou restaure les pièces qui lui sont confiées. Source : cidj.com "
+      },
+      {
+        "metier": "  Bio-informaticien        ",
+        "description": "     Biologiste qui développe des logiciels permettant l’exploitation efficace de données récoltées lors d’expériences. En effet, la recherche biotechnologique, biomédicale ou sur le génome humain nécessitent de recourir à des algorithmes très puissants, des techniques avancées.    "
+      },
+      {
+        "metier": "  Biostatisticien ",
+        "description": " Il aide les chercheurs à planifier leurs expériences et en analyser les résultats. Il utilise ses compétences statistiques et informatiques dans les domaines de la santé, de la biologie, de l’agroalimentaire, etc. Source : studyrama.com  "
+      },
+      {
+        "metier": "    Capitaine (marine marchande)      ",
+        "description": "     Aussi appelé commandant, il a sous ses ordres un équipage dont l’importance varie selon la taille du navire et le type d’activité ; il assure également la sécurité des passagers et de l’équipage, le transport de conteneurs, de passagers ou de marchandises, le bon déroulement des opérations et amène le navire à bon port. Source : studyrama.com    "
+      },
+      {
+        "metier": "Chef d’orchestre   ",
+        "description": "  Le chef d’orchestre coordonne l’exécution et l’interprétation d’une œuvre en fonction des instruments de l’orchestre. Il est le chef des interprètes. Source : studyrama.com "
+      },
+      {
+        "metier": "     Chiropracteur ou chiropraticien     ",
+        "description": "     Le chiropracteur soigne avec ses mains, en se concentrant sur les systèmes nerveux et musculo-squelettique tout en vous évitant médicaments et chirurgie.    "
+      },
+      {
+        "metier": " Chocolatier-confiseur  ",
+        "description": "  Il se charge de la préparation de la pâte, la garniture, la cuisson et la décoration de ses produits à base de chocolat. "
+      },
+      {
+        "metier": "    Coboticien      ",
+        "description": "  Les ingénieurs en cobotique conçoivent, développent et assurent la maintenance des robots collaboratifs c’est-à-dire des robots qui interagissent avec l’homme à l’aide de bras articulés ou robotisés. Source : cidj.com       "
+      },
+      {
+        "metier": "  Contrôleur de la circulation aérienne ",
+        "description": " Le contrôleur de la circulation aérienne, logé dans la tour de contrôle et communément appelé « aiguilleur du ciel », dirige en toute sécurité les aéronefs avant le décollage, tout au long du vol jusqu’à leur atterrissage à l’aéroport de destination.  "
+      },
+      {
+        "metier": "     Éducateur de chiens guides d’aveugles     ",
+        "description": "   Le travail de ce professionnel consiste à éduquer des chiens, la plupart du temps des labradors, qui viendront en aide aux personnes non-voyantes ou malvoyantes. Source : studyrama.com      "
+      },
+      {
+        "metier": "  Entraîneur sportif ",
+        "description": "  Il a pour mission d’encadrer ses athlètes afin qu’ils soient opérationnels dans les différentes compétions où ils sont engagés. Source : Studyrama.com "
+      },
+      {
+        "metier": "      Guide de haute montagne    ",
+        "description": "  Le guide de haute montagne conduit et accompagne des personnes dans des excursions ou des ascensions.       "
+      },
+      {
+        "metier": " Hydrogéologue  ",
+        "description": " Spécialiste des eaux souterraines. Il recherche les nappes phréatiques à exploiter et les surveille afin de limiter toute pollution. Source : studyrama.com  "
+      },
+
+      {
+        "metier": "       Ingénieur aéronautique et aérospatial   ",
+        "description": "  Il conçoit, expérimente, fabrique et entretient les avions, hélicoptères et autres appareils volants (drones, montgolfières, etc.)     "
+      },
+      {
+        "metier": "  Ingénieur Cloud Computing ",
+        "description": " L’ingénieur cloud computing est en charge du déploiement, du stockage et de la gestion des données sur des serveurs situés hors de l’entreprise, dans des data centers. C’est un spécialiste des algorithmes, de l’architecture de logiciels et réseaux, de la sécurisation des données sensibles dématérialisées et de l’optimisation des consommations d’énergie des data centers.  "
+      },
+      {
+        "metier": "      Ingénieur électronicien des systèmes de la sécurité aérienne    ",
+        "description": "  L’ingénieur électronicien des systèmes de la sécurité aérienne (IESSA) gère les systèmes de sécurité aérienne pour permettre aux contrôleurs d’assurer le suivi du contrôle aérien. Source : cidj.com         "
+      },
+      {
+        "metier": "  Ingénieur ferroviaire ",
+        "description": "  L’ingénieur ferroviaire est spécialiste des systèmes de transport sur rail. On le trouve aussi bien dans la construction, la surveillance que dans la signalisation, la sécurité ou l’exploitation. Source : cidj.com "
+      },
+      {
+        "metier": "    Ingénieur météorologue      ",
+        "description": "    L’ingénieur météorologue est un spécialiste des sciences météo-climatique. Il travaille sur de multiples domaines : modélisation de l’atmosphère et de l’océan, hydrologie, qualité de l’air, énergies renouvelables, calcul scientifique, changement climatique et bien entendu les prévisions météorologiques. Source : cidj.com     "
+      },
+      {
+        "metier": "  Ingénieur Sûreté-exploitation ",
+        "description": "  L’ingénieur sûreté-exploitation veille au respect des règles de sécurité dans le domaine de l’industrie nucléaire. À lui de prendre les dispositions nécessaires afin d’assurer la protection des hommes et des installations. "
+      },
+      {
+        "metier": "    Juriste en cybercriminalité      ",
+        "description": "    Expert du droit des technologies de l’information et de la communication spécialisé dans les questions de cybersécurité et de protection des données. Source : studyrama.com     "
+      },
+      {
+        "metier": " Maître de chai  ",
+        "description": "  En viticulture, le maître de chai est le responsable de la cave. Il supervise la fabrication du vin de l’arrivée du raisin à la mise en bouteille. Source : Studyrama.com "
+      },
+      {
+        "metier": "       Maître-chien   ",
+        "description": "  Le maître-chien, parfois appelé dresseur, agent cynophile de sécurité ou conducteur, dresse des chiens dans différents objectifs : sauvetage, défense et sécurité. Source : cidj.com       "
+      },
+      {
+        "metier": " Maître-nageur sauveteur  ",
+        "description": " Il assure la sécurité d'un lieu de baignade et dispense des cours de natation à toutes sortes de publics. Source : cidj.com  "
+      },
+      {
+        "metier": " Maquettiste automobile ",
+        "description": "  Il réalise des maquettes automobiles (modèles réduits ou à taille réelle) à partir des plans réalisés par les designers. "
+      }
+      ,
+      {
+        "metier": "  Mécanicien de maintenance aérienne",
+        "description": "Le mécanicien avion ou mécanicien de maintenance aéronautique assure la maintenance quotidienne de l’ensemble de l’appareil avant et après le vol. Il est généralement spécialisé dans un domaine particulier. Source : cidj.com   "
+      },
+      {
+        "metier": " Moniteur de plongée ",
+        "description": "  Il encadre et enseigne la pratique de la plongée auprès de plongeurs amateurs ou confirmés. Source : cidj.com "
+      }
+      ,
+      {
+        "metier": " Moniteur d’escalade ",
+        "description": " Le moniteur d’escalade encadre des jeunes ou des adultes de tout niveau (loisir ou compétition) sur des sites naturels ou artificiels. Il ou elle leur enseigne les techniques de grimpe dans le respect des consignes de sécurité.  "
+      }
+      ,
+      {
+        "metier": " Officier de la marine marchande ",
+        "description": "  Il occupe des fonctions de direction et de commandement. En tant que chefs d’équipe, ils font régner une solidarité sans faille, tradition chère à la marine marchande "
+      }
+      ,
+      {
+        "metier": " Océanologue ",
+        "description": "  Spécialiste de la mer, l’océanologue étudie les eaux, les fonds marins et sa faune et sa flore afin de protéger son environnement et d’en exploiter les ressources. Source : studyrama.com "
+      },
+      {
+        "metier": "Œnologue  ",
+        "description": " L’œnologue, étymologiquement « celui qui possède la science du vin », a pour mission de s’assurer que le vin produit est de bonne qualité. Il supervise toutes les étapes de fabrication, pour conseiller et épauler les viticulteurs (élaboration du goût, conseils en rendement, en sécurité alimentaire, etc.).  "
+      }
+      ,
+      {
+        "metier": "  Orthophoniste",
+        "description": " Professionnel de la santé, l’orthophoniste dépiste, évalue et rééduque les troubles de la communication orale et écrite chez les personnes.  "
+      },
+      {
+        "metier": "Pilote de drone  ",
+        "description": "Dans le civil ou à l’armée, le ou la pilote de drone télécommande les déplacements d’un drone en fonction de la mission assignée (prise de vue, surveillance...). Source : cidj.com "
+      },
+      {
+        "metier": "Professeur de musique (conservatoire)  ",
+        "description": "  Spécialiste qui enseigne un instrument, duquel il joue lui-même parfaitement, ou qu’un style de musique. Source : studyrama.com"
+      },
+      {
+        "metier": " Relieur-doreur ",
+        "description": "  Le relieur-doreur est un artisan d'art dont le métier est très ancien. Il réalise la fabrication manuelle d'un livre à partir de feuilles imprimées, ou bien restaure des livres anciens. Brochure, reliure et dorure demandent un excellent savoir-faire. Source : cidj.com"
+      },
+      {
+        "metier": "Responsable de salle de sport ",
+        "description": "  Il se charge de la promotion du lieu, il se doit d’être à l’écoute des nouvelles tendances, des attentes des abonnés, par exemple en proposant régulièrement de nouvelles activités et des équipements innovants, mais aussi en créant des événements. Source : studyrama.com "
+      },
+      {
+        "metier": " Spécialistes de l’industrie du Nucléaire ",
+        "description": "  Métiers du secteur de l’industrie nucléaire :  technicien, soudeur, robinetier, ingénieur développement, etc."
+      },
+      {
+        "metier": "  Taxidermiste",
+        "description": " Le.la taxidermiste rend l’apparence du vivant à la dépouille d’un animal dans un but artistique, scientifique ou pédagogique. Les animaux ainsi empaillés sont voués à la conservation ou à l’exposition. Source : studyrama.com  "
+      },
+      {
+        "metier": "Technicien en radioprotection  ",
+        "description": "  Sur un chantier nucléaire, le technicien en radioprotection veille à prévenir les risques radiologiques en amont des travaux et pendant la phase de réalisation. "
+      },
+      {
+        "metier": " Tonnelier ",
+        "description": "   Il fabrique ou répare des fûts en bois de toutes formes et de toutes dimensions qui servent à l’élevage des vins et des alcools."
+      },
+      {
+        "metier": " Vigneron ",
+        "description": "Agriculteur spécialisé dans les vignes et la production de vins. Il cultive et s’occupe continuellement de ses vignes pour assurer des productions viticoles de qualité. Source : studyrama.com   "
+      },
+      {
+        "metier": "  Vitrailliste (maître verrier)",
+        "description": "   Il conçoit des objets de décoration, des verres ou des vases à partir de verre à fusion placé à l’extrémité d’une canne dans laquelle il souffle."
+      }
+  ]
