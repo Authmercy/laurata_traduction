@@ -20,7 +20,7 @@ export default function WelcomePage2() {
     
 
       <div
-        className="bg-cover bg-center bg-no-repeat flex flex-col max-w-screen min-h-screen"
+        className="bg-cover  bg-no-repeat flex flex-col min-w-screen min-h-screen"
         style={{ backgroundImage: "url('/images/bgWeb.png')" }}
       >
         <div className="pt-8 ">

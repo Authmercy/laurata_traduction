@@ -3,7 +3,8 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import Link from "next/link";
-
+import en from '../../../../i18/en/student/metier.json';
+import fr from '../../../../i18/fr/student/metier.json';
 
 export default function ConcourBourse() {
 

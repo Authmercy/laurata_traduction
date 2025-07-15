@@ -1,46 +1,47 @@
-
 {
-   "searchForm": {
-    "internship": "’m looking for an internship",
-    "firstJob": "Je cherche un premier emploi (débutant)",
-    "keyword": "Keyword",
-    "sector": "Secteur",
-    "level": "Niveau",
-    "duration": "Durée",
-    "employer": "Employeur",
-    "contract": "Contrat",
-    "publication": "Publication",
+  "searchForm": {
+    "formation": "  REchercher une formation",
+    "keyword": "Mot clé ",
+    "diplome": "Diplôme",
     "city": "Ville",
-    "submit": "Lancer ma recherche"
+    "submit": "Lancer ma recherche",
+    "repertoire": " Répertoire des formations post-bac",
+    "text": "offertes par les Universités d'État (leurs Facultés, Grandes Écoles et Instituts), les Établissements Publics à Statut Particulier, les Institutions Privées d'Enseignement Supérieur (IPES) agréées et les  Institutions Transnationales et Sous-régionales."
   },
   "searchResult": {
-    "result": "RESULTAT DE LA RECHERCHE",
+    "result": "RÉSULTATS DE LA RECHERCHE",
     "published": " Publié le ",
     "nexSearch": " Nouvelle recherche",
     "description": "    Descriptif du poste",
     "sur": "sur",
-    "found": "Offre(s) trouvée(s)",
+    "found": " Formation(s) trouvée(s)",
     "filter": "Appliquer les filtres",
-    
+    "affiner": " Affiner la recherche",
     "load": "Chargement en cours",
-    "noData":"       Aucune offre ne correspond à vos critères de recherche. <br />  Vous pouvez déposer votre CV pour recevoir les nouvelles annonces automatiquement ! "
+    "formation": "Formation",
+    "domain": "Domaine",
+    "sector": "Secteur",
+    "handicap": "Handicap",
+    "mode": "Mode d'enseignement",
+    "fees": "Pension",
+    "langage": "Langue d'enseignement",
+    "statut": "Statut de l'institution",
+    "noData": "      Aucune formation ne correspond à vos critères de recherche. "
   },
-  "searchDescription":{
-        "descriptif":"     Descriptif du poste",
-    "presentation":"     Présentation de l'employeur ",
-    "mission":"     Vos Missions ",
-"diplome":"     Diplôme ",
-"profil":" Profil & Compétences recherchés",
-"competence":" Compétences",
-"payement":"Rémunération & Avantages divers ",
-"debut":"Date de debut ",
-"dLimite":"Date limite de candidature ",
-"Retour":"  Retour aux résultats",
-"Postuler":"     Postuler"
-
-  },
-  "postuler":"  POstuler au poste"
-
-
+  "searchDescription": {
+    "descriptif": "     Informations sur la Formation",
+    "admission": "  Admission & Durée",
+    "domaine": "     Domaine ",
+    "fees": "     Pension ",
+    "type": " Type d'admissions",
+    "requirement": " Diplômes requis",
+    "internet": " Internet",
+    "mail": " Courriel",
+    "tel": " Tél.",
+    "pobox": " Boîte postale ",
+    "plaquette": " Plaquette",
+    "addresse": " Adresse",
+    "fiche": " Fiche d'inscription",
+    "Retour": "  Retour aux résultats"
+  }
 }
-

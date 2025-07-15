@@ -3,7 +3,8 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import ServiceFormationDetail from "@/service/service_Formation_Descriptif";
-
+import en from '../../../../i18/en/student/formation.json';
+import fr from '../../../../i18/fr/student/formation.json';
 export default function DetailDescriptifFormation() {
   const router = useRouter();
   const { id } = router.query;
@@ -35,7 +36,8 @@ export default function DetailDescriptifFormation() {
   
   } = ServiceFormationDetail()
   
-
+ const { locale } = router;
+  const t = locale === 'en' ? en : fr
 
 
 
@@ -44,10 +46,10 @@ export default function DetailDescriptifFormation() {
 
       <div className="flex flex-row justify-between items-center mt-3 p-2 w-full ">
         <h1 className="bg-[#4A62AA] text-white text-xl uppercase text-center font-bold w-96 p-2">
-          Informations sur la Formation
+         {t.searchDescription.descriptif}
         </h1>
         <button onClick={handleSearch} className="bg-[#A87A38] text-white px-4  py-2">
-          Nouvelle recherche
+        {t.searchResult.nexSearch}
         </button>
       </div>
 
@@ -103,10 +105,10 @@ export default function DetailDescriptifFormation() {
             </div>
             <div className="w-full flex flex-col lg:flex-row justify-center gap-1 mt-2">
               {[
-                { id: "domain", label: "Domaine" },
-                { id: "admission", label: "Admission & Durée" },
-                { id: "cout", label: "Pension" },
-                { id: "langue", label: "Langue d’enseignement" },
+                { id: "domain", label: t.searchDescription.domaine },
+                { id: "admission", label: t.searchDescription.admission },
+                { id: "cout", label: t.searchDescription.fees },
+                { id: "langue", label: t.searchResult.langage },
                 { id: "contact", label: "Contact" },
               ].map(({ id, label }) => (
                 <Link
@@ -135,11 +137,11 @@ export default function DetailDescriptifFormation() {
             </div>
             <div className="bg-white p-4">
               <div id="domain" className="mb-4">
-                <h4 className="uppercase">Domaine</h4>
+                <h4 className="uppercase">{t.searchDescription.domaine}</h4>
                 <p className="text-black ">{formationData.studyField}</p>
               </div>
               <div id="admission" className="mb-4">
-                <h4 className="uppercase">Admission & Durée</h4>
+                <h4 className="uppercase">{t.searchDescription.admission}</h4>
               <div className="mx-4">   <p className="text-black ">
                   {formationData.requirements.text} 
                
@@ -148,7 +150,7 @@ export default function DetailDescriptifFormation() {
                {Array.isArray(formationData.requirements.admissionTypes) && formationData.requirements.admissionTypes.length > 0 ? (
                                     <div className="space-y-2">
                                       <p>
-                                        Type d'admissions
+                                    {t.searchDescription.type}
                                       </p>
                                         {formationData.requirements.admissionTypes.map((fee:any, index:any) => (
                                             <p className="text-black  " key={index}>- {fee}</p>
@@ -160,7 +162,7 @@ export default function DetailDescriptifFormation() {
                     {Array.isArray(formationData.requirements.degrees) && formationData.requirements.degrees.length > 0 ? (
                                     <div className="space-y-2">
                                       <p>
-                                        Diplômes requis
+                                     {t.searchDescription.requirement}
                                       </p>
                                         {formationData.requirements.degrees.map((fee:any, index:any) => (
                                             <p className="text-black  " key={index}>- {fee}</p>
@@ -188,7 +190,7 @@ export default function DetailDescriptifFormation() {
                
               </div>
               <div id="langue" className="mb-4">
-                <h4 className="uppercase">Langue d’enseignement</h4>
+                <h4 className="uppercase">{t.searchResult.langage}</h4>
                 <p className="text-black ">{formationData.languages}</p>
               </div>
 
@@ -197,11 +199,11 @@ export default function DetailDescriptifFormation() {
   <h4 className="uppercase">Contact</h4>
   <p className="text-black">
     <h2 className=" font-bold mb-2">{formationData.schoolName}</h2>
-    Boîte postale : {formationData.contacts?.postalBox || ""}<br />
-    Adresse : {formationData.contacts?.address || ""}<br />
-    Tél. : {formationData.contacts?.phone || ""}<br />
-    Courriel : {formationData.contacts?.email || ""}<br />
-    Internet : {formationData.contacts?.website ? (
+    {t.searchDescription.pobox} : {formationData.contacts?.postalBox || ""}<br />
+   {t.searchDescription.addresse}  : {formationData.contacts?.address || ""}<br />
+    {t.searchDescription.tel} : {formationData.contacts?.phone || ""}<br />
+   {t.searchDescription.mail}   : {formationData.contacts?.email || ""}<br />
+   {t.searchDescription.internet}   : {formationData.contacts?.website ? (
       <a
         href={`https://${formationData.contacts.website}`}
         className="text-blue-500 hover:underline"
@@ -228,10 +230,10 @@ export default function DetailDescriptifFormation() {
               onClick={handleSearch}
               className="bg-[#4A62AA] text-white px-6 py-2 rounded-2xl hover:bg-gray-200 hover:text-[#4A62AA]"
             >
-              Plaquette
+                {t.searchDescription.plaquette} 
             </button>
             <button className="bg-[#9b6e0f] text-white px-12 py-2 rounded-2xl hover:bg-gray-200 hover:text-[#4A62AA]">
-              Fiche d'inscription
+          {t.searchDescription.fiche} 
             </button>
           </div>
           
@@ -245,7 +247,7 @@ export default function DetailDescriptifFormation() {
                   </button>
                   
                    <button onClick={() => handleClick2()} className="bg-[#9b6e0f] text-white px-12 py-2 rounded-2xl hover:bg-gray-200 hover:text-[#4A62AA]">
-            Retour aux résultats
+                   {t.searchDescription.Retour} 
           </button>
           
             <button

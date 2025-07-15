@@ -3,7 +3,9 @@ import React, { useRef } from "react";
 import Link from "next/link";
 import UseBourseService from "@/service/service_bourse";
 
-
+import en from '../../../../i18/en/student/concous_bourse.json';
+import fr from '../../../../i18/fr/student/concous_bourse.json';
+import { useRouter } from "next/router";
 
 
 export default function BourseComponent() {
@@ -21,7 +23,10 @@ export default function BourseComponent() {
 
   } = UseBourseService()
 
+ const router = useRouter();
 
+  const { locale } = router;
+  const t = locale === 'en' ? en : fr;
 
   return (
 
@@ -33,13 +38,12 @@ export default function BourseComponent() {
 
             <div className="p-2 px-2  uppercase  w-[35%] text-2xl text-center bg-[#9C824A]  hover:bg-[#a19478] h-20 flex items-center justify-center">
 
-              <Link href="/students/concoursBourse"> CONCOURS & BOURSES</Link>
+              <Link href="/students/concoursBourse">  {t.scholarships.title}</Link>
             </div>
 
 
             <div className="p-3 px-8  text-xl text-center bg-[#A87A38] h-12 mt-4 flex items-center justify-center">
-
-              BOURSES D'ÉTUDES
+ {t.scholarships.subtitle}
             </div>
           </div>
 
@@ -47,7 +51,7 @@ export default function BourseComponent() {
             <div className="flex-1  ">
             </div>
             <div className="flex-2 bg-white  text-black p-4 text-end"> <p className="">
-              Le succès est une conséquence et non un but.
+              {t.scholarships.quote}
               <br />  <span className="text-[#4A62AA] font-semibold "> Gustave Flaubert</span>
             </p>
 
@@ -64,7 +68,7 @@ export default function BourseComponent() {
                 }}
                 className="py-2 px-4 mt-2 w-full bg-[#4A62AA] text-white font-bold flex justify-between items-center"
               >
-                <span className="font-bold text-center text-xl"> Guide pour postuler à une bourse d’étude</span>
+                <span className="font-bold text-center text-xl">  {t.scholarships.guideTitle}</span>
                 <span className="text-xl">{open === 10 ? "▲" : "▼"}</span>
               </div>
 
@@ -72,60 +76,28 @@ export default function BourseComponent() {
             {open === 10 && (
    <div className="mt-1  text-black bg-white/70 p-8 space-y-4">
        
-            <p> <span className="text-[#4A62AA] "> ■
-            </span>
-              &nbsp; &nbsp;Commencez vos recherches et démarches le plus tôt possible (au moins un (1) an avant) ;
-            </p>
-            <p> <span className="text-[#4A62AA] "> ■
-            </span>
-              &nbsp;&nbsp;      Les critères de sélection des organismes attributaires sont multiples : résultats académiques, motivation personnelle, projet professionnel, genre, talents spécifiques (sports, musiques, etc.) ;
-            </p>
+            {t.scholarships.guideTips.map((tip, index) => (
+  <p key={index}>
+    <span className="text-[#4A62AA]">■</span>&nbsp;&nbsp;{tip}
+  </p>
+))}
 
-            <p> <span className="text-[#4A62AA] "> ■
-            </span>
-              &nbsp;&nbsp;    Lisez attentivement l’ensemble des critères d’éligibilité pour vous assurer que vous êtes éligible à la bourse ;
-            </p>
+<p>
+  <span className="text-[#4A62AA] font-bold">NB:</span> {t.scholarships.note}
+</p>
 
-            <p> <span className="text-[#4A62AA] "> ■
-            </span>
-              &nbsp;&nbsp;     Remplissez minutieusement et honnêtement les formulaires et questionnaires du dossier de candidature ;
-            </p>
-
-            <p> <span className="text-[#4A62AA] "> ■
-            </span>
-              &nbsp;&nbsp;   Évitez les erreurs dans votre dossier et rangez les pièces et documents dans l’ordre prescrit ;
-            </p>
-            <p> <span className="text-[#4A62AA] "> ■
-            </span>
-              &nbsp;&nbsp;    Insérez des lettres de recommandation pour accroître vos chances de sélection ;
-            </p>
-
-
-            <p> <span className="text-[#4A62AA] "> ■
-            </span>
-              &nbsp;&nbsp;   Déposez votre dossier complet dans les délais et le format requis : e-mail, plateforme en ligne, physique, clé USB, etc. ;
-            </p>
-            <p> <span className="text-[#4A62AA] "> ■
-            </span>
-              &nbsp;&nbsp;   Préparez minutieusement votre entretien : passez en revue vos motivations ; exercez-vous à pouvoir vous présenter en 60 ou 90 secondes en exposant l’essentiel de votre parcours, vos objectifs de carrière, vos points forts, soft skills, etc.
-
-            </p>
-            <p> <span className="text-[#4A62AA] font-bold">  NB :
-            </span>
-              &nbsp;   Il existe des bourses complètes (Full Scholarships) couvrant l’intégralité des frais de scolarité et du coût de la vie et des bourses partielles (Part Scholarships) couvrant une partie des frais de scolarité et/ou du coût de la vie.
-
-            </p>
-            <p> <span className="text-[#e63636]  font-bold"> Avertissement !
-            </span> <br />
-              Ne postulez jamais à une bourse avec des faux documents ou des fausses déclarations ; ils sont détectés dans 100% des cas. La conséquence sera le rejet votre dossier et l’interdiction de repostuler.
-            </p>
+<p>
+  <span className="text-[#e63636] font-bold">{t.scholarships.warningTitle}</span>
+  <br />
+  {t.scholarships.warningText}
+</p>
 
 
 
           </div>
 )}
           <div className="bg-[#A87A38] text-center p-3 mt-2">
-            <p> <span className="text-white  text-xl uppercase font-bold"> Liste non exhaustive des bourses d’Études
+            <p> <span className="text-white  text-xl uppercase font-bold">  {t.scholarships.tableTitle}
             </span>
 
             </p></div>
@@ -163,9 +135,9 @@ export default function BourseComponent() {
         <table className="text-start border-collapse w-full">
             <thead>
                 <tr>
-                    <th>Pays</th>
-                    <th>Organisme</th>
-                    <th>Description & Lien</th>
+                    <th>{t.scholarships.table.country}</th>
+    <th>{t.scholarships.table.organization}</th>
+    <th>{t.scholarships.table.descriptionLink}</th>
                 </tr>
             </thead>
             <tbody>
@@ -199,7 +171,7 @@ export default function BourseComponent() {
                             </td>
                             <td className="border border-x-0 p-2">
                                 <p>{offer.description}</p>
-                                <p>Lien: 
+                                <p> {t.scholarships.table.linkLabel}:
                                     <a 
                                         href={offer.website} 
                                         className="text-[#4A62AA] hover:underline ml-1"

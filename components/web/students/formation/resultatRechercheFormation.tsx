@@ -1,10 +1,11 @@
 "use client";
-import React, { useState, useEffect } from "react";
-import { useRouter } from "next/router";
+import React from "react";
+
 import ServiceFormationResult from "@/service/service_Formation_Result";
 
+import en from '../../../../i18/fr/student/formation.json';
+import fr from '../../../../i18/fr/student/formation.json';
 export default function SearchResultsFormation() {
-
 
 
 
@@ -60,6 +61,8 @@ totalElements,
 
     } = ServiceFormationResult()
 
+  const { locale } = router;
+  const t = locale === 'en' ? en : fr;
 
 
 
@@ -69,20 +72,20 @@ totalElements,
         <div className="p-2 mt-8 md:p-8">
             <div className="flex justify-between  items-center w-full px-4 md:mx-8">
                 <h1 className="bg-[#4A62AA] text-white text-center font-bold w-96 p-2">
-                    RÉSULTATS DE LA RECHERCHE
+                    {t.searchResult.result}
                 </h1>
                 <button
                     onClick={handleSearch}
                     className="bg-[#A87A38] text-white px-4 py-2 mr-4"
                 >
-                    Nouvelle recherche
+                      {t.searchResult.nexSearch}
                 </button>
             </div>
 
-            <div className=" px-4 md:ml-12 border-4 border-[#4A62AA]  gap-6 p-2">
+            <div className=" px-4  border-4 border-[#4A62AA]  gap-6 p-2">
                 {loading ? (
 
-                    <div className=" text-2xl text-center"><p>Chargement en cours</p>
+                    <div className=" text-2xl text-center"><p>  {t.searchResult.load}</p>
 
 
                     </div>
@@ -90,7 +93,7 @@ totalElements,
 
                     <div className="flex-grow ">
                         <p className=" text-white  text-center text-lg p-2 mb-4">
-                            <b>  {totalElements} Formation(s) </b>   trouvée(s)
+                            <b>  {totalElements}  </b>  {t.searchResult.found}
                         </p>
 
                     </div>
@@ -99,7 +102,7 @@ totalElements,
                 ) : (<div className="mt-10">
                     <div className="flex-grow mt-10  ">
                         <p className=" text-white  text-center text-lg p-2 mb-4">
-                            <b>  {totalElements} Formation(s) </b>   trouvée(s)
+                            <b>  {totalElements}  </b>   {t.searchResult.found}
                         </p>
 
                     </div>
@@ -112,13 +115,13 @@ totalElements,
                         <button className="bg-[#A87A38]
             text-center font-bold   text-white
                 mb-2  p-2"
-                        >  Affiner la recherche
+                        > {t.searchResult.affiner}
                         </button>
 
                         <input
                             type="text"
                             name="school"
-                            placeholder="Mot clé"
+                            placeholder={t.searchForm.keyword}
                             value={formValues.school}
                             onChange={handleInputChange}
                             className="border border-[#7b92d6] p-2"
@@ -126,7 +129,7 @@ totalElements,
                         <input
                             type="text"
                             name="city"
-                            placeholder="Ville"
+                            placeholder={t.searchForm.city}
                             value={formValues.city}
                             onChange={handleInputChange}
                             className="border border-[#7b92d6] p-2"
@@ -151,7 +154,7 @@ totalElements,
                                             .filter(opt => formValues.degreeLevels?.values.includes(opt.key))
                                             .map(opt => opt.text)
                                             .join(', ')
-                                        : 'Diplôme'}
+                                        : t.searchForm.diplome}
                                 </span>
                                 <span className="text-xl">{open === 1 ? '▲' : '▼'}</span>
                             </div>
@@ -230,7 +233,7 @@ totalElements,
                                 <span className="truncate text-sm" title={formValues.training?.values.map(key => training.find(s => s.key === key)?.text).join(', ')}>
                                     {formValues.training?.values.length
                                         ? training.filter(s => formValues.training?.values.includes(s.key)).map(s => s.text).join(', ')
-                                        : 'Formation'}
+                                        : t.searchResult.formation }
                                 </span>
                                 <span className="text-xl">{open === 2 ? "▲" : "▼"}</span>
                             </div>
@@ -257,7 +260,7 @@ totalElements,
                                 <span className="truncate text-sm" title={formValues.studyFields?.values.map(key => studyFields.find(s => s.key === key)?.text).join(', ')}>
                                     {formValues.studyFields?.values.length
                                         ? studyFields.filter(s => formValues.studyFields?.values.includes(s.key)).map(s => s.text).join(', ')
-                                        : 'studyFields'}
+                                        : t.searchResult.domain }
                                 </span>
                                 <span className="text-xl">{open === 3 ? "▲" : "▼"}</span>
                             </div>
@@ -287,7 +290,7 @@ totalElements,
                                 <span className="truncate text-sm" title={formValues.admission?.values.map(key => admission.find(f => f.key === key)?.text).join(', ')}>
                                     {formValues.admission?.values.length
                                         ? admission.filter(f => formValues.admission?.values.includes(f.key)).map(f => f.text).join(', ')
-                                        : 'Secteur'}
+                                        : t.searchResult.sector }
                                 </span>
                                 <span className="text-xl">{open === 4 ? "▲" : "▼"}</span>
                             </div>
@@ -315,7 +318,7 @@ totalElements,
                                 <span className="truncate text-sm" title={formValues.disabilities?.values.map(key => disabilities.find(f => f.key === key)?.text).join(', ')}>
                                     {formValues.disabilities?.values.length
                                         ? disabilities.filter(f => formValues.disabilities?.values.includes(f.key)).map(f => f.text).join(', ')
-                                        : 'Handicap'}
+                                        : t.searchResult.handicap}
                                 </span>
                                 <span className="text-xl">{open === 5 ? "▲" : "▼"}</span>
                             </div>
@@ -342,7 +345,7 @@ totalElements,
                                 <span className="truncate text-sm" title={formValues.trainingMode?.values.map(key => trainingMode.find(s => s.key === key)?.text).join(', ')}>
                                     {formValues.trainingMode?.values.length
                                         ? trainingMode.filter(s => formValues.trainingMode?.values.includes(s.key)).map(s => s.text).join(', ')
-                                        : "Mode d'enseignement"}
+                                        : t.searchResult.mode}
                                 </span>
                                 <span className="text-xl">{open === 6 ? "▲" : "▼"}</span>
                             </div>
@@ -367,7 +370,7 @@ totalElements,
                         <input
                             type="text"
                             name="enumFees"
-                            placeholder="Pension"
+                            placeholder={t.searchResult.fees}
                             value={formValues.enumFees}
                             onChange={handleInputChange}
                             className="border border-[#7b92d6] p-2"
@@ -377,7 +380,7 @@ totalElements,
                         <input
                             type="text"
                             name="enumLanguage"
-                            placeholder="Langue d'enseignement"
+                            placeholder={t.searchResult.langage}
                             value={formValues.enumLanguage}
                             onChange={handleInputChange}
                             className="border border-[#7b92d6] p-2"
@@ -389,7 +392,7 @@ totalElements,
                                 <span className="truncate text-sm" title={formValues.schoolType?.values.map(key => schoolTypes.find(s => s.key === key)?.text).join(', ')}>
                                     {formValues.schoolType?.values.length
                                         ? schoolTypes.filter(s => formValues.schoolType?.values.includes(s.key)).map(s => s.text).join(', ')
-                                        : "Statut de l'institution"}
+                                        : t.searchResult.statut}
                                 </span>
                                 <span className="text-xl">{open === 7 ? "▲" : "▼"}</span>
                             </div>
@@ -419,7 +422,7 @@ totalElements,
         isModified ? "bg-[#A87A38] hover:bg-[#af8d60]" : "bg-gray-400 cursor-not-allowed"
     }`}
 >
-    Appliquer les filtres
+    {t.searchResult.filter}
 </button>
 
                         </div>
@@ -447,7 +450,7 @@ totalElements,
                                                 ←
                                             </button>
                                             <span className="text-sm text-white mt-2">
-                                                Page {pagination.pageNumber + 1} sur {pagination.totalPages}
+                                                Page {pagination.pageNumber + 1} {t.searchResult.sur} {pagination.totalPages}
                                             </span>
                                             <button
                                                 onClick={handleNextPage}
@@ -503,12 +506,12 @@ totalElements,
                                     ) : (<div>
                                         <div className="p-8 bg-white  mx-8 mt-12">
                                             <p className="text-center text-[#4A62AA] justify-center text-lg">
-                                                Aucune formation ne correspond à vos critères de recherche. <br />
+                                               {t.searchResult.noData} <br />
 
                                             </p></div>
                                         <div className="mt-4 text-center">
                                             <button onClick={handleSearch} className="px-6 py-2 bg-blue-600 text-white font-bold ">
-                                                Nouvelle recherche
+                                              {t.searchResult.nexSearch}
                                             </button>
                                         </div>
                                     </div>

@@ -1,7 +1,9 @@
 "use client";
 
 import ServiceFormationFilter from "@/service/service_Formation";
-import { useRouter } from "next/router";
+
+import en from '../../../../i18/en/student/formation.json';
+import fr from '../../../../i18/fr/student/formation.json';
 
 export default function FormulaireFormation() {
   const {
@@ -55,6 +57,8 @@ export default function FormulaireFormation() {
 
 
   } = ServiceFormationFilter()
+  const { locale } = router;
+  const t = locale === 'en' ? en : fr;
 
 
   return (
@@ -64,7 +68,7 @@ export default function FormulaireFormation() {
 
           <p className="flex w-px-4  text-xl justify-center py-2 bg-[#A87A38]  uppercase text-white ps-5 text-center ">
 
-            REchercher une formation
+           {t.searchForm.formation}
           </p>
 
 
@@ -81,7 +85,7 @@ export default function FormulaireFormation() {
                 <input
                   type="text"
                   name="school"
-                  placeholder="Mot clé "
+                  placeholder=   {t.searchForm.keyword}
                   value={filters.school}
                   onChange={handleChange}
                   className="text-center border-2 border-[#7b92d6] placeholder-[#717172] p-2"
@@ -100,7 +104,7 @@ export default function FormulaireFormation() {
                           .filter(c => selectedDegreeLevels.includes(c.key))
                           .map(c => c.text)
                           .join(', ')
-                        : 'Diplôme'}
+                        : t.searchForm.diplome}
 
                     </span>
                     <span className="text-xl">{open === 4 ? "▲" : "▼"}</span>
@@ -171,14 +175,14 @@ export default function FormulaireFormation() {
                 <input
                   type="text"
                   name="city"
-                  placeholder="Ville"
+                  placeholder=   {t.searchForm.city}
                   value={filters.city}
                   onChange={handleChange}
                   className="text-center border-2 border-[#7b92d6] placeholder-[#717172] p-2"
                 />
               </div>
-              <p className="text-center px-16 my-2"> <b>  Répertoire des formations post-bac</b> offertes par les Universités d'État (leurs Facultés, Grandes Écoles et Instituts), les Établissements Publics à Statut Particulier,
-                les Institutions Privées d'Enseignement Supérieur (IPES) agréées et les  Institutions Transnationales et Sous-régionales.  </p>
+              <p className="text-center px-16 my-2">
+                 <b>  {t.searchForm.repertoire}</b> {t.searchForm.text}</p>
 
               {errorMessage && (
                 <div className="text-red-600 text-center w-full py-4 bg-red-100 border border-red-300 rounded relative">
@@ -204,7 +208,7 @@ export default function FormulaireFormation() {
                     }
          ] '`}
                 >
-                  Lancer ma recherche
+                {t.searchForm.submit}
                 </button>
               </div>
             </div></div>

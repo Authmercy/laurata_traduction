@@ -1,0 +1,49 @@
+{
+    "searchForm": {
+        "formation": " FIND A PROGRAM",
+        "keyword": "Keyword ",
+        "diplome": "Degree",
+        "city": "City",
+        "submit": "Start search",
+        "repertoire": " Directory of training programs",
+        "text": " offered by Public Universities (Faculties, Schools and Institutes), Public Schools with Special Status, Authorized Private Higher Education Institutions (PHEI) and Sub-regional and International Institutions."
+    },
+    
+  "searchResult": {
+    "result": "SEARCH RESULTS",
+    "published": " Publié le ",
+    "nexSearch": " New search",
+    "description": "    Descriptif du poste",
+    "sur": "sur",
+    "found": " Program(s) founded",
+    "filter": "Apply  filters",
+    "affiner": " Filter Options",
+    "load": "Chargement en cours",
+    "formation": "Formation",
+    "domain": "Area of study",
+    "sector": "Sector",
+    "handicap": "Handicap",
+    "mode": "Mode of training",
+    "fees": "School fees",
+    "langage": "Language of training",
+    "statut": "Institution status",
+    "noData": "     Sorry, there are no programs that match your search criteria. "
+  },
+  "searchDescription": {
+    "descriptif": "    PROGRAM INFORMATION",
+    "admission": "  Admission & Duration",
+    "domaine": "     Area of study ",
+    "fees": "     Fees ",
+    "type": " Admission type ",
+    "requirement": " Required Degree",
+    "internet": " Internet",
+    "mail": " Email",
+    "tel": " Phone",
+    "pobox": " P.O Box ",
+    "plaquette": " Prospectus",
+    "addresse": " Location",
+    "fiche": " Registration form",
+    "Retour": "  Back to results"
+  }
+
+}

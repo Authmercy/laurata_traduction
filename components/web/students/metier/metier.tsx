@@ -24,10 +24,10 @@ type Jobsheet = {
 
 
 export default function MetierComponent() {
-   const router = useRouter();
+  const router = useRouter();
 
-    const { locale } = router;
-    const t = locale === 'en' ? en : fr;
+  const { locale } = router;
+  const t = locale === 'en' ? en : fr;
   const handleClick = (letter: string) => {
 
     router.push(`/students/metier/${letter}`);
@@ -65,7 +65,7 @@ export default function MetierComponent() {
           },
         });
 
-       
+
         const data = await response.json();
 
 
@@ -87,13 +87,13 @@ export default function MetierComponent() {
       <div className="flex w-full gap-2 ml-12  text-white font-bold">
         <div className="p-2 px-2  uppercase  w-[35%] text-2xl text-center bg-[#9C824A]  hover:bg-[#a19478] h-20 flex items-center justify-center">
 
-          <Link href="/students/metier/metier"> 
-              {t.professions}</Link>
+          <Link href="/students/metier/metier">
+            {t.professions}</Link>
         </div>
 
 
         <div className="p-3 px-8  text-xl text-center bg-[#A87A38] h-12 mt-4 flex items-center justify-center">
- {t.jobSheets}
+          {t.jobSheets}
         </div>
 
 
@@ -107,7 +107,7 @@ export default function MetierComponent() {
 
             <div className="mt-6 bg-white/70 text-black p-4 w-full flex-grow">
               <p>
-              {t.jobSheetIntro} </p>
+                {t.jobSheetIntro} </p>
               <div className="flex flex-row mt-4 gap-1">
                 <div className="flex-1">
                   <img src="/images/concoursBourse.jpg" alt="" className="h-[100%] " />

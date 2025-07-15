@@ -3,7 +3,7 @@
    "searchForm": {
     "internship": "Je cherche un stage",
     "firstJob": "Je cherche un premier emploi (débutant)",
-    "keyword": "Keyword",
+    "keyword": "Mot clé",
     "sector": "Secteur",
     "level": "Niveau",
     "duration": "Durée",
@@ -14,7 +14,7 @@
     "submit": "Lancer ma recherche"
   },
   "searchResult": {
-    "result": "RESULTAT DE LA RECHERCHE",
+    "result": "RÉSULTATS DE LA RECHERCHE",
     "published": " Publié le ",
     "nexSearch": " Nouvelle recherche",
     "description": "    Descriptif du poste",
