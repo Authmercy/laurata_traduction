@@ -1,10 +1,12 @@
+"use client";
 import router from "next/router";
 import React from "react";
 import Image from "next/image";
 
 import ServiceInternshipDetail from "@/service/service_Internship_Descriptif";
-import { div } from "framer-motion/client";
 
+import en from '../../../../i18/en/student/internship.json';
+import fr from '../../../../i18/fr/student/internship.json';
 
 export default function DetailDescriptif() {
 
@@ -22,6 +24,12 @@ export default function DetailDescriptif() {
 
   } = ServiceInternshipDetail()
 
+    const { locale } = router;
+    const t = locale === 'en' ? en : fr;
+
+
+
+ 
 
   const handleClick = (id: number) => {
     router.push(`/students/postuler/${id}`);
@@ -43,7 +51,7 @@ export default function DetailDescriptif() {
         {offerDetails ? (
           <div className="flex-grow md:w-2/3 p-8">
 
-            <div className="  bg-[#A87A38] p-3  text-xl text-start uppercase pl-8 font-bold text-white ">  Descriptif du poste</div>
+            <div className="  bg-[#A87A38] p-3  text-xl text-start uppercase pl-8 font-bold text-white ">{t.searchDescription.descriptif}</div>
 
             <div
 
@@ -108,7 +116,7 @@ export default function DetailDescriptif() {
                     <div className="flex flex-col pt-8 items-end ml-44 mr-8 sm:items-end gap-4">
                       {offerDetails.levels.length > 0 && (
                         <p className="w-full sm:w-auto">
-                          <span>Niveau : </span>
+                          <span>{t.searchForm.level} : </span>
                           {offerDetails.levels.map((level: string, index: number) => (
                             <span className="text-sm" key={index}>{level}</span>
                           ))}
@@ -117,7 +125,7 @@ export default function DetailDescriptif() {
 
 
                       <p className="  w-full sm:w-auto">
-                        <span>Publié le :</span> {offerDetails.publishedOn}
+                        <span> {t.searchResult.published} :</span> {offerDetails.publishedOn}
                       </p>
 
 
@@ -133,11 +141,11 @@ export default function DetailDescriptif() {
 
             <div className="bg-white pl-8 p-4">
               <div className="mt-4 text-black">
-                <h3 className="text-md font-bold  text-[#4A62AA]">Présentation de l'employeur</h3>
+                <h3 className="text-md font-bold  text-[#4A62AA]">{t.searchDescription.presentation}</h3>
                 <p>{offerDetails.description}</p>
               </div>
               <div className="mt-4 text-black">
-                <h3 className="text-md font-bold  text-[#4A62AA]">Vos Missions</h3>
+                <h3 className="text-md font-bold  text-[#4A62AA]">{t.searchDescription.mission}</h3>
                 <ul className="list-disc ml-6">
                   {offerDetails.tasks.map((task: string, index: number) => (
                     <li key={index}>{task}</li>
@@ -145,11 +153,11 @@ export default function DetailDescriptif() {
                 </ul>
               </div>
               <div className="mt-4 text-black">
-                <h3 className="text-md font-bold  text-[#4A62AA]">Profil & Compétences recherchés</h3>
+                <h3 className="text-md font-bold  text-[#4A62AA]">{t.searchDescription.profil}</h3>
                  {offerDetails.degrees ? (
                   <div>
                     <p >
-                        Diplôme
+                      {t.searchDescription.diplome}
                     </p>
                     <ul className="list-disc ml-6">
                       {offerDetails.degrees.map((degree: string, index: number) => (
@@ -163,7 +171,7 @@ export default function DetailDescriptif() {
                 {offerDetails.skills ? (
                   <div>
                     <p >
-                      Compétences
+                     {t.searchDescription.competence}
                     </p>
                     <ul className="list-disc ml-6">
                       {offerDetails.skills.map((degree: string, index: number) => (
@@ -176,14 +184,14 @@ export default function DetailDescriptif() {
 
               {offerDetails.salary ? (
                 <div className="mt-4 text-black">
-                  <h3 className="text-md font-bold  text-[#4A62AA]">Rémunération & Avantages divers</h3>
+                  <h3 className="text-md font-bold  text-[#4A62AA]">{t.searchDescription.payement}</h3>
                   <p> {offerDetails.salary}   {offerDetails.currency}  {offerDetails.payPeriod}</p>
                 </div>) : (
                 <p> </p>
               )}
               {offerDetails.beginDate ? (
                 <div className="mt-4 text-black">
-                  <h3 className="text-md font-bold  text-[#4A62AA]">Date de debut</h3>
+                  <h3 className="text-md font-bold  text-[#4A62AA]">{t.searchDescription.debut}</h3>
                   <p>{offerDetails.beginDate}</p>
                 </div>) : (
                 <p> </p>
@@ -192,7 +200,7 @@ export default function DetailDescriptif() {
 
               {offerDetails.deadline ? (
                 <div className="mt-4 text-black">
-                  <h3 className="text-md font-bold  text-[#4A62AA]">Date limite de candidature</h3>
+                  <h3 className="text-md font-bold  text-[#4A62AA]">{t.searchDescription.dLimite}</h3>
                   <p>{offerDetails.deadline}</p>
                 </div>) : (
                 <p> </p>
@@ -202,10 +210,10 @@ export default function DetailDescriptif() {
               <div className="  flex flex-row gap-24">
                 <div className="flex  mr-10 mt-6 justify-start flex-row gap-12">
                   <button onClick={handleSearch} className=" bg-[#4A62AA]  text-white px-6 py-2 rounded-2xl hover:bg-blue-200  hover:text-[#4A62AA]">
-                    Nouvelle recherche
+                  {t.searchResult.nexSearch}
                   </button>
                   <button onClick={handleClick1} className=" bg-[#2848a8]  text-white px-6 py-2 rounded-2xl hover:bg-gray-200  hover:text-[#4A62AA]">
-                    Retour aux résultats
+                  {t.searchDescription.Retour}
                   </button>
                 </div>
                 <div className="flex gap-4  mt-6 justify-end">
@@ -218,7 +226,7 @@ export default function DetailDescriptif() {
                   </button>
 
                   <button key={offerDetails.id} onClick={() => handleClick(offerDetails.id)} className=" bg-[#A87A38] flex font-bold justify-end text-white px-10 py-2 rounded-2xl hover:bg-blue-200  hover:text-[#4A62AA]">
-                    Postuler
+               {t.searchDescription.Postuler}
                   </button>
                   <button
                     onClick={goToNextOffer}

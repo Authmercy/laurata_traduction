@@ -41,7 +41,7 @@ export default function WelcomePage1() {
 
 
           <div className="absolute top-[20%] left-[75%] transform -translate-x-1/2 text-center text-white w-[70%] md:w-[30%]">
-            <p className="text-5xl  font-semibold">Vitrine des offres de stage au Cameroun</p>
+            <p className="text-5xl uppercas font-semibold">Vitrine des offres de stage au Cameroun</p>
           </div>
 
        <div className="absolute top-[20%] left-[75%] transform -translate-x-1/2 text-center text-white w-[70%] md:w-[30%]">

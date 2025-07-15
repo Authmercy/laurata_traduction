@@ -78,7 +78,7 @@ export default function Bandeau() {
         fetchsetBrand();
     }, []);
     return (
-        <div className="  bg-white flex items-center justify-center">
+    <div className="bg-white flex items-center justify-center mt-auto">
 
             <div className=" grid grid-cols-10 justify-center  gap-1 px-24    ">
 

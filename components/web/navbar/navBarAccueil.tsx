@@ -13,7 +13,7 @@ export default function NavBarAccueil() {
   
       } = UseLanguageService()
   
-    const [activeLink, setActiveLink] = useState('#french');
+ 
     return (
         <div>
             <nav className="bg-[#4A62AA]">

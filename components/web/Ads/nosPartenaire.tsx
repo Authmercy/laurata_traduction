@@ -1,6 +1,7 @@
 "use client";
 
 import { Brand } from "@/service/Brand";
+import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
 export default function Partenaire() {
@@ -148,11 +149,13 @@ export default function Partenaire() {
 
         fetchsetBrand();
     }, []);
+        const router = useRouter();
+       const { locale } = router;
     return (
         <div className="flex flex-wrap mt-10 pt-6">
 
             <div className="w-full  h-[35%] py-2 pb-4 bg-white ">
-                <p className="text-center  uppercase p-1 pb-4 text-[#4A62AA] ">  Partenaires </p>
+                <p className="text-center  uppercase p-1 pb-4 text-[#4A62AA] ">  {locale === 'en' ? 'Partenaires' : 'Partners'}  </p>
                 <div className=" grid grid-cols-9 pl-10  ">
 
                     {brand.map((item, index) => (

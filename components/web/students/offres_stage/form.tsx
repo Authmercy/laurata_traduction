@@ -3,7 +3,8 @@ import React from 'react';
 
 
 import ServiceInternshipFilter from '@/service/service_Internship';
-
+import en from '../../../../i18/en/student/internship.json';
+import fr from '../../../../i18/fr/student/internship.json';
 
 
 export default function FormulaireStage() {
@@ -48,53 +49,54 @@ export default function FormulaireStage() {
     isSearchDisabled,
     handleSearch,
     handlePresetSelection,
-    isFormEmpty,allEmplois,allInternships
+    isFormEmpty, allEmplois, allInternships
 
   } = ServiceInternshipFilter()
 
 
 
+  const { locale } = router;
+  const t = locale === 'en' ? en : fr;
+
   return (
     <div className="flex flex-wrap pt-6">
       <div className="w-full py-2">
         <form onSubmit={handleSearch}>
-        <div className="flex text-xl">
-  <button
-    type="button"
-    onClick={() => handlePresetSelection("stage")}
-    className={`flex-1 py-2 font-bold flex items-center gap-2 ps-5 ${
-      allInternships.every(v => selectedContracts.includes(v))
-        ? "bg-white/70  text-[#4A62AA]"
-        : "bg-white/70 text-[#4A62AA]"
-    }`}
-  >
-    <input
-      type="checkbox"
-      checked={allInternships.every(v => selectedContracts.includes(v))}
-      readOnly
-      className="w-5 h-5 rounded-md border-2 border-[#4A62AA] focus:ring-[#4A62AA]"
-    />
-    <p className="flex-1 text-start">Je cherche un stage</p>
-  </button>
+          <div className="flex text-xl">
+            <button
+              type="button"
+              onClick={() => handlePresetSelection("stage")}
+              className={`flex-1 py-2 font-bold flex items-center gap-2 ps-5 ${allInternships.every(v => selectedContracts.includes(v))
+                ? "bg-white/70  text-[#4A62AA]"
+                : "bg-white/70 text-[#4A62AA]"
+                }`}
+            >
+              <input
+                type="checkbox"
+                checked={allInternships.every(v => selectedContracts.includes(v))}
+                readOnly
+                className="w-5 h-5 rounded-md border-2 border-[#4A62AA] focus:ring-[#4A62AA]"
+              />
+              <p className="flex-1 text-start">       {t.searchForm.internship}</p>
+            </button>
 
-  <button
-    type="button"
-    onClick={() => handlePresetSelection("emploi")}
-    className={`flex-1 py-2 font-bold flex items-center gap-2 ps-5 ${
-      allEmplois.every(v => selectedContracts.includes(v))
-        ? "bg-[#4A62AA] text-white"
-        : "bg-[#4A62AA] text-white"
-    }`}
-  >
-    <input
-      type="checkbox"
-      checked={allEmplois.every(v => selectedContracts.includes(v))}
-      readOnly
-      className="w-5 h-5 rounded-md border-2 border-[#4A62AA] focus:ring-[#4A62AA]"
-    />
-    <p className="flex-1 text-start">Je cherche un premier emploi (débutant)</p>
-  </button>
-</div>
+            <button
+              type="button"
+              onClick={() => handlePresetSelection("emploi")}
+              className={`flex-1 py-2 font-bold flex items-center gap-2 ps-5 ${allEmplois.every(v => selectedContracts.includes(v))
+                ? "bg-[#4A62AA] text-white"
+                : "bg-[#4A62AA] text-white"
+                }`}
+            >
+              <input
+                type="checkbox"
+                checked={allEmplois.every(v => selectedContracts.includes(v))}
+                readOnly
+                className="w-5 h-5 rounded-md border-2 border-[#4A62AA] focus:ring-[#4A62AA]"
+              />
+              <p className="flex-1 text-start">       {t.searchForm.firstJob}</p>
+            </button>
+          </div>
 
           <div className="flex flex-col md:flex-row">
             <div className="w-full bg-white pt-6  pb-4">
@@ -104,7 +106,7 @@ export default function FormulaireStage() {
                 <input
                   type="text"
                   name="keywords"
-                  placeholder="Mot clé"
+                  placeholder={t.searchForm.keyword}
                   value={filters.keywords}
                   onChange={handleChange}
                   className="border border-[#7b92d6] p-2"
@@ -116,7 +118,7 @@ export default function FormulaireStage() {
                     <span className="truncate max-w-[120px] text-sm" title={selectedSectors.map(k => foas.find(f => f.key === k)?.text).join(', ')}>
                       {selectedSectors.length
                         ? foas.filter(f => selectedSectors.includes(f.key)).map(f => f.text).join(', ')
-                        : 'Secteur'}
+                        : t.searchForm.sector}
                     </span>
                     <span className="text-xl">{open === 1 ? "▲" : "▼"}</span>
                   </div>
@@ -146,7 +148,7 @@ export default function FormulaireStage() {
                     <span className="truncate max-w-[120px] text-sm" title={selectedLevels.map(k => degreeLevels.find(d => d.key === k)?.text).join(', ')}>
                       {selectedLevels.length
                         ? degreeLevels.filter(d => selectedLevels.includes(d.key)).map(d => d.text).join(', ')
-                        : 'Niveau'}
+                        : t.searchForm.level}
                     </span>
                     <span className="text-xl">{open === 2 ? "▲" : "▼"}</span>
                   </div>
@@ -175,7 +177,8 @@ export default function FormulaireStage() {
                     <span className="truncate max-w-[120px] text-sm">
                       {selectedDuration
                         ? durations.find(d => d.key === selectedDuration)?.text
-                        : 'Durée'}
+                        : t.searchForm.duration
+                      }
                     </span>
                     <span className="text-xl">{open === 3 ? "▲" : "▼"}</span>
                   </div>
@@ -204,7 +207,7 @@ export default function FormulaireStage() {
                     <span className="truncate max-w-[120px] text-sm" title={selectedOrgTypes.map(k => status.find(s => s.key === k)?.text).join(', ')}>
                       {selectedOrgTypes.length
                         ? status.filter(s => selectedOrgTypes.includes(s.key)).map(s => s.text).join(', ')
-                        : 'Employeur'}
+                        : t.searchForm.employer}
                     </span>
                     <span className="text-xl">{open === 5 ? "▲" : "▼"}</span>
                   </div>
@@ -243,7 +246,7 @@ export default function FormulaireStage() {
                           .filter(c => selectedContracts.includes(c.key))
                           .map(c => c.text)
                           .join(', ')
-                        : 'Contrat'}
+                        : t.searchForm.contract}
 
                     </span>
                     <span className="text-xl">{open === 4 ? "▲" : "▼"}</span>
@@ -317,7 +320,7 @@ export default function FormulaireStage() {
                     <span className="truncate max-w-[120px] text-sm">
                       {selectedPublication
                         ? parutions.find(p => p.key === selectedPublication)?.text
-                        : 'Publication'}
+                        : t.searchForm.publication}
                     </span>
                     <span className="text-xl">{open === 8 ? "▲" : "▼"}</span>
                   </div>
@@ -346,7 +349,7 @@ export default function FormulaireStage() {
                 <input
                   type="text"
                   name="city"
-                  placeholder=" Ville"
+                  placeholder={t.searchForm.city}
                   className="border border-[#7b92d6] p-2"
                   value={filters.city}
                   onChange={handleChange}
@@ -366,16 +369,16 @@ export default function FormulaireStage() {
                 </div>
               )}
               <div className="my-8 text-center">
-              
+
                 <button
                   type="submit"
                   disabled={isFormEmpty()}
-                 className={`px-6 py-2 rounded-lg font-bold  ${isFormEmpty()
+                  className={`px-6 py-2 rounded-lg font-bold  ${isFormEmpty()
                     ? "bg-gray-400 cursor-not-allowed"
                     : " bg-[#4A62AA]  hover:bg-[#8c6630] text-white"
                     }`}
                 >
-                  Lancer ma recherche
+                  {t.searchForm.submit}
                 </button>
               </div>
             </div>

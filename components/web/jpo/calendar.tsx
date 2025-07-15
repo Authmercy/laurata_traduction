@@ -59,7 +59,7 @@ setSchoolName,
       />
     </div>
 
-    {/* Submit Button */}
+   
     <button
       className="bg-[#4A62AA] hover:bg-[#A87A38] text-white p-2 px-6"
       onClick={handleSubmit}
@@ -68,7 +68,7 @@ setSchoolName,
     </button>
   </div>
 
-  {/* Error Message */}
+  
   {message && (
     <p className="text-center mt-4 text-sm text-red-600">{message}</p>
   )}

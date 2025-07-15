@@ -2,11 +2,16 @@ import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { URLS } from "@/service/url";
+import en from '../../../../i18/en/student/internship.json';
+import fr from '../../../../i18/fr/student/internship.json';
 
 
 export default function PostulerAuPost() {
   const router = useRouter();
   const { id } = router.query;
+  const { locale } = router;
+    const t = locale === 'en' ? en : fr;
+
 
   const [offerDetails, setOfferDetails] = useState<any>(null);
   const [loading, setLoading] = useState(true);
@@ -86,7 +91,7 @@ export default function PostulerAuPost() {
         {offerDetails ? (
           <div className="flex-grow md:w-2/3 p-8">
 
-            <div className="  bg-[#A87A38] p-3 text-start text-xl uppercase pl-8 font-bold text-white ">  POstuler au  poste</div>
+            <div className="  bg-[#A87A38] p-3 text-start text-xl uppercase pl-8 font-bold text-white ">  {t.postuler} </div>
 
             <div
 
@@ -151,7 +156,7 @@ export default function PostulerAuPost() {
                     <div className="flex flex-col pt-8 items-end ml-44 mr-8 sm:items-end gap-4">
                       {offerDetails.levels.length > 0 && (
                         <p className="w-full sm:w-auto">
-                          <span>Niveau : </span>
+                          <span>{t.searchForm.level}  : </span>
                           {offerDetails.levels.map((level: string, index: number) => (
                             <span className="text-sm" key={index}>{level}</span>
                           ))}
@@ -160,7 +165,7 @@ export default function PostulerAuPost() {
 
 
                       <p className="  w-full sm:w-auto">
-                        <span>Publié le :</span> {offerDetails.publishedOn}
+                        <span>{t.searchResult.published} :</span> {offerDetails.publishedOn}
                       </p>
 
 
@@ -187,10 +192,10 @@ export default function PostulerAuPost() {
               <div className="  flex  justify-end  flex-row gap-32">
                 <div className="flex  mr-10 mt-6 justify-end flex-row gap-12">
                   <button onClick={handleSearch} className=" bg-[#4A62AA]  text-white px-6 py-2 rounded-2xl hover:bg-blue-200  hover:text-[#4A62AA]">
-                    Nouvelle recherche
+                   {t.searchResult.nexSearch} 
                   </button>
                   <button onClick={handleClick1} className=" bg-[#2848a8]  text-white px-6 py-2 rounded-2xl hover:bg-gray-200  hover:text-[#4A62AA]">
-                    Retour aux résultats
+           {t.searchDescription.Retour} 
                   </button>
                 </div>
 

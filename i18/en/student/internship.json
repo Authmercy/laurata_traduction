@@ -1,0 +1,40 @@
+{
+  "searchForm": {
+    "internship": "I’m looking for an internship",
+    "firstJob": " I’m looking for an Entry-level Job",
+    "keyword": "Keyword",
+    "sector": "Sector",
+    "level": "Level",
+    "duration": "Duration",
+    "employer": "Employer",
+    "contract": "Contract type",
+    "publication": "Published",
+    "city": "City",
+    "submit": "Search"
+  },
+  "searchResult": {
+    "result": "SEARCH RESULTS",
+    "published": " Published",
+    "nexSearch": "New Search",
+    "description": "Description",
+    "sur": "on",
+    "found": "internship(s) found",
+    "filter": "Apply filter",
+    "load": "Loading",
+    "noData": "Sorry, there were no vacancies found with your search criteria. <br /> Register and send us your CV to receive the newest vacancies and exclusive content."
+  },
+  "searchDescription": {
+    "descriptif": "    JOB DESCRIPTION",
+    "presentation": "     About the employer ",
+    "mission": "     Day to Day responsibilities ",
+    "diplome": "     Degree ",
+    "profil": " Education & Skills required",
+    "competence": " Skills",
+    "payement": "Salary & Benefits ",
+    "debut": "Start Date ",
+    "dLimite": "Deadline for application ",
+    "Retour": "  Return to result",
+    "Postuler": "     Apply"
+  },
+    "postuler":" Apply to the job"
+}

@@ -3,6 +3,7 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/students/offresStage": "pages/students/offresStage.js",
-  "/students/sondage_enquetes": "pages/students/sondage_enquetes.js",
-  "/jpo/jpo": "pages/jpo/jpo.js"
+  "/students/resultatRecherche": "pages/students/resultatRecherche.js",
+  "/": "pages/index.js",
+  "/students/formations": "pages/students/formations.js"
 }

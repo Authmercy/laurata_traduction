@@ -17,69 +17,81 @@ export default function WelcomePage2() {
 
 
   return (
-    <div className="flex flex-col max-w-screen min-h-screen">
-
+    
 
       <div
-        className=" min-h-screen bg-cover bg-center bg-no-repeat flex flex-col"
+        className="bg-cover bg-center bg-no-repeat flex flex-col max-w-screen min-h-screen"
         style={{ backgroundImage: "url('/images/bgWeb.png')" }}
       >
-        <div className="justify-end pt-2 mr-8 flex space-x-6 text-white">
-          <Link href="/authentification/signup" className="hover:underline font-bold">S'inscrire</Link>
-          <span>|</span>
-          <Link href="/authentification/login" className="hover:underline font-bold">Se connecter</Link>
-          <div className="flex space-x-2">
+        <div className="pt-8 ">
 
-            <button
-              onClick={() => changeLanguage('fr')}
-              className={`hover:underline ${locale === 'fr' ? 'font-bold' : 'font-normal'}`}
-            >
-              Français
-            </button>
-            <span className="mx-2">|</span>
-            <button
-              onClick={() => changeLanguage('en')}
-              className={`hover:underline ${locale === 'en' ? 'font-bold' : 'font-normal'}`}
-            >
-              English
-            </button>
 
+          <div className=" flex ml-[20%] pb-8 mt-2">
+            <Image src="/images/logo.png" alt="logoSES" width={250} height={150} />
+          </div>
+          <div className="justify-end mr-8 -mt-16 flex space-x-6 text-white">
+            <Link href="/authentification/signup" className="hover:underline font-bold">S'inscrire</Link>
+            <span>|</span>
+            <Link href="/authentification/login" className="hover:underline font-bold">Se connecter</Link>
+            <div className="flex space-x-2">
+
+              <button
+                onClick={() => changeLanguage('fr')}
+                className={`hover:underline ${locale === 'fr' ? 'font-bold' : 'font-normal'}`}
+              >
+                Français
+              </button>
+              <span className="mx-2">|</span>
+              <button
+                onClick={() => changeLanguage('en')}
+                className={`hover:underline ${locale === 'en' ? 'font-bold' : 'font-normal'}`}
+              >
+                English
+              </button>
+
+
+
+            </div>
           </div>
         </div>
 
 
-        <div className="relative h-full flex items-center justify-center px-4">
+        <div className=" pt-2 px-4">
 
 
 
 
-          <div className="absolute top-[10%] left-1/2 transform -translate-x-1/2">
-            <Image src="/images/logolaurata.png" alt="logoSES" width={200} height={120} />
+
+
+          <div className="flex    mt-44   justify-end text-end   text-white ">
+            <p className="text-4xl  text-end uppercase ">Vitrine des <b>
+            offres  de stage   </b> <br /> au Cameroun</p>
           </div>
 
-
-          <div className="absolute top-[20%] left-[75%] transform -translate-x-1/2 text-center text-white w-[70%] md:w-[30%]">
-            <p className="text-5xl  font-semibold">Vitrine des offres de stage au Cameroun</p>
+          <div className="flex mr-2   mt-36   justify-end text-end   text-white ">
+            <p className=" text-end text-white text-xl ">
+              <b>  Étudiants & Jeunes diplômés </b> <br /> Trouve ton stage et jette les bases d’une carrière réussie.
+            </p>
           </div>
-
-          <div className="absolute top-[20%] left-[75%] transform -translate-x-1/2 text-center text-white w-[70%] md:w-[30%]">
-            <p className="text-5xl  font-semibold">Vitrine des offres de stage au Cameroun</p>
-          </div>
-          <p className="ml-[20%] mt-[24%]  text-white text-xl ">
-            Étudiants & Jeunes diplômés : Trouve ton stage et jette les bases d’une carrière réussie.
-          </p>
-
         </div>
-        <div className="flex  mt-48 ">
-          <div className=" flex  ml-[24%]">
+
+        <div>
+           <div className="flex mr-2   px-4 my-20   justify-end text-end   text-[#4A62AA] ">
+            <p className=" text-end text-xl ">
+              <b>Secteurs public & privé </b> <br /> Ensemble, œuvrons pour leur insertion dans l'emploi.
+            </p>
+          </div>
+        </div>
+        <div className="flex  my-4 mb-8 ">
+           <div className=" flex  ml-[24%]">
             <ButtonAccueil />
           </div>
         </div>
 
 
-        <div className="mt-auto w-full px-6 py-4 bg-white">
+        <div className="w-full px-6 mt-auto  bg-white">
           <div className="flex justify-end">
-            <div className="w-full md:w-[80%]">
+            <div className="w-full ">
               <Bandeau />
             </div>
           </div>
@@ -88,7 +100,7 @@ export default function WelcomePage2() {
 
 
 
-    </div>
+ 
 
   );
 
