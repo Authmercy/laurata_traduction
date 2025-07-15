@@ -2,5 +2,7 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/students/carrier": "pages/students/carrier.js"
+  "/students/metier/fichesMetier": "pages/students/metier/fichesMetier.js",
+  "/students/offresStage": "pages/students/offresStage.js",
+  "/students/classements": "pages/students/classements.js"
 }

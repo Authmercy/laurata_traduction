@@ -3,10 +3,15 @@ import React, { useState } from "react";
 
 import UseClassementService from "@/service/service_classement";
 
-
+import en from '../../../i18/en/student/classement.json';
+import fr from '../../../i18/fr/student/classement.json';
+import { useRouter } from "next/router";
 export default function ClassementComponent() {
 
+const router = useRouter();
 
+    const { locale } = router;
+    const t = locale === 'en' ? en : fr;
 const {
   regions,
   selectedRegion,
@@ -31,8 +36,7 @@ const {
         <div className="flex justify-center">
           <h1 className=" uppercase bg-[#A87A38] text-white  text-2xl text-center font-extrabold w-full  p-2">
 
-
-            Classements
+   {t.title}
           </h1></div>
 
         {errorMessage && (
@@ -123,10 +127,10 @@ const {
       <table className="w-[80%] text-center text-lg border-collapse">
         <thead>
           <tr>
-            <th className="border-[#A87A38] text-start p-2">Université</th>
-            <th className="border-[#A87A38] p-2">Rang</th>
+            <th className="border-[#A87A38] text-start p-2"> {t.university}</th>
+            <th className="border-[#A87A38] p-2">{t.rank}</th>
             <th className="border-[#A87A38] bg-[#c7d0e9] p-2">
-              {code === 'CM' ? 'Ville' : 'Pays'}
+                      {code === 'CM' ? ` ${t.city}` : `${t.country}`}
             </th>
           </tr>
         </thead>
@@ -149,7 +153,7 @@ const {
     ) : (
       <div className="w-full py-8 text-center text-gray-500">
         {selectedCategory 
-          ? `Aucun classement disponible pour la catégorie "${selectedCategory.label}"`
+          ? `${t.noData} "${selectedCategory.label}"`
           : ""}
       </div>
     )}
