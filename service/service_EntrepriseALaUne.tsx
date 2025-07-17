@@ -2,6 +2,7 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { URLS } from "./url";
 import { useTranslation } from "react-i18next";
+import UseLanguageService from "./language_switch";
 
 
 type Contact = {
@@ -29,8 +30,13 @@ type Company = {
 
 
 export default function UseEntrepriseUneService() {
-   const { i18n } = useTranslation();
-   const currentLanguage = i18n.language; 
+ const {
+
+   headers
+
+
+    } = UseLanguageService()
+
     const [companies, setCompanies] = useState<Company[]>([]);
     const [selectedCompany, setSelectedCompany] = useState<Company | null>(null);
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -70,10 +76,7 @@ export default function UseEntrepriseUneService() {
 
                 const response = await fetch(BACKEND_URL, {
                     method: "GET",
-                    headers: {
-                        "Content-Type": "application/json",
-                        locale: currentLanguage,
-                    },
+                    headers,
                 });
 
                 console.log("URL used:", BACKEND_URL);

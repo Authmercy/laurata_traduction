@@ -2,6 +2,7 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { URLS } from "./url";
 import { useTranslation } from "react-i18next";
+import UseLanguageService from "./language_switch";
 
 type Institution = {
   id: number;
@@ -16,8 +17,13 @@ type Institution = {
   city?: string;
 };
 export default function UseInstitutionService() {
-  const { i18n } = useTranslation();
-  const currentLanguage = i18n.language; 
+ const {
+
+   headers
+
+
+    } = UseLanguageService()
+
   const [institutionsTransnational, setInstitutionsTransnational] = useState<Institution[]>([]);
   const [institutionPublic, setInstitutionsPublic] = useState<Institution[]>([]);
   const [institutionsLaiques, setInstitutionsLaiques] = useState<Institution[]>([]);
@@ -61,10 +67,7 @@ export default function UseInstitutionService() {
         url.searchParams.append("type", "TRANSNATIONAL");
         const response = await fetch(url.toString(), {
           method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-            locale: currentLanguage,
-          },
+         headers,
         });
         if (!response.ok) {
           throw new Error(`Erreur HTTP: ${response.status},
@@ -97,10 +100,7 @@ export default function UseInstitutionService() {
         url.searchParams.append("type", "PUBLIC_OTHERS");
         const response = await fetch(url.toString(), {
           method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-            locale: currentLanguage,
-          },
+         headers,
         });
 
         if (!response.ok) {
@@ -133,10 +133,7 @@ export default function UseInstitutionService() {
         url.searchParams.append("type", "PRIVATE_LAIC");
         const response = await fetch(url.toString(), {
           method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-            locale: currentLanguage,
-          },
+         headers,
         });
 
         if (!response.ok) {
@@ -169,10 +166,7 @@ export default function UseInstitutionService() {
         url.searchParams.append("type", "PRIVATE_CONFESIONNAL");
         const response = await fetch(url.toString(), {
           method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-            locale: currentLanguage,
-          },
+         headers,
         });
         if (!response.ok) {
           throw new Error(`Erreur HTTP: ${response.status},
@@ -204,10 +198,7 @@ export default function UseInstitutionService() {
         url.searchParams.append("type", "PUBLIC_SPECIAL");
         const response = await fetch(url.toString(), {
           method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-            locale: currentLanguage,
-          },
+         headers,
         });
 
         if (!response.ok) {
@@ -240,10 +231,7 @@ export default function UseInstitutionService() {
          url.searchParams.append("type", "PUBLIC");
          const response = await fetch(url.toString(), {
            method: "GET",
-           headers: {
-             "Content-Type": "application/json",
-             locale: currentLanguage,
-           },
+           headers,
          });
  
            if (!response.ok) {

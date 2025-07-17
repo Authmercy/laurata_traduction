@@ -2,6 +2,7 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { URLS } from "./url";
 import { useTranslation } from "react-i18next";
+import UseLanguageService from "./language_switch";
 
 type Items = {
   id: number;
@@ -37,8 +38,12 @@ type GroupedQuestions = {
 };
 
 export default function UseSondageService() {
-    const { i18n } = useTranslation();
-    const currentLanguage = i18n.language; 
+ const {
+
+   headers
+
+
+    } = UseLanguageService()
   const [responses, setResponses] = useState<{ [questionId: number]: string | string[] }>({});
   const [question, setQuestions] = useState<Question[]>([]);
   const [loading, setLoading] = useState(true);
@@ -111,10 +116,7 @@ export default function UseSondageService() {
       console.log(url);
       const response = await fetch(url.toString(), {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          locale: currentLanguage,
-        },
+        headers,
         body: JSON.stringify(payload),
       });
 
@@ -145,10 +147,7 @@ export default function UseSondageService() {
         const url = new URL(BACKEND_URL);
         const response = await fetch(url.toString(), {
           method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-            locale: currentLanguage,
-          },
+         headers,
         });
 
         const data = await response.json();

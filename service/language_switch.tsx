@@ -1,24 +1,21 @@
-import  { useRouter } from "next/router";
+import { useRouter } from 'next/router';
 
-
-
-
-
-export default function UseActuService() {
+export default function UseLanguageService() {
   const router = useRouter();
   const { pathname, asPath, query, locale } = router;
 
-
-  const changeLanguage = (newLocale: any) => {
-
+  const changeLanguage = (newLocale: string) => {
     router.push({ pathname, query }, asPath, { locale: newLocale });
   };
 
+  const headers = {
+    "Content-Type": "application/json",
+    locale: locale || "fr",
+  };
+
   return {
-
     locale,
-    changeLanguage
-
-
-  }
+    changeLanguage,
+    headers,
+  };
 }

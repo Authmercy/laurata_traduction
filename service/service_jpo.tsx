@@ -3,6 +3,7 @@ import { FormEvent, useEffect, useState } from "react";
 import { URLS } from "./url";
 import DatePicker, { DateObject } from "react-multi-date-picker";
 import { useTranslation } from "react-i18next";
+import UseLanguageService from "./language_switch";
 
 type Opendays = {
   id: number;
@@ -26,8 +27,13 @@ type Opendays = {
 
 
 export default function UseJPOService() {
-  const { i18n } = useTranslation();
-  const currentLanguage = i18n.language; 
+ const {
+
+   headers
+
+
+    } = UseLanguageService()
+
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const handleError = (error: any, context?: string) => {
     console.error(`Error in ${context || 'operation'}:`, error);
@@ -81,10 +87,7 @@ export default function UseJPOService() {
 
       const response = await fetch(URLS.OPENDAYS_SEARCH, {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          locale: currentLanguage,
-        },
+        headers,
         body: JSON.stringify(payload),
       });
 
@@ -133,10 +136,7 @@ console.log("searchResults.length:", searchResults.length);
         url.searchParams.append("category", "NOSCHOOL");
         const response = await fetch(url.toString(), {
           method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-            locale: currentLanguage,
-          },
+         headers,
         });
 
 

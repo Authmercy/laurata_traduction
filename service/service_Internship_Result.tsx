@@ -3,11 +3,17 @@ import React, { FormEvent, useEffect, useRef, useState } from 'react';
 import { URLS } from './url';
 import { InternshipFilter } from '@/service/Internship-filter';
 import { useTranslation } from 'react-i18next';
+import UseLanguageService from './language_switch';
 
 
 export default function ServiceInternshipResult() {
-      const { i18n } = useTranslation();
-      const currentLanguage = i18n.language; 
+     const {
+    
+       headers
+    
+    
+        } = UseLanguageService()
+    
     const [foas, setSectors] = useState<Sector[]>([]);
     const [status, setStatus] = useState<Status[]>([]);
     const [Levels, setLevels] = useState<Level[]>([]);
@@ -74,10 +80,7 @@ export default function ServiceInternshipResult() {
                 }
                 const response = await fetch(BACKEND_URL, {
                     method: "GET",
-                    headers: {
-                        "Content-Type": "application/json",
-                        locale: currentLanguage,
-                    },
+                    headers,
                 });
                 if (!response.ok) {
                     throw new Error(`Erreur HTTP: ${response.status}, Erreur serveur, veuillez réessayer plus tard`);
@@ -100,10 +103,7 @@ export default function ServiceInternshipResult() {
                 }
                 const response = await fetch(BACKEND_URL, {
                     method: "GET",
-                    headers: {
-                        "Content-Type": "application/json",
-                        locale: currentLanguage,
-                    },
+                    headers,
                 });
                 if (!response.ok) {
                     throw new Error(`Erreur HTTP: ${response.status}, Erreur serveur, veuillez réessayer plus tard`);
@@ -126,10 +126,7 @@ export default function ServiceInternshipResult() {
                 }
                 const response = await fetch(BACKEND_URL, {
                     method: "GET",
-                    headers: {
-                        "Content-Type": "application/json",
-                        locale: currentLanguage,
-                    },
+                    headers,
                 });
                 if (!response.ok) {
                     throw new Error(`Erreur HTTP: ${response.status}, Erreur serveur, veuillez réessayer plus tard`);
@@ -152,10 +149,7 @@ export default function ServiceInternshipResult() {
                 }
                 const response = await fetch(BACKEND_URL, {
                     method: "GET",
-                    headers: {
-                        "Content-Type": "application/json",
-                        locale: currentLanguage,
-                    },
+                    headers,
                 });
                 if (!response.ok) {
                     throw new Error(`Erreur HTTP: ${response.status}, Erreur serveur, veuillez réessayer plus tard`);
@@ -179,10 +173,7 @@ export default function ServiceInternshipResult() {
                 }
                 const response = await fetch(BACKEND_URL, {
                     method: "GET",
-                    headers: {
-                        "Content-Type": "application/json",
-                        locale: currentLanguage,
-                    },
+                    headers,
                 });
                 if (!response.ok) {
                     throw new Error(`Erreur HTTP: ${response.status}, Erreur serveur, veuillez réessayer plus tard`);
@@ -205,10 +196,7 @@ export default function ServiceInternshipResult() {
                 }
                 const response = await fetch(BACKEND_URL, {
                     method: "GET",
-                    headers: {
-                        "Content-Type": "application/json",
-                        locale: currentLanguage,
-                    },
+                    headers,
                 });
                 if (!response.ok) {
                     throw new Error(`Erreur HTTP: ${response.status}, Erreur serveur, veuillez réessayer plus tard`);
@@ -283,10 +271,7 @@ export default function ServiceInternshipResult() {
 
             const response = await fetch(URLS.INTERNSHIP_SEARCH, {
                 method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                    locale: currentLanguage,
-                },
+                headers,
                 body: JSON.stringify(filters),
             });
 
@@ -396,10 +381,7 @@ export default function ServiceInternshipResult() {
 
             const response = await fetch(BACKEND_URL, {
                 method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                    locale: currentLanguage,
-                },
+                headers,
                 body: JSON.stringify(newFilters.toJSON()),
             });
 

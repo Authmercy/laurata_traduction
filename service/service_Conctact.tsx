@@ -2,13 +2,19 @@
 import { useEffect, useState } from "react";
 import { URLS } from "./url";
 import { useTranslation } from "react-i18next";
+import UseLanguageService from "./language_switch";
 
 
 
 export default function UseContactService() {
 
-   const { i18n } = useTranslation();
-   const currentLanguage = i18n.language; 
+  const {
+ 
+    headers
+ 
+ 
+     } = UseLanguageService()
+ 
   const [elements, setElements] = useState({ fullname: "", email: "", phone: "", subject: "", text: "" });
   const [successMessage, setSuccessMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
@@ -32,10 +38,7 @@ export default function UseContactService() {
 
       const response = await fetch(BACKEND_URL, {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          locale: currentLanguage,
-        },
+        headers,
         body: JSON.stringify(elements),
       });
 

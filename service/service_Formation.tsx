@@ -3,6 +3,7 @@ import React, { FormEvent, useEffect, useState } from 'react';
 import { URLS } from './url';
 import { SchoolFilter } from './SchoolProgram-filter';
 import { useTranslation } from 'react-i18next';
+import UseLanguageService from './language_switch';
 
 
 type Training = {
@@ -39,8 +40,13 @@ type TrainingMode = {
 
 
 export default function ServiceFormationFilter() {
-    const { i18n } = useTranslation();
-    const currentLanguage = i18n.language; 
+   const {
+  
+     headers
+  
+  
+      } = UseLanguageService()
+  
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const router = useRouter();
   const [error, setError] = useState<string | null>(null);
@@ -97,10 +103,7 @@ export default function ServiceFormationFilter() {
         }
         const response = await fetch(BACKEND_URL, {
           method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-            locale: currentLanguage,
-          },
+         headers,
         });
         if (!response.ok) {
           throw new Error(`Erreur HTTP: ${response.status},
@@ -130,10 +133,7 @@ export default function ServiceFormationFilter() {
         }
         const response = await fetch(BACKEND_URL, {
           method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-            locale: currentLanguage,
-          },
+         headers,
         });
         if (!response.ok) {
           throw new Error(`Erreur HTTP: ${response.status},
@@ -164,10 +164,7 @@ export default function ServiceFormationFilter() {
         }
         const response = await fetch(BACKEND_URL, {
           method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-            locale: currentLanguage,
-          },
+         headers,
         });
         if (!response.ok) {
           throw new Error(`Erreur HTTP: ${response.status},
@@ -198,10 +195,7 @@ export default function ServiceFormationFilter() {
         }
         const response = await fetch(BACKEND_URL, {
           method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-            locale: currentLanguage,
-          },
+         headers,
         });
         if (!response.ok) {
           throw new Error(`Erreur HTTP: ${response.status},
@@ -232,10 +226,7 @@ export default function ServiceFormationFilter() {
         }
         const response = await fetch(BACKEND_URL, {
           method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-            locale: currentLanguage,
-          },
+         headers,
         });
         if (!response.ok) {
           throw new Error(`Erreur HTTP: ${response.status},
@@ -264,10 +255,7 @@ export default function ServiceFormationFilter() {
         }
         const response = await fetch(BACKEND_URL, {
           method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-            locale: currentLanguage,
-          },
+         headers,
         });
         if (!response.ok) {
           throw new Error(`Erreur HTTP: ${response.status},
@@ -297,10 +285,7 @@ export default function ServiceFormationFilter() {
         }
         const response = await fetch(BACKEND_URL, {
           method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-            locale: currentLanguage,
-          },
+         headers,
         });
         if (!response.ok) {
           throw new Error(`Erreur HTTP: ${response.status},
@@ -456,10 +441,7 @@ export default function ServiceFormationFilter() {
 
       const response = await fetch(BACKEND_URL, {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          locale: currentLanguage,
-        },
+        headers,
         body: JSON.stringify(payload),
       });
 

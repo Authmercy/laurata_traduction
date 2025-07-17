@@ -4,6 +4,7 @@ import { CV_Class } from "@/service/CV";
 import { URLS } from "@/service/url";
 import { useRouter } from "next/router";
 import { useTranslation } from "react-i18next";
+import UseLanguageService from "./language_switch";
 type Sector = {
   id: string;
   text: string;
@@ -12,8 +13,13 @@ type Sector = {
 
 export default function UseDepotCVService() {
 
-   const { i18n } = useTranslation();
-   const currentLanguage = i18n.language; 
+  const {
+ 
+    headers
+ 
+ 
+     } = UseLanguageService()
+ 
   const router = useRouter();
   
    const handleError = (error: any, context?: string) => {
@@ -57,10 +63,7 @@ export default function UseDepotCVService() {
   
           const response = await fetch(BACKEND_URL, {
             method: "GET",
-            headers: {
-              "Content-Type": "application/json",
-              locale: currentLanguage,
-            },
+            headers,
   
   
           });
@@ -144,10 +147,7 @@ export default function UseDepotCVService() {
   
         const response = await fetch(BACKEND_URL, {
           method: "POST",
-          headers: {
-            locale: currentLanguage,
-  
-          },
+          headers,
           body: data,
         });
   

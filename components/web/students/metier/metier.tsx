@@ -2,7 +2,7 @@
 import { URLS } from "@/service/url";
 import Link from "next/link";
 import router from "next/router";
-import React, { useEffect, useMemo, useRef, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import en from '../../../../i18/en/student/metier.json';
 import fr from '../../../../i18/fr/student/metier.json';
 import { useRouter } from "next/router";

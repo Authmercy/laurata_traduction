@@ -2,6 +2,7 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { URLS } from "./url";
 import { useTranslation } from "react-i18next";
+import UseLanguageService from "./language_switch";
 
 type Concours = {
   id: string;
@@ -22,8 +23,13 @@ type Concours = {
 
 
 export default function UseConcourService() {
-  const { i18n } = useTranslation();
-  const currentLanguage = i18n.language; 
+ const {
+
+   headers
+
+
+    } = UseLanguageService()
+
   const [concours, setConcours] = useState<Concours[]>([]);
   const [errorMessage, setErrorMessage] = useState<string | null>(null)
   const handleError = (error: any, context?: string) => {
@@ -60,10 +66,7 @@ export default function UseConcourService() {
 
         const response = await fetch(BACKEND_URL, {
           method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-            locale: currentLanguage,
-          },
+         headers,
 
 
         });

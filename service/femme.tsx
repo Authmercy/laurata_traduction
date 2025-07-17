@@ -2,6 +2,7 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { URLS } from "./url";
 import { useTranslation } from 'react-i18next';
+import UseLanguageService from "./language_switch";
 type InterviewItem = {
   id: number;
   index: number;
@@ -25,8 +26,13 @@ type Femme = {
 
 export default function UseFemmeService() {
   const router = useRouter();
-  const { i18n } = useTranslation();
-  const currentLanguage = i18n.language; 
+ const {
+
+   headers
+
+
+    } = UseLanguageService()
+
   const [open, setOpen] = useState(null);
   const [femmeImpact, setFemmeImpact] = useState<Femme[]>([]);
 
@@ -78,10 +84,7 @@ export default function UseFemmeService() {
 
         const response = await fetch(BACKEND_URL, {
           method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-            locale: currentLanguage,
-          },
+         headers,
 
 
         });
@@ -121,10 +124,7 @@ export default function UseFemmeService() {
 
         const response = await fetch(BACKEND_URL, {
           method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-            locale: currentLanguage,
-          },
+         headers,
 
 
         });
@@ -160,10 +160,8 @@ export default function UseFemmeService() {
         try {
           const response = await fetch(`${BACKEND_URL}/${id}`, {
             method: 'GET',
-            headers: {
-              'Content-Type': 'application/json',
-              'locale': currentLanguage,
-            },
+              headers,
+
           });
 
           const data = await response.json();

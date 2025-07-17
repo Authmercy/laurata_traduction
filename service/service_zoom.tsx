@@ -16,8 +16,13 @@ type NewsFeed = {
 
 
 export default function UseZoomService() {
-  const { i18n } = useTranslation();
-  const currentLanguage = i18n.language; 
+ const {
+
+   headers
+
+
+    } = UseLanguageService()
+
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const handleError = (error: any, context?: string) => {
     console.error(`Error in ${context || 'operation'}:`, error);
@@ -64,10 +69,7 @@ const currentYear = currentDate.getFullYear();
 
         const response = await fetch(url.toString(), {
           method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-            locale: currentLanguage,
-          },
+         headers,
         });
 
         if (!response.ok) {

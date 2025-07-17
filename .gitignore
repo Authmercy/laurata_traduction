@@ -1,5 +1,6 @@
 # Ignore Next.js build output
 .next/
+.next
 
 # Ignore node modules
 node_modules/

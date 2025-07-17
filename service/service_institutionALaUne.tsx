@@ -2,6 +2,7 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { URLS } from "./url";
 import { useTranslation } from "react-i18next";
+import UseLanguageService from "./language_switch";
 
 
 type Contact = {
@@ -50,8 +51,13 @@ type Institution = {
 
 export default function UseInstitutionUneService() {
 
-  const { i18n } = useTranslation();
-  const currentLanguage = i18n.language; 
+ const {
+
+   headers
+
+
+    } = UseLanguageService()
+
     const [institutions, setInstitutions] = useState<Institution[]>([]);
     const [selectedCompany, setSelectedCompany] = useState<Institution | null>(null);
 
@@ -89,10 +95,7 @@ const handleError = (error: any, context?: string) => {
 
                 const response = await fetch(BACKEND_URL, {
                     method: "GET",
-                    headers: {
-                        "Content-Type": "application/json",
-                        locale: currentLanguage,
-                    },
+                    headers,
                 });
 
                    if (!response.ok) {

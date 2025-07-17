@@ -2,6 +2,7 @@ import { useRouter } from 'next/router';
 import React, { FormEvent, useEffect, useState } from 'react';
 import { URLS } from './url';
 import { useTranslation } from 'react-i18next';
+import UseLanguageService from './language_switch';
 
 
 
@@ -12,8 +13,13 @@ export default function ServiceFormationDetail() {
   const { id } = router.query;
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [formationData, setOfferDetails] = useState<any>(null);
-  const { i18n } = useTranslation();
-  const currentLanguage = i18n.language; 
+ const {
+
+   headers
+
+
+    } = UseLanguageService()
+
   const [error, setError] = useState<string | null>(null);
   const BACKEND_URL = URLS.GET_PROGRAM_DETAIL;
   const [currentOfferIndex, setCurrentOfferIndex] = useState<number>(0);
@@ -52,10 +58,7 @@ export default function ServiceFormationDetail() {
         try {
           const response = await fetch(`${BACKEND_URL}/${id}`, {
             method: 'GET',
-            headers: {
-              'Content-Type': 'application/json',
-              'locale': currentLanguage,
-            },
+            headers,
           });
 
           const data = await response.json();
