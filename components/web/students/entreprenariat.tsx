@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 
-import en from '@/i18/fr/student/entrepreneuriat.json';
+import en from '@/i18/en/student/entrepreneuriat.json';
 import fr from '@/i18/fr/student/entrepreneuriat.json';
 
 export default function Entrepreunariat() {
@@ -844,30 +844,30 @@ export default function Entrepreunariat() {
 
                                         <div className="w-full ">
                                             <div className="space-y-4">
-                                                  < p className="font-bold">
-                                                {t.content9.titleCamerounais}
+                                                < p className="font-bold">
+                                                    {t.content9.titleCamerounais}
                                                 </p>
-                                                 {t.content9.aucteurCamerounais.map((tip, index) => (
-          <p 
-            key={index}
-           
-          >
-            -  {tip.name}<i className="text-[#4A62AA]"> {tip.title}</i> {tip.edition}
-          </p>
-        ))}
-                                              
-                                    
+                                                {t.content9.aucteurCamerounais.map((tip, index) => (
+                                                    <p
+                                                        key={index}
+
+                                                    >
+                                                        -  {tip.name}<i className="text-[#4A62AA]"> {tip.title}</i> {tip.edition}
+                                                    </p>
+                                                ))}
+
+
                                                 <p className="font-bold pt-4">
-                                                   {t.content9.titleEtranger}
+                                                    {t.content9.titleEtranger}
                                                 </p>
-                                                                               {t.content9.aucteurEtranger.map((tip, index) => (
-          <p 
-            key={index}
-           
-          >
-            -  {tip.name}<i className="text-[#4A62AA]"> {tip.title}</i> {tip.edition}
-          </p>
-        ))}
+                                                {t.content9.aucteurEtranger.map((tip, index) => (
+                                                    <p
+                                                        key={index}
+
+                                                    >
+                                                        -  {tip.name}<i className="text-[#4A62AA]"> {tip.title}</i> {tip.edition}
+                                                    </p>
+                                                ))}
                                             </div>
 
 

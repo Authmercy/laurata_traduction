@@ -2,6 +2,7 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/students/service": "pages/students/service.js",
-  "/students/entrepreneuriat": "pages/students/entrepreneuriat.js"
+  "/parole_dexpert/[id]": "pages/parole_dexpert/[id].js",
+  "/students/postulerStage": "pages/students/postulerStage.js",
+  "/parole_dexpert/parole_expert": "pages/parole_dexpert/parole_expert.js"
 }

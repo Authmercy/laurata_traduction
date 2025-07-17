@@ -32,19 +32,19 @@ export default function PostulerStage() {
                                 className="bg-white/60     p-2 px-6 shadow-sm mt-2 cursor-pointer hover:shadow-md transition-shadow"
                             >
                                 <p className=" py-2">
-                                        {t.emploiContent.intro}
+                                        {t.stageContent.intro}
                                 </p>
                             </div>
                             <div className="bg-white w-[102%] -ml-3 p-6">
                                 <p>
                                     <span className="text-[#4A62AA] font-bold">
-                                        {t.emploiContent.consultez} </span>  {t.emploiContent.consultezText}
+                                        {t.stageContent.consultez} </span>  {t.stageContent.consultezText}
                                 </p>
 
                                 <p>
                                     <span className="text-[#4A62AA] font-bold">
-                                        {t.emploiContent.envoyezText}
-                                    </span>   {t.emploiContent.envoyezText2}
+                                        {t.stageContent.envoyezText}
+                                    </span>   {t.stageContent.envoyezText2}
                                 </p>
                             </div>
                             <div
@@ -54,7 +54,7 @@ export default function PostulerStage() {
                                 <p className="ml-2">
                                     <b>
                                         NB :
-                                    </b>  {t.emploiContent.depot}.</p>
+                                    </b>  {t.stageContent.depot}.</p>
 
 
 
@@ -63,41 +63,41 @@ export default function PostulerStage() {
 
                             <div className="flex mt-8 gap-1 w-full">
                                 <p className="bg-[#4A62AA]  px-32 py-2 uppercase text-white  text-start ">
-                             {t.emploiContent.postuler}
+                             {t.stageContent.postuler}
                                 </p>
 
                             </div>
                             <div className="bg-white/70 p-2 mt-3 grid grid-cols-[1fr_3fr] gap-8">
                                 <div className="   mt-2 text-center text-[#4A62AA] ">
-                                      {t.emploiContent.spontane}</div>
+                                      {t.stageContent.spontane}</div>
                                 <div className="max-w-4xl">
-                                    <p>   {t.emploiContent.Cantidature}
+                                    <p>   {t.stageContent.Cantidature}
 
                                     </p>
                                 </div>
                             </div>
                             <div className="bg-white/70 p-2 mt-1 grid grid-cols-[1fr_3fr] gap-8">
                                 <div className="   text-center text-[#4A62AA] ">
-                                       {t.emploiContent.annonce}</div>
+                                       {t.stageContent.annonce}</div>
                                 <div className="max-w-4xl">
-                                    <p>   {t.emploiContent.format}
+                                    <p>   {t.stageContent.format}
                                     </p>
                                 </div>
                             </div>
                             <div className="bg-white/50 p-2 text-[#A87A38] text-xl font-bold text-center mt-3">
-                             {t.emploiContent.redaction}
+                             {t.stageContent.redaction}
 
                             </div>
                             <div className="flex flex-col w-full gap-1 mt-2">
                                 <div className="grid grid-cols-[1fr_3fr] gap-4">
                                     <div className=" p-2 text-start text-white h-full  bg-[#A87A38]/70 ">
-                                        <p className="font-bold">   {t.emploiContent.Curriculum} </p>
+                                        <p className="font-bold">   {t.stageContent.Curriculum} </p>
                                         <p className=" my-4">
-                                              {t.emploiContent.CurriculumText}
+                                              {t.stageContent.CurriculumText}
                                         </p>
                                         <p className=" my-4">
-                                            <b>  <Link href="/misc/nous_contacter" className="  hover:text-xl">    {t.emploiContent.contact} </Link>
-                                            </b>     {t.emploiContent.contactText}
+                                            <b>  <Link href="/misc/nous_contacter" className="  hover:text-xl">    {t.stageContent.contact} </Link>
+                                            </b>     {t.stageContent.contactText}
                                         </p>
                                     </div>
 
@@ -105,59 +105,59 @@ export default function PostulerStage() {
                                     <div className="w-full  bg-white/60 ">
                                         <div className="p-3">
                                             <p className="text-[#4A62AA]  font-bold">
-                                        {t.emploiContent.motivationLetter}
+                                        {t.stageContent.motivationLetter}
                                             </p>
 
                                             <p className="mt-1">
-                                                 {t.emploiContent.motivationLetterText}
+                                                 {t.stageContent.motivationLetterText}
                                             </p>
                                             <p className="mt-1">
                                                 <b>
-                                                    {t.emploiContent.first} :&nbsp;
+                                                    {t.stageContent.first} :&nbsp;
                                                 </b>
-                                               {t.emploiContent.firstText}
+                                               {t.stageContent.firstText}
                                             </p>
                                             <p className="mt-1">
                                                 <b>
-                                                     {t.emploiContent.second} : &nbsp;
+                                                     {t.stageContent.second} : &nbsp;
                                                 </b>
-                                               {t.emploiContent.secondText}
+                                               {t.stageContent.secondText}
                                             </p>
 
                                             <p className="mt-1">
                                                 <b>
-                                                     {t.emploiContent.third}  :&nbsp;
+                                                     {t.stageContent.third}  :&nbsp;
                                                 </b>
-                                             {t.emploiContent.thirdText}
+                                             {t.stageContent.thirdText}
                                             </p>
                                         </div>
                                     </div>
 
                                 </div>
                                 <div className=" bg-white p-2 text-center">
-                                    <Link href="/misc/nous_contacter" className="  font-bold hover:text-xl">     {t.emploiContent.contact} </Link>
-                                   {t.emploiContent.contactModele}
+                                    <Link href="/misc/nous_contacter" className="  font-bold hover:text-xl">     {t.stageContent.contact} </Link>
+                                   {t.stageContent.contactModele}
                                 </div>
                                 <div className="font-bold text-[#4A62AA]  bg-white/50 p-2 text-center">
-                                   {t.emploiContent.dossier}
+                                   {t.stageContent.dossier}
                                 </div>
                                 <div className=" bg-white/80  pl-24 p-2 text-start">
 
-                                    <p>   - {t.emploiContent.lettre}</p>
-                                    <p>   - {t.emploiContent.cv}</p>
-                                    <p>  - {t.emploiContent.contion}</p>
-                                    <p>    - {t.emploiContent.diplome}</p>
-                                    <p>   - {t.emploiContent.certificat}</p>
+                                    <p>   - {t.stageContent.lettre}</p>
+                                    <p>   - {t.stageContent.cv}</p>
+                                    <p>  - {t.stageContent.contion}</p>
+                                    <p>    - {t.stageContent.diplome}</p>
+                                    <p>   - {t.stageContent.certificat}</p>
                                 </div>
                             </div>
                             <p className=" text-white py-3" >
                                 <b className="ml-10">NB : </b>
-                               {t.emploiContent.nb}
+                               {t.stageContent.nb}
                             </p>
 
                             <div className="flex flex-row">
                                 <div className="flex-1"> </div>
-                                <button onClick={handleClick} className=" bg-white border border-[#4A62AA] font-bold text-[#4A62AA] p-3 rounded-xl"> {t.emploiContent.Postuler} </button>
+                                <button onClick={handleClick} className=" bg-white border border-[#4A62AA] font-bold text-[#4A62AA] p-3 rounded-xl"> {t.stageContent.Postuler} </button>
 
                             </div>
 
