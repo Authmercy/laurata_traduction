@@ -1,0 +1,15 @@
+{
+  
+    "title": "CONTACT US",
+    "form": {
+      "fullname": "Full name",
+      "email": "Email",
+      "phone": "Phone (WhatsApp)",
+      "subject": "Subject",
+      "message": "Enter your message",
+      "submit": "Send"
+    },
+    "success": "Your message has been successfully sent.",
+    "error": "An error occurred. Please try again."
+  }
+

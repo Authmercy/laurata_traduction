@@ -155,7 +155,7 @@ export default function Partenaire() {
         <div className="flex flex-wrap mt-10 pt-6">
 
             <div className="w-full  h-[35%] py-2 pb-4 bg-white ">
-                <p className="text-center  uppercase p-1 pb-4 text-[#4A62AA] ">  {locale === 'en' ? 'Partenaires' : 'Partners'}  </p>
+                <p className="text-center  uppercase p-1 pb-4 text-[#4A62AA] ">  {locale === 'en' ? 'Partners' : ' Partenaires'}  </p>
                 <div className=" grid grid-cols-9 pl-10  ">
 
                     {brand.map((item, index) => (

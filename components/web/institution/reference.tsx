@@ -1,7 +1,7 @@
 "use client";
 import { useRouter } from 'next/router';
-import en from '../../../i18/en/institution/reference.json';
-import fr from '../../../i18/fr/institution/reference.json';
+import en from '@/i18/en/institution/reference.json';
+import fr from '@/i18/fr/institution/reference.json';
 import Image from "next/image";
 import Link from "next/link";
 

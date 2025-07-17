@@ -3,8 +3,8 @@ import React, { useState } from "react";
 
 import UseClassementService from "@/service/service_classement";
 
-import en from '../../../i18/en/student/classement.json';
-import fr from '../../../i18/fr/student/classement.json';
+import en from '@/i18/en/student/classement.json';
+import fr from '@/i18/fr/student/classement.json';
 import { useRouter } from "next/router";
 export default function ClassementComponent() {
 

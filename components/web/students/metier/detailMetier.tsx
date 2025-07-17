@@ -1,6 +1,8 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
+import en from '../../../../i18/en/student/metier.json';
+import fr from '../../../../i18/fr/student/metier.json';
 
 type Jobsheet = {
     id: number;
@@ -18,7 +20,10 @@ type Jobsheet = {
 };
 
 export default function MetierDetaille() {
-    const router = useRouter();
+const router = useRouter();
+
+  const { locale } = router;
+  const t = locale === 'en' ? en : fr;
     const [jobOffers, setJobsheets] = useState<Jobsheet[]>([]);
     const [filteredMetiers, setFilteredMetiers] = useState<any[]>([]);
     const [loading, setLoading] = useState(true);
@@ -61,8 +66,8 @@ export default function MetierDetaille() {
 
         <div className="p-2 mt-8 md:p-8">
             <div className="flex justify-between items-center w-full px-4 md:mx-8">
-                <h1 className="bg-[#4A62AA] text-white text-center  text-xl font-bold w-96 p-2">
-                    FICHES MÉTIERS - {letter}
+                <h1 className="bg-[#4A62AA] uppercase text-white text-center  text-xl font-bold w-96 p-2">
+                      {t.jobSheets} - {letter}
                 </h1>
             </div>
 

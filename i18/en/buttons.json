@@ -1,0 +1,18 @@
+{
+  "home": {
+    "buttons": {
+      "institutions": "Higher Education",
+      "companies": "Companies &\nOrganizations",
+      "students": "Students &\nGraduates",
+      "internships": "Internship Offers"
+    }
+  },
+  "stage": {
+    "buttons": {
+      "postInternship": "POST AN INTERNSHIP",
+      "submitCV": "SUBMIT MY RESUME",
+      "applyGuide": "GUIDE TO APPLY FOR A POSITION",
+      "succeedTips": "TIPS TO SUCCEED IN YOUR INTERNSHIP"
+    }
+  }
+}

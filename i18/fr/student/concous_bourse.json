@@ -1,4 +1,5 @@
-{
+{"scholarship":" Bourses",
+"concour":"Concours ",
   "scholarships": {
     "title": "CONCOURS & BOURSES",
     "subtitle": "BOURSES D'ÉTUDES",
@@ -25,5 +26,34 @@
       "descriptionLink": "Description & Lien",
       "linkLabel": "Lien"
     }
-  }
+ },
+  
+  "concours": {
+    "title": "CONCOURS & BOURSES",
+    "subtitle": "CONCOURS",
+    "quote": "Un jour, tu te réveilleras et tu n’auras plus le temps de faire ce que tu voulais faire. Fais-le donc maintenant.",
+    "author": "Paulo Coelho",
+    "instructionsTitle": "Consignes relatives aux concours",
+    "instructions": [
+      "Lisez attentivement le communiqué pour vous assurer que vous remplissez toutes les conditions ;",
+      "Montez minutieusement votre dossier de candidature en fournissant toutes les pièces demandées ;",
+      "Déposez votre dossier dans les délais et les formats requis ;",
+      "Préparez-vous sérieusement à l’aide d’anciennes épreuves ou dans un cours préparatoire."
+    ],
+    "avant":"        Avant de postuler à un concours :",
+    "warningTitle": "Avertissement !",
+    "warning1": "Nous nous limitons uniquement à publier les communiqués d’ouverture des concours. Pour tout renseignement complémentaire, bien vouloir vous adresser à l'institution ou à l’administration concernée.",
+    "warning2": "Ne postulez jamais à un concours avec des faux documents ; ils sont détectés dans 100% des cas.",
+    "warning3": "La conséquence sera le rejet de votre dossier et l’éventualité de poursuites judiciaires.",
+    "warning4": "En août 2022, le Ministère de la Défense a radié de ses écoles plus de 1 000 recrues en cours de formation ayant postulé avec des faux diplômes !",
+    "sections": {
+      "public": "Institutions Publiques",
+      "private": "Institutions Privées",
+      "transnational": "Institutions Transnationales",
+      "liberal": "Professions libérales et réglementées",
+      "fonction": "Recrutement à la Fonction Publique",
+      "defense": "Forces de défense et de sécurité"
+    },
+    "calendarHint": "Consultez le calendrier des concours ici."
+  }  
 }

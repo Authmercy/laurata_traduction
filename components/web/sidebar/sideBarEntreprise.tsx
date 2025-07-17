@@ -6,8 +6,8 @@ import Zoom from "../zoom/zoom";
 import Actualite from "../actualite/actualité";
 import Pub from "./pub";
 import { usePathname } from "next/navigation";
-import en from '../../../i18/en/sidebar/sideBarEntreprise.json';
-import fr from '../../../i18/fr/sidebar/sideBarEntreprise.json';
+import en from '@/i18/en/sidebar/sideBarEntreprise.json';
+import fr from '@/i18/fr/sidebar/sideBarEntreprise.json';
 import { useRouter } from "next/router";
 export default function SidebarEntreprise() {
 

@@ -6,8 +6,8 @@ import Image from "next/image";
 import FormJPO from "./calendar";
 import UseJPOService from "@/service/service_jpo";
 
-import en from '../../../i18/en/student/jpo.json';
-import fr from '../../../i18/fr/student/jpo.json';
+import en from '@/i18/en/student/jpo.json';
+import fr from '@/i18/fr/student/jpo.json';
 import { useRouter } from "next/router";
 
 

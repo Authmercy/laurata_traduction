@@ -1,0 +1,67 @@
+{
+    "internshipTips": {
+        "title": "Conseils pour réussir son stage",
+        "intro": "Le stagiaire qui veut réussir son stage :",
+        "before": "AVANT LE DÉBUT DU STAGE",
+        "blocks": {
+            "general": "Généralités",
+            "dress": "Code vestimentaire",
+            "interview": "Entretien d’embauche"
+        },
+        "tips": {
+            "1": "S’informe sur l’entreprise, son secteur d’activité et ses concurrents sur Internet.",
+            "2": "Se renseigne sur les horaires de travail et de pauses lors de l’entretien.",
+            "3": "Évalue le trajet (en taxi, moto, etc.) entre son domicile et le lieu du stage pour éviter les retards.",
+            "4": "Demande à avoir un accès minimum au matériel de travail et si ce dernier est fourni par l’entreprise.",
+            "5": "S’informe sur l’existence ou non d’un code vestimentaire au sein de l’entreprise. Si oui, le respecte.",
+            "6": "S’exerce à se présenter en moins de 3 minutes, en synthétisant son parcours autour de quelques axes majeurs.",
+            "7": "Est ponctuel le jour de l’entretien et porte une tenue décente et formelle.",
+            "8": "Se munit de moyens de montrer son expérience, son savoir-faire et ses compétences ainsi que quelques références en lien avec ses engagements associatifs ou de candidatures idéales.",
+            "9": "Lorsqu’il ne comprend pas bien une expression ou un terme, il prend des notes et demande à son interlocuteur de la répéter."
+        }
+    },
+    "internshipTipsDuringStage": {
+        "title": "PENDANT LE STAGE",
+        "blocks": {
+            "punctuality": "Ponctualité, retard, absence",
+            "appearance": "Habillement & Savoir-être",
+            "involvement": "Implication, engagement",
+            "company": "Connaissance de l’entreprise",
+            "notCanteen": "Pour éviter d’être cantonné au photocopieur ou à la machine à café",
+            "supervisor": "Entretien régulier avec l’encadreur",
+            "report": "Rédaction du rapport de stage",
+            "issues": "Abus, difficultés, etc."
+        },
+        "tips": {
+            "10": "Prend ses dispositions pour JAMAIS arriver en retard ou s’absenter sans autorisation préalable. (Lorsqu’il doit s’absenter pour une raison quelconque (maladie, deuil, etc.), il n’attend pas la veille pour en informer le responsable et demander l’autorisation d’absence mais le fait une semaine avant. Demande à avoir un accès minimum au matériel de travail et si ce dernier est fourni par l’entreprise.)",
+            "11": "Est toujours propre sur lui, habillé décemment et sans extravagance dans le respect du code vestimentaire.",
+            "12": "Est, en toutes circonstances, poli et courtois avec l’ensemble du personnel, du vigile au grand patron.",
+            "13": "Évite le vol, les intrigues et les ragots.",
+            "14": "Dès le premier jour, s’implique totalement dans l’exécution des tâches qui lui sont confiées. Muni d’un bloc-notes, il note toutes les informations nécessaires à l’exécution de celles-ci. Il prend des initiatives et pose des questions et n’hésite pas à les faire savoir lorsqu’il n’a pas bien compris une tâche ou des explications.",
+            "15": "Au bout de la 1ère semaine, il possède une parfaite connaissance de l’entreprise et ses produits et comprend l’organigramme et les différentes directions et leurs fonctions respectives.",
+            "16": "Indique dès le premier jour à son encadreur que son rapport de stage devra expliquer sa contribution à l’exécution d’une tâche quotidienne, hebdomadaire ou à la résolution d’une problématique précise, etc.",
+            "17": "Se montre disposé à apprendre et intéressé par de nouvelles tâches.",
+            "18": "Fait un point régulier avec son encadreur (chaque semaine ou après deux semaines) sur la progression de son apprentissage. Le cas échéant, il lui fait part des difficultés rencontrées.",
+            "19": "Élabore dès la première semaine un planning de rédaction et commence dès que possible.",
+            "20": "Informe l’encadreur dès la 1ère semaine de la date butoir pour le dépôt du rapport de stage à l’établissement.",
+            "21": "Évite le plagiat d’autres rapports sur Internet car il existe de nos jours des logiciels qui détectent les plagiats, allant du simple paragraphe à des pages entières. Pensez aux sanctions académiques voire pénales.",
+            "22": "Se réfère toujours en premier à son encadreur quelle que soit la nature des difficultés ou des soucis qu’il rencontre. S’il s’agit d’un sujet sensible, fais-le par écrit."
+        }
+    },
+    "internshipTipsAfterStage": {
+     "title": "AVANT/À LA FIN DU STAGE ",
+        "blocks": {
+            "certificate": "Attestation de stage",
+            "networking": "Nouer des contacts",
+            "recruitment": "Recrutement",
+            "thanks": "Remerciements"
+        },
+        "tips": {
+            "23": "Se renseigne assez tôt (au moins 2 semaines avant la fin du stage) des formalités à remplir au sein de l’entreprise pour la délivrance de l’attestation de stage.",
+            "24": " Informe son encadreur et la direction du personnel suffisamment tôt de la date à laquelle il doit être en possession de cette attestation.",
+            "25": " Noue le maximum de contacts possibles. Ils pourront être d’une grande utilité dans la recherche d’un premier emploi.",
+            "26": "Se renseigne auprès de son encadreur ou des ressources humaines si un recrutement est envisagé à court ou moyen dans son domaine dans la structure. Fais part de son intérêt le cas échéant.",
+            "27": "Adresse ses remerciements à son encadreur ainsi qu’à l’équipe au sein de laquelle il a effectué son stage. Voire à la direction générale s’il pense que cela est justifié."
+        }
+    }
+}

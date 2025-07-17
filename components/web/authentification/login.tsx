@@ -2,8 +2,8 @@
 
 
 import { useRouter } from 'next/router';
-import en from '../../../i18/en/auth/login.json';
-import fr from '../../../i18/fr/auth/login.json';
+import en from '@/i18/en/auth/login.json';
+import fr from '@/i18/fr/auth/login.json';
 export default function LoginComponent() {
 
  const router = useRouter();

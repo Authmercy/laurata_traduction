@@ -3,8 +3,8 @@
 import UsePosterService from "@/service/service_posterStage";
 import { useRouter } from "next/router";
 import { useState } from "react";
-import en from '../../../i18/en/entreprise/Editer.json';
-import fr from '../../../i18/fr/entreprise/Editer.json';
+import en from '@/i18/en/entreprise/Editer.json';
+import fr from '@/i18/fr/entreprise/Editer.json';
 
 
 export default function EditionOffre() {

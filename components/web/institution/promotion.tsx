@@ -1,8 +1,8 @@
 "use client";
 
 import { useRouter } from 'next/router';
-import en from '../../../i18/en/institution/promotion.json';
-import fr from '../../../i18/fr/institution/promotion.json';
+import en from '@/i18/en/institution/promotion.json';
+import fr from '@/i18/fr/institution/promotion.json';
 import Link from "next/link";
 export default function PromotionInstitution() {
  const router = useRouter();

@@ -4,8 +4,8 @@ import { useState } from "react";
 import Image from "next/image";
 import UseLanguageService from "@/service/language_switch";
 import { useRouter } from "next/router";
-import en from '../../../i18/en/navbar/etudiant.json';
-import fr from '../../../i18/fr/navbar/etudiant.json';
+import en from '@/i18/en/navbar/etudiant.json';
+import fr from '@/i18/fr/navbar/etudiant.json';
 
 export default function NavBarOffre() {
 

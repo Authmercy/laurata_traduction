@@ -1,0 +1,26 @@
+{
+  "cv": {
+    "title": "Déposer mon cv",
+    "infoTitle": "Ayez la primeur de l’information sur les nouvelles annonces",
+    "infoText": "Déposer votre CV vous permet de recevoir les annonces de stage ou d’emploi pour débutants dans votre boîte mail d'une part et, de le rendre consultable par les entreprises et organisations partenaires d'autre part.",
+    "altTitle1": "Deux alternatives p",
+      "altTitle2": "pour envoyer votre CV",
+    "option1": "1. Au format PDF à",
+    "option11": " en précisant vos domaines d'intéret. ",
+    "option2": "2. Remplir et envoyer le formulaire ci-dessous.",
+    "input": {
+      "firstname": "Nom *",
+      "lastname": "Prénom *",
+      "email": "Email *",
+      "phone": "Téléphone *",
+      "sector": "Secteur",
+      "job": "Métier recherché",
+      "upload": "Télécharger votre CV *",
+      "uploadNote": "(.doc, .docx, .pdf) Taille : Max 2MB"
+    },
+    "terms": "J'accepte les conditions générales d'utilisation",
+    "termsError": "Veuillez accepter les conditions générales d'utilisation",
+    "submit": "Envoyer",
+    "back": "Retour"
+  }
+}

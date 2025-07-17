@@ -4,8 +4,8 @@ import UseJPOService from "@/service/service_jpo";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
 import DatePicker, { DateObject } from "react-multi-date-picker";
-import en from '../../../i18/en/student/jpo.json';
-import fr from '../../../i18/fr/student/jpo.json';
+import en from '@/i18/en/student/jpo.json';
+import fr from '@/i18/fr/student/jpo.json';
 export default function FormJPO() {
 
 

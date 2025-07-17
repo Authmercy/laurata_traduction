@@ -3,8 +3,8 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import ButtonAccueil from "@/components/web/buttons/buttonAccueil";
-import en from '../../../i18/en/misc/mention.json';
-import fr from '../../../i18/fr/misc/mention.json';
+import en from '@/i18/en/misc/mention.json';
+import fr from '@/i18/fr/misc/mention.json';
 
 export default function LegalSection() {
 const router = useRouter();

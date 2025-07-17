@@ -4,8 +4,8 @@ import Link from "next/link";
 import Zoom from "../zoom/zoom";
 import Actualite from "../actualite/actualité";
 import Pub from "./pub";
-import en from '../../../i18/en/sidebar/sideBarInstitution.json';
-import fr from '../../../i18/fr/sidebar/sideBarInstitution.json';
+import en from '@/i18/en/sidebar/sideBarInstitution.json';
+import fr from '@/i18/fr/sidebar/sideBarInstitution.json';
 import { useRouter } from "next/router";
 export default function SidebarInstitut() {
     

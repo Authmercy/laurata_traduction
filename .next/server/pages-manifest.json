@@ -2,7 +2,6 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/students/concoursBourse": "pages/students/concoursBourse.js",
-  "/students/bourses": "pages/students/bourses.js",
-  "/students/concours": "pages/students/concours.js"
+  "/students/service": "pages/students/service.js",
+  "/students/entrepreneuriat": "pages/students/entrepreneuriat.js"
 }

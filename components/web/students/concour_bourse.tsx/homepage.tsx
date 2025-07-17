@@ -3,11 +3,14 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import Link from "next/link";
-import en from '../../../../i18/en/student/metier.json';
-import fr from '../../../../i18/fr/student/metier.json';
+import en from '../../../../i18/en/student/concous_bourse.json';
+import fr from '../../../../i18/fr/student/concous_bourse.json';
 
 export default function ConcourBourse() {
+   const router = useRouter();
 
+    const { locale } = router;
+    const t = locale === 'en' ? en : fr;
     return (
         <div className="p-2 md:pl-8 text-black" >
             <div className="flex pl-6 gap-1 w-full">
@@ -16,7 +19,7 @@ export default function ConcourBourse() {
                         <h1 className=" bg-[#A87A38] text-white  text-2xl text-center font-extrabold w-full  p-2">
 
 
-                            CONCOURS & BOURSES
+                    {t.concours.title}
                         </h1></div>
                     <div className="bg-white/70 border-1 p-6 text-start border-[#4A62AA]">
                         <div className="flex flex-row mt-4 gap-1">
@@ -28,14 +31,14 @@ export default function ConcourBourse() {
                                     <Link href="/students/bourses">
                                         <div className="flex items-center  gap-2 py-2">
                                             <img src="/icons/puces_1.png" alt="" className="w-5" />
-                                            <p className="text-[#4A62AA] font-bold hover:text-[#A87A38] ">Bourses d'études</p>
+                                            <p className="text-[#4A62AA] font-bold hover:text-[#A87A38] ">{t.scholarship}</p>
                                         </div>
                                     </Link>
 
                                     <Link href="/students/concours">
                                         <div className="flex items-center  gap-2 py-2">
                                             <img src="/icons/puces_1.png" alt="" className="w-5" />
-                                            <p className="text-[#4A62AA] font-bold hover:text-[#A87A38] ">Concours</p>
+                                            <p className="text-[#4A62AA] font-bold hover:text-[#A87A38] ">{t.concour}</p>
                                         </div>
                                     </Link>
                                 </div>

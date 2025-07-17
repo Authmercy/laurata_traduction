@@ -3,8 +3,8 @@ import React, { useState, useEffect } from "react";
 
 import { useRouter } from "next/router";
 
-import en from '../../../i18/en/misc/cgu.json';
-import fr from '../../../i18/fr/misc/cgu.json';
+import en from '@/i18/en/misc/cgu.json';
+import fr from '@/i18/fr/misc/cgu.json';
 
 export default function CguComponent() {
     const router = useRouter();

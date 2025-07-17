@@ -1,0 +1,15 @@
+{
+  
+    "title": "CONTACTEZ-NOUS",
+    "form": {
+      "fullname": "Nom et prénom",
+      "email": "Email",
+      "phone": "Téléphone (WhatsApp)",
+      "subject": "Sujet",
+      "message": "Entrez votre message",
+      "submit": "Envoyer"
+    },
+    "success": "Votre message a été envoyé avec succès.",
+    "error": "Une erreur s'est produite. Veuillez réessayer."
+  }
+

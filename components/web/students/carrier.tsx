@@ -2,8 +2,8 @@
 import React, { useRef } from "react";
 import { useEffect, useState } from "react";
 
-import en from '../../../i18/en/student/career.json';
-import fr from '../../../i18/fr/student/career.json';
+import en from '@/i18/en/student/career.json';
+import fr from '@/i18/fr/student/career.json';
 import { useRouter } from "next/router";
 
 export default function CarrierComponent() {
@@ -68,37 +68,24 @@ export default function CarrierComponent() {
 
                                 <div className="w-full">
                                     <div className="space-y-4 bg-white/80">
-                                        <p className=" p-3  py-2" dangerouslySetInnerHTML={{ __html: t.content1.p1 }}>
-
-                                        </p>
-                                        <p className="bg-[#f1d9b6] p-3  py-2" dangerouslySetInnerHTML={{ __html: t.content1.p1 }}>
-
+                              
+                                        <p className="bg-[#f1d9b6] p-3  py-2" dangerouslySetInnerHTML={{ __html: t.content1.p1 }}/>
+                                        <p className=" p-3  py-2" dangerouslySetInnerHTML={{ __html: t.content1.p2 }}/>
 
 
-                                        </p>
-                                        <p className=" p-3  py-2" dangerouslySetInnerHTML={{ __html: t.content1.p2 }}>
-
-
-                                        </p>
-                                        <p className="bg-[#f1d9b6] p-3 py-2" dangerouslySetInnerHTML={{ __html: t.content1.p3 }}>
-
-
-                                        </p>
-                                        <p className=" p-3 py-2" dangerouslySetInnerHTML={{ __html: t.content1.p4 }}>
-                                        </p>
+                                       
+                                        <p className="bg-[#f1d9b6] p-3 py-2" dangerouslySetInnerHTML={{ __html: t.content1.p3 }}/>
+                                        <p className=" p-3 py-2" dangerouslySetInnerHTML={{ __html: t.content1.p4 }}/>
                                         <p className="bg-[#f1d9b6] p-3 py-2">
-                                            <span dangerouslySetInnerHTML={{ __html: t.content1.p5 }} > </span>
+                                            <span dangerouslySetInnerHTML={{ __html: t.content1.p5 }} />
 
-                                            <p dangerouslySetInnerHTML={{ __html: t.content1.p6 }}>
+                                            <p dangerouslySetInnerHTML={{ __html: t.content1.p6 }}/>
 
-                                            </p>
-
+                                    
                                         </p>
                                         <p className=" p-3 py-2">
                                             <b className="text-[#4A62AA]">10 entreprises les plus performantes en 2021</b> (chiffre d’affaires en milliards de FCFA)
-                                            <span dangerouslySetInnerHTML={{ __html: t.content1.p7 }}>
-
-                                            </span>
+                                            <span dangerouslySetInnerHTML={{ __html: t.content1.p7 }}/>
                                             <p>
                                                 <b> 1.  </b> SNH (788,3) ;
                                                 <b> 2.  </b>  ENEO (394,5) ;
@@ -241,17 +228,9 @@ export default function CarrierComponent() {
                                                           {t.content2.r3}
                                                         </span>
                                                     </td>
-                                                    <td className="   px-4 py-2 text-left" dangerouslySetInnerHTML={{ __html: t.content2.p17 }}>
-
-                                                    </td>
-                                                    <td className="   px-4 py-2 text-left" dangerouslySetInnerHTML={{ __html: t.content2.p18 }}>
-                                                    
-                                                    </td>
-                                                    <td className="   px-4 py-2 text-left" dangerouslySetInnerHTML={{ __html: t.content2.p19 }}>
-                                                       
-
-                                                    </td>
-
+                                                    <td className="   px-4 py-2 text-left" dangerouslySetInnerHTML={{ __html: t.content2.p17 }}/>
+                                                    <td className="   px-4 py-2 text-left" dangerouslySetInnerHTML={{ __html: t.content2.p18 }}/>
+                                                    <td className="   px-4 py-2 text-left" dangerouslySetInnerHTML={{ __html: t.content2.p19 }}/>
 
                                                 </tr>
 
@@ -268,17 +247,14 @@ export default function CarrierComponent() {
                                                             {t.content2.p29}
                                                         </p>
                                                         <p>
-                                                            <i  dangerouslySetInnerHTML={{ __html: t.content2.p28 }}>
-                                                            </i>
+                                                            <i  dangerouslySetInnerHTML={{ __html: t.content2.p28 }}/>
                                                         </p>
 
                                                     </td>
                                                     <td className="   px-4 py-2 text-left">
                                                         {t.content2.p22}
                                                     </td>
-                                                    <td className="   px-4 py-2 text-left" dangerouslySetInnerHTML={{ __html: t.content2.p23 }}>
-                                                       
-                                                    </td>
+                                                    <td className="   px-4 py-2 text-left" dangerouslySetInnerHTML={{ __html: t.content2.p23 }}/>
 
 
                                                 </tr>
@@ -293,9 +269,7 @@ export default function CarrierComponent() {
                                                     </td>
 
                                                     <td className="   px-4 py-2 text-left">
-                                                        <p dangerouslySetInnerHTML={{ __html: t.content2.p24 }}>
-                                                 
-                                                        </p>
+                                                        <p dangerouslySetInnerHTML={{ __html: t.content2.p24 }}/>
                                                     </td>
                                                     <td className="   px-4 py-2 text-left">
                                                         <p>

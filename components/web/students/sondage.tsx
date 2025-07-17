@@ -3,8 +3,8 @@ import ButtonAccueil from "../buttons/buttonAccueil";
 import UseSondageService from "@/service/service_sondage";
 
 
-import en from '../../../i18/en/student/sondage.json';
-import fr from '../../../i18/fr/student/sondage.json';
+import en from '@/i18/en/student/sondage.json';
+import fr from '@/i18/fr/student/sondage.json';
 import { useRouter } from "next/router";
 
 

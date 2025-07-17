@@ -1,8 +1,8 @@
 import UseRegistrationService from "@/service/service_registration";
 import { URLS } from "@/service/url";
 import { useState } from "react";
-import en from '../../../i18/en/auth/register.json';
-import fr from '../../../i18/fr/auth/register.json';
+import en from '@/i18/en/auth/register.json';
+import fr from '@/i18/fr/auth/register.json';
 import { useRouter } from "next/router";
 
 

@@ -2,8 +2,8 @@
 import Link from "next/link"
 import { useRouter } from "next/router";
 
-import en from '../../../i18/en/entreprise/promotion.json';
-import fr from '../../../i18/fr/entreprise/promotion.json';
+import en from '@/i18/en/entreprise/promotion.json';
+import fr from '@/i18/fr/entreprise/promotion.json';
 
 export default function Visibilite() {
 

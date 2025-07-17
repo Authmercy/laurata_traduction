@@ -1,0 +1,26 @@
+{
+  "cv": {
+    "title": "Submit my resume",
+    "infoTitle": "Be the first to get new job alerts",
+    "infoText": "Submitting your resume lets you receive internship and junior job listings in your email and allows companies and partner organizations to view it.",
+    "altTitle1": "Two options ",
+        "altTitle2": "to submit your resume",
+    "option1": "1. In PDF format to",
+     "option11": " precising your interest ",
+    "option2": "2. Fill and submit the form below.",
+    "input": {
+      "firstname": "Last name *",
+      "lastname": "First name *",
+      "email": "Email *",
+      "phone": "Phone *",
+      "sector": "Sector",
+      "job": "Desired position",
+      "upload": "Upload your resume *",
+      "uploadNote": "(.doc, .docx, .pdf) Max size: 2MB"
+    },
+    "terms": "I accept the terms and conditions",
+    "termsError": "Please accept the terms and conditions",
+    "submit": "Submit",
+    "back": "Back"
+  }
+}

@@ -5,8 +5,8 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { usePathname } from "next/navigation";
 import UseLanguageService from "@/service/language_switch";
-import en from '../../../i18/en/navbar/institution.json';
-import fr from '../../../i18/fr/navbar/institution.json';
+import en from '@/i18/en/navbar/institution.json';
+import fr from '@/i18/fr/navbar/institution.json';
 export default function NavbarInstitut() {
 
        const {

@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import en from '../../../i18/en/entreprise/talent.json';
-import fr from '../../../i18/fr/entreprise/talent.json';
+import en from '@/i18/en/entreprise/talent.json';
+import fr from '@/i18/fr/entreprise/talent.json';
 
 export default function Trouver() {
   const router = useRouter();

@@ -9,10 +9,17 @@ import FonctionPubliqueTable from "./tableFonctionPublic";
 import LiberaleTable from "./tableLiberales";
 import ForceArmeComponent from "./forceEtDefence";
 
+import en from '../../../../i18/en/student/concous_bourse.json';
+import fr from '../../../../i18/fr/student/concous_bourse.json';
+import { useRouter } from "next/router";
 
 
 export default function ConcourComponent() {
 
+    const router = useRouter();
+
+    const { locale } = router;
+    const t = locale === 'en' ? en : fr;
     const [open, setOpen] = useState(null);
 
     const handleToggle = (index: any) => {
@@ -26,15 +33,11 @@ export default function ConcourComponent() {
                 <div className="  mt-1">
                     <div className="flex w-full gap-2 text-white font-bold">
 
-                        <div className="p-2 px-2  uppercase  w-[35%] text-2xl text-center bg-[#9C824A]  hover:bg-[#a19478] h-20 flex items-center justify-center">
-
-                            <Link href="/students/concoursBourse"> CONCOURS & BOURSES </Link>
+                        <div className="p-2 px-2 uppercase w-[35%] text-2xl text-center bg-[#9C824A] hover:bg-[#a19478] h-20 flex items-center justify-center">
+                            <Link href="/students/concoursBourse">{t.concours.title}</Link>
                         </div>
-
-
-                        <div className="p-3 px-8  text-xl text-center bg-[#A87A38] h-12 mt-4 flex items-center justify-center">
-
-                            CONCOURS
+                        <div className="p-3 px-8 text-xl text-center bg-[#A87A38] h-12 mt-4 flex items-center justify-center">
+                            {t.concours.subtitle}
                         </div>
 
                     </div>
@@ -43,18 +46,18 @@ export default function ConcourComponent() {
                         <div className="flex-1  ">
                         </div>
                         <div className="flex-2 bg-white  text-black p-4 text-end"> <p className="">
-                            Un jour, tu te réveilleras et tu n’auras plus le temps de faire ce <br /> que tu voulais faire. Fais-le donc maintenant.
+                               {t.concours.quote}
                             <br />  <span className="text-[#4A62AA] font-semibold "> Paulo Coelho </span>
                         </p>
 
                         </div>
                     </div>
-                       <div
+                    <div
                         className="py-2 px-8 mt-4 w-full   bg-white/70 text-[#A87A38] font-bold flex justify-between items-center"
 
                         onClick={() => handleToggle(7)}
                     >
-                        <span className=" font-bold text-lg ">Consignes relatives aux concours</span>
+                        <span className=" font-bold text-lg ">     {t.concours.instructionsTitle}</span>
                         <span className="text-xl">{open === 7 ? "▲" : "▼"}</span>
                     </div>
                     {open === 7 && (
@@ -63,44 +66,27 @@ export default function ConcourComponent() {
 
                             <div className="w-full  py-4 px-8 text-black">
 
-                                 <p className=" font-bold mb-4">
-                                    Avant de postuler à un concours :
+                                <p className=" font-bold mb-4">
+                                 {t.concours.avant}
                                 </p>
-                                <p>  <span className="text-[#4A62AA] font-bold">
-                                    i)
-                                </span>
-                                    &nbsp;&nbsp;    Lisez attentivement le communiqué pour vous assurer que vous remplissez toutes les conditions ;
-                                </p>
-                                <p> <span className="text-[#4A62AA] font-bold">
-                                    ii)
-                                </span>
-                                    &nbsp;&nbsp;   Montez minutieusement votre dossier de candidature en fournissant toutes les pièces demandées ;
-                                </p>
-                                <p> <span className="text-[#4A62AA] font-bold">
-                                    iii)
-                                </span>
-                                    &nbsp;&nbsp;    Déposez votre dossier dans les délais et les formats requis ;
-                                </p>
-                                <p> <span className="text-[#4A62AA] font-bold">
-                                    iv)
-                                </span>
-                                    &nbsp;&nbsp;   Préparez-vous sérieusement à l’aide d’anciennes épreuves ou dans un cours préparatoire.
-                                </p>
+                                {t.concours.instructions.map((item, idx) => (
+              <p key={idx}>
+                <span className="text-[#4A62AA] font-bold">{['i)', 'ii)', 'iii)', 'iv)'][idx]}</span>&nbsp;&nbsp;{item}
+              </p>
+            ))}
 
-                                <p className=" mt-4 "> <span className="text-red-600 font-bold ">Avertissement ! <br /></span>
-                                    - Nous nous limitons uniquement à publier les communiqués d’ouverture des concours. Pour tout renseignement complémentaire, bien vouloir vous adresser à  l'institution ou  à l’administration concernée.
+                               <p className="mt-4">
+              <span className="text-red-600 font-bold">{t.concours.warningTitle}<br /></span>
+              - {t.concours.warning1}
+            </p>
+            <p>
+              <span className="text-[#4A62AA] font-bold">-</span>
+              <span className="text-red-600"> {t.concours.warning2} </span>
+              {t.concours.warning3}
+            </p>
+            <p>- {t.concours.warning4}</p>
+          </div>
 
-                                </p>
-                                <p> <span className="text-[#4A62AA] font-bold">
-                                    -
-                                </span>
-                                   <span className="text-red-600  "> Ne postulez jamais à un concours avec des faux documents ; ils sont détectés dans 100% des cas. </span>La conséquence sera le rejet votre dossier et l’éventualité de poursuites judiciaires.
-                                </p>
-                                <p> - En août 2022, le Ministère de la Défense a radié de ses écoles plus de 1 000  recrues en cours de formation ayant postulé avec des faux diplômes !
-                                </p>
-                            </div>
-                         
-                       
 
 
 
@@ -111,7 +97,7 @@ export default function ConcourComponent() {
 
                         onClick={() => handleToggle(4)}
                     >
-                        <span className=" font-bold text-lg ">Institutions Publiques</span>
+                        <span className=" font-bold text-lg ">{t.concours.sections.public}</span>
                         <span className="text-xl">{open === 4 ? "▲" : "▼"}</span>
                     </div>
                     {open === 4 && (
@@ -123,7 +109,7 @@ export default function ConcourComponent() {
 
                             </div>
                             <p className="text-lg text-center text-black p-2 bg-white">
-                                Consultez le calendrier des concours <b className="underline text-[#4A62AA] ">
+                                  {t.concours.calendarHint} <b className="underline text-[#4A62AA] ">
                                     ici</b>.
                             </p>
                             <InstitutionsPublicTable></InstitutionsPublicTable>
@@ -139,7 +125,7 @@ export default function ConcourComponent() {
 
                         onClick={() => handleToggle(3)}
                     >
-                        <span className=" font-bold text-lg">Institutions Privées</span>
+                        <span className=" font-bold text-lg">{t.concours.sections.private}</span>
                         <span className="text-xl">{open === 3 ? "▲" : "▼"}</span>
                     </div>
                     {open === 3 && (
@@ -148,7 +134,7 @@ export default function ConcourComponent() {
 
                             <div className="w-full  py-4 px-8 text-black">
 
-                              
+
                             </div>
 
                             <InstitutionsPriveTable></InstitutionsPriveTable>
@@ -172,7 +158,7 @@ export default function ConcourComponent() {
 
                         onClick={() => handleToggle(2)}
                     >
-                        <span className=" font-bold text-lg ">Institutions Transnationales</span>
+                        <span className=" font-bold text-lg ">{t.concours.sections.transnational}</span>
                         <span className="text-xl">{open === 2 ? "▲" : "▼"}</span>
                     </div>
                     {open === 2 && (
@@ -181,7 +167,7 @@ export default function ConcourComponent() {
 
                             <div className="w-full  py-4 px-8 text-black">
 
-                              
+
                             </div>
                             <InstitutionsTransnationaleTable></InstitutionsTransnationaleTable>
                         </div>)}
@@ -190,7 +176,7 @@ export default function ConcourComponent() {
 
                         onClick={() => handleToggle(1)}
                     >
-                        <span className=" font-bold text-lg">Professions libérales et réglementées</span>
+                        <span className=" font-bold text-lg">{t.concours.sections.liberal}</span>
                         <span className="text-xl">{open === 1 ? "▲" : "▼"}</span>
                     </div>
                     {open === 1 && (
@@ -207,7 +193,7 @@ export default function ConcourComponent() {
 
                         onClick={() => handleToggle(5)}
                     >
-                        <span className=" font-bold  text-lg">Recrutement à la Fonction Publique </span>
+                        <span className=" font-bold  text-lg">{t.concours.sections.fonction} </span>
                         <span className="text-xl">{open === 5 ? "▲" : "▼"}</span>
                     </div>
                     {open === 5 && (
@@ -216,7 +202,7 @@ export default function ConcourComponent() {
 
                             <div className="w-full  py-4 px-8 text-black">
 
-                              
+
                             </div>
                             <FonctionPubliqueTable></FonctionPubliqueTable>
                         </div>)}
@@ -226,7 +212,7 @@ export default function ConcourComponent() {
 
                         onClick={() => handleToggle(6)}
                     >
-                        <span className=" font-bold text-lg">Forces de défense et de sécurité</span>
+                        <span className=" font-bold text-lg">{t.concours.sections.defense}</span>
                         <span className="text-xl">{open === 6 ? "▲" : "▼"}</span>
                     </div>
                     {open === 6 && (
@@ -235,7 +221,7 @@ export default function ConcourComponent() {
 
                             <div className="w-full  py-4 px-8 text-black">
 
-                               
+
                                 <ForceArmeComponent></ForceArmeComponent>
                             </div>     </div>)}
 

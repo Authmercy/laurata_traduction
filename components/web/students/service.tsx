@@ -3,8 +3,8 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import en from '../../../i18/en/student/service.json';
-import fr from '../../../i18/fr/student/service.json';
+import en from '@/i18/en/student/service.json';
+import fr from '@/i18/fr/student/service.json';
 
 import { useRouter } from "next/router";
 

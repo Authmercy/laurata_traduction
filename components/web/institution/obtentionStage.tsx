@@ -3,8 +3,8 @@
 
 import Link from "next/link";
 
-import en from '../../../i18/en/institution/obtenir.json';
-import fr from '../../../i18/fr/institution/obtenir.json';
+import en from '@/i18/en/institution/obtenir.json';
+import fr from '@/i18/fr/institution/obtenir.json';
 import { useRouter } from "next/router";
 
 export default function ObtentionStage() {

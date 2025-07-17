@@ -1,0 +1,18 @@
+{
+  "home": {
+    "buttons": {
+      "institutions": "Institutions du\nSupérieur",
+      "companies": "Entreprises &\nOrganisations",
+      "students": "Étudiants &\nDiplômés",
+      "internships": "Offres\nde stage"
+    }
+  },
+  "stage": {
+    "buttons": {
+      "postInternship": "POSTER UN STAGE",
+      "submitCV": "DÉPOSER MON CV",
+      "applyGuide": "GUIDE POUR POSTULER À UNE OFFRE",
+      "succeedTips": "CONSEILS POUR RÉUSSIR SON STAGE"
+    }
+  }
+}

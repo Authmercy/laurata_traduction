@@ -3,8 +3,8 @@ import Image from "next/image"
 import Link from "next/link"
 import { useRouter } from "next/router";
 import { useState } from "react";
-import en from '../../../i18/en/footer/footer.json';
-import fr from '../../../i18/fr/footer/footer.json';
+import en from '@/i18/en/footer/footer.json';
+import fr from '@/i18/fr/footer/footer.json';
 export default function Footer() {
     const router = useRouter();
     const [clicked, setClicked] = useState(false);
