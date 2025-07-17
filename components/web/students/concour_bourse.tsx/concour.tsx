@@ -9,8 +9,8 @@ import FonctionPubliqueTable from "./tableFonctionPublic";
 import LiberaleTable from "./tableLiberales";
 import ForceArmeComponent from "./forceEtDefence";
 
-import en from '../../../../i18/en/student/concous_bourse.json';
-import fr from '../../../../i18/fr/student/concous_bourse.json';
+import en from '@/i18/en/student/concous_bourse.json';
+import fr from '@/i18/fr/student/concous_bourse.json';
 import { useRouter } from "next/router";
 
 

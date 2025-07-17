@@ -2,6 +2,7 @@ import { useRouter } from 'next/router';
 import React, { FormEvent, useEffect, useRef, useState } from 'react';
 import { URLS } from './url';
 import { SchoolFilter } from './SchoolProgram-filter';
+import { useTranslation } from 'react-i18next';
 type Training = {
     key: string;
     text: string;
@@ -37,6 +38,8 @@ type TrainingMode = {
 
 
 export default function ServiceFormationResult() {
+      const { i18n } = useTranslation();
+      const currentLanguage = i18n.language; 
     const [training, setTraining] = useState<Training[]>([]);
     const [studyFields, setStudyFields] = useState<StudyFields[]>([]);
     const [degreeLevels, setDegreeLevels] = useState<DegreeLevel[]>([]);
@@ -115,7 +118,7 @@ const [isModified, setIsModified] = useState(false);
                     method: "GET",
                     headers: {
                         "Content-Type": "application/json",
-                        locale: "fr",
+                        locale: currentLanguage,
                     },
                 });
                 if (!response.ok) {
@@ -148,7 +151,7 @@ const [isModified, setIsModified] = useState(false);
                     method: "GET",
                     headers: {
                         "Content-Type": "application/json",
-                        locale: "fr",
+                        locale: currentLanguage,
                     },
                 });
                 if (!response.ok) {
@@ -182,7 +185,7 @@ const [isModified, setIsModified] = useState(false);
                     method: "GET",
                     headers: {
                         "Content-Type": "application/json",
-                        locale: "fr",
+                        locale: currentLanguage,
                     },
                 });
                 if (!response.ok) {
@@ -216,7 +219,7 @@ const [isModified, setIsModified] = useState(false);
                     method: "GET",
                     headers: {
                         "Content-Type": "application/json",
-                        locale: "fr",
+                        locale: currentLanguage,
                     },
                 });
                 if (!response.ok) {
@@ -250,7 +253,7 @@ const [isModified, setIsModified] = useState(false);
                     method: "GET",
                     headers: {
                         "Content-Type": "application/json",
-                        locale: "fr",
+                        locale: currentLanguage,
                     },
                 });
                 if (!response.ok) {
@@ -282,7 +285,7 @@ const [isModified, setIsModified] = useState(false);
                     method: "GET",
                     headers: {
                         "Content-Type": "application/json",
-                        locale: "fr",
+                        locale: currentLanguage,
                     },
                 });
                 if (!response.ok) {
@@ -315,7 +318,7 @@ const [isModified, setIsModified] = useState(false);
                     method: "GET",
                     headers: {
                         "Content-Type": "application/json",
-                        locale: "fr",
+                        locale: currentLanguage,
                     },
                 });
                 if (!response.ok) {
@@ -404,7 +407,7 @@ const [isModified, setIsModified] = useState(false);
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
-                    locale: "fr",
+                    locale: currentLanguage,
                 },
                 body: JSON.stringify(filters),
             });
@@ -523,7 +526,7 @@ const [isModified, setIsModified] = useState(false);
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
-                    locale: "fr",
+                    locale: currentLanguage,
                 },
                 body: JSON.stringify(newFilters.toJSON()),
             });

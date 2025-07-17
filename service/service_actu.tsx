@@ -1,6 +1,7 @@
 import router, { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { URLS } from "./url";
+import { useTranslation } from "react-i18next";
 
 type NewsFeed = {
   id: number;
@@ -15,7 +16,8 @@ type NewsFeed = {
 
 
 export default function UseActuService() {
-
+  const { i18n } = useTranslation();
+  const currentLanguage = i18n.language; 
   const [newsfeed, setNewsfeed] = useState<NewsFeed[]>([]);
   const [loading, setLoading] = useState(true);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
@@ -56,7 +58,7 @@ export default function UseActuService() {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
-            locale: "fr",
+            locale: currentLanguage,
           },
         });
 

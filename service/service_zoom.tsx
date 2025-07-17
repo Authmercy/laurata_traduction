@@ -1,6 +1,7 @@
 import router, { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { URLS } from "./url";
+import { useTranslation } from "react-i18next";
 
 type NewsFeed = {
   id: number;
@@ -15,7 +16,8 @@ type NewsFeed = {
 
 
 export default function UseZoomService() {
-
+  const { i18n } = useTranslation();
+  const currentLanguage = i18n.language; 
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const handleError = (error: any, context?: string) => {
     console.error(`Error in ${context || 'operation'}:`, error);
@@ -64,7 +66,7 @@ const currentYear = currentDate.getFullYear();
           method: "GET",
           headers: {
             "Content-Type": "application/json",
-            locale: "fr",
+            locale: currentLanguage,
           },
         });
 

@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { URLS } from "./url";
+import { useTranslation } from "react-i18next";
 
 type Institution = {
   id: number;
@@ -15,7 +16,8 @@ type Institution = {
   city?: string;
 };
 export default function UseInstitutionService() {
-
+  const { i18n } = useTranslation();
+  const currentLanguage = i18n.language; 
   const [institutionsTransnational, setInstitutionsTransnational] = useState<Institution[]>([]);
   const [institutionPublic, setInstitutionsPublic] = useState<Institution[]>([]);
   const [institutionsLaiques, setInstitutionsLaiques] = useState<Institution[]>([]);
@@ -61,7 +63,7 @@ export default function UseInstitutionService() {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
-            locale: "fr",
+            locale: currentLanguage,
           },
         });
         if (!response.ok) {
@@ -97,7 +99,7 @@ export default function UseInstitutionService() {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
-            locale: "fr",
+            locale: currentLanguage,
           },
         });
 
@@ -133,7 +135,7 @@ export default function UseInstitutionService() {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
-            locale: "fr",
+            locale: currentLanguage,
           },
         });
 
@@ -169,7 +171,7 @@ export default function UseInstitutionService() {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
-            locale: "fr",
+            locale: currentLanguage,
           },
         });
         if (!response.ok) {
@@ -204,7 +206,7 @@ export default function UseInstitutionService() {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
-            locale: "fr",
+            locale: currentLanguage,
           },
         });
 
@@ -240,7 +242,7 @@ export default function UseInstitutionService() {
            method: "GET",
            headers: {
              "Content-Type": "application/json",
-             locale: "fr",
+             locale: currentLanguage,
            },
          });
  

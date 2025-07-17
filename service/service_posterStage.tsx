@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { URLS } from "./url";
+import { useTranslation } from "react-i18next";
 
 type Sector = {
   key: string ;
@@ -33,7 +34,8 @@ type Parution = {
 export default function UsePosterService() {
 
 
- 
+   const { i18n } = useTranslation();
+   const currentLanguage = i18n.language; 
 
    const [foas, setSectors] = useState<Sector[]>([]);
       const [status, setStatus] = useState<Status[]>([]);
@@ -89,7 +91,7 @@ export default function UsePosterService() {
                       method: "GET",
                       headers: {
                           "Content-Type": "application/json",
-                          locale: "fr",
+                          locale: currentLanguage,
                       },
                   });
                   if (!response.ok) {
@@ -123,7 +125,7 @@ export default function UsePosterService() {
                       method: "GET",
                       headers: {
                           "Content-Type": "application/json",
-                          locale: "fr",
+                          locale: currentLanguage,
                       },
                   });
                   if (!response.ok) {
@@ -157,7 +159,7 @@ export default function UsePosterService() {
                       method: "GET",
                       headers: {
                           "Content-Type": "application/json",
-                          locale: "fr",
+                          locale: currentLanguage,
                       },
                   });
                   if (!response.ok) {
@@ -191,7 +193,7 @@ export default function UsePosterService() {
                       method: "GET",
                       headers: {
                           "Content-Type": "application/json",
-                          locale: "fr",
+                          locale: currentLanguage,
                       },
                   });
                   if (!response.ok) {
@@ -225,7 +227,7 @@ export default function UsePosterService() {
                       method: "GET",
                       headers: {
                           "Content-Type": "application/json",
-                          locale: "fr",
+                          locale: currentLanguage,
                       },
                   });
                   if (!response.ok) {
@@ -259,7 +261,7 @@ export default function UsePosterService() {
                       method: "GET",
                       headers: {
                           "Content-Type": "application/json",
-                          locale: "fr",
+                          locale: currentLanguage,
                       },
                   });
                   if (!response.ok) {

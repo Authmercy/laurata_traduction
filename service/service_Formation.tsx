@@ -2,6 +2,7 @@ import { useRouter } from 'next/router';
 import React, { FormEvent, useEffect, useState } from 'react';
 import { URLS } from './url';
 import { SchoolFilter } from './SchoolProgram-filter';
+import { useTranslation } from 'react-i18next';
 
 
 type Training = {
@@ -38,6 +39,8 @@ type TrainingMode = {
 
 
 export default function ServiceFormationFilter() {
+    const { i18n } = useTranslation();
+    const currentLanguage = i18n.language; 
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const router = useRouter();
   const [error, setError] = useState<string | null>(null);
@@ -96,7 +99,7 @@ export default function ServiceFormationFilter() {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
-            locale: "fr",
+            locale: currentLanguage,
           },
         });
         if (!response.ok) {
@@ -129,7 +132,7 @@ export default function ServiceFormationFilter() {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
-            locale: "fr",
+            locale: currentLanguage,
           },
         });
         if (!response.ok) {
@@ -163,7 +166,7 @@ export default function ServiceFormationFilter() {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
-            locale: "fr",
+            locale: currentLanguage,
           },
         });
         if (!response.ok) {
@@ -197,7 +200,7 @@ export default function ServiceFormationFilter() {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
-            locale: "fr",
+            locale: currentLanguage,
           },
         });
         if (!response.ok) {
@@ -231,7 +234,7 @@ export default function ServiceFormationFilter() {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
-            locale: "fr",
+            locale: currentLanguage,
           },
         });
         if (!response.ok) {
@@ -263,7 +266,7 @@ export default function ServiceFormationFilter() {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
-            locale: "fr",
+            locale: currentLanguage,
           },
         });
         if (!response.ok) {
@@ -296,7 +299,7 @@ export default function ServiceFormationFilter() {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
-            locale: "fr",
+            locale: currentLanguage,
           },
         });
         if (!response.ok) {
@@ -455,7 +458,7 @@ export default function ServiceFormationFilter() {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          locale: "fr",
+          locale: currentLanguage,
         },
         body: JSON.stringify(payload),
       });

@@ -2,6 +2,7 @@ import router, { useRouter } from "next/router";
 import { FormEvent, useEffect, useState } from "react";
 import { URLS } from "./url";
 import DatePicker, { DateObject } from "react-multi-date-picker";
+import { useTranslation } from "react-i18next";
 
 type Opendays = {
   id: number;
@@ -25,7 +26,8 @@ type Opendays = {
 
 
 export default function UseJPOService() {
-
+  const { i18n } = useTranslation();
+  const currentLanguage = i18n.language; 
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const handleError = (error: any, context?: string) => {
     console.error(`Error in ${context || 'operation'}:`, error);
@@ -81,7 +83,7 @@ export default function UseJPOService() {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          locale: "fr",
+          locale: currentLanguage,
         },
         body: JSON.stringify(payload),
       });
@@ -133,7 +135,7 @@ console.log("searchResults.length:", searchResults.length);
           method: "GET",
           headers: {
             "Content-Type": "application/json",
-            locale: "fr",
+            locale: currentLanguage,
           },
         });
 

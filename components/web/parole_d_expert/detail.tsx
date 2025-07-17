@@ -3,8 +3,9 @@ import UseParoleExpertService from "@/service/parole_expert";
 import Image from "next/image";
 
 import router, { useRouter } from "next/router";
-import { useEffect, useState } from "react";
 
+import en from '@/i18/en/student/parole_dexper.json';
+import fr from '@/i18/fr/student/parole_dexpert.json';
 export default function DetailExpert() {
   const {
     maxImages,
@@ -32,6 +33,10 @@ export default function DetailExpert() {
 
     router.push(`/parole_dexpert/parole_expert`);
   };
+     const router = useRouter();
+
+    const { locale } = router;
+    const t = locale === 'en' ? en : fr;
 
   return (
     <div className="flex flex-col   md:flex-row  ">
@@ -41,8 +46,7 @@ export default function DetailExpert() {
           <div className="flex justify-center">
             <h1 className=" bg-[#A87A38] text-white uppercase text-2xl text-center font-extrabold w-full  p-2">
 
-
-              PAROLE D'Expert
+    {t.title}
             </h1></div>
 
 
@@ -79,17 +83,17 @@ export default function DetailExpert() {
               </div>
 
             ) : (
-              <div>Loading...</div>
+              <div>{t.loading}</div>
             )}
           </div>
 
         </div>
         <div className="flex flex-row gap-8 mt-4  justify-end">
           <button className="px-6 py-2  bg-[#4A62AA] rounded-xl text-white font-bold ">
-            Écouter le texte
+        {t.ecouter}
           </button>
           <button onClick={handleClick} className="px-6 py-2  bg-[#A87A38] rounded-xl text-white font-bold ">
-            Retour à l'accueil
+             {t.retour}
           </button>
         </div>
       </div>

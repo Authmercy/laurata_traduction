@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { URLS } from "./url";
+import { useTranslation } from "react-i18next";
 
 
 type Contact = {
@@ -49,7 +50,8 @@ type Institution = {
 
 export default function UseInstitutionUneService() {
 
- const router = useRouter();
+  const { i18n } = useTranslation();
+  const currentLanguage = i18n.language; 
     const [institutions, setInstitutions] = useState<Institution[]>([]);
     const [selectedCompany, setSelectedCompany] = useState<Institution | null>(null);
 
@@ -89,7 +91,7 @@ const handleError = (error: any, context?: string) => {
                     method: "GET",
                     headers: {
                         "Content-Type": "application/json",
-                        locale: "fr",
+                        locale: currentLanguage,
                     },
                 });
 

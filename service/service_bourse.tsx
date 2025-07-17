@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { URLS } from "./url";
+import { useTranslation } from "react-i18next";
 
 type Offer = {
   id?: string | number;
@@ -21,7 +22,8 @@ type Region = {
 
 
 export default function UseBourseService() {
-
+  const { i18n } = useTranslation();
+  const currentLanguage = i18n.language; 
    const [open, setOpen] = useState(null);
   const [regions, setRegions] = useState<Region[]>([]);
   const [selectedRegion, setSelectedRegion] = useState<string | null>(null);
@@ -69,7 +71,7 @@ const handleError = (error: any, context?: string) => {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
-            locale: "fr",
+            locale: currentLanguage,
           },
 
 
@@ -105,7 +107,9 @@ const handleError = (error: any, context?: string) => {
       const queryParams = new URLSearchParams({ region: reg.regionCode.toString() });
       const response = await fetch(`${BACKEND_URL}?${queryParams.toString()}`, {
         method: "GET",
-        headers: { "Content-Type": "application/json", locale: "fr" },
+        headers: { 
+          "Content-Type": "application/json",
+           locale: currentLanguage },
       });
 
     

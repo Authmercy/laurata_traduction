@@ -1,10 +1,12 @@
 import router, { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { URLS } from "./url";
+import { useTranslation } from "react-i18next";
 
 
 export default function UseRegistrationService() {
-
+  const { i18n } = useTranslation();
+  const currentLanguage = i18n.language; 
    const [elements, setElements] = useState({ username: "", email: "", password: "" });
   const [confirmPassword, setConfirmPassword] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
@@ -39,7 +41,7 @@ export default function UseRegistrationService() {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          locale: "fr",
+          locale: currentLanguage,
         },
         body: JSON.stringify(elements),
       });

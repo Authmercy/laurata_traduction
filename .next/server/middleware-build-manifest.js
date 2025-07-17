@@ -20,15 +20,15 @@ self.__BUILD_MANIFEST = {
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/parole_dexpert/[id]": [
+    "/entreprise/employeur": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/parole_dexpert/[id].js"
+      "static/chunks/pages/entreprise/employeur.js"
     ],
-    "/parole_dexpert/parole_expert": [
+    "/students/stage/[id]": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/parole_dexpert/parole_expert.js"
+      "static/chunks/pages/students/stage/[id].js"
     ]
   },
   "ampFirstPages": []

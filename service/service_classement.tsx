@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { URLS } from "./url";
+import { useTranslation } from "react-i18next";
 
 type Category = {
   id: number;
@@ -15,7 +16,8 @@ type Region = {
 
 
 export default function UseClassementService() {
-
+  const { i18n } = useTranslation();
+  const currentLanguage = i18n.language; 
 
   const [regions, setRegions] = useState<Region[]>([]);
   const [selectedRegion, setSelectedRegion] = useState<string | null>(null);
@@ -45,7 +47,7 @@ useEffect(() => {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
-          locale: "fr",
+          locale: currentLanguage,
         },
       });
 
@@ -110,7 +112,7 @@ useEffect(() => {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
-            locale: "fr",
+            locale: currentLanguage,
           },
         });
 
@@ -160,7 +162,7 @@ const handleCategoryClick = async (category: Category) => {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
-        locale: 'fr',
+        locale: currentLanguage,
       },
     });
 

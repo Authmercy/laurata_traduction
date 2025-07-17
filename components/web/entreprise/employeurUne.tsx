@@ -3,9 +3,11 @@
 import UseEntrepriseUneService from "@/service/service_EntrepriseALaUne";
 import Image from "next/image";
 import Link from "next/link";
-import router from "next/router";
-import { useState } from "react";
 
+import { useState } from "react";
+import en from '@/i18/en/entreprise/entrepriseALaUne.json';
+import fr from '@/i18/fr/entreprise/entrepriseALaUne.json';
+import { useRouter } from "next/router";
 
 export default function EmployeurALaUNe() {
     const {
@@ -23,6 +25,9 @@ export default function EmployeurALaUNe() {
 
     } = UseEntrepriseUneService()
 
+   const router = useRouter();
+      const { locale } = router;
+      const t = locale === 'en' ? en : fr;
 
 
 
@@ -41,7 +46,7 @@ export default function EmployeurALaUNe() {
                         <div className=" text-center flex-shrink-0">
                             <div className="relative text-2xl  flex flex-row items-center">
                                 <h1 className="border-[#A87A38] py-2 pr-20 text-end border-2 border-r-0 text-white bg-[#4A62AA] uppercase  font-extrabold w-full">
-                                    EMPLOYEUR
+                                        {t.title}
                                 </h1>
                                 <Image
                                     src="/icons/entreprise.png"
@@ -51,7 +56,7 @@ export default function EmployeurALaUNe() {
                                     className="absolute left-1/2 py-2  -mt-3 transform -translate-x-1/2 z-16"
                                 />
                                 <h1 className="border-[#A87A38] py-2 text-start pl-24 border-2 border-l-0 text-white bg-[#4A62AA] uppercase  font-extrabold w-full">
-                                    à la une
+                                        {t.title2}
                                 </h1>
                             </div>
                         </div>
@@ -65,7 +70,7 @@ export default function EmployeurALaUNe() {
                   <div className="mt-10 lg:w-1/3">
     <div className="bg-white p-4 pb-10 text-center">
         <p className="mt-8 text-black">
-            Cette rubrique présente aux étudiants et diplômés une entreprise, son secteur d'activité et ses métiers.
+     {t.intro}
         </p>
     </div>
     <div className="-mt-6 flex justify-center text-center">
@@ -73,7 +78,7 @@ export default function EmployeurALaUNe() {
             onChange={handleSelectChange}
             className="p-4 text-white text-center font-bold bg-[#A87A38] rounded-md shadow-sm"
         >
-            <option value="" disabled selected className="hidden ">Sélectionner un employeur</option>
+            <option value="" disabled selected className="hidden ">     {t.option}</option>
             {companies.map((company) => (
                 <option key={company.id} value={company.id}>
                     {company.name}
@@ -118,12 +123,12 @@ export default function EmployeurALaUNe() {
 
                             <div className="grid grid-cols-1 sm:grid-cols-1 lg:flex flex-wrap justify-center gap-2 w-full mt-4">
                                 {[
-                                    { href: '#presentation', label: 'Présentation' },
-                                    { href: '#secteur', label: 'Secteur' },
-                                    { href: '#produits', label: 'Produits & Services' },
-                                    { href: '#metiers', label: 'Nos métiers' },
-                                    { href: '#video', label: 'Vidéo' },
-                                    { href: '#contact', label: 'Contact' },
+                                    { href: '#presentation', label: t.presentation },
+                                    { href: '#secteur', label: t.secteur  },
+                                    { href: '#produits', label: t.produit  },
+                                    { href: '#metiers', label: t.metier  },
+                                    { href: '#video', label: t.video  },
+                                    { href: '#contact', label: t.contact  },
                                 ].map((link) => (
                                     <Link
                                         key={link.href}
@@ -142,7 +147,7 @@ export default function EmployeurALaUNe() {
 
 
                             <div id="presentation" className=" p-4 mt-2  bg-white/70">
-                                <h1 className="text-[#4A62AA] font-bold">PRÉSENTATION</h1>
+                                <h1 className="text-[#4A62AA] uppercase font-bold">{t.presentation}</h1>
                                 <div className="flex  flex-col gap-1">
 
                                     {Array.isArray(selectedCompany.description) && selectedCompany.description.length > 0 ? (
@@ -153,12 +158,12 @@ export default function EmployeurALaUNe() {
                                         </div>
 
                                     ) : (
-                                        <p>Aucune description enregistrée.</p>
+                                        <p>{t.noDescription}</p>
                                     )}
                                 </div>
                             </div>
                             <div id="secteur" className="mt-4  p-4  bg-white/70">
-                                <h1 className="text-[#4A62AA]  pb-8 font-bold">SECTEUR D'ACTIVITÉ</h1>
+                                <h1 className="text-[#4A62AA]  uppercase pb-8 font-bold">{t.secteur}</h1>
 
                                 {Array.isArray(selectedCompany.activities) && selectedCompany.activities.length > 0 ? (
                                     <div className="space-y-2">
@@ -168,13 +173,13 @@ export default function EmployeurALaUNe() {
                                     </div>
 
                                 ) : (
-                                    <p>Aucune activité enregistrée.</p>
+                                    <p>{t.noProgram}</p>
                                 )}
 
 
                             </div>
                             <div id="produits" className="mt-4  p-4  bg-white/70">
-                                <h1 className="text-[#4A62AA] pb-8  font-bold">PRODUITS & SERVICES</h1>
+                                <h1 className="text-[#4A62AA] pb-8 uppercase  font-bold">{t.produit}</h1>
 
 
                                 {Array.isArray(selectedCompany.portfolio) && selectedCompany.portfolio.length > 0 ? (
@@ -184,13 +189,13 @@ export default function EmployeurALaUNe() {
                                         ))}
                                     </div>
                                 ) : (
-                                    <p>Aucun produit enregistrée.</p>
+                                    <p>{t.noProduct}</p>
                                 )}
 
                             </div>
 
                             <div id="metiers" className="mt-4  p-4 pb-4   bg-white/70">
-                                <h1 className="text-[#4A62AA]  pb-8  font-bold">NOS MÉTIERS</h1>
+                                <h1 className="text-[#4A62AA]  pb-8 uppercase font-bold">{t.metier}</h1>
 
 
                                 {Array.isArray(selectedCompany.jobs) && selectedCompany.jobs.length > 0 ? (
@@ -200,12 +205,12 @@ export default function EmployeurALaUNe() {
                                         ))}
                                     </div>
                                 ) : (
-                                    <p>Aucun métiers enregistrée.</p>
+                                    <p>{t.nometier}</p>
                                 )}
 
                             </div>
                             <div id="video" className="mt-4 p-4 pb-4   bg-white/70">
-                                <h1 className="text-[#4A62AA]  pb-8  font-bold">VIDEO</h1>
+                                <h1 className="text-[#4A62AA]  pb-8 uppercase font-bold"> {t.video}</h1>
                                 <video src={selectedCompany.video}> {selectedCompany.video}</video>
                             </div>
                             <div id="contact" className="mt-8 p-4 bg-white/70">

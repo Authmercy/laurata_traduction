@@ -2,6 +2,7 @@ import { useRouter } from 'next/router';
 import React, { FormEvent, useEffect, useState } from 'react';
 import { URLS } from './url';
 import { InternshipFilter } from '@/service/Internship-filter';
+import { useTranslation } from 'react-i18next';
 type Sector = {
   key: string ;
   text: string;
@@ -30,7 +31,8 @@ type Parution = {
 }; 
 
 export default function ServiceInternshipFilter() {
-
+  const { i18n } = useTranslation();
+  const currentLanguage = i18n.language; 
 
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
 

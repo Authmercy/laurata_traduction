@@ -7,7 +7,7 @@ import en from '../../../../i18/en/student/concous_bourse.json';
 import fr from '../../../../i18/fr/student/concous_bourse.json';
 
 export default function ConcourBourse() {
-   const router = useRouter();
+    const router = useRouter();
 
     const { locale } = router;
     const t = locale === 'en' ? en : fr;
@@ -19,12 +19,12 @@ export default function ConcourBourse() {
                         <h1 className=" bg-[#A87A38] text-white  text-2xl text-center font-extrabold w-full  p-2">
 
 
-                    {t.concours.title}
+                            {t.concours.title}
                         </h1></div>
                     <div className="bg-white/70 border-1 p-6 text-start border-[#4A62AA]">
                         <div className="flex flex-row mt-4 gap-1">
                             <div className="flex-1">
-                                <img src="/images/concoursBourse.jpg" alt=""  />
+                                <img src="/images/concoursBourse.jpg" alt="" />
                             </div>
                             <div className="flex-1 flex items-center justify-center">
                                 <div className="flex flex-col justify-center gap-4 text-2xl">

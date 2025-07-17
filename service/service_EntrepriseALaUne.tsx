@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { URLS } from "./url";
+import { useTranslation } from "react-i18next";
 
 
 type Contact = {
@@ -28,7 +29,8 @@ type Company = {
 
 
 export default function UseEntrepriseUneService() {
-    const router = useRouter();
+   const { i18n } = useTranslation();
+   const currentLanguage = i18n.language; 
     const [companies, setCompanies] = useState<Company[]>([]);
     const [selectedCompany, setSelectedCompany] = useState<Company | null>(null);
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -70,7 +72,7 @@ export default function UseEntrepriseUneService() {
                     method: "GET",
                     headers: {
                         "Content-Type": "application/json",
-                        locale: "fr",
+                        locale: currentLanguage,
                     },
                 });
 

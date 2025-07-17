@@ -1,7 +1,7 @@
 import router, { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { URLS } from "./url";
-
+import { useTranslation } from 'react-i18next';
 type InterviewItem = {
   id: number;
   index: number;
@@ -24,7 +24,8 @@ type Expert = {
 
 
 export default function UseParoleExpertService() {
-
+  const { i18n } = useTranslation();
+  const currentLanguage = i18n.language; 
   const [open, setOpen] = useState(null);
   const [experts, setExperts] = useState<Expert[]>([]);
 
@@ -70,7 +71,7 @@ export default function UseParoleExpertService() {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
-            locale: "fr",
+            locale: currentLanguage,
           },
 
 
@@ -113,7 +114,7 @@ export default function UseParoleExpertService() {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
-            locale: "fr",
+            locale: currentLanguage,
           },
 
 
@@ -159,7 +160,7 @@ export default function UseParoleExpertService() {
             method: 'GET',
             headers: {
               'Content-Type': 'application/json',
-              'locale': 'fr',
+              'locale': currentLanguage,
             },
           });
 

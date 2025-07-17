@@ -5,8 +5,9 @@ import Link from "next/link";
 
 import { useEffect, useState } from "react";
 import UseInstitutionUneService from "@/service/service_institutionALaUne";
-
-
+import { useRouter } from "next/router";
+import en from '@/i18/en/institution/institutionALaUne.json';
+import fr from '@/i18/fr/institution/institutionALaUne.json';
 export default function InstitutionALaUNe() {
 
     const {
@@ -26,7 +27,10 @@ export default function InstitutionALaUNe() {
     } = UseInstitutionUneService()
 
 
+const router = useRouter();
 
+    const { locale } = router;
+    const t = locale === 'en' ? en : fr;
    
 
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -46,7 +50,7 @@ export default function InstitutionALaUNe() {
                             <div className="w-full text-center flex-shrink-0">
                                 <div className="relative text-3xl  flex flex-row items-center">
                                     <h1 className=" py-2 pr-24 text-end  border-4 border-[#4A62AA] text-white bg-[#A87A38] uppercase  font-extrabold w-full">
-                                        Institution
+                                   {t.title}
                                     </h1>
                                     <Image
                                         src="/icons/institutsup2.png"
@@ -56,7 +60,7 @@ export default function InstitutionALaUNe() {
                                         className="absolute left-1/2 py-2  -mt-3 transform -translate-x-1/2 z-16"
                                     />
                                     <h1 className=" py-2 text-start pl-24  text-white border-4 border-[#4A62AA] bg-[#A87A38] uppercase  font-extrabold w-full">
-                                        à la une
+                                           {t.title2}
                                     </h1>
                                 </div>
                             </div>
@@ -72,7 +76,7 @@ export default function InstitutionALaUNe() {
                         <div className="my-4 w-full max-w-md h-44 border-x-0 border-4 border-[#4A62AA]">
                             <div className="pb-10 text-center">
                                 <p className="mt-4 text-black">
-                                    LAURATA vous présente à intervalle régulier une institution majeure du supérieur.
+                                      {t.intro}
                                 </p>
                             </div>
                             <div className="-mt-6 mb-4 flex justify-center text-center">
@@ -80,7 +84,7 @@ export default function InstitutionALaUNe() {
                                     onChange={handleSelectChange}
                                     className="p-4 text-[#4A62AA] border border-[#4A62AA] rounded-2xl shadow-sm w-full"
                                 >
-                                    <option value="">Sélectionner une institution</option>
+                                    <option value="">   {t.option}</option>
                                     {institutions.map((company) => (
                                         <option key={company.id} value={company.id}>
                                             {company.shortName || company.name}
@@ -122,11 +126,11 @@ export default function InstitutionALaUNe() {
 
                                     <div className="grid grid-cols-1 sm:grid-cols-1 lg:flex flex-wrap justify-center gap-4 w-full mt-4">
                                         {[
-                                            { href: '#presentation', label: 'Présentation' },
-                                            { href: '#formation', label: 'Formations' },
-                                            { href: '#infrastructures', label: 'Infrastructures' },
-                                            { href: '#video', label: 'Vidéo' },
-                                            { href: '#contact', label: 'Contact' },
+                                            { href: '#presentation', label:    t.presentation },
+                                            { href: '#formation', label:   t.formation },
+                                            { href: '#infrastructures', label: t.infra },
+                                            { href: '#video', label:  t.video },
+                                            { href: '#contact', label: t.contact },
                                         ].map((link) => (
                                             <Link
                                                 key={link.href}
@@ -183,7 +187,7 @@ export default function InstitutionALaUNe() {
 
                             <div id="presentation" className="mt-1 p-2 px-4  bg-white/70">
                                 <button onClick={() => handleToggle(1)} className="text-[#A87A38]   flex w-full font-bold">
-                                    <span className="flex-grow uppercase text-left">PRÉSENTATION</span>
+                                    <span className="flex-grow uppercase text-left">{t.presentation}</span>
                                     <span className="ml-10 text-2xl ">{open === 1 ? "▲" : "▼"}</span>
                                 </button>
 
@@ -196,7 +200,7 @@ export default function InstitutionALaUNe() {
                                         </div>
 
                                     ) : (
-                                        <p>Aucune description enregistrée.</p>
+                                        <p>{t.noDescription}</p>
                                     )}
 
                                 </div>
@@ -204,7 +208,7 @@ export default function InstitutionALaUNe() {
                             </div>
                             <div id="formation" className="mt-1  p-2 px-4   bg-white/70">
                                 <button onClick={() => handleToggle(5)} className="text-[#A87A38]  flex w-full font-bold">
-                                    <span className="flex-grow  uppercase text-left">    formations </span>
+                                    <span className="flex-grow  uppercase text-left">   {t.formation} </span>
                                     <span className="ml-10 text-2xl "> {open === 5 ? "▲" : "▼"}</span></button>
                                 {open === 5 && (
                                     <div className="border-t border-[#A87A38]">
@@ -230,7 +234,7 @@ export default function InstitutionALaUNe() {
                                                 ))}
                                             </div>
                                         ) : (
-                                            <p>Aucune formation enregistrée.</p>
+                                            <p>{t.noProgram}</p>
                                         )}
                                     </div>
 
@@ -239,7 +243,7 @@ export default function InstitutionALaUNe() {
                             </div>
                             <div id="infrastructures" className="mt-1 p-2 px-4  bg-white/70">
                                 <button onClick={() => handleToggle(2)} className="text-[#A87A38]  flex w-full font-bold">
-                                    <span className="flex-grow uppercase text-left">  Infrastructures </span>
+                                    <span className="flex-grow uppercase text-left">  {t.infra} </span>
                                     <span className="ml-10 text-2xl "> {open === 2 ? "▲" : "▼"}</span></button>
                                 {open === 2 &&
                                     (
@@ -251,7 +255,7 @@ export default function InstitutionALaUNe() {
                                                     ))}
                                                 </div>
                                             ) : (
-                                                <p>Aucune infrastructure enregistrée.</p>
+                                                <p>{t.noInfra}</p>
                                             )}
                                         </div>
                                     )}   </div>
@@ -259,7 +263,7 @@ export default function InstitutionALaUNe() {
 
                             <div id="video" className="mt-1  p-2 px-4  bg-white/70">
                                 <button onClick={() => handleToggle(3)} className="text-[#A87A38] flex w-full font-bold">
-                                    <span className="flex-grow uppercase text-left">    VIDEO</span>
+                                    <span className="flex-grow uppercase text-left">    {t.video}</span>
                                     <span className="ml-10 text-2xl "> {open === 3 ? "▲" : "▼"}</span></button>
                                 {open === 3 && (<div className="border-t  border-[#A87A38] ">
                                     <video src={selectedCompany.video}> {selectedCompany.video}</video>
@@ -267,7 +271,7 @@ export default function InstitutionALaUNe() {
                                 )} </div>
                             <div id="contact" className="mt-1 p-2 px-4   bg-white/70">
                                 <button onClick={() => handleToggle(4)} className="text-[#A87A38]  flex w-full font-bold">
-                                    <span className="flex-grow uppercase text-left">     CONTACT</span>
+                                    <span className="flex-grow uppercase text-left">     {t.contact}</span>
                                     <span className="ml-10 text-2xl "> {open === 4 ? "▲" : "▼"}</span></button>
                                 {open === 4 && (
 
@@ -280,16 +284,16 @@ export default function InstitutionALaUNe() {
                                                 {selectedCompany.contact.map((c) => (
                                                     <div key={c.id}>
                                                         <div className=" flex flex-row w-full bg-white ">
-                                                            <p className="bg-white p-2">Localisation </p>
+                                                            <p className="bg-white p-2">{t.location} </p>
                                                             <p className="ml-20 p-2 text-black "> {c.location}</p></div>
                                                         <div className=" flex flex-row w-full bg-white ">
-                                                            <p className="bg-white p-2">Téléphone </p>
+                                                            <p className="bg-white p-2">{t.tel} </p>
                                                             <p className="ml-20 p-2 text-black"> {c.phones} </p></div>
                                                         <div className=" flex flex-row w-full bg-white ">
-                                                            <p className="bg-white p-2">Mail </p>
+                                                            <p className="bg-white p-2">{t.mail} </p>
                                                             <p className="-ml-3 p-2  text-blue-5"> {c.mail} </p></div>
                                                         <div className=" flex flex-row w-full bg-white ">
-                                                            <p className="bg-white p-2">Internet </p>
+                                                            <p className="bg-white p-2">{t.internet} </p>
                                                             <p className="-ml-10 p-2"> <a href={c.website} className="md:pl-36  text-blue-5"> {c.website}</a></p>
                                                         </div>
 
@@ -302,16 +306,16 @@ export default function InstitutionALaUNe() {
 
 
                                             <div className=" flex flex-row w-full bg-white ">
-                                                <p className="bg-white p-2">Localisation </p>
+                                                <p className="bg-white p-2">{t.location} </p>
                                                 <p className="ml-20 p-2 text-black "> </p></div>
                                             <div className=" flex flex-row w-full bg-white ">
-                                                <p className="bg-white p-2">Téléphone </p>
+                                                <p className="bg-white p-2">{t.tel} </p>
                                                 <p className="ml-20 p-2 text-black"> </p></div>
                                             <div className=" flex flex-row w-full bg-white ">
-                                                <p className="bg-white p-2">Mail </p>
+                                                <p className="bg-white p-2">{t.mail} </p>
                                                 <p className="-ml-3 p-2  text-blue-5">  </p></div>
                                             <div className=" flex flex-row w-full bg-white ">
-                                                <p className="bg-white p-2">Internet </p>
+                                                <p className="bg-white p-2">{t.internet} </p>
                                                 <p className="-ml-10 p-2"> <a className="md:pl-36  text-blue-5"> </a></p>
                                             </div>
 

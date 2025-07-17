@@ -1,11 +1,13 @@
 import { useRouter } from 'next/router';
 import React, { FormEvent, useEffect, useState } from 'react';
 import { URLS } from './url';
+import { useTranslation } from 'react-i18next';
 
 
 export default function ServiceInternshipCriteria() {
 
-
+  const { i18n } = useTranslation();
+  const currentLanguage = i18n.language; 
    const [foas, setSectors] = useState<Sector[]>([]);
       const [status, setStatus] = useState<Status[]>([]);
       const [Levels, setLevels] = useState<Level[]>([]);
@@ -54,7 +56,7 @@ export default function ServiceInternshipCriteria() {
                       method: "GET",
                       headers: {
                           "Content-Type": "application/json",
-                          locale: "fr",
+                          locale: currentLanguage,
                       },
                   });
                   if (!response.ok) {
@@ -88,7 +90,7 @@ export default function ServiceInternshipCriteria() {
                       method: "GET",
                       headers: {
                           "Content-Type": "application/json",
-                          locale: "fr",
+                          locale: currentLanguage,
                       },
                   });
                   if (!response.ok) {
@@ -122,7 +124,7 @@ export default function ServiceInternshipCriteria() {
                       method: "GET",
                       headers: {
                           "Content-Type": "application/json",
-                          locale: "fr",
+                          locale: currentLanguage,
                       },
                   });
                   if (!response.ok) {
@@ -156,7 +158,7 @@ export default function ServiceInternshipCriteria() {
                       method: "GET",
                       headers: {
                           "Content-Type": "application/json",
-                          locale: "fr",
+                          locale: currentLanguage,
                       },
                   });
                   if (!response.ok) {
@@ -190,7 +192,7 @@ export default function ServiceInternshipCriteria() {
                       method: "GET",
                       headers: {
                           "Content-Type": "application/json",
-                          locale: "fr",
+                          locale: currentLanguage,
                       },
                   });
                   if (!response.ok) {
@@ -224,7 +226,7 @@ export default function ServiceInternshipCriteria() {
                       method: "GET",
                       headers: {
                           "Content-Type": "application/json",
-                          locale: "fr",
+                          locale: currentLanguage,
                       },
                   });
                   if (!response.ok) {

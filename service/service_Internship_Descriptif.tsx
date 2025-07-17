@@ -2,11 +2,13 @@ import { useRouter } from 'next/router';
 import React, { FormEvent, useEffect, useState } from 'react';
 import { URLS } from './url';
 import { InternshipFilter } from '@/service/Internship-filter';
+import { useTranslation } from 'react-i18next';
 
 
 export default function ServiceInternshipDetail() {
 
-
+  const { i18n } = useTranslation();
+  const currentLanguage = i18n.language; 
    const router = useRouter();
      const { id } = router.query;
      const [errorMessage, setErrorMessage] = useState<string | null>(null);
@@ -52,7 +54,7 @@ export default function ServiceInternshipDetail() {
                method: 'GET',
                headers: {
                  'Content-Type': 'application/json',
-                 'locale': 'fr',
+                 'locale': currentLanguage,
                },
              });
    

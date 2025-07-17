@@ -1,10 +1,10 @@
 "use client";
 
 import UseParoleExpertService from "@/service/parole_expert";
-import { URLS } from "@/service/url";
-import Link from "next/link";
+
+import en from '@/i18/en/student/parole_dexper.json';
+import fr from '@/i18/fr/student/parole_dexpert.json';
 import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
 export default function ParoleDexpert() {
   const {
  maxImages,
@@ -25,7 +25,10 @@ handleViewDetails,
   experts,
   error
    } = UseParoleExpertService()
- 
+   const router = useRouter();
+
+    const { locale } = router;
+    const t = locale === 'en' ? en : fr;
  
   for (let i = 0; i < maxImages; i++) {
     const index = (currentIndex + i) % experts.length;
@@ -40,13 +43,15 @@ handleViewDetails,
           <div className="flex justify-center">
             <h1 className=" bg-[#A87A38] text-white  text-2xl text-center uppercase font-extrabold w-full  p-2">
 
-              Parole d'expert
+           
+                            {t.title}
             </h1></div>
           <div className=" bg-white/70 border-1 p-6  text-start border-[#4A62AA]" >
-            <p className="text-[#4A62AA] text-xl">  Écoutez   un professionnel et montez en compétences</p>
+            <p className="text-[#4A62AA] text-xl">  
+                            {t.intro}</p>
             <p className=" text-black" >
 
-             À intervalle régulier, un de nos experts vous parle d'une thématique en lien avec la formation et/ou le monde du travail.
+            {t.text}
             </p>
 
           </div>
@@ -56,20 +61,20 @@ handleViewDetails,
  
   {error && (
     <div className="p-8 text-center text-red-600">
-      <p>Échec du chargement des experts. Veuillez réessayer ultérieurement..</p>
+      <p> {t.erreur}</p>
     </div>
   )}
 
  
   {!error && !experts && (
     <div className="p-8 text-center">
-      <p>Chargement xperts...</p>
+      <p> {t.loading}</p>
     </div>
   )}
 
   {!error && experts?.length === 0 && (
     <div className="p-8 text-center">
-      <p>Aucun expert disponible pour le moment.</p>
+      <p> {t.nodata}</p>
     </div>
   )}
 
