@@ -1,0 +1,103 @@
+{
+ 
+    "orientation": "Orientation",
+    "prepare": "PRÉPARER SON BACCALAURÉAT",
+    "quote": {
+      "text": "S’attendre à obtenir un bon travail sans étudier, c’est comme s’attendre à gagner un marathon sans le courir.",
+      "author": "Albert Einstein"
+    },
+    "intro": [
+      "L’élève qui a une méthode de révision efficace et optimise son temps de travail, réussira à coup sûr le baccalauréat.",
+      "Pour une préparation optimale au baccalauréat, l’élève :"
+    ],
+    "sections": {
+      "enClasse": {
+        "title": "En classe",
+        "points": [
+          "   <b> Est assidu, attentif et participe activement  </b> aux cours dès le premier jour ;",
+          "   <b>     Ne sous-estime aucune matière   </b> <i> (le bonus d'une matière facultative peut permettre de relever votre note finale) ; </i>",
+          " <b>           Est toujours motivé et déterminé à apprendre.   </b>"
+        ]
+      },
+      "aLaMaison": {
+        "title": "À la maison",
+        "points": [
+          "<b>  Effectue ses révisions </b> sur la bases d'un calendrier de révision, au besoin réaménagé périodiquement, et qu'il respecte scrupuleusement dès la rentrée ;",
+          " <b> Résume jour après jour l'essentiel de chaque leçon pour chaque matière   à  l'aide de fiches de synthèse bien élaborées et structurées qu'il révise ensuite intelligemment. </b>"
+        ]
+      },
+      "avecCamarades": {
+        "title": "Avec ses camarades",
+        "text": "   <b>   Travaille en groupe et séexerce continuellement    à l'aide d'exercices résolus en classe ou d'anciennes épreuves <i>   voir Annales du Bac.   </i> </b>"
+      },
+      "internet": {
+        "title": "Internet",
+        "text": "   <b> Utilise Internet pour optimiser ses révisions,  </b>télécharger ou consulter les Annales d'anciennes épreuves et leur corrigés, densifier ses lectures et approfondir sa culture générale.<i> Consultez uniquement les sites aux contenus vérifiés ; évitez de perdre du temps sur les réseaux sociaux.</i>"
+      },
+      "sport": {
+        "title": "Sport",
+        "text": "  <b> Prend soin de sa condition physique  </b> par une alimentation saine et équilibrée, des heures de repos appropriées et, par une pratique régulière de sport pour se détendre."
+      }
+    },
+    "astuces": {
+      "title": "Astuces pour les révisions",
+      "intro": "<b>  Identifie ton(tes) profil(s) d’apprentissage et ajuste ta méthode de révision </b> en conséquence :",
+      "profils": [
+        {
+          "label": "Profil visuel :",
+          "text": "tu apprends et mémorises plus facilement les contenus à l’aide de supports graphiques, schémas, vidéos, fiches de synthèse, etc."
+        },
+        {
+          "label": "Profil auditif :",
+          "text": "tu retiens plus facilement à l’oral, tu seras porté vers l’apprentissage par cœur ;"
+        },
+        {
+          "label": "Profil kinesthésique :",
+          "text": "tu as besoin de pratique pour comprendre et assimiler ;"
+        },
+        {
+          "label": "Profil communicatif :",
+          "text": "tu apprends plus facilement en binôme ou en groupe."
+        }
+      ],
+      "conclusion": " <b>  Mets à contribution le maximum de canaux d’apprentissage possible à la fois : </b>  canal visuel, auditif, kinesthésique."
+    },
+    "veilleExam": {
+      "title": "La veille et le jour de l’examen",
+      "points": [
+        "Va tôt au lit après avoir rassemblé les effets à emporter le lendemain (pièce d’identité, calculatrice, stylos, etc.) ; NB : porte une tenue dans laquelle tu seras à ton aise ;",
+        "Le jour de l’examen, prends toutes les dispositions nécessaires pour être à l’heure dans la salle d’examen ; exécute à la lettre les instructions des surveillants ;",
+        "     Prends le temps de lire attentivement les énoncés de chaque épreuve, plusieurs fois si nécessaire.  Ensuite, traite sans précipitation les sujets en commençant par les plus faciles. ",
+        "Prévoir du temps pour relire ta copie afin d’éviter les fautes, erreurs de calcul, contresens, omissions, etc."
+      ]
+    },
+    "references": {
+      "title": "Références bibliographiques",
+      "list": [
+          {
+                "name": "      Jean-François Michel (2005).  ",
+                "title": " Les 7 profils d’apprentissage. ",
+                "edition": "Ed. Eyrolles."
+            },
+                {
+                "name": " Howard Gardner (2010). ",
+                "title": " Les formes de l’intelligence. ",
+                "edition": "Éditions Odile Jacob"
+            }
+               
+      ]
+    },
+    "liensUtiles": {
+      "title": "Liens utiles",
+      "links": [
+        {
+          "name": "Cameroon GCE Board (GCEB)",
+          "url": "https://camgceb.org/"
+        },
+        {
+          "name": "Office du Baccalauréat du Cameroun (OBC)",
+          "url": "https://www.obc.cm/"
+        }
+      ]
+    }
+  }
