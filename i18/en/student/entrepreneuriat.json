@@ -191,7 +191,138 @@
     },
     "content8":{
  "title": "Structures et programmes d’accompagnement à l’entrepreneuriat  ",
- "intro":"Bien qu’il existe plusieurs cas de (jeunes) diplômés ayant mené à bien leur projet immédiatement à la sortie des bancs, il n’en demeure pas moins qu’<b>une première expérience professionnelle présente à bien des égards un atout majeur lorsqu’on se lance dans l’entrepreneuriat. "
+ "intro":"Bien qu’il existe plusieurs cas de (jeunes) diplômés ayant mené à bien leur projet immédiatement à la sortie des bancs, il n’en demeure pas moins qu’<b>une première expérience professionnelle présente à bien des égards un atout majeur lorsqu’on se lance dans l’entrepreneuriat.</b> ",
+  "sections": [
+      {
+        "title": "1. Centre des Formalités de Création d'Entreprises (CFCE)",
+        "content": "Présents dans plusieurs chefs-lieux de région, les CFCE facilitent la création d'entreprises dont le capital est compris entre 100 000 et un million de FCFA ; au-delà, les formalités s'effectuent chez un notaire.",
+        "link": {
+          "text": "Pour plus d'informations :",
+          "url": "https://yaounde.eregulations.org/?l=fr",
+          "display": "https://yaounde.eregulations.org/?l=fr"
+        }
+      },
+      {
+        "title": "2. Structures publiques d'accompagnement",
+        "subsections": [
+          {
+            "title": "Agence de Promotion des PME (APME)",
+            "missions": [
+              "Soutien aux PME-PMI",
+              "Accompagnement dans les procédures de création",
+              "Mentorat et coaching des porteurs de projets",
+              "Incubation des start-up"
+            ],
+            "location": "Siège : quartier, Tsinga, Yaoundé."
+          },
+          {
+            "title": "Fonds National de l'Emploi (FNE)",
+            "mission": "Promotion de l'emploi. Siège à Yaoundé (Elig-Essono) et représentations dans les 10 régions.",
+            "link": {
+              "url": "https://www.fnecm.org/index.php/fr",
+              "display": "https://www.fnecm.org/index.php/fr"
+            }
+          },
+          {
+            "title": "Banque Camerounaise des Petites et Moyennes Entreprises (BC-PME SA)",
+            "mission": "Apporter les concours financiers aux PME et à l'Artisanat. Siège Yaoundé (après la Région du Centre).",
+            "link": {
+              "url": "https://bc-pme.com/",
+              "display": "https://bc-pme.com/"
+            }
+          },
+          {
+            "title": "Agence de Promotion des Investissements (API)",
+            "mission": "Promotion du site économique « Cameroun ». Siège Yaoundé, nouvelle route Bastos.",
+            "link": {
+              "url": "https://www.investincameroon.net/language/fr/",
+              "display": "https://www.investincameroon.net/language/fr/"
+            }
+          },
+          {
+            "title": "Centres de gestion agréés (CGA)",
+            "description": "Association agréée par le Ministre chargé des Finances dont le but est d'apporter une assistance en matière de gestion, d'encadrement et d'exécution des obligations fiscales et comptables aux petites entreprises adhérentes réalisant un chiffre d'affaires annuel compris entre 15 et 100 millions de FCFA.",
+            "link": {
+              "url": "https://minfi.gov.cm/les-centres-de-gestion-agrees-cadres-de-partenariat-par-excellence-de-ladministration-fiscale-et-des-pme9/",
+              "display": "https://minfi.gov.cm/les-centres-de-gestion-agrees-cadres-de-partenariat-par-excellence-de-ladministration-fiscale-et-des-pme9/"
+            }
+          }
+        ]
+      },
+      {
+        "title": "3. Chambres consulaires et Organisations patronales",
+        "subsections": [
+          {
+            "title": "Chambre de Commerce, de l'Industrie, des Mines et de l'Artisanat (CCIMA)",
+            "description": "Organisme consultatif et représentatif des milieux d'affaires dans les domaines du commerce, de l'industrie, des mines et de l'artisanat, il joue le rôle de courroie de transmission entre d'une part, les milieux d'affaires privés et d'autre part, les pouvoirs publics en matière de consultation et de représentation, concernant les nombreux domaines au premier rang desquels se trouve l'économie. Son siège se trouve à Douala.",
+            "link": {
+              "url": "https://www.ccima.cm/interne.php?idsmenu=269",
+              "display": "https://www.ccima.cm/interne.php?idsmenu=269"
+            }
+          },
+          {
+            "title": "Chambre d'Agriculture, des Pêches, de l'Élevage et des Forêts du Cameroun (CAPEF)",
+            "description": "Organisme de représentation et de défense des intérêts des professionnels de l'agriculture, de la pêche, de l'élevage, de la forêt et de la faune auprès des pouvoirs publics. (Siège : Yaoundé, après SHO)."
+          },
+          {
+            "title": "Groupement des Entreprises du Cameroun (GECAM)",
+            "description": "Basé à Douala, le GECAM est la principale organisation patronale du Cameroun.",
+            "link": {
+              "url": "https://legecam.cm",
+              "display": "https://legecam.cm"
+            }
+          }
+        ]
+      },
+      {
+        "title": "4. Quelques programmes en faveur de l'entrepreneuriat et l'emploi des jeunes",
+        "subsections": [
+          {
+            "title": "Programme d'appui à la jeunesse rurale et urbaine (PAJER-U)",
+            "description": "Le Pajer-U est mis en place par le biais du ministère de la jeunesse et de l'éducation civique.",
+            "link": {
+              "url": "www.pajeru-pifma.com",
+              "display": "www.pajeru-pifma.com"
+            }
+          },
+          {
+            "title": "Programme de promotion de l'entrepreneuriat agropastoral des jeunes (PEA-Jeune)",
+            "description": "Le PIPMAS promeut l'emploi et l'auto-emploi des jeunes.",
+            "link": {
+              "url": "www.pajeru-pifma.com",
+              "display": "www.pajeru-pifma.com"
+            }
+          },
+          {
+            "title": "Programme de Promotion de l'Entrepreneuriat des Femmes et des Jeunes au Cameroun (PPEFJC)",
+            "description": "Programme initié par l'OIF, en vue d'appuyer les efforts du Gouvernement en faveur de la recherche des opportunités de création d'emploi."
+          },
+          {
+            "title": "Programme d'aide au retour et à l'insertion des jeunes de la diaspora (PARU-JEDI)"
+          },
+          {
+            "title": "Programme d'Appui aux acteurs du secteur informel (PIAASI)",
+            "description": "Structure gouvernementale rattachée au ministère de l'emploi et de la formation professionnelle."
+          },
+          {
+            "title": "Programme Intégré de Renforcement des Capacités des Entrepreneurs Locaux (EMPRETEC)",
+            "description": "Structure gouvernementale rattachée au ministère des PME."
+          },
+          {
+            "title": "Programme KAIZEN – Amélioration de la Productivité et de la Qualité",
+            "description": "Structure gouvernementale rattachée au ministère des PME."
+          },
+          {
+            "title": "Programme National d'Incubation (INCUB'CAM)",
+            "description": "Structure gouvernementale rattachée au ministère des PME."
+          },
+          {
+            "title": "Pépinière Nationale Pilote d'Entreprises d'Édéa (PNPE)",
+            "description": "Structure gouvernementale rattachée au ministère des PME."
+          }
+        ]
+      }
+    ]
     },
 
     "content9": {

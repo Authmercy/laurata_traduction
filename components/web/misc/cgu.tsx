@@ -36,7 +36,7 @@ return (
      
           <div className="mb-4">
             <h1 className="mb-4 font-bold">{t.sections.purpose.title}</h1>
-            <p className="mb-2">Les informations qui figurent sur Laurata.com sont de nature générale. Elles visent à :</p>
+            <p className="mb-2">{t.sections.purpose.text}</p>
             {t.sections.purpose.points.map((point, index) => (
               <p key={index} className="mb-2">― {point}</p>
             ))}

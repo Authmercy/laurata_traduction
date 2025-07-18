@@ -610,212 +610,97 @@ export default function Entrepreunariat() {
                                         className="py-2 px-4 w-full bg-white/80 text-[#4A62AA]   text-xl font-bold flex justify-between items-center"
                                         onClick={() => handleToggle(8)}
                                     >
-                                        <span> {t.content8.title}</span>
+                                        <span > {t.content8.title}</span>
                                         <span className="text-2xl">{open === 8 ? "▲" : "▼"}</span>
                                     </button>
 
 
-                                    {open === 8 && (<div className="bg-white/80  p-4 ">
+                                    {open === 8 && (
+                                        <div className="bg-white/80  p-4 ">
 
                                         <div className="w-full ">
-                                            <p> {t.content8.intro}  </p>
-                                            <div className="bg-white ">
-                                                <p className="font-bold my-2 text-lg bg-[#dac7ac] p-2">
-                                                    1. Centre des Formalités de Création d’Entreprises (CFCE) </p>
-                                                <p className="p-4 ">
-                                                    Présents dans plusieurs chefs-lieux de région, les CFCE facilitent la création d’entreprises dont le capital est compris entre 100 000 et un million de FCFA ; au-delà, les formalités s’effectuent chez un notaire.
-                                                    Pour plus d’informations : <a href="https://yaounde.eregulations.org/?l=fr" className="text-blue-600" target="_blank" rel="noopener noreferrer"> <i>  https://yaounde.eregulations.org/?l=fr </i></a>
+                                            <p  dangerouslySetInnerHTML={{ __html: t.content8.intro }} /> 
 
 
-
-                                                </p>
-
-                                            </div>
-
-                                            <div className="bg-white mt-2 ">
-                                                <p className="font-bold text-lg bg-[#dac7ac] p-2">
-                                                    2.	Structures publiques d’accompagnement
-                                                </p>
-                                                <div className="p-4 ">
-                                                    <p className=" font-bold">
-                                                        ■ Agence de Promotion des PME (APME)
-
-                                                    </p>
-                                                    <div className=" text-black">
-                                                        Missions :
-                                                        <div className="mx-4">
-                                                            -  Soutien aux PME-PMI <br />
-                                                            - Accompagnement dans les procédures de création <br /> - Mentorat et coaching des porteurs de projets
-                                                            <br /> - Incubation des start-up.
-                                                        </div>  <p className="mt-2">
-                                                            Siège : quartier, Tsinga, Yaoundé.
-                                                        </p>
-                                                    </div>
-                                                    <p className=" mt-2 font-bold">
-                                                        ■  Fonds National de l’Emploi (FNE)
-
-                                                    </p>
-                                                    <p>
-                                                        Mission : Promotion de l’emploi. Siège à Yaoundé (Elig-Essono) et représentations dans les 10 régions.
-                                                    </p>
-                                                    <p>
-                                                        <a href="https://www.fnecm.org/index.php/fr" className="text-blue-600" target="_blank" rel="noopener noreferrer"> <i>  https://www.fnecm.org/index.php/fr </i></a>
-                                                    </p>
-
-                                                    <p className=" mt-2 font-bold">
-                                                        ■ Banque Camerounaise des Petites et Moyennes Entreprises (BC-PME SA)
-
-                                                    </p>
-                                                    <p>
-
-                                                        Mission : Apporter les concours financiers aux PME et à l’Artisanat. Siège Yaoundé (après la Région du Centre).
-                                                    </p>
-                                                    <p>
-                                                        <a href="https://bc-pme.com/" className="text-blue-600" target="_blank" rel="noopener noreferrer"> <i>  https://bc-pme.com/ </i></a>
-                                                    </p>
-
-                                                    <p className=" mt-2 font-bold">
-                                                        ■   Agence de Promotion des Investissements (API)
-
-                                                    </p>
-                                                    <p>
-                                                        Mission : Promotion du site économique « Cameroun ». Siège Yaoundé, nouvelle route Bastos.   </p>
-                                                    <p>
-                                                        <a href="https://www.investincameroon.net/language/fr/" className="text-blue-600" target="_blank" rel="noopener noreferrer"> <i>  https://www.investincameroon.net/language/fr/ </i></a>
-                                                    </p>
-                                                    <p className=" mt-2 font-bold">
-                                                        ■   Centres de gestion agréés (CGA)
-
-                                                    </p>
-                                                    <p>
-                                                        Association agréée par le Ministre chargé des Finances dont le but est d’apporter une assistance en matière de gestion, d’encadrement et d’exécution des obligations fiscales et comptables aux petites entreprises adhérentes réalisant un chiffre d’affaires annuel compris entre 15 et 100 millions de FCFA.
-                                                    </p>
-                                                    <p>
-                                                        <a href="https://minfi.gov.cm/les-centres-de-gestion-agrees-cadres-de-partenariat-par-excellence-de-ladministration-fiscale-et-des-pme9/" className="text-blue-600" target="_blank" rel="noopener noreferrer"> <i>  https://minfi.gov.cm/les-centres-de-gestion-agrees-cadres-de-partenariat-par-excellence-de-ladministration-fiscale-et-des-pme9/ </i></a>
-                                                    </p></div>
-                                            </div>
-                                            <div className="bg-white mt-2">
-                                                <p className="font-bold  text-lg bg-[#dac7ac] p-2">
-                                                    3.	Chambres consulaires et Organisations patronales
-                                                </p>
-                                                <div className="p-4 ">
-                                                    <p className=" mt-2 font-bold">
-                                                        ■ Chambre de Commerce, de l’Industrie, des Mines et de l’Artisanat (CCIMA)
-
-                                                    </p>
-                                                    <p>
-                                                        Organisme consultatif et représentatif des milieux d’affaires dans les domaines du commerce, de l’industrie, des mines et de l’artisanat, il joue le rôle de courroie de transmission entre d’une part, les milieux d’affaires privés et d’autre part, les pouvoirs publics en matière de consultation et de représentation, concernant les nombreux domaines au premier rang desquels se trouve l’économie. Son siège se trouve à Douala.    </p>
-                                                    <p>
-                                                        <a href="https://www.ccima.cm/interne.php?idsmenu=269" className="text-blue-600" target="_blank" rel="noopener noreferrer"> <i>  https://www.ccima.cm/interne.php?idsmenu=269</i></a>
-                                                    </p>
-
-                                                    <p className=" mt-2 font-bold">
-                                                        ■ Chambre d’Agriculture, des Pêches, de l’Élevage et des Forêts du Cameroun (CAPEF)
-
-                                                    </p>
-                                                    <p>
-                                                        Organisme de représentation et de défense des intérêts des professionnels de l’agriculture, de la pêche, de l’élevage, de la forêt et de la faune auprès des pouvoirs publics. (Siège : Yaoundé, après SHO).
-                                                    </p>
-
-                                                    <p className=" mt-2 font-bold">
-                                                        ■ Groupement des Entreprises du Cameroun (GECAM)
-
-                                                    </p>
-                                                    <p>
-                                                        Basé à Douala, le GECAM est la principale organisation patronale du Cameroun.    </p>
-                                                    <p>
-                                                        <a href="https://legecam.cm" className="text-blue-600" target="_blank" rel="noopener noreferrer"> <i>  https://legecam.cm </i></a>
-                                                    </p>
-
-
-
-
-
-                                                </div>
-
-
-
-                                            </div>
-
-                                            <div className="bg-white mt-2">
-                                                <p className="font-bold text-lg bg-[#dac7ac] p-2">
-                                                    4.	Quelques programmes en faveur de l’entrepreneuriat et l’emploi des jeunes
-
-                                                </p>
-                                                <div className="p-4 ">
-                                                    <p className=" mt-2 font-bold">
-                                                        ■  Programme d’appui à la jeunesse rurale et urbaine (PAJER-U).
-
-                                                    </p>
-                                                    <p>
-                                                        Le Pajer-U est mis en place par le biais du ministère de la jeunesse et de l’éducation civique.    </p>
-                                                    <p>
-                                                        <a href="www.pajeru-pifma.com" className="text-blue-600" target="_blank" rel="noopener noreferrer"> <i> www.pajeru-pifma.com</i></a>
-                                                    </p>
-
-                                                    <p className=" mt-2 font-bold">
-                                                        ■ Programme de promotion de l’entrepreneuriat agropastoral des jeunes (PEA-Jeune).
-
-                                                    </p>
-                                                    <p>
-                                                        Le PIPMAS promeut l’emploi et l’auto-emploi des jeunes.    </p>
-                                                    <p>
-                                                        <a href="www.pajeru-pifma.com" className="text-blue-600" target="_blank" rel="noopener noreferrer"> <i> www.pajeru-pifma.com</i></a>
-                                                    </p>
-
-
-                                                    <p className=" mt-2 font-bold">
-                                                        ■ Programme de Promotion de l’Entrepreneuriat des Femmes et des Jeunes au Cameroun (PPEFJC).
-
-                                                    </p>
-                                                    <p>
-                                                        Programme initié par l’OIF, en vue d’appuyer les efforts du Gouvernement en faveur de la recherche des opportunités de création d’emploi.   </p>
-                                                    <p>
-
-                                                    </p>
-                                                    <p className=" mt-2 font-bold">
-
-                                                        ■ Programme d’aide au retour et à l’insertion des jeunes de la diaspora (PARU-JEDI).
-                                                    </p>
-                                                    <p className="font-bold">
-                                                        ■ Programme d’Appui aux acteurs du secteur informel (PIAASI).
-                                                    </p>
-                                                    <p>
-                                                        Structure gouvernementale rattachée au ministère de l’emploi et de la formation professionnelle.
-                                                    </p>
-                                                    <p className="font-bold">
-                                                        ■ Programme Intégré de Renforcement des Capacités des Entrepreneurs Locaux (EMPRETEC).
-                                                    </p>
-                                                    <p>
-                                                        Structure gouvernementale rattachée au ministère des PME.
-                                                    </p>
-                                                    <p className="font-bold">
-                                                        ■ Programme KAIZEN – Amélioration de la Productivité et de la Qualité.
-                                                    </p>
-                                                    <p>
-                                                        Structure gouvernementale rattachée au ministère des PME.
-                                                    </p>
-                                                    <p className="font-bold">
-                                                        ■ Programme National d’Incubation (INCUB’CAM).
-                                                    </p>
-                                                    <p>
-                                                        Structure gouvernementale rattachée au ministère des PME.
-                                                    </p>
-                                                    <p className="font-bold">
-                                                        ■ Pépinière Nationale Pilote d’Entreprises d’Édéa (PNPE).
-                                                    </p>
-                                                    <p>
-                                                        Structure gouvernementale rattachée au ministère des PME.
-                                                    </p>
-
-
-
-                                                </div>
-
-
-
-                                            </div>
+                                          
                                         </div>
+   {t.content8.sections.map((section, sectionIndex) => (
+        <div key={sectionIndex} className="bg-white mt-2">
+          <p className="font-bold my-2 text-lg bg-[#dac7ac] p-2">
+            {section.title}
+          </p>
+          
+          <div className="p-4">
+         
+            {section.content && <p>{section.content}</p>}
+            
+         
+            {section.link && (
+              <p>
+                {section.link.text} 
+                <a 
+                  href={section.link.url} 
+                  className="text-blue-600" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  <i> {section.link.display}</i>
+                </a>
+              </p>
+            )}
+            
+         
+            {section.subsections && section.subsections.map((subsection, subIndex) => (
+              <div key={subIndex} className="mt-2">
+                <p className="font-bold"> ■  {subsection.title}</p>
+                
+             
+                {'missions' in subsection && subsection.missions && (
+                  <div className="text-black">
+                    Missions :
+                    <div className="mx-4">
+                      {subsection.missions.map((mission, missionIndex) => (
+                        <div key={missionIndex}>- {mission}</div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+                
+              
+                {'description' in subsection && subsection.description && (
+                  <p>{subsection.description}</p>
+                )}
+                
+         
+                {'mission' in subsection && subsection.mission && (
+                  <p>{subsection.mission}</p>
+                )}
+                
+           
+                {'location' in subsection && subsection.location && (
+                  <p className="mt-2">{subsection.location}</p>
+                )}
+                
+            
+                {'link' in subsection && subsection.link && (
+                  <p>
+                    <a 
+                      href={subsection.link.url} 
+                      className="text-blue-600" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                    >
+                      <i>{subsection.link.display}</i>
+                    </a>
+                  </p>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+    
+
                                     </div>)}
 
 

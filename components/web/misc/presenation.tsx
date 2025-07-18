@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
-
+import en from '@/i18/en/misc/apropos.json';
+import fr from '@/i18/fr/misc/apropos.json';
 import { useRouter } from "next/router";
 
 import Image from "next/image";
@@ -8,26 +9,26 @@ import ButtonAccueil from "@/components/web/buttons/buttonAccueil";
 
 export default function PresentaionDuSite() {
     const router = useRouter();
-
+   const { locale } = router;
+    const t = locale === 'en' ? en : fr;
     return (
         <div className="p-2  text-black" >
             <div className="flex gap-1 w-full">
                 <div className="flex justify-center flex-col">
 
                     <div className="my-4  ">
-                        <p> La plateforme <span className="text-[#4A62AA] text-xl font-bold"> LAURATA.COM</span> a pour principal objectif de contribuer à améliorer la qualité de la formation et l’employabilité des jeunes (diplômés) Camerounais en vue de leur garantir une insertion professionnelle réussie.
- </p>
+                        <p> {t.plateform}<span className="text-[#4A62AA] text-xl font-bold"> LAURATA.COM</span> {t.p1}</p>
                     </div>
                     <div className="mb-4">
 
-                        <p > <span className="text-[#4A62AA]  ">  ▌ </span> Dans cette optique, en collaboration avec les secteurs public et privé et, en droite ligne dans la réalisation des ODD N˚4, 10 et 17 de l’ONU (Éducation de qualité – Inégalités réduites – Partenariats pour les Objectifs), <span className="text-[#4A62AA] text-xl font-bold"> LAURATA</span>  répertorie et centralise les offres de stage et en assure un accès transparent et équitable à la communauté éducative. En outre, elle met  en relation les employeurs avec les étudiants et jeunes diplômés.
+                        <p > <span className="text-[#4A62AA]  ">  ▌ </span> {t.p2} <span className="text-[#4A62AA] text-xl font-bold"> LAURATA </span>{t.p22}
 
  </p>
                     </div>
 
                     <div className="mb-4">
 
-                        <p > <span className="text-[#4A62AA]  ">  ▌ </span> <span className="text-[#4A62AA] text-xl font-bold"> LAURATA </span>fournit egalement des ressources documentaires de qualité pour aider chaque jeune à identifier une filière d’étude et/ou un métier qui sied à son projet professionnel et à ses aptitudes. </p>
+                        <p > <span className="text-[#4A62AA]  ">  ▌ </span> <span className="text-[#4A62AA] text-xl font-bold"> LAURATA </span>{t.p3}</p>
 
 
 
@@ -35,14 +36,15 @@ export default function PresentaionDuSite() {
                     </div>
                    
                     
-                    <div className="mb-4">
 
-                        <p className="my-2"> <span className="text-[#4A62AA] text-xl font-bold ">  NOTES IMPORTANTES </span> </p>
-                        <p className="my-2"> ─  L’utilisation du genre masculin a été adoptée dans les différentes sections de notre site afin de faciliter la lecture ; cela n’a aucune intention discriminatoire.</p>
-                        <p className="my-2"> ─  Nous respectons tout travail intellectuel. Aussi avons-nous, à chaque fois que cela s’imposait, indiqué les sources de nos textes. </p>
-
-                    </div>
-
+     
+          <div className="mb-4">
+            <p className="my-2 text-[#4A62AA] text-xl font-bold">
+              {t.importantNotes}
+            </p>
+            <p className="my-2">{t.note1}</p>
+            <p className="my-2">{t.note2}</p>
+          </div>
 
                     <div className="flex flex-col justify-center gap-2 text-center">
                         <div className="text-[#A38340] font-bold pt-8 text-xl "> Partager cette page </div>
