@@ -20,15 +20,15 @@ self.__BUILD_MANIFEST = {
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/entreprise/employeur": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/entreprise/employeur.js"
-    ],
     "/entreprise/poster": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/entreprise/poster.js"
+    ],
+    "/students/offresStage": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/students/offresStage.js"
     ]
   },
   "ampFirstPages": []

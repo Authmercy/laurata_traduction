@@ -2,7 +2,7 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/entreprise/employeur": "pages/entreprise/employeur.js",
-  "/entreprise/poster": "pages/entreprise/poster.js",
-  "/students/offresStage": "pages/students/offresStage.js"
+  "/": "pages/index.js",
+  "/students/offresStage": "pages/students/offresStage.js",
+  "/entreprise/poster": "pages/entreprise/poster.js"
 }
