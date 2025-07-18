@@ -3,7 +3,9 @@ import React, { useMemo, useRef } from "react";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { URLS } from "@/service/url";
-
+import en from '@/i18/en/student/lexique.json';
+import fr from '@/i18/fr/student/lexique.json';
+import { useRouter } from "next/router";
 
 type Glossary = {
   id: number;
@@ -63,41 +65,42 @@ export default function LexiqueComponent() {
     fetchGlossary();
   }, []);
 
+      const router = useRouter();
 
-  return (
+    const { locale } = router;
+    const t = locale === 'en' ? en : fr;
 
-    <div className="flex flex-col   md:flex-row  ">
+
+
+ return (
+    <div className="flex flex-col md:flex-row">
       <div className="flex-grow md:w-2/3 p-8">
-
-        <div className="  mt-1">
-
-          <div className="flex w-full gap-2 text-white font-bold">
-
-            <div className="p-2 px-2  uppercase  w-[35%] text-2xl text-center bg-[#9C824A] hover:bg-[#a19478]  h-20 flex items-center justify-center">
-
-              <Link href="/students/bacAlafac/bac_fac"> Orientation</Link>
+        <div className="mt-1">
+          <div className="flex w-full uppercase gap-2 text-white font-bold">
+            <div className="p-2 px-2 uppercase w-[35%] text-2xl text-center bg-[#9C824A] hover:bg-[#a19478] h-20 flex items-center justify-center">
+              <Link href="/students/bacAlafac/bac_fac">{t.orientation}</Link>
             </div>
-
-
-            <div className="p-3 px-8  text-xl text-center bg-[#A87A38] h-12 mt-4 flex items-center justify-center">
-              LEXIQUE
+            <div className="p-3 px-8 text-xl text-center bg-[#A87A38] h-12 mt-4 flex items-center justify-center">
+              {t.lexiconTitle}
             </div>
-
           </div>
 
           <div className="flex flex-row my-4 gap-1">
-            <div className="flex-1  ">
-            </div>
-            <div className="flex-2 bg-white  text-black p-4 text-end"> <p className="">
-              Si vous ne pouvez pas encore faire de grandes choses, faites de petites choses de façon remarquable.
-              <br />  <span className="text-[#4A62AA] font-semibold ">Napoleon Hill</span>
-            </p>
-
+            <div className="flex-1"></div>
+            <div className="flex-2 bg-white text-black p-4 text-end">
+              <p>
+                {t.quote}
+                <br />
+                <span className="text-[#4A62AA] font-semibold">
+                  {t.quoteAuthor}
+                </span>
+              </p>
             </div>
           </div>
 
-          <div className="mt-1  text-black bg-white/70 p-8 space-y-4">
-            <p>Petit lexique des termes usuels pour vous familiariser avec le vocabulaire du supérieur.</p>
+          <div className="mt-1 text-black bg-white/70 p-8 space-y-4">
+            <p>{t.intro}</p>
+            
             <div className="mt-6 text-black w-full flex-grow">
               <div className="flex flex-col gap-4 w-full">
                 <div className="flex flex-row gap-2 w-full flex-wrap">
@@ -107,9 +110,13 @@ export default function LexiqueComponent() {
                     const isSelected = selectedLetter === letter;
 
                     const buttonClasses = `
-              py-2 px-4 border rounded font-bold text-white
-              ${isSelected ? 'bg-[#A87A38] hover:bg-orange-500' : hasData ? 'bg-[#6d81be] hover:bg-blue-700' : 'bg-gray-400 cursor-not-allowed'}
-            `;
+                      py-2 px-4 border rounded font-bold text-white
+                      ${isSelected 
+                        ? 'bg-[#A87A38] hover:bg-orange-500' 
+                        : hasData 
+                          ? 'bg-[#6d81be] hover:bg-blue-700' 
+                          : 'bg-gray-400 cursor-not-allowed'}
+                    `;
 
                     return (
                       <button
@@ -145,18 +152,11 @@ export default function LexiqueComponent() {
                 </div>
               )}
 
-              {loading && <p>Chargement du glossaire...</p>}
+              {loading && <p>{t.loading}</p>}
             </div>
           </div>
         </div>
-
       </div>
     </div>
-
-
-
-
-
-
   );
 }

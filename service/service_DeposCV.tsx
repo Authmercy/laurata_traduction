@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import { CV_Class } from "@/service/CV";
 import { URLS } from "@/service/url";
 import { useRouter } from "next/router";
-import { useTranslation } from "react-i18next";
 import UseLanguageService from "./language_switch";
 type Sector = {
   id: string;

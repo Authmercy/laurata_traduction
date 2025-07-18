@@ -1,0 +1,149 @@
+{
+    "orientation": "Orientation",
+    "generalitesTitle": "GÉNÉRALITÉS SUR LE SUPÉRIEUR",
+    "quote": "Education is not a name of any degree or certificate that can be shown to others as a proof. <br /> Education is the name of our attitude, actions, language and behavior with others in real life.",
+    "quoteAuthor": "Barack Obama",
+    "paragraph1": "Dernier niveau du système éducatif formel, l'enseignement supérieur est placé sous la tutelle du Ministère de l'enseignement supérieur (MINESUP). Toutefois, il existe des établissements d'enseignement supérieur à statut particulier, relevant chacun conjointement du MINESUP et d'un ministère du ressort assurant la tutelle technique, cf. rubrique « Institutions du supérieur ».",
+    "paragraph2": "Par ailleurs, il existe au niveau du supérieur une composante « Formation professionnelle » diplômante (DQP, DT, DTS) et certifiante (CQP) offerte par les Centres de formation professionnelle et plusieurs établissements privés sous la tutelle du Ministère de l'Emploi et de la Formation Professionnelle (MINEFOP).",
+    "paragraph3": "Ci-dessous l'essentiel de ce qu'il faut savoir sur les études supérieures au Cameroun.",
+    "accessTitle": "Accès aux études supérieures",
+    "accessIntro": "Deux sous-systèmes éducatifs coexistent au Cameroun :        un <b> sous-système anglophone </b>  d’inspiration anglo-saxonne en vigueur principalement dans les régions duNord-Ouest et du Sud-Ouest et un <b> sous-système francophone </b>  d’inspiration française en vigueur dans les huit autres régions. De ce fait, deux diplômes sanctionnant la fin des études secondaires donnent accès aux études supérieures :",
+    "diplomasIntro": "De ce fait, deux diplômes sanctionnant la fin des études secondaires donnent accès aux études supérieures :",
+    "diploma1": " Le <b>  General Certificate of Education Advanced Level – GCE A/L </b>– (général ou technique) pour le sous-système anglophone ;",
+    "diploma2": " Le <b> Baccalauréat </b> de l’enseignement secondaire (général ou technique) pour le sous-système francophone.",
+    "tableHeader1": "Admission en première année du 1er cycle",
+    "tableHeader2": "Admission en master et doctorat",
+    "tableRow1Col1": " Sur <b>demande d'admission</b> suivie ou non d'étude de dossier pour les filières généralistes dans les universités publiques et les IPES — une corrélation entre la filière choisie et la série du baccalauréat ou du GCE A/L étant généralement indispensable ; ou,",
+    "tableRow1Col2": "Sur <b>concours ou étude de dossier</b> suivie d'entretien au sein des Écoles doctorales des différents établissements.",
+    "tableRow2Col1": " Sur <b>concours national</b> pour les filières technologiques et professionnelles des universités publiques, des Écoles d'ingénieurs, de commerce, de médecine et des institutions transnationales et privées.",
+    "tableRow2Col2": " <b>Processus très sélectif</b> dans le public comme dans le privé (relevés de notes et parcours académiques excellents).",
+    "noteText": "Les diplômes admis équivalents au baccalauréat ou au GCE A/L et la Validation des Acquis de l’Expérience (VAE) dans quelques cas spécifiques, peuvent également permettre d’accéder au supérieur.",
+    "content2": {
+        "title": "Organisation et architecture des enseignements ",
+        "paragraph1": " Les cycles de formation",
+        "paragraph2": "  Les études supérieures sont organisées autour du <b> système LMD  </b>(Licence, Master, Doctorat) s’articulant en trois cycles de formation à savoir :",
+        "cycle": [
+            {
+                "title": "1er Cycle :",
+                "text": " grade de Licence (Bac+3) ;"
+            },
+            {
+                "title": "2nd Cycle : ",
+                "text": "grade de Master (Bac+5) ;"
+            },
+            {
+                "title": "3ème Cycle  : ",
+                "text": " grade de Doctorat/PhD (Bac+8)."
+            }
+        ],
+        "paragraph3": "Outre ces trois cycles, il existe également des <b>  formations courtes </b> de type <b> BAC+2</b> à finalité professionnelle, sanctionnées par le Brevet de Technicien Supérieur <b> (BTS)</b> et le Diplôme Universitaire de Technologie <b> (DUT)</b>. Les Universités d’État proposent généralement l’ensemble des cycles tandis que la majorité des Institutions Privées d’Enseignement Supérieur (IPES) se limitent aux cycles courts et éventuellement associé au 1er cycle.  ",
+        "paragraph4": "   Au sein du système LMD, les contenus des formations sont organisés en parcours-types et déclinés en domaines, mentions et spécialités. ",
+        "paragraph5": " Les enseignements et la formation reçus sont mesurés en crédits ; ces derniers sont transférables et capitalisables d'un parcours à un autre. La période de formation couvre un semestre équivalent à 30 crédits.",
+        "credit1": " Licence = 180 crédits",
+        "credit2": "  Master = 120 crédits après la Licence",
+        "credit3": "        Doctorat = 180 crédits après le Master",
+        "paragraph6": "Le régime des études",
+        "paragraph7": "  Il existe les  <b> filières généralistes  </b> <i> (non professionnelles ou académiques)</i> et les <b> filières professionnelles</b>, dont le nombre et la durée varient en fonction des établissements et de la nature des études.",
+        "paragraph9": " Elle est diversifiée mais ne couvre pas encore de nombreux domaines technologiques et scientifiques de pointe, comme <i>  les nanotechnologies, la robotique, l’aérospatiale, etc. </i>   ",
+        "paragraph8": " L’offre de formation "
+    },
+    "content3": {
+        "title": "Droits universitaires ",
+        "paragraph1": "        Institutions publiques ",
+        "intro": "                     Le décret N°93/033 du 19 janvier 1993 fixe les taux de paiement des droits universitaires dans les établissements publics comme suit :  ",
+        "paragraph2": " <b> Camerounais</b> : Cinquante mille (50 000) francs CFA (environ 85 USD) par année académique, payables en une seule fois ou en deux tranches. ",
+        "paragraph3": " Ce montant s’applique en grande partie aux formations des filières généralistes ; le coût des formations professionnelles est généralement plus élevé.",
+        "para": " Trois cent mille (300 000) francs CFA <i>   (environ 500 USD) </i>dans les Facultés des Lettres, des Sciences Humaines, Juridiques, Politiques, Économiques et de Gestion.",
+        "paragraph4": "      <b> Étudiants étrangers :  </b>Sous réserve de réciprocité et des conventions en vigueur, les étudiants de nationalité étrangère s’acquittent des droits dont les taux sont fixés comme suit :",
+        "paragraph5": "   Six cent mille (600 000) francs CFA <i>   (environ 1 000 USD)</i> dans les Facultés des Sciences et des Instituts Universitaires de Technologie.",
+        "paragraph6": "Un million (1 000 000) de francs CFA <i>  (environ 1 700 USD)</i> dans les Facultés de Médecine et de Pharmacie, dans les Écoles et Établissements de Formation professionnelle (Art. 3).",
+        "paragraph7": "  Institutions privées",
+        "paragraph9": " Les frais de scolarité des institutions privées et transnationales sont nettement plus élevés que ceux des institutions publiques. Ils varient d’un établissement à l’autre et commencent autour de 200 000 francs CFA (env. 400 USD) par an pour les institutions à faible cote pour aller jusqu’à plusieurs millions de francs CFA (plus de 1500 USD) pour les institutions prestigieuses. "
+    },
+      "logement": {
+        "title": "Population estudiantine & Logement ",
+        "paragraph1": "    La population estudiantine est en progression constante au fil des ans. 413 888 étudiants étaient inscrits dans les universités camerounaises à la rentrée 2022/2023, dont 294 189 dans les établissements publics et 119 699 dans le privé. Les étudiants étrangers représentaient 10% de l’effectif global.  ",
+       "paragraph2": "<b> Trois alternatives </b>  se présentent aux étudiants camerounais pour leur logement : ",
+        "paragraph3": "      1. Les résidences universitaires privées jouxtant les campus.",
+        "paragraph4": " (Loyer mensuel généralement homologué de concert avec l’Université et oscillant entre 15 000 et 35 000 francs CFA selon la ville et le standing.)",
+        "paragraph5": "                   2. Les résidences publiques sur les campus.",
+        "paragraph6": "(Capacités d’accueil faibles mais loyers les plus bas) ",
+        "paragraph7": "  3. En famille. ",
+        "paragraph8": "     La grande majorité des étudiants loge dans les résidences universitaires privées et en famille. ",
+         "paragraph9": "    Les logements des résidences publiques, aux capacités d’accueil limitées, sont attribués prioritairement aux étudiants handicapés ou issus des couches sociales défavorisées et étrangers. Le Service des œuvres sociales de l’université est à contacter pour les demandes y relatives. "
+    },
+    "content4": {
+        "title": "Droits universitaires ",
+        "paragraph1": "      En règle générale, les diplômes camerounais ne sont pas automatiquement reconnus à l’extérieur. En conséquence, l’étudiant qui souhaite poursuivre ses études à l’étranger devra faire reconnaître son diplôme camerounais par l’organisme compétent du pays d’accueil si l’université pour laquelle il postule ne reconnait pas ce dernier. La procédure de reconnaissance est relativement longue (entre 4 et 6 mois selon le pays) et payante."
+    },
+    "content5":"Organisation schématique du système éducatif camerounais",
+    "content6": "Références bibliographiques",
+    "references": [
+        {
+            "prefix": "‒ Annuaire Statistique 2019",
+            "text": "du Ministère de l’Enseignement Supérieur."
+        },
+        {
+            "prefix": "‒ Décret N°93/033 du 19 janvier 1993",
+            "text": "modifiant certaines dispositions du décret n°79/186 du 17 mai 1979 fixant les taux de paiement des droits universitaires."
+        },
+        {
+            "prefix": "‒ Directive 01/06-UEAC-019-CM-14 du 11 mars 2006",
+            "text": "portant application du système LMD (Licence, Master, Doctorat) dans les Universités et Établissements d’Enseignement Supérieur de l’espace CEMAC ;"
+        },
+        {
+            "prefix": "‒ Directive 02/06-UEAC-019-CM-14 du 11 mars 2006",
+            "text": "portant organisation des études universitaires dans l’espace ‒ dans le cadre du système LMD (Licence, Master, Doctorat)."
+        },
+        {
+            "prefix": "‒ Loi N°005/2001 du 16 avril 2001 portant",
+            "text": "Orientation de l’Enseignement Supérieur au Cameroun."
+        },
+        {
+            "prefix": "‒ Loi N°2018/10 du 11 juillet 2018 régissant",
+            "text": "la Formation professionnelle au Cameroun."
+        },
+        {
+            "authors": "Luc Ngwe, Hilaire De Prince Pokam,",
+            "title": "L'enseignement supérieur au Cameroun depuis la réforme de 1993 : dynamiques et perspectives.",
+            "publisher": "Éditions CODESRIA, 2022."
+        },
+        {
+            "prefix": "‒ Rapport d’analyse de l’annuaire statistique du secteur de l’éducation et de la formation au Cameroun.",
+            "text": "Édition 2023."
+        },
+        {
+            "prefix": "‒ Répertoire de l’offre de formation de l’Enseignement Supérieur au Cameroun.",
+            "text": "Édition 2022."
+        }
+    ],
+   "ressources": {
+    "title": "Ressources utiles",
+    "links": [
+      {
+        "name": "Cameroon GCE Board (GCEB)",
+        "url": "https://camgceb.org/"
+      },
+      {
+        "name": "Ministère des Enseignements Secondaires (Minesec)",
+        "url": "https://www.minesec.gov.cm/"
+      },
+      {
+        "name": "Ministère de l’Enseignement Supérieur (Minesup)",
+        "url": "https://www.minesup.gov.cm/"
+      },
+      {
+        "name": "Ministère de l’Emploi et de la Formation professionnelle (MINEFOP)",
+        "url": "https://www.minefop.cm/fr/"
+      },
+      {
+        "name": "Ministère de la Jeunesse et de l’Éducation Civique (Minjec)",
+        "url": "https://minjec.gov.cm/site/"
+      },
+      {
+        "name": "Office du Baccalauréat du Cameroun (OBC)",
+        "url": "https://www.obc.cm/"
+      }
+    ]
+  }
+}
