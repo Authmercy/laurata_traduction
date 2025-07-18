@@ -1,7 +1,9 @@
 "use client";
-import React, { useState, useEffect } from "react";
-import Image from "next/image";
+import React, { useState} from "react";
+import en from '@/i18/en/misc/mention.json';
+import fr from '@/i18/fr/misc/mention.json';
 import { useRouter } from "next/router";
+
 
 import BandeauMobile from "../footer/footer";
 import Navbar from "../navbar/navbar";
@@ -9,7 +11,8 @@ import FooterMobile from "../footer/footerEnd";
 
 export default function LegalSectionMobile() {
   const router = useRouter();
-
+const { locale } = router;
+    const t = locale === 'en' ? en : fr;
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobileMenuOpen2, setIsMobileMenuOpen2] = useState(false);
 
@@ -26,26 +29,22 @@ export default function LegalSectionMobile() {
           } ${isMobileMenuOpen2 ? "blur-sm " : ""
           } `}>
           <div className="justify-center p-2 text-center text-xl font-bold uppercase bg-[#9b6e0f] text-white">
-            <p>MENTIONS LÉGALES</p>
+        <p>
+                                    {locale === 'en' ? 'Legal Notice' : 'MENTIONS LÉGALES'} 
+                        </p>
           </div>
 
 
 
           <div className="flex p-3 bg-white text-black gap-1 w-full">
             <div className="flex justify-center text-justify flex-col w-full px-4 md:px-0">
-              <div className="mb-4">
-                <p><span className="text-[#4A62AA] text-xl font-bold"> Laurata.com</span> est édité par la
-                  société MOSAIK, immatriculée au Registre de Commerce sous le numéro RC/YAO/2020/A/1319, et
-                  dont le siège social est à Yaoundé. </p>
-              </div>
-              <div className="mb-4">
-
-
-                <p className="my-2"> L’Éditeur est joignable par courrier électronique à l’adresse suivante :
-                  info@laurata.com ou par téléphone au +237 690 707 253. </p>
-                <p className="my-2"> Les CGU ont été établies conformément à l’ensemble des dispositions
-                  législatives et règlementaires applicables en la matière. </p>
-              </div>
+                 <div className="mb-4">
+            <p dangerouslySetInnerHTML={{ __html: t.intro }} />
+          </div>
+               <div className="mb-4">
+            <p className="my-2">{t.contact}</p>
+            <p className="my-2">{t.terms}</p>
+          </div>
 
 
 

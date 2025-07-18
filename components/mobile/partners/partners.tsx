@@ -4,6 +4,7 @@ import Navbar from "../navbar/navbar";
 import { useEffect, useState } from "react";
 import { Brand } from "@/service/Brand";
 import FooterMobile from "../footer/footerEnd";
+import { useRouter } from "next/router";
 
 export default function Partenaire() {
 
@@ -151,6 +152,8 @@ export default function Partenaire() {
 
         fetchsetBrand();
     }, []);
+       const router = useRouter();
+           const { locale } = router;
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isMobileMenuOpen2, setIsMobileMenuOpen2] = useState(false);
 
@@ -168,7 +171,7 @@ export default function Partenaire() {
                     } ${isMobileMenuOpen2 ? "blur-sm " : ""
                     } `}>
                     <div className="justify-center p-2 text-center text-xl font-bold uppercase bg-[#9b6e0f] text-white">
-                        <p>  Partenaires</p>
+                        <p>  {locale === 'en' ? 'Partners' : ' Partenaires'}  </p>
                     </div>
 
 

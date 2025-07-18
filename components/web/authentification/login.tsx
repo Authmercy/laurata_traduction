@@ -37,6 +37,12 @@ export default function LoginComponent() {
                   <p>
                     {t.noAccount} <a href="/authentification/signup" className="text-blue-800">{t.signUp}</a>
                   </p>
+                               <button   
+                  className="   bg-white   text-[#1f386d]  px-1 py-2  hover:bg-blue-700 transition"
+                >
+
+                {t.forgotPassword}
+                </button>
                   <button
                     type="submit"
                     className="px-6 py-2 rounded-lg bg-[#A87A38] text-white font-bold"

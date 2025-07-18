@@ -4,9 +4,14 @@ import Navbar from "../navbar/navbar";
 import { useState } from "react";
 import FooterMobile from "../footer/footerEnd";
 
+import en from '@/i18/en/institution/obtenir.json';
+import fr from '@/i18/fr/institution/obtenir.json';
+import { useRouter } from "next/router";
 export default function ObtentionStageMobile() {
 
-
+ const router = useRouter();
+  const { locale } = router;
+  const t = locale === 'en' ? en : fr;
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobileMenuOpen2, setIsMobileMenuOpen2] = useState(false);
 
@@ -24,7 +29,7 @@ export default function ObtentionStageMobile() {
           } ${isMobileMenuOpen2 ? "blur-sm " : ""
           } `}>
           <div className="justify-center p-2 text-center text-xl font-bold uppercase bg-[#9b6e0f] text-white">
-            <p> OBTENIR DES STAGES À SES ÉTUDIANTS ET DIPLÔMÉS</p>
+            <p>           {t.title} </p>
           </div>
 
 
@@ -32,36 +37,28 @@ export default function ObtentionStageMobile() {
 
             className="bg-white/70  mt-8  p-2 py-4 shadow-sm mb-2 hover:shadow-md transition-shadow"
           >
-            <p className="text-[#4A62AA] text-center text-lg font-bold">Soyez une institution dont les formations mènent véritablement à l’emploi !</p>
+            <p className="text-[#4A62AA] text-center text-lg font-bold">
+             {t.subtitle}</p>
 
           </div>
           <div className="grid grid-cols-1 lg:flex-row flex-grow p-2 justify-center mt-2   ">
 
             <div>
-              <p className="text-white text-center p-3 text-lg bg-[#4A62AA]/90">GRÂCE AU PARTENARIAT AVEC LAURATA</p>
+              <p className="text-white uppercase text-center p-3 text-lg bg-[#4A62AA]/90">  {t.benefits.heading}</p>
 
               <div className="flex flex-col lg:flex-row flex-grow justify-center gap-6 mt-4">
-
+ {t.benefits.items.map((benefit, index) => (
                 <div
-                  className="  rounded-md bg-[#A87A38] p-8 text-center text-white"
-
+                  key={index}
+                  className={` rounded-md text-center p-8 text-white ${
+                    index === 0 ? 'bg-[#A87A38]' : 
+                    index === 1 ? 'bg-[#A87A38]/90' : 'bg-[#A87A38]/70'
+                  }`}
                 >
-                  <p>
-                    Obtenez des opportunités de stages et premiers emplois à vos étudiants et diplômés.
-
-                  </p>
+                  <p>{benefit}</p>
                 </div>
-
-
-                <div className="bg-[#A87A38]/70 rounded-md  text-center  p-8   text-white">
-
-                  <p>    Renforcez la présence numérique de vos formations et de votre institution.
-                  </p>
-                </div>
-                <div className="bg-[#A87A38]/50 rounded-md  text-center  items-stretch   p-8 text-white">
-
-                  <p>Envoi ciblé de votre offre de formations à nos abonnés élèves, étudiants et parents.</p>
-                </div>
+              ))}
+           
 
 
               </div>
@@ -72,8 +69,12 @@ export default function ObtentionStageMobile() {
           </div>
           <div className="flex justify-center mt- w-full">
             <div className="">
-              <p className="text-center text-white p-4"><b className="text-xl"><Link href="/misc/nous_contacter" className="  hover:text-2xl">     Contactez-nous </Link>
-              </b> pour plus d’informations ou appelez-le  <br />(+237) 690 707 253.</p>
+              <p className="text-center text-white p-4">
+                <b className="text-xl">
+                    <Link href="/misc/nous_contacter" className="hover:text-2xl">
+                  {locale === 'en' ? 'Contact us' : 'Contactez-nous'}
+                </Link>
+              </b> {t.cta.replace('Contactez-nous', '').replace('Contact us', '')}<br />(+237) 690 707 253.</p>
             </div>
           </div>
 

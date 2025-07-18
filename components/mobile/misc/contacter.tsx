@@ -5,6 +5,9 @@ import Navbar from "../navbar/navbar";
 import FooterMobile from "../footer/footerEnd";
 import UseContactService from "@/service/service_Conctact";
 
+import { useRouter } from "next/router";
+import en from '@/i18/en/misc/contact.json';
+import fr from '@/i18/fr/misc/contact.json';
 
 export default function ContactComponentMobile() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -29,7 +32,9 @@ export default function ContactComponentMobile() {
 
 
   } = UseContactService()
-
+     const router = useRouter();
+      const { locale } = router;
+      const t = locale === 'en' ? en : fr;
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -44,7 +49,7 @@ export default function ContactComponentMobile() {
           } ${isMobileMenuOpen2 ? "blur-sm " : ""
           } `}>
           <div className="justify-center p-2 text-center text-xl font-bold uppercase bg-[#9b6e0f] text-white">
-            <p>CONTACTEZ-NOUS</p>
+            <p>   {t.title}</p>
           </div>
 
 
@@ -63,7 +68,7 @@ export default function ContactComponentMobile() {
             <form onSubmit={handleSubmit} className="space-y-4">
               <input
                 type="text"
-                placeholder="Nom et prénom"
+        placeholder={t.form.fullname}
                 onChange={handleChange}
                 name="fullname"
                 className="w-full p-3 placeholder-[#1f386d] bg-white/80"
@@ -74,7 +79,7 @@ export default function ContactComponentMobile() {
                 name="email"
                 value={elements.email}
                 onChange={handleChange}
-                placeholder="Email"
+                 placeholder={t.form.email}
                 className="w-full p-3 placeholder-[#1f386d] bg-white/80"
                 required
               />
@@ -83,13 +88,13 @@ export default function ContactComponentMobile() {
                 name="phone"
                 value={elements.phone}
                 onChange={handleChange}
-                placeholder="Téléphone (WhatsApp) "
+                        placeholder={t.form.phone}
                 className="w-full p-3 placeholder-[#1f386d] bg-white/80"
                 required
               />
               <input
                 type="text"
-                placeholder="Sujet"
+                 placeholder={t.form.subject}
                 name="subject"
                 value={elements.subject}
                 onChange={handleChange}
@@ -101,7 +106,7 @@ export default function ContactComponentMobile() {
                 name="text"
                 value={elements.text}
                 onChange={handleChange}
-                placeholder="Entrez votre message "
+                       placeholder={t.form.message}
                 className="w-full p-3 h-20 placeholder-[#1f386d] bg-white/80"
                 required
               />
@@ -110,7 +115,7 @@ export default function ContactComponentMobile() {
                   type="submit"
                   className="bg-white text-[#1f386d] px-3 py-2 font-bold hover:bg-blue-700 transition"
                 >
-                  Envoyer
+                      {t.form.submit}
                 </button>
               </div>
             </form>

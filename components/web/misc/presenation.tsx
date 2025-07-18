@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import en from '@/i18/en/misc/apropos.json';
 import fr from '@/i18/fr/misc/apropos.json';
 import { useRouter } from "next/router";
@@ -47,7 +47,7 @@ export default function PresentaionDuSite() {
           </div>
 
                     <div className="flex flex-col justify-center gap-2 text-center">
-                        <div className="text-[#A38340] font-bold pt-8 text-xl "> Partager cette page </div>
+                        <div className="text-[#A38340] font-bold pt-8 text-xl ">   {t.shareTitle}</div>
                         <div className="flex flex-row  justify-center gap-2">
                             <img src="/icons/icons8-whatsapp-logo-64(1).png" alt="social" className=" mt-2 w-[52px] h-[52px]" />
                             <img src="/icons/icons8-facebook-logo-64.png" alt="social" className="" />

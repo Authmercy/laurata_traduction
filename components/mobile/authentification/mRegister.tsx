@@ -1,14 +1,17 @@
 "use client";
 import { useState } from "react";
 import { useRouter } from "next/router";
-import Image from "next/image";
+
 import BandeauMobile from "../footer/footer";
 import Navbar from "../navbar/navbar";
 import FooterMobile from "../footer/footerEnd";
 import UseRegistrationService from "@/service/service_registration";
-
+import en from '@/i18/en/auth/register.json';
+import fr from '@/i18/fr/auth/register.json';
 export default function MRegister() {
-  const router = useRouter();
+const router = useRouter();
+    const { locale } = router;
+    const t = locale === 'en' ? en : fr;
       const {
      
      errorMessage,
@@ -47,7 +50,7 @@ export default function MRegister() {
           } ${isMobileMenuOpen2 ? "blur-sm " : ""
           } `}>
           <div className="justify-center p-2 text-center text-xl font-bold uppercase bg-[#9b6e0f] text-white">
-            <p>S'inscrire (Gratuit)</p>
+            <p>{t.title}</p>
           </div>
 
 
@@ -66,9 +69,10 @@ export default function MRegister() {
             <form onSubmit={handleSubmit} className="text-[#1f386d] space-y-4 mt-4">
               <input
                 type="text"
-
-
-                placeholder="Username"
+ name="username"
+                    value={elements.username}
+                    onChange={handleChange}
+                    placeholder={t.username}
                 className="w-full p-3 placeholder-[#1f386d] bg-white/80"
                 required
               />
@@ -77,7 +81,7 @@ export default function MRegister() {
                 name="email"
                 value={elements.email}
                 onChange={handleChange}
-                placeholder="Email"
+                            placeholder={t.email}
                 className="w-full p-3 placeholder-[#1f386d] bg-white/80"
                 required
               />
@@ -86,7 +90,7 @@ export default function MRegister() {
                 name="password"
                 value={elements.password}
                 onChange={handleChange}
-                placeholder="Mot de passe"
+                    placeholder={t.password}
                 className="w-full p-3 placeholder-[#1f386d] bg-white/80"
                 required
               />
@@ -95,18 +99,25 @@ export default function MRegister() {
                 name="confirmPassword"
                 value={confirmPassword}
                 onChange={handleConfirmPasswordChange}
-                placeholder="Confirmer le mot de passe"
+                       placeholder={t.confirmPassword}
                 className="w-full p-3 placeholder-[#1f386d] bg-white/80"
                 required
               />
 
-              <div className="flex justify-end">
+              <div className="flex justify-between gap-4">
+                <p className="text-white">
+                    {t.alreadyHaveAccount}{" "}
+                    <a href="/authentification/login" >
+                     <br /> {t.login}
+                    </a>
+                  </p>
+                   <div className="flex justify-end">
                 <button
                   type="submit"
                   className="bg-white text-[#1f386d] px-4 py-2 font-bold hover:bg-blue-700 hover:text-white transition rounded"
                 >
-                  Envoyer
-                </button>
+                    {t.submit}
+                </button></div>
               </div>
             </form>
           </div>

@@ -1,7 +1,8 @@
 import router, { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { URLS } from "./url";
-import { useTranslation } from "react-i18next";
+
+import UseLanguageService from "./language_switch";
 
 type NewsFeed = {
   id: number;

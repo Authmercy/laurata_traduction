@@ -1,9 +1,9 @@
 
 {
-  "orientation": "Orientation",
-  "lexiconTitle": "LEXIQUE",
-  "quote": "Si vous ne pouvez pas encore faire de grandes choses, faites de petites choses de façon remarquable.",
-  "quoteAuthor": "Napoleon Hill",
-  "intro": "Petit lexique des termes usuels pour vous familiariser avec le vocabulaire du supérieur.",
-  "loading": "Chargement du glossaire..."
+  "orientation": "ACADEMIC ADVISING",
+  "lexiconTitle": "GLOSSARY",
+  "quote": "Don’t judge each day by the harvest you reap but by the seeds that you plant. ",
+  "quoteAuthor": "Robert Louis Stevenson",
+  "intro": "List of terms commonly used by Universities and Higher Education Institutions.",
+  "loading": "Loading the glossary..."
 }

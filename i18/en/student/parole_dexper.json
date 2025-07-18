@@ -1,10 +1,10 @@
 {
-    "title": "Parole d'expert",
-    "intro": " Écoutez un professionnel et montez en compétences",
-    "text": "À intervalle régulier, un de nos experts vous parle d'une thématique en lien avec la formation et/ou le monde du travail.",
-    "erreur": "Échec du chargement des experts. Veuillez réessayer ultérieurement..",
-    "loading": "Chargement experts...",
-    "nodata": "Aucun expert disponible pour le moment.",
-    "retour": "  Retour  à l'accueil",
-    "ecouter": "  Écouter le texte"
+    "title": "EXPERTS SPEAK",
+    "intro": "Discover a job profile by listening to a professional",
+    "text": " ",
+    "erreur": "Expert loading failed. Please try again later...",
+    "loading": "Expert loading...",
+    "nodata": "No experts available at the moment.",
+    "retour": "Back to home",
+    "ecouter": "Listen to the text"
 }

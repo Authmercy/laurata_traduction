@@ -1,11 +1,11 @@
 {
-    "title": "FEMME D'IMPACT",
+    "title": "WOMAN OF IMPACT",
     "intro": "Embrassez la carrière de vos rêves sans complexe",
     "text": "Dans notre pays, encore beaucoup trop de jeunes filles hésitent, pour différentes raisons, à embrasser certaines professions traditionnellement exercées par les hommes, notamment dans les domaines techniques, technologiques et scientifiques.",
       "text2": " En leur présentant à intervalle régulier le parcours d’une femme ayant particulièrement réussi dans sa profession, Laurata souhaite contribuer d’une part à encourager les jeunes filles à embrasser sans complexe des filières et professions scientifiques, et d’autre part, à les inspirer à viser l’excellence dans l’exercice de la profession qu’elles auront choisie.",
-    "erreur": "Échec du chargement des experts. Veuillez réessayer ultérieurement..",
-    "loading": "Chargement experts...",
-    "nodata": "Aucun expert disponible pour le moment.",
-    "retour": "  Retour  à l'accueil",
-    "ecouter": "  Écouter le texte"
+    "erreur": "Expert loading failed. Please try again later...",
+    "loading": "Expert loading...",
+    "nodata": "No experts available at the moment.",
+    "retour": " Back to home",
+    "ecouter": " Listen to the text"
 }

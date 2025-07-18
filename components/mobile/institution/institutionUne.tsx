@@ -6,13 +6,20 @@ import FooterMobile from "../footer/footerEnd";
 
 import UseInstitutionUneService from "@/service/service_institutionALaUne";
 import { useState } from "react";
-
+import { useRouter } from "next/router";
+import en from '@/i18/en/institution/institutionALaUne.json';
+import fr from '@/i18/fr/institution/institutionALaUne.json';
 
 
 export default function InstitutionALaUNeMobile() {
 const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobileMenuOpen2, setIsMobileMenuOpen2] = useState(false);
 
+const router = useRouter();
+
+    const { locale } = router;
+    const t = locale === 'en' ? en : fr;
+   
     const {
         errorMessage,
         handleSelectChange,
@@ -54,7 +61,7 @@ const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     <div className="flex flex-row sm:flex-row items-center relative w-full">
     
       <h1 className="w-full  text-[#4A62AA] py-2  text-center  border-4 sm:border-r-0 border-[#A87A38] bg-white uppercase font-bold">
-        Institution
+            {t.title}
       </h1>
 
 
@@ -68,7 +75,7 @@ const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
  
       <h1 className="w-full  text-[#4A62AA] py-2 text-center border-4 sm:border-l-0 border-[#A87A38] bg-white uppercase font-bold">
-        à la une
+       {t.title2}
       </h1>
     </div>
   </div>
@@ -79,15 +86,14 @@ const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
                         <div className="w-full max-w-md h-44 border-x-0 border-4 border-[#4A62AA]">
                             <div className="pb-10 text-center">
                                 <p className="mt- text-white">
-                                    LAURATA vous présente à intervalle régulier une institution majeure du supérieur.
-                                </p>
+                                    {t.intro}    </p>
                             </div>
                             <div className="-mt-6 mb-2 flex justify-center text-center">
                                 <select
                                     onChange={handleSelectChange}
                                     className="p-4 text-[#4A62AA] border border-[#4A62AA] rounded-2xl shadow-sm w-full max-w-xs"
                                 >
-                                    <option value="">Sélectionner une institution</option>
+                                    <option value=""> {t.option}</option>
                                     {institutions.map((company) => (
                                         <option key={company.id} value={company.id}>
                                                {company.shortName || company.name}
@@ -169,7 +175,7 @@ const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
                 ))}
               </div>
             ) : (
-              <p className="text-gray-500 py-2">Aucune description enregistrée.</p>
+              <p className="text-gray-500 py-2">{t.noDescription}</p>
             )}
           </div>
         )}
@@ -202,18 +208,18 @@ const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
                               ))}
                             </ul>
                           ) : (
-                            <p className="text-gray-500 ml-4">Aucun détail disponible</p>
+                            <p className="text-gray-500 ml-4">{t.noProgram}</p>
                           )}
                         </div>
                       ))
                     ) : (
-                      <p className="text-gray-500 ml-4">Aucun programme disponible</p>
+                      <p className="text-gray-500 ml-4">{t.noProgram}</p>
                     )}
                   </div>
                 ))}
               </div>
             ) : (
-              <p className="text-gray-500 py-2">Aucune formation enregistrée.</p>
+              <p className="text-gray-500 py-2">{t.noProgram}</p>
             )}
           </div>
         )}
@@ -233,7 +239,7 @@ const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
                 ))}
               </div>
             ) : (
-              <p className="text-gray-500 py-2">Aucune infrastructure enregistrée.</p>
+              <p className="text-gray-500 py-2">{t.noInfra}</p>
             )}
           </div>
         )}
@@ -267,15 +273,15 @@ const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
                 <div key={c.id}>
                   <div className="flex flex-row w-full bg-white">
                     <p className="p-2"><Image src="/icons/location.svg" alt="icon" width={24} height={20} /></p>
-                    <p className=" p-2 text-black">{c.location || <span className="text-gray-500">Non spécifié</span>}</p>
+                    <p className=" p-2 text-black">{c.location || <span className="text-gray-500"></span>}</p>
                   </div>
                   <div className="flex flex-row w-full bg-white">
                     <p className="p-2"><Image src="/icons/icons8-telephone-50.png" alt="icon" width={24} height={20} /></p>
-                    <p className=" p-2 text-black">{c.phones || <span className="text-gray-500">Non spécifié</span>}</p>
+                    <p className=" p-2 text-black">{c.phones || <span className="text-gray-500"></span>}</p>
                   </div>
                   <div className="flex flex-row w-full bg-white">
                     <p className="p-2"><Image src="/icons/icons8-email-30.png" alt="icon" width={24} height={20} /></p>
-                    <p className=" p-2 text-blue-500">{c.mail || <span className="text-gray-500">Non spécifié</span>}</p>
+                    <p className=" p-2 text-blue-500">{c.mail || <span className="text-gray-500"></span>}</p>
                   </div>
                   <div className="flex flex-row w-full bg-white">
                     <p className="p-2"><Image src="/icons/icons8-web-50.png" alt="icon" width={20} height={20} /></p>
@@ -283,7 +289,7 @@ const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
                       {c.website ? (
                         <a href={c.website} className="md:pl-36 text-blue-500">{c.website}</a>
                       ) : (
-                        <span className="text-gray-500">Non spécifié</span>
+                        <span className="text-gray-500"></span>
                       )}
                     </p>
                   </div>
@@ -293,19 +299,19 @@ const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
               <div>
                 <div className="flex flex-row w-full bg-white">
                   <p className="p-2"><Image src="/icons/location.svg" alt="icon" width={24} height={20} /></p>
-                  <p className=" p-2 text-gray-500">Non spécifié</p>
+                  <p className=" p-2 text-gray-500"></p>
                 </div>
                 <div className="flex flex-row w-full bg-white">
                   <p className="p-2"><Image src="/icons/icons8-telephone-50.png" alt="icon" width={24} height={20} /></p>
-                  <p className=" p-2 text-gray-500">Non spécifié</p>
+                  <p className=" p-2 text-gray-500"></p>
                 </div>
                 <div className="flex flex-row w-full bg-white">
                   <p className="p-2"><Image src="/icons/icons8-email-30.png" alt="icon" width={24} height={20} /></p>
-                  <p className="- p-2 text-gray-500">Non spécifié</p>
+                  <p className="- p-2 text-gray-500"></p>
                 </div>
                 <div className="flex flex-row w-full bg-white">
                   <p className="p-2"><Image src="/icons/icons8-web-50.png" alt="icon" width={20} height={20} /></p>
-                  <p className="p-2 text-gray-500">Non spécifié</p>
+                  <p className="p-2 text-gray-500"></p>
                 </div>
               </div>
             )}

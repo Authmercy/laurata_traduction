@@ -1,17 +1,19 @@
 "use client";
-import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
+import {  useState } from "react";
+import { useRouter } from "next/router";
 import Navbar from "../navbar/navbar";
 import FooterMobile from "../footer/footerEnd";
-import { URLS } from "@/service/url";
+;
 import UseActuService from "@/service/service_actu";
-
+import en from '@/i18/en/misc/apropos.json';
+import fr from '@/i18/fr/misc/apropos.json';
 
 
 
 export default function ActuComponentMobile() {
   const router = useRouter();
-
+   const { locale } = router;
+    const t = locale === 'en' ? en : fr;
   const {
 
      newsfeed,
@@ -27,7 +29,7 @@ export default function ActuComponentMobile() {
     
     setErrorMessage,
     getMonthName,
-    open,
+
 
   } = UseActuService()
 
@@ -47,8 +49,8 @@ export default function ActuComponentMobile() {
         <div className={`${isMobileMenuOpen ? "blur-sm " : ""
           } ${isMobileMenuOpen2 ? "blur-sm " : ""
           } `}>
-          <div className="justify-center p-2 text-center text-xl font-bold uppercase bg-[#c09111] text-white">
-            <p>ACTUALITÉS</p>
+          <div className="justify-center p-2 text-center  text-xl font-bold uppercase bg-[#c09111] text-white">
+                     <p>     {locale === 'en' ? 'News' : 'Actualités'}</p>
           </div>
 
           <div className="w-full  py-6">

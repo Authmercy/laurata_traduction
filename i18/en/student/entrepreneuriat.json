@@ -1,334 +1,202 @@
 {
-    "title": "         Entrepreneuriat",
-    "quote": "Ce ne sont pas les études de marché sur la lampe à huile qui ont permis l’invention de l’électricité.",
-    "intro": "La rareté et la précarité de l’emploi salarié poussent, et continuent de pousser, de plus en plus de jeunes diplômés camerounais à opter pour l’entrepreneuriat. Toutefois, nous suggérons vivement à toutes celles et tous ceux qui veulent se lancer de bien s’y préparer au risque de voir leur projet péricliter dès les premiers mois.",
-    "intro2": "Ci-dessous <b> l’essentiel de ce qu’il faut savoir et faire avant d’entreprendre</b>.",
+    "title": "ENTREPRENEURSHIP",
+    "quote": "He who is not courageous enough to take risks will accomplish nothing in life. ",
+    "intro": "The high unemployment rate and the precariousness of salaried employment are pushing, and will continue to push more and more young Cameroonian (graduates or not) to start their own businesses in future.",
+    "intro2": "<b> Here some key information on what to know and do before starting a business.</b>.",
     "content1": {
-        "title": "Choses à savoir et à faire avant de créer son entreprise",
-        "intro": " <b> Plus de 90% des start-ups camerounaises font faillite au cours des deux premières années d’existence. </b>Si vous ne voulez pas contribuer à faire grossir ce chiffre, avant de vous lancer prenez préalablement le temps et le soin de :",
-        "item1": "  <b>Bien évaluer  </b> votre potentiel d’entrepreneur : à travers un bilan de compétences (savoirs, savoir-faire, savoir-être, motivations, réseau relationnel, etc.) ;",
-        "item2": "  <b> Mûrir </b>votre projet ou idée d’entreprise ;",
-        "item3": "    <b> Bien vous renseigner </b>sur votre marché : taille, cible, chiffre d’affaires, concurrence, réglementation, etc. ;",
-        "item4": "<b> D’élaborer</b> au besoin un Business Model Canvas (Matrice d’affaires) et/ou un Business plan (Plan d’affaires) exposant votre business model ;",
-        "item5": " <b> Avoir développé et posséder </b> les qualités essentielles de l’entrepreneur ; un mentor ou coach peut vous y aider !",
-        "item6": " <b>D’acquérir </b> de bonnes notions en gestion et comptabilité ;",
-        "item7": "  <b>Vous être informé </b> sur le cadre législatif et réglementaire relatif à la création et à l’accompagnement des PME ;",
-        "item8": " <b>Constituer si possible un capital d’investissement  </b> et de vous être informé sur les sources de financement possibles de vos activités ;",
-        "item9": " <b> Planifier minutieusement </b> la mise en œuvre de votre plan d’actions contenant les objectifs (hebdomadaires, mensuels…) à atteindre ;",
-        "item10": "  <b>Préparer un plan B  </b> en cas d’échec.",
-        "maniere": " De manière plus concrète, il s’agira pour vous :",
-        "maniere1": "d’avoir ou de développer une idée originale (d’un produit ou service résolvant un problème ou répondant à un besoin) ainsi qu’un « business model » savamment pensé ;",
-        "maniere2": "de bien calculer toutes vos charges en prenant en compte les imprévus ;",
-        "maniere3": "d’estimer de manière réaliste le produit de vos ventes (à partir d’estimations basses).",
-        "conclusion": " Si votre résultat est largement bénéficiaire, il y a de fortes chances que votre affaire soit rentable et pérenne.",
-        "majorite": "Enfin, sachez que la majorité des grands entrepreneurs à succès :",
-        "majorite1": "ne cite pas la quête du gain (devenir riche) comme moteur principal de leur action mais la passion pour ce qu’ils font et la volonté de rendre meilleur le monde.",
-        "majorite2": "Le milliardaire Dietrich Mateschitz, 1ère fortune d’Autriche et cocréateur de la boisson énergisante Red Bull, déclare ainsi dans une de ses rares interviews que l’argent n’a jamais été un moteur pour lui. Mais plutôt la liberté, l’indépendance et la passion pour ses projets.",
-        "majorite3": "n’a pas essayé de tout anticiper ou attendu que tout soit prêt ;",
-        "majorite4": " Ils sont passés à l’action dès que possible et ont progressé en apprenant de leurs erreurs."
+        "title": "Things to know and do before starting a business",
+        "intro": " <b>More than 90% of start-ups fail within the first two years of existence. </b> If you do not want to be included in these statistics in the future, take the time and care before starting your business to:",
+        "item1": "  <b>Assess</b> your entrepreneurial potential: through a skills assessment (knowledge, know-how, soft skills, motivation etc.);",
+        "item2": "  <b> Mature </b>your project or business idea;",
+        "item3": "    <b> Learn about  </b>your market: size, turnover, competitors, regulations, etc.;",
+        "item4": "<b> Develop</b>  a Business plan outlining your business model;",
+        "item5": " <b> Possess or have developed </b> l the essential qualities of an entrepreneur (see below); a mentor or coach can help you do this!",
+        "item6": " <b>Acquire </b> basic notions of management and accounting;",
+        "item7": "  <b>Get informed </b> about the legislative and regulatory framework relating to the creation and support of SMEs;",
+        "item8": " <b>Build up an investment capital  </b> and be informed about where you can get funding for your business;",
+        "item9": " <b> Carefully plan </b>  the implementation of your action plan with the objectives to be achieved (weekly, monthly...)",
+        "item10": "  <b>Prepare a backup plan </b> in case the project fails.",
+        "maniere": " More concretely, you will need to:",
+        "maniere1": "have or develop an original idea (solving a problem or meeting a need) as well as a well thought-out “business model”;",
+        "maniere2": "calculate all your costs carefully, taking into account unforeseen circumstances;",
+        "maniere3": "realistically estimate your sales revenue.",
+        "conclusion": " If your result is largely profitable, there is a good chance that your business is profitable and sustainable.",
+        "majorite": "Last but not least, you should know that most of the successful entrepreneurs:",
+        "majorite1": "do not mention the quest for gain (becoming rich) as the main driving force behind their actions, but the passion for what they do and the desire to make the world a better place. ",
+        "majorite2": "The billionaire Dietrich Mateschitz, Austria number one fortune and cofounder of the energy drink Red Bull, said in one of his rare interviews that money always came last after the quest for freedom, independence and passion for his projects.",
+        "majorite3": "did not try to anticipate everything or wait for everything to be ready;",
+        "majorite4": " they took action as soon as possible and progressed by learning from their mistakes."
     },
     "content2": {
-        "title": "Qualités essentielles de l’entrepreneur",
-        "intro": "Le jeune diplômé qui veut réussir  son projet entrepreneurial doit, outre ses compétences, développer les principales aptitudes et qualités suivantes, possédées par la majorité des entrepreneurs à succès :  ",
+        "title": "CORE QUALITIES OF AN ENTREPRENEUR",
+        "intro": "In order to avoid being overwhelmed by the euphoria of success, the pressure, the stress and the risk of failure inherent in any entrepreneurial project, the young graduate who wants to succeed must, in addition to his competences, develop the following fundamental skills and qualities possessed by the majority of successful entrepreneurs:",
         "item1": {
-            "title": "Être ambitieux et audacieux",
-            "text": "Entreprendre c’est avoir de l’ambition, de l’audace et être disposé à prendre des risques ;"
+            "title": "Be ambitious and bold",
+            "text": "To be an entrepreneur is to be ambitious, bold and willing to take risks;"
         },
         "item2": {
-            "title": "Avoir une grande confiance en soi",
-            "text": " Être confiant en ses capacités à mener à bien son projet ;"
+            "title": "High level of self-confidence",
+            "text": "Be confident in your ability to complete your project;"
         },
         "item3": {
-            "title": "  Être déterminé et patient",
-            "text": "Le succès n’arrive pas du jour au lendemain et nécessite parfois beaucoup de temps ; "
+            "title": "  Determination and patience",
+            "text": "Success does not happen overnight and sometimes takes a long time;"
         },
         "item4": {
             "title": "  Leadership",
-            "text": "Penser aux autres et agir pour le bien commun plutôt que se concentrer sur ses propres intérêts (base de tout leadership à impact positif !) ;"
+            "text": "Thinking of others and acting for the common good rather than focusing on one's own interests (the basis of all positive impact leadership!)"
         },
         "item5": {
-            "title": "  Faculté d’adaptation et flexibilité ",
-            "text": "Capacité à se remettre en question et à changer si nécessaire de cap ou ses méthodes de travail ;"
+            "title": " Adaptability and flexibility ",
+            "text": "Ability to question and change course or working methods if necessary;"
         },
         "item6": {
-            "title": " Être créatif",
-            "text": "Nécessaire pour l’innovation et la compétitivité ;"
+            "title": "Creativity",
+            "text": "Needed for innovation and competitiveness;"
         },
         "item7": {
-            "title": "  Savoir travailler en équipe",
-            "text": " Pour garantir la cohésion au sein de ses collaborateurs ;"
+            "title": "  Ability to work in team",
+            "text": " To ensure cohesion among its employees;"
         },
         "item8": {
-            "title": "Être rigoureux et organisé",
-            "text": "Pour planifier, prioriser les actions et les mettre en œuvre efficacement ;"
+            "title": "Be rigorous and organised",
+            "text": "To plan, prioritise and implement actions effectively;"
         },
         "item9": {
-            "title": "Être optimiste",
-            "text": "Pour croire en la réussite du projet et rester positif face à l’adversité et aux revers ;"
+            "title": "Be optimistic",
+            "text": "To believe in the success of the project and remain positive in the face of adversity and setbacks;"
         },
         "item10": {
-            "title": " Être honnête et juste",
-            "text": "Que ce soit avec vos collaborateurs ou avec vos clients et partenaires, soyez toujours honnête et juste ; ne roulez personne car votre réputation vous suivra partout. « Biens mal acquis ne profitent jamais ! »"
+            "title": "Be honest and fair",
+            "text": "Whether with your employees or with your customers and partners, always be honest and fair; don't cheat anyone, your reputation will follow you everywhere. Remember the old saying: “Ill-gotten gains seldom prosper”."
         }
     },
     "content3": {
-        "title": "Avantages et inconvénients de l’entrepreneuriat",
-        "intro": " L'entrepreneuriat présente des advantages et inconvénients  dont il faut être bien conscient avant de se lancer :   ",
+        "title": "Benefits and disadvantages of being an entrepreneur",
+        "intro": " Just like any other project, Entrepreneurship has its own drawbacks. Here are a few:",
         "plus": {
-            "title": "Les plus",
+            "title": "Benefits",
             "item1": {
-                "title": "Indépendance et liberté : ",
-                "text": "vous êtes votre propre chef, libre dans vos choix et décisions et mettez en œuvre vos propres idées. Vous organisez vous-même votre emploi du temps."
+                "title": "Independence and freedom: ",
+                "text": " you are your own boss, free in your choices and decisions and implement your own ideas. You organise your own schedule."
             },
             "item2": {
                 "title": "Satisfaction : ",
-                "text": " travailler dans un domaine que vous aimez, apporter une solution au besoin d’une clientèle, devenir une source d’inspiration par sa réussite, etc. procurent grande satisfaction et fierté."
+                "text": " working in a field you love, providing a solution to a client's need, becoming a source of inspiration through your success, etc. gives great satisfaction and pride."
             },
             "item3": {
-                "title": " Autonomie financière :",
-                "text": "en cas de succès, vos revenus seront conséquents et vous garantiront une autonomie financière. "
+                "title": "Financial autonomy:",
+                "text": "if you are successful, your income will be substantial and will guarantee you financial autonomy."
             },
             "item4": {
-                "title": "   Choix de vos collaborateurs ",
-                "text": "vous constituez et recrutez vous-même votre équipe selon vos préférences."
+                "title": "Choice of your employees: ",
+                "text": "you set up and recruit your own team according to your preferences"
             }
         },
         "moins": {
-            "title": "Les moins",
+            "title": "Disadvantages",
             "item1": {
-                "title": "Heures de travail illimitées :  ",
-                "text": "vous n’aurez pas d’heures fixes de travail et votre vie privée pourrait en pâtir, d’où l’importance d’une bonne organisation et de l’autodiscipline."
+                "title": "you will not have fixed working hours and your private life may suffer, hence the importance of good organisation and self-discipline."
             },
             "item2": {
-                "title": "Insécurité financière : ",
-                "text": " si votre affaire tarde à être rentable, vous aurez un revenu faible et irrégulier ; en cas de faillite, vous perdrez le capital investi et risquerez la précarité financière, qui le cas échéant, mettra en péril le bien-être et la stabilité de votre famille."
+                "title": "Financial insecurity: ",
+                "text": "if your business takes a long time to become profitable, you will have a low and irregular income; if you go bankrupt, you will lose the capital invested."
             },
             "item3": {
-                "title": " Incertitudes : ",
-                "text": "liée à la recherche de financement, à la fidélité de la clientèle ou des fournisseurs, à la réussite ou à l’échec du projet."
+                "title": " Uncertainties : ",
+                "text": "related to the search for financing, the loyalty of customers or suppliers, the success or failure of the project."
             },
             "item4": {
-                "title": "  Pression élevée et situations de stress garanties :",
-                "text": "découlant de la concurrence ; des nombreuses charges : loyer, salaires ; de vos responsabilités (recherche de partenaires/clients, coordination de l’équipe, comptabilité, etc.) ; voire de la jalousie et la convoitise de l’entourage en cas de succès."
+                "title": "High pressure and stressful situations are guaranteed:",
+                "text": "due to the competition; the numerous charges: rent, salaries; your responsibilities (finding partners/clients, coordinating the team, accounting, etc.); and even jealousy and envy from the people around you if you are successful."
             }
         }
     },
     "content4": {
-        "title": "Obstacles à l’entrepreneuriat formel",
-        "p1": "La majorité des jeunes (diplômés) qui se lance dans l’entrepreneuriat évolue hélas dans l’informel, principalement dans le commerce, l’artisanat, l’agropastoral et les services. La fiscalité, la corruption et les lourdeurs et tracasseries administratives figurent parmi les obstacles les plus cités par ces entrepreneurs pour justifier le choix de l’informel. (1)",
-        "p2": "Bien qu’ils aient été considérablement abaissés à travers des politiques gouvernementales incitatives, les coûts de formalisation administrative représentent encore un obstacle important : 41 500 FCFA en moyenne pour un Établissement et 54 625 FCFA pour une SARL sous seing privé dans un CFCE, auxquels s’ajoutent les différents précomptes à payer à la création pour l’obtention de l’attestation de de conformité fiscale (ACF).",
-        "p3": "  En conclusion, sachez que l’informel présente son lot d’inconvénients plus ou moins contraignants selon l’activité. Aussi, nous vous recommandons de toujours opter pour la formalisation de votre entreprise au démarrage lorsque cela est possible.",
-        "inconvenient": "INCONVÉNIENTS DE L’INFORMEL",
-        "item1": "Exclusion de la quasi-totalité des programmes étatiques d’aide et de soutien à l’entrepreneuriat (formations, coaching, avantages fiscaux, crédits garantis …) ;",
-        "item2": "        Exclusion de la commande publique ;",
-        "item3": " Impossibilité d’accès au crédit bancaire ;",
-        "item4": "  Non couverture par les assurances ; ",
-        "item5": "     Impossibilité de faire affaires avec des partenaires étrangers ; etc.",
-        "plusLoin": " → Pour aller plus loin",
-        "read": "  Lire :",
-        "name": " « Enquête auprès des entreprises informelles du Cameroun. »",
-        "info": "  sous la direction de Benjamin FOMBA KAMGA, (2017). Bureau International du Travail, Équipe d’Appui Technique de l’Organisation Internationale du Travail (OIT) au travail décent pour l’Afrique centrale."
+        "title": "Barriers to formal entrepreneurship",
+        "p1": "he majority of young people or graduates who embark on entrepreneurship work in the informal sector, mainly in trade, handicrafts, agropastoral activities and services. Taxation, corruption and administrative red tape (particularly for obtaining the trade register, the taxpayer's card and affiliation to the NSIF) are among the obstacles most cited by these entrepreneurs to justify their choice of the informal sector (1).",
+        "p2": "The important cost of drawing up the aforementioned administrative documents relating to the formality also represents a major obstacle to the formalisation of the company: CFAF 41,500 on average for an establishment (Sole Proprietorship Company, SPC) to more than CFAF 54,625 for a Limited Liability Company (LLC) in a CFCE in addition to other taxes.",
+        "p3": " Last but not least, the choice of the informal sector is also motivated by the non-payment of taxes. That said, the informal sector also has its share of disadvantages, which are more or less restrictive depending on the activity.",
+        "inconvenient": "DISADVANTAGES OF WORKING IN THE INFORMAL SECTOR",
+        "item1": "Exclusion from almost all state programmes to help and support entrepreneurship (training, coaching, tax benefits, guaranteed credit, etc.);",
+        "item2": "Exclusion from public procurement;",
+        "item3": "Inability to access bank credit;",
+        "item4": " No insurance coverage;",
+        "item5": "Inability to do business with foreign partners; etc.",
+        "plusLoin": " To go further",
+        "read": "  Read : ",
+        "name": "« Enquête auprès des entreprises informelles du Cameroun. » ",
+        "info": "  Under the direction of Benjamin Fomba Kamga. (2017). Bureau International du Travail, Équipe d’Appui Technique de l’Organisation Internationale du Travail (OIT) au travail décent pour l’Afrique centrale."
     },
     "content5": {
-        "title": "Entreprendre sans passer par la case salariat ?",
-        "p1": "Bien qu’il existe plusieurs cas de (jeunes) diplômés ayant mené à bien leur projet immédiatement à la sortie des bancs, il n’en demeure pas moins qu’<b>une première expérience professionnelle présente à bien des égards un atout majeur lorsqu’on se lance dans l’entrepreneuriat. </b>",
-        "p2": " Les avantages de créer son entreprise après une première expérience professionnelle",
-        "p3": " <b> Une première expérience  </b> vous permet : ",
+        "title": "Starting your business after or without a prior work experience?",
+        "p1": "Although there are several cases of young graduates who have successfully completed their project immediately after graduation, the fact remains that <b>a first professional experience is in many respects a major asset when starting a business. </b>",
+        "p2": "Benefits of a first work experience",
+        "p3": " <b> A first work experience </b> allows you to:",
         "item1": {
-            "title": "De toucher du doigt les réalités",
-            "text": ", le fonctionnement et « l’écosystème » de l’entreprise ; "
+            "title": "Get a first-hand feel for ",
+            "text": "a company’s life;"
         },
         "item2": {
-            "title": "D’acquérir",
-            "text": " de nouvelles compétences et connaissances : fiscalité, marketing, gestion etc. ; "
+            "title": "Acquire new skills and knowledge: ",
+            "text": " taxation, marketing, management, etc.;"
         },
         "item3": {
-            "title": " D’apprendre",
-            "text": "des personnes ou collègues plus expérimentés ; "
+            "title": "Learn from",
+            "text": "more experienced persons or colleagues;"
         },
         "item4": {
-            "title": "  De bénéficier",
-            "text": "le cas échéant de formations (comptabilité, fiscalité, ventes, etc.) payées par l’employeur ;"
+            "title": " Benefit from",
+            "text": "training opportunities (accounting, tax, sales, etc.) paid for by the employer;"
         },
         "item5": {
-            "title": "De connaître ",
-            "text": "vos futurs concurrents et fournisseurs, les réseaux de distribution, etc. ; "
-        },
-        "item6": {
-            "title": " De constituer une épargne ",
-            "text": "(qui pourrait servir au financement de votre projet entrepreneurial) ; "
+            "title": "Learn about an activity sector: ",
+            "text": "competitors and suppliers, distribution networks, etc.;"
         },
         "item7": {
-            "title": "  De constituer ",
-            "text": " un réseau relationnel dans plusieurs secteurs d’activités ;"
+            "title": " Bild up savings ",
+            "text": "which could be used to finance your business;"
+        },
+        "item6": {
+            "title": "Build up a network of contacts ",
+            "text": " in several sectors of activity;"
         },
         "item8": {
-            "title": "De détecter ",
-            "text": "un besoin non satisfait dans votre domaine ou une nouvelle opportunité d’affaires ; etc. "
+            "title": "Detect an unmet need",
+            "text": "in your field or a business opportunity; etc."
         },
-        "conclu": "Ces divers acquis vous seront indubitablement utiles pour la maturation et la mise en œuvre de votre projet. Aussi, nous vous recommandons, si l’occasion se présente,<b> de ne pas hésiter à acquérir de l’expérience professionnelle avant d’entreprendre  </b> (y compris par des stages pendant et après vos études).",
-        "conclu2": "Dans le cas contraire, nous vous conseillons de développer pendant vos études, outre votre idée d’entreprise, les principales qualités permettant de faire face aux défis et difficultés que vous rencontrerez en tant que chef d’entreprise.",
-        "contact": "Contactez-nous",
-        "info": " si vous souhaitez être accompagné par nos experts dans la mise en œuvre de votre projet entrepreneurial."
+        "conclu": "These various assets will undoubtedly be useful for the maturation and implementation of your project. We therefore recommend that, in case you have the opportunity, <b> you do not hesitate to acquire professional experience before starting your project </b> (including internships or volunteering during and after your studies).",
+        "conclu2": "But if you decide to start your own business without work experience, we advise you to develop during your studies, beside your business idea, the main qualities to face the challenges and difficulties you will encounter as an entrepreneur.",
+        "contact": "Contact us",
+        "info": " "
     },
     "content6": {
-        "title": "Éthique et morale  ",
-        "p1": " Dans un contexte où  beaucoup de jeunes veulent accéder à la richesse matérielle et au succès au plus vite, et parfois, à tous les prix et sans effort particulier au détriment des valeurs éthiques, il convient de leurs rappeler que, comme le dit si bien le <b>  proverbe Africain, « On ne peut pas labourer, semer, récolter et manger le même jour. »</b>",
-        "p2": "Ainsi, il y a un temps pour étudier et acquérir des connaissances et des compétences et un autre pour déployer ses compétences et savoirs et jouir des retombées des efforts antérieurs. Cet apprentissage doit se faire dans le travail acharné, la discipline, le respect d’autrui, et surtout, sans tricherie et sans causer du tort aux autres. Que vous ayez opté pour le salariat ou l’entrepreneuriat, vous ferez toujours la différence et serez un citoyen utile à votre pays lorsque vous êtes honnête, intègre et juste.",
-        "p3": "    Aussi, nous vous suggérons vivement de mettre les valeurs éthiques au cœur de tout ce que vous entreprenez et entreprendrez pendant et après vos études et d’y être fidèle, vos accomplissements et succès n’en seront que plus gratifiants."
+        "title": "Ethics & Moral",
+        "p1": "Available soon.",
+        "p2": "",
+        "p3": ""
     },
     "content7": {
-        "title": "Culture générale  ",
-        "quote": "         La persévérance, c’est ce qui rend l’impossible possible, le possible probable et le probable réalisé.",
-        "p1": "   L’importance de la lecture et de la culture générale",
-        "p2": "    La culture générale est incontournable dans la vie de l’étudiant, et ultérieurement dans la vie professionnelle. En effet, elle permet non seulement de reconnaître le niveau de curiosité de l’étudiant,  mais aussi, l’étendue de ses connaissances ne relevant pas de sa formation disciplinaire.",
-        "p3": "   Développer son niveau de culture générale",
-        "p4": " La curiosité intellectuelle et l’ardent désir d’élargir ses connaissances constituent les principaux moteurs du développement de la culture générale chez l’individu.",
-        "p5": " Un des moyens les plus efficaces pour développer sa culture générale est la lecture quotidienne (livres,  Internet ou bibliothèque) car elle amplifie la capacité de mémorisation.  <br />  À côté de la lecture, vous pouvez également enrichir vos connaissances en prenant part à des conférence-débats, à des dédicaces de livres, en visitant le musée national, et même en apprenant à jouer d’un instrument de musique.",
-        "plusLoin": "              Pour aller plus loin",
-        "consulter": "  Consulter le dossier consacré  dans la rubrique ",
-        "zoom": "  Zoom Sur  "
+        "title": "General knowledge",
+        "quote": " ",
+        "p1": " Importance of general knowledge and reading.",
+        "p2": " General knowledge is an essential part of a student's life, and later on in professional life. Indeed, in one hand it allows to discover the level of curiosity of the student and in the other to evaluate his or her knowledge outside of his or her field of training. Nowadays, most training providers often subject applicants to a general knowledge test in form of multiple-choice questions or essay. General knowledge is defined as the totality of knowledge in different fields possessed by an individual; and, on the other hand, the ability to use it to express reasoned opinions, to be more open-minded. This knowledge often applies to a limited population in a specific region and at a specific time.",
+        "p3": "  Developing general knowledge",
+        "p4": " Intellectual curiosity and a strong desire to expand one's knowledge are the main driving forces behind the development of general knowledge in the individual.",
+        "p5": " One of the most effective ways of developing general knowledge is to read every day, as this amplifies the capacity to memorise. Reading can be done either in the traditional way in a library with different books, or through the panoply of media available: online or paper press, specialised or generalist magazines online or on paper.Besides reading, you can also enrich your knowledge by taking part in lectures on campus or in cultural centres, book signings, visiting museums, etc. and even learning to play a musical instrument.",
+        "plusLoin": " Related websites ",
+        "consulter": " ",
+        "zoom": " "
     },
     "content8":{
  "title": "Structures et programmes d’accompagnement à l’entrepreneuriat  ",
- "intro":"Bien qu’il existe plusieurs cas de (jeunes) diplômés ayant mené à bien leur projet immédiatement à la sortie des bancs, il n’en demeure pas moins qu’<b>une première expérience professionnelle présente à bien des égards un atout majeur lorsqu’on se lance dans l’entrepreneuriat.</b> ",
-  "sections": [
-      {
-        "title": "1. Centre des Formalités de Création d'Entreprises (CFCE)",
-        "content": "Présents dans plusieurs chefs-lieux de région, les CFCE facilitent la création d'entreprises dont le capital est compris entre 100 000 et un million de FCFA ; au-delà, les formalités s'effectuent chez un notaire.",
-        "link": {
-          "text": "Pour plus d'informations :",
-          "url": "https://yaounde.eregulations.org/?l=fr",
-          "display": "https://yaounde.eregulations.org/?l=fr"
-        }
-      },
-      {
-        "title": "2. Structures publiques d'accompagnement",
-        "subsections": [
-          {
-            "title": "Agence de Promotion des PME (APME)",
-            "missions": [
-              "Soutien aux PME-PMI",
-              "Accompagnement dans les procédures de création",
-              "Mentorat et coaching des porteurs de projets",
-              "Incubation des start-up"
-            ],
-            "location": "Siège : quartier, Tsinga, Yaoundé."
-          },
-          {
-            "title": "Fonds National de l'Emploi (FNE)",
-            "mission": "Promotion de l'emploi. Siège à Yaoundé (Elig-Essono) et représentations dans les 10 régions.",
-            "link": {
-              "url": "https://www.fnecm.org/index.php/fr",
-              "display": "https://www.fnecm.org/index.php/fr"
-            }
-          },
-          {
-            "title": "Banque Camerounaise des Petites et Moyennes Entreprises (BC-PME SA)",
-            "mission": "Apporter les concours financiers aux PME et à l'Artisanat. Siège Yaoundé (après la Région du Centre).",
-            "link": {
-              "url": "https://bc-pme.com/",
-              "display": "https://bc-pme.com/"
-            }
-          },
-          {
-            "title": "Agence de Promotion des Investissements (API)",
-            "mission": "Promotion du site économique « Cameroun ». Siège Yaoundé, nouvelle route Bastos.",
-            "link": {
-              "url": "https://www.investincameroon.net/language/fr/",
-              "display": "https://www.investincameroon.net/language/fr/"
-            }
-          },
-          {
-            "title": "Centres de gestion agréés (CGA)",
-            "description": "Association agréée par le Ministre chargé des Finances dont le but est d'apporter une assistance en matière de gestion, d'encadrement et d'exécution des obligations fiscales et comptables aux petites entreprises adhérentes réalisant un chiffre d'affaires annuel compris entre 15 et 100 millions de FCFA.",
-            "link": {
-              "url": "https://minfi.gov.cm/les-centres-de-gestion-agrees-cadres-de-partenariat-par-excellence-de-ladministration-fiscale-et-des-pme9/",
-              "display": "https://minfi.gov.cm/les-centres-de-gestion-agrees-cadres-de-partenariat-par-excellence-de-ladministration-fiscale-et-des-pme9/"
-            }
-          }
-        ]
-      },
-      {
-        "title": "3. Chambres consulaires et Organisations patronales",
-        "subsections": [
-          {
-            "title": "Chambre de Commerce, de l'Industrie, des Mines et de l'Artisanat (CCIMA)",
-            "description": "Organisme consultatif et représentatif des milieux d'affaires dans les domaines du commerce, de l'industrie, des mines et de l'artisanat, il joue le rôle de courroie de transmission entre d'une part, les milieux d'affaires privés et d'autre part, les pouvoirs publics en matière de consultation et de représentation, concernant les nombreux domaines au premier rang desquels se trouve l'économie. Son siège se trouve à Douala.",
-            "link": {
-              "url": "https://www.ccima.cm/interne.php?idsmenu=269",
-              "display": "https://www.ccima.cm/interne.php?idsmenu=269"
-            }
-          },
-          {
-            "title": "Chambre d'Agriculture, des Pêches, de l'Élevage et des Forêts du Cameroun (CAPEF)",
-            "description": "Organisme de représentation et de défense des intérêts des professionnels de l'agriculture, de la pêche, de l'élevage, de la forêt et de la faune auprès des pouvoirs publics. (Siège : Yaoundé, après SHO)."
-          },
-          {
-            "title": "Groupement des Entreprises du Cameroun (GECAM)",
-            "description": "Basé à Douala, le GECAM est la principale organisation patronale du Cameroun.",
-            "link": {
-              "url": "https://legecam.cm",
-              "display": "https://legecam.cm"
-            }
-          }
-        ]
-      },
-      {
-        "title": "4. Quelques programmes en faveur de l'entrepreneuriat et l'emploi des jeunes",
-        "subsections": [
-          {
-            "title": "Programme d'appui à la jeunesse rurale et urbaine (PAJER-U)",
-            "description": "Le Pajer-U est mis en place par le biais du ministère de la jeunesse et de l'éducation civique.",
-            "link": {
-              "url": "www.pajeru-pifma.com",
-              "display": "www.pajeru-pifma.com"
-            }
-          },
-          {
-            "title": "Programme de promotion de l'entrepreneuriat agropastoral des jeunes (PEA-Jeune)",
-            "description": "Le PIPMAS promeut l'emploi et l'auto-emploi des jeunes.",
-            "link": {
-              "url": "www.pajeru-pifma.com",
-              "display": "www.pajeru-pifma.com"
-            }
-          },
-          {
-            "title": "Programme de Promotion de l'Entrepreneuriat des Femmes et des Jeunes au Cameroun (PPEFJC)",
-            "description": "Programme initié par l'OIF, en vue d'appuyer les efforts du Gouvernement en faveur de la recherche des opportunités de création d'emploi."
-          },
-          {
-            "title": "Programme d'aide au retour et à l'insertion des jeunes de la diaspora (PARU-JEDI)"
-          },
-          {
-            "title": "Programme d'Appui aux acteurs du secteur informel (PIAASI)",
-            "description": "Structure gouvernementale rattachée au ministère de l'emploi et de la formation professionnelle."
-          },
-          {
-            "title": "Programme Intégré de Renforcement des Capacités des Entrepreneurs Locaux (EMPRETEC)",
-            "description": "Structure gouvernementale rattachée au ministère des PME."
-          },
-          {
-            "title": "Programme KAIZEN – Amélioration de la Productivité et de la Qualité",
-            "description": "Structure gouvernementale rattachée au ministère des PME."
-          },
-          {
-            "title": "Programme National d'Incubation (INCUB'CAM)",
-            "description": "Structure gouvernementale rattachée au ministère des PME."
-          },
-          {
-            "title": "Pépinière Nationale Pilote d'Entreprises d'Édéa (PNPE)",
-            "description": "Structure gouvernementale rattachée au ministère des PME."
-          }
-        ]
-      }
-    ]
+ "intro":"Bien qu’il existe plusieurs cas de (jeunes) diplômés ayant mené à bien leur projet immédiatement à la sortie des bancs, il n’en demeure pas moins qu’<b>une première expérience professionnelle présente à bien des égards un atout majeur lorsqu’on se lance dans l’entrepreneuriat. "
     },
 
     "content9": {
-        "title": "Livres de référence en lien avec l’entrepreneuriat",
-         "titleCamerounais": "  Auteurs Camerounais",
-         "titleEtranger": "  Auteurs étrangers",
+        "title": "Reference books related to entrepreneurship",
+         "titleCamerounais": " Cameroonian Authors",
+         "titleEtranger": "  Foreign authors",
         "aucteurCamerounais": [
            
             {
@@ -445,11 +313,11 @@
       
     },
       "content10": {
-            "title": "Liens utiles",
-            "item1": " Pour tester votre esprit entrepreneurial : ",
-            "item2": "Pour évaluer vos aptitudes à entreprendre : ",
-            "item3": "Pour tester votre détermination :",
-            "item4": "Ministère de l’Emploi et de la Formation professionnelle (MINEFOP) :",
-            "item5": "Ministère des Petites et Moyennes Entreprises, de l'Économie Sociale et de l'Artisanat (MINPMEESA) : ",
-            "item6": " Les dix compétences du futur d’après le World Economic Forum : "
+            "title": "Useful links",
+            "item1": " For testing your entrepreneurial skills : ",
+            "item2": "For testing your character and abilities : ",
+            "item3": "For testing your determination :",
+            "item4": "Ministry of Employment and Vocational Training (MINEFOP) :",
+            "item5": "Ministry of Small and Medium-sized Enterprises, Social economy and Handicraft (MINPMEESA) : ",
+            "item6": " Top 10 job skills of tomorrow according to the World Economic Forum : "
         }   }

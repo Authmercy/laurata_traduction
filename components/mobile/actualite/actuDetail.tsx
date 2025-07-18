@@ -4,9 +4,12 @@ import { useEffect, useState } from "react";
 import Navbar from "../navbar/navbar";
 import FooterMobile from "../footer/footerEnd";
 
-
+import en from '@/i18/en/misc/apropos.json';
+import fr from '@/i18/fr/misc/apropos.json';
 export default function ActuDetailMobile() {
-  const router = useRouter();
+    const router = useRouter();
+   const { locale } = router;
+    const t = locale === 'en' ? en : fr;
 
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -63,7 +66,7 @@ export default function ActuDetailMobile() {
           } ${isMobileMenuOpen2 ? "blur-sm " : ""
           } `}>
           <div className="justify-center p-2 text-center text-xl font-bold uppercase bg-[#c09111] text-white">
-            <p>ACTUALITÉS</p>
+                         <p>     {locale === 'en' ? 'News' : 'Actualités'}</p>
           </div>
 
           <div className="flex bg-white mt-4 flex-col flex-grow w-full">

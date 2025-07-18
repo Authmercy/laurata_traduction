@@ -4,5 +4,6 @@
     "password": "Mot de passe",
     "noAccount": "Vous n'avez pas de compte ?",
     "signUp": "Inscrivez-vous",
-    "loginButton": "Se connecter"
+    "loginButton": "Se connecter",
+     "forgotPassword": " Mot de passe oublié ?"
   }
