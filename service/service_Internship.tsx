@@ -2,8 +2,6 @@ import { useRouter } from 'next/router';
 import React, { FormEvent, useEffect, useState } from 'react';
 import { URLS } from './url';
 import { InternshipFilter } from '@/service/Internship-filter';
-import { useTranslation } from 'react-i18next';
-import UseLanguageService from './language_switch';
 type Sector = {
   key: string ;
   text: string;
@@ -32,12 +30,6 @@ type Parution = {
 }; 
 
 export default function ServiceInternshipFilter() {
- const {
-
-   headers
-
-
-    } = UseLanguageService()
 
 
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
@@ -100,7 +92,10 @@ const allEmplois = ["PERMANENT", "FIXED_TERM"];
         }
         const response = await fetch(BACKEND_URL, {
           method: "GET",
-          headers,
+          headers: {
+            "Content-Type": "application/json",
+            locale: "fr",
+          },
         });
         if (!response.ok) {
           throw new Error(`Erreur HTTP: ${response.status},
@@ -131,7 +126,10 @@ const allEmplois = ["PERMANENT", "FIXED_TERM"];
         }
         const response = await fetch(BACKEND_URL, {
           method: "GET",
-          headers,
+          headers: {
+            "Content-Type": "application/json",
+            locale: "fr",
+          },
         });
         if (!response.ok) {
           throw new Error(`Erreur HTTP: ${response.status},
@@ -162,7 +160,10 @@ const allEmplois = ["PERMANENT", "FIXED_TERM"];
         }
         const response = await fetch(BACKEND_URL, {
           method: "GET",
-          headers,
+          headers: {
+            "Content-Type": "application/json",
+            locale: "fr",
+          },
         });
         if (!response.ok) {
           throw new Error(`Erreur HTTP: ${response.status},
@@ -193,7 +194,10 @@ const allEmplois = ["PERMANENT", "FIXED_TERM"];
         }
         const response = await fetch(BACKEND_URL, {
           method: "GET",
-          headers,
+          headers: {
+            "Content-Type": "application/json",
+            locale: "fr",
+          },
         });
         if (!response.ok) {
           throw new Error(`Erreur HTTP: ${response.status},
@@ -224,7 +228,10 @@ const allEmplois = ["PERMANENT", "FIXED_TERM"];
         }
         const response = await fetch(BACKEND_URL, {
           method: "GET",
-          headers,
+          headers: {
+            "Content-Type": "application/json",
+            locale: "fr",
+          },
         });
         if (!response.ok) {
           throw new Error(`Erreur HTTP: ${response.status},
@@ -255,8 +262,10 @@ const allEmplois = ["PERMANENT", "FIXED_TERM"];
         }
         const response = await fetch(BACKEND_URL, {
           method: "GET",
-          headers
-,
+          headers: {
+            "Content-Type": "application/json",
+            locale: "fr",
+          },
         });
         if (!response.ok) {
           throw new Error(`Erreur HTTP: ${response.status},
@@ -457,7 +466,10 @@ const isSearchDisabled = () => {
 
       const response = await fetch(BACKEND_URL, {
         method: "POST",
-        headers,
+        headers: {
+          "Content-Type": "application/json",
+          locale: "fr",
+        },
         body: JSON.stringify(payload),
       });
 

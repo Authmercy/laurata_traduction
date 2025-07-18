@@ -1,8 +1,38 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { URLS } from "./url";
-import { useTranslation } from "react-i18next";
+
 import UseLanguageService from "./language_switch";
+import { PostInternship } from "@/service/PosterStage";
+interface PostInternshipProps {
+  publicationDate?: Date;
+  deadline?: Date;
+  startDate?: Date;
+  employer?: string;
+  employerDesc?: string;
+  city?: string;
+  title?: string;
+  reference?: string;
+  logo?: File;
+  level?: string[];
+  duration?: string;
+  durationUnit?: string;
+  remuneration?: string;
+  apply?: string;
+  employerType?: string[];
+  skills?: string;
+  tasks?: string;
+  address?: string;
+  website?: string;
+  role?: string;
+  adType?: string[];
+  firstname?: string;
+  lastname?: string;
+  phone?: string;
+  email?: string;
+  sector?: string[];
+}
+
 
 type Sector = {
   key: string;
@@ -34,12 +64,12 @@ type Parution = {
 
 export default function UsePosterService() {
 
- const {
+  const {
 
-   headers
+    headers
 
 
-    } = UseLanguageService()
+  } = UseLanguageService()
 
 
   const [foas, setSectors] = useState<Sector[]>([]);
@@ -52,11 +82,12 @@ export default function UsePosterService() {
   const [selectedSectors, setSelectedSectors] = useState<string[]>([]);
   const [selectedLevels, setSelectedLevels] = useState<string[]>([]);
   const [selectedContracts, setSelectedContracts] = useState<string[]>([]);
-  const [selectedOrgTypes, setSelectedOrgTypes] = useState<string[]>([]);
+  const [selectedOrgTypes, setSelectedOrgTypes] = useState<string | null>(null);
   const [selectedDuration, setSelectedDuration] = useState<string | null>(null);
   const [selectedPublication, setSelectedPublication] = useState<string | null>(null);
-  const [errorMessage, setErrorMessage] = useState<string | null>(null);
- 
+
+  const [errorMessage, setErrorMessage] = useState("");
+  const [successMessage, setSuccessMessage] = useState("");
 
   const handleError = (error: any, context?: string) => {
     console.error(`Error in ${context || 'operation'}:`, error);
@@ -90,7 +121,7 @@ export default function UsePosterService() {
         }
         const response = await fetch(BACKEND_URL, {
           method: "GET",
-         headers,
+          headers,
         });
         if (!response.ok) {
           throw new Error(`Erreur HTTP: ${response.status},
@@ -121,7 +152,7 @@ export default function UsePosterService() {
         }
         const response = await fetch(BACKEND_URL, {
           method: "GET",
-         headers,
+          headers,
         });
         if (!response.ok) {
           throw new Error(`Erreur HTTP: ${response.status},
@@ -152,7 +183,7 @@ export default function UsePosterService() {
         }
         const response = await fetch(BACKEND_URL, {
           method: "GET",
-         headers,
+          headers,
         });
         if (!response.ok) {
           throw new Error(`Erreur HTTP: ${response.status},
@@ -183,7 +214,7 @@ export default function UsePosterService() {
         }
         const response = await fetch(BACKEND_URL, {
           method: "GET",
-         headers,
+          headers,
         });
         if (!response.ok) {
           throw new Error(`Erreur HTTP: ${response.status},
@@ -214,7 +245,7 @@ export default function UsePosterService() {
         }
         const response = await fetch(BACKEND_URL, {
           method: "GET",
-         headers,
+          headers,
         });
         if (!response.ok) {
           throw new Error(`Erreur HTTP: ${response.status},
@@ -245,7 +276,7 @@ export default function UsePosterService() {
         }
         const response = await fetch(BACKEND_URL, {
           method: "GET",
-         headers,
+          headers,
         });
         if (!response.ok) {
           throw new Error(`Erreur HTTP: ${response.status},
@@ -268,31 +299,25 @@ export default function UsePosterService() {
 
 
   const handleCheckboxChange = (
-    type: 'foa' | 'degreeLevels' | 'orgTypes' | 'adTypes' | 'status',
+    type: 'sector' | 'level' | 'adTypes' | 'status',
     value: string
   ) => {
     switch (type) {
-      case 'foa':
+      case 'sector':
         setSelectedSectors(prev =>
           prev.includes(value)
             ? prev.filter(v => v !== value)
             : [...prev, value]
         );
         break;
-      case 'degreeLevels':
+      case 'level':
         setSelectedLevels(prev =>
           prev.includes(value)
             ? prev.filter(v => v !== value)
             : [...prev, value]
         );
         break;
-      case 'orgTypes':
-        setSelectedOrgTypes(prev =>
-          prev.includes(value)
-            ? prev.filter(v => v !== value)
-            : [...prev, value]
-        );
-        break;
+
       case 'adTypes':
         setSelectedContracts(prev =>
           prev.includes(value)
@@ -302,11 +327,9 @@ export default function UsePosterService() {
         break;
     }
   };
-  const handleRadioChange = (type: 'enumDuration' | 'enumPublicationDate', value: string) => {
-    if (type === 'enumDuration') {
-      setSelectedDuration(value);
-    } else {
-      setSelectedPublication(value);
+  const handleRadioChange = (type: 'employerType', value: string) => {
+    {
+      setSelectedOrgTypes(value);
     }
     setOpen(null);
   };
@@ -314,13 +337,100 @@ export default function UsePosterService() {
   const handleToggle = (index: any) => {
     setOpen(open === index ? null : index);
   };
+const handleChange = (
+  e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+) => {
+  const { name, value, type } = e.target;
+
+  if (type === 'file') {
+    const target = e.target as HTMLInputElement;
+    if (target.files && target.files[0]) {
+      setElements(prev => updateElement(prev, { [name]: target.files![0] }));
+    }
+  } else {
+    setElements(prev => updateElement(prev, { [name]: value }));
+  }
+  if (type === 'date') {
+  setElements(prev => updateElement(prev, { [name]: new Date(value) }));
+}
+
+};
+
+  const [elements, setElements] = useState(new PostInternship());
+  function updateElement(
+    prev: PostInternship,
+    changes: Partial<PostInternshipProps>
+  ): PostInternship {
+    const merged: PostInternshipProps = {
+      ...prev.toObject(),
+      ...changes,
+    };
+
+    return new PostInternship(merged);
+  }
+
+
+  const handleSubmit = async (e: any) => {
+    e.preventDefault();
+
+    const data = new FormData();
+    data.append("publicationDate", elements.publicationDate ? elements.publicationDate.toISOString() : "");
+    data.append("deadline", elements.deadline ? elements.deadline.toISOString() : "");
+    data.append("startDate", elements.startDate ? elements.startDate.toISOString() : "");
+    data.append("employer", elements.employer ?? "");
+    data.append("employerDesc", elements.employerDesc ?? "");
+    data.append("city", elements.city ?? "");
+    data.append("title", elements.title ?? "");
+    data.append("reference", elements.reference ?? "");
+    data.append("duration", elements.duration ?? "");
+    data.append("durationUnit", elements.durationUnit ?? "");
+    data.append("remuneration", elements.remuneration ?? "");
+    data.append("apply", elements.apply ?? "");
+    data.append("skills", elements.skills ?? "");
+    data.append("tasks", elements.tasks ?? "");
+    data.append("address", elements.address ?? "");
+    data.append("website", elements.website ?? "");
+    data.append("role", elements.role ?? "");
+    data.append("firstname", elements.firstname ?? "");
+    data.append("lastname", elements.lastname ?? "");
+    data.append("phone", elements.phone ?? "");
+    data.append("email", elements.email ?? "");
+   data.append("logo", elements.logo ?? "");
+    elements.level?.forEach((item: string) => data.append("level", item));
+    elements.employerType?.forEach((item: string) => data.append("employerType", item));
+    elements.adType?.forEach((item: string) => data.append("adType", item));
+    elements.sector?.forEach((item: string) => data.append("sector", item));
+
+   
+    try {
+      console.log("Envoi de la requête...");
+      const BACKEND_URL = URLS.POST_UPLOAD;
+
+
+      const response = await fetch(BACKEND_URL, {
+        method: "POST",
+        headers,
+        body: data,
+      });
 
 
 
+      const result = await response.json();
+      setSuccessMessage("🎉 Votre offre a été bien envoyé, Nous vous reconterons  !");
+
+
+      console.log("Formulaire soumis avec succès:", result);
+      setErrorMessage("");
+    } catch (error: any) {
+
+      handleError(error, "fetching institution");
+    }
+  };
 
 
   return {
-
+    handleSubmit,
+    elements,
     handleRadioChange,
     handleCheckboxChange,
     errorMessage,
@@ -349,7 +459,9 @@ export default function UsePosterService() {
     setParutions,
     open,
     setOpen,
-    foas
+    foas,
+    handleChange,
+
 
   }
 }

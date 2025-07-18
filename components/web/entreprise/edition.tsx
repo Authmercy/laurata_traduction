@@ -8,39 +8,12 @@ import fr from '@/i18/fr/entreprise/Editer.json';
 
 
 export default function EditionOffre() {
-    const [formData, setFormData] = useState({
-        employer: "",
-        logo: null,
-        status: "",
-        jobTitle: "",
-        sector: "",
-        contract: "",
-        level: "",
-        duration: "",
-        publicationDate: "",
-        reference: "",
-        city: "",
-        employerPresentation: "",
-        missions: "",
-        profile: "",
-        benefits: "",
-        applicationDeadline: "",
-        applicationInstructions: "",
-    });
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        const { name, value } = e.target;
-        setFormData({ ...formData, [name]: value });
-    };
 
-    const handleLogoUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const file = e.target.files?.[0];
-        setFormData({ ...formData });
-    };
     const {
-        foas,
-        errorMessage,
+        elements,
         handleRadioChange,
         handleCheckboxChange,
+        errorMessage,
         setErrorMessage,
         setSelectedSectors,
         selectedSectors,
@@ -66,6 +39,8 @@ export default function EditionOffre() {
         setParutions,
         open,
         setOpen,
+        foas, handleSubmit,
+        handleChange,
 
 
     } = UsePosterService()
@@ -92,15 +67,15 @@ export default function EditionOffre() {
                     <span>{isEditionOpen ? "▲" : "▼"}</span>
                 </button></div>
             {isEditionOpen && (
-                <div>
+                <form onSubmit={handleSubmit} >
                     <div className="grid grid-cols-1  md:ml-10  md:grid-cols-3 gap-6 mt-8 my-4">
                         <div>
 
                             <input
                                 type="text"
                                 name="employer"
-                                placeholder=  {t.Employeur}
-                                value={formData.employer}
+                                placeholder={t.Employeur}
+                                value={elements.employer}
                                 onChange={handleChange}
                                 className="mt-1 w-full font-bold bg-white/70  p-2  placeholder:text-[#4A62AA] shadow-sm   focus:ring-white focus:border-white"
                             />
@@ -110,10 +85,12 @@ export default function EditionOffre() {
 
                             <div className="relative border  bg-white/70    placeholder:text-[#4A62AA] shadow-sm  focus:ring-white focus:border-white font-extrabold text-[#4A62AA] p-2">
                                 <div className="w-full flex justify-between items-center cursor-pointer" onClick={() => handleToggle(5)}>
-                                    <span className="truncate  text-sm" title={selectedOrgTypes.map(k => status.find(s => s.key === k)?.text).join(', ')}>
-                                        {selectedOrgTypes.length
-                                            ? status.filter(s => selectedOrgTypes.includes(s.key)).map(s => s.text).join(', ')
-                                            : t.Employeur}
+                                    <span className="truncate  text-sm">
+
+                                        {selectedOrgTypes
+                                            ? status.find(d => d.key === selectedOrgTypes)?.text
+                                            : t.status
+                                        }
                                     </span>
                                     <span className="text-xl">{open === 5 ? "▲" : "▼"}</span>
                                 </div>
@@ -123,10 +100,10 @@ export default function EditionOffre() {
                                             {status.map((s, index) => (
                                                 <label key={s.key} className="flex  font-normal items-center gap-2">
                                                     <input
-                                                        type="checkbox"
+                                                        type="radio"
                                                         value={s.key}
-                                                        checked={selectedOrgTypes.includes(s.key)}
-                                                        onChange={() => handleCheckboxChange('orgTypes', s.key)}
+                                                        checked={selectedOrgTypes === s.key}
+                                                        onChange={() => handleRadioChange('employerType', s.key)}
                                                         className="accent-blue-500"
                                                     />
                                                     {s.text}
@@ -143,7 +120,7 @@ export default function EditionOffre() {
                                 type="text"
                                 name="city"
                                 placeholder={t.Ville}
-                                value={formData.city}
+                                value={elements.city}
                                 onChange={handleChange}
                                 className="mt-1 w-full font-bold bg-white/70  p-2  placeholder:text-[#4A62AA] shadow-sm   focus:ring-white focus:border-white"
                             />
@@ -157,8 +134,8 @@ export default function EditionOffre() {
 
                         <input
                             type="text"
-                            name="jobTitle"
-                            value={formData.jobTitle}
+                            name="title"
+                            value={elements.title}
                             onChange={handleChange}
                             placeholder={t.Poste}
                             className="mt-1 w-full font-bold bg-white/70  p-2  placeholder:text-[#4A62AA] shadow-sm text-black  focus:ring-white focus:border-white"
@@ -186,7 +163,7 @@ export default function EditionOffre() {
                                                     type="checkbox"
                                                     value={foa.key}
                                                     checked={selectedSectors.includes(foa.key)}
-                                                    onChange={() => handleCheckboxChange('foa', foa.key)}
+                                                    onChange={() => handleCheckboxChange('sector', foa.key)}
                                                     className="accent-blue-500"
                                                 />
                                                 {foa.text}
@@ -204,7 +181,7 @@ export default function EditionOffre() {
                             placeholder={t.Ref}
                             type="text"
                             name="reference"
-                            value={formData.reference}
+                            value={elements.reference}
                             onChange={handleChange}
                             className="mt-1 w-full  bg-white/70  p-2  placeholder:text-[#4A62AA] shadow-sm   focus:ring-white focus:border-white"
                         />
@@ -313,7 +290,7 @@ export default function EditionOffre() {
                                                         type="checkbox"
                                                         value={level.key}
                                                         checked={selectedLevels.includes(level.key)}
-                                                        onChange={() => handleCheckboxChange('degreeLevels', level.key)}
+                                                        onChange={() => handleCheckboxChange('level', level.key)}
                                                     />
                                                     {level.text}
                                                 </label>
@@ -324,35 +301,18 @@ export default function EditionOffre() {
                             </div>
                         </div>
                         <div>
-                            <div
-                                className="bg-white/70 flex justify-between font-bold placeholder-[#4A62AA] required p-2 px-6 "
-                                onClick={() => handleToggle(3)}
-                            >
-                                <span className="truncate ">
-                                    {selectedDuration
-                                        ? durations.find(d => d.key === selectedDuration)?.text
-                                        : t.Duration}
-                                </span>
-                                <span className="text-xl">{open === 3 ? "▲" : "▼"}</span>
-                            </div>
-                            {open === 3 && (
-                                <div className=" top-full mt-1 left-0  text-black bg-white p-4  shadow ">
-                                    <div className="grid grid-cols-2 gap-4">
+                            <div>
 
-                                        {durations.map((duration, index) => (
-                                            <label key={duration.key} className="flex items-center gap-2">
-                                                <input
-                                                    type="radio"
-                                                    checked={selectedDuration === duration.key}
-                                                    onChange={() => handleRadioChange('enumDuration', duration.key)}
-                                                    className="accent-blue-500"
-                                                />
-                                                {duration.text}
-                                            </label>
-                                        ))}
-                                    </div>
-                                </div>
-                            )}
+                            <input
+                                type="text"
+                                name="duration"
+                                placeholder={t.Duration}
+                                value={elements.duration}
+                                onChange={handleChange}
+                                className="mt-1 w-full font-bold bg-white/70  p-2  placeholder:text-[#4A62AA] shadow-sm   focus:ring-white focus:border-white"
+                            />
+                        </div>
+
                         </div>
                     </div>
 
@@ -362,11 +322,11 @@ export default function EditionOffre() {
                             <input
                                 type="date"
                                 name="publicationDate"
-                                value={formData.publicationDate}
+                                value={elements.publicationDate ? elements.publicationDate.toISOString().split('T')[0] : ''}
                                 onChange={handleChange}
-                                placeholder=""
-                                className="mt-1 w-full  bg-white/70  p-2  placeholder:text-[#4A62AA] shadow-sm   focus:ring-white focus:border-white"
+                                className="mt-1 w-full bg-white/70 p-2 placeholder:text-[#4A62AA] shadow-sm focus:ring-white focus:border-white"
                             />
+
                         </div>
                         <div>
                             <label className=" block font-bold   text-[#4A62AA]">{t.Logo}</label>
@@ -374,7 +334,7 @@ export default function EditionOffre() {
                                 type="file"
                                 name="logo"
                                 placeholder="Logo"
-                                onChange={handleLogoUpload}
+                                onChange={handleChange}
                                 className="mt-1 w-full  bg-white/70  p-2  placeholder:text-[#4A62AA] shadow-sm  focus:ring-white focus:border-white"
                             />
                         </div>
@@ -384,8 +344,8 @@ export default function EditionOffre() {
                         <div className="p-2 md:pl-10 text-gray-700">
                             <label className="block   text-[#4A62AA] font-extrabold">{t.Presentation}</label>
                             <textarea
-                                name="employerPresentation"
-                                value={formData.employerPresentation}
+                                name="employerDesc"
+                                value={elements.employerDesc}
                                 onChange={handleChange}
                                 rows={4}
                                 className="mt-1 w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
@@ -394,8 +354,8 @@ export default function EditionOffre() {
                         <div className="p-2  md:pl-10">
                             <label className="block   text-[#4A62AA] font-extrabold">{t.missions}</label>
                             <textarea
-                                name="missions"
-                                value={formData.missions}
+                                name="tasks"
+                                value={elements.tasks}
                                 onChange={handleChange}
                                 rows={4}
                                 className="mt-1 w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
@@ -404,8 +364,8 @@ export default function EditionOffre() {
                         <div className="p-2  md:pl-10">
                             <label className="block   text-[#4A62AA] font-extrabold">{t.Profil}</label>
                             <textarea
-                                name="profile"
-                                value={formData.profile}
+                                name="skills"
+                                value={elements.skills}
                                 onChange={handleChange}
                                 rows={4}
                                 className="mt-1 w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
@@ -415,7 +375,7 @@ export default function EditionOffre() {
                             <label className="block   text-[#4A62AA] font-extrabold">{t.Payement}</label>
                             <textarea
                                 name="benefits"
-                                value={formData.benefits}
+                                value={elements.remuneration}
                                 onChange={handleChange}
                                 rows={4}
                                 className="mt-1 w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
@@ -427,8 +387,8 @@ export default function EditionOffre() {
                                 <label className="block   text-[#4A62AA] font-extrabold">{t.dLimite}</label>
                                 <input
                                     type="date"
-                                    name="applicationDeadline"
-                                    value={formData.applicationDeadline}
+                                    name="deadline"
+                                    value={elements.deadline ? elements.deadline.toISOString().split('T')[0] : ''}
                                     onChange={handleChange}
                                     className="mt-1 w-full border border-gray-300 p-2 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
                                 />
@@ -438,9 +398,9 @@ export default function EditionOffre() {
                             <div>
                                 <label className="block    text-[#4A62AA] font-extrabold">{t.Instructions}</label>
                                 <textarea
-                                    name="applicationInstructions"
-                                    value={formData.applicationInstructions}
-                                   placeholder= {t.InstructionPlaceholder}
+                                    name="apply"
+                                    value={elements.apply}
+                                    placeholder={t.InstructionPlaceholder}
                                     onChange={handleChange}
                                     rows={3}
                                     className="mt-1 w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
@@ -451,19 +411,19 @@ export default function EditionOffre() {
                     </div>
                     <div className="flex flex-row justify-center mt-10 gap-24">
                         <button className=" bg-[#A87A38] text-white py-3 px-10 rounded-lg font-bold hover:bg-[#855512]">
-                        {t.Modifier}
+                            {t.Modifier}
                         </button>
 
-                        <button className=" bg-[#4A62AA] text-white py-3  px-10  rounded-lg font-bold hover:bg-[#3a62d8]">
-                          {t.Valider}
+                        <button type="submit" className=" bg-[#4A62AA] text-white py-3  px-10  rounded-lg font-bold hover:bg-[#3a62d8]">
+                            {t.Valider}
                         </button>
 
                         <button className=" bg-[#5f5d5d] text-white py-3  px-10  rounded-lg font-bold hover:bg-[#a7a2a2]">
-                          {t.Annuler}
+                            {t.Annuler}
                         </button>
                     </div>
 
-                </div>)}
+                </form>)}
         </div>
 
     );
