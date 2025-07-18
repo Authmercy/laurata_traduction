@@ -2,7 +2,7 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/students/bacAlafac/bac_fac": "pages/students/bacAlafac/bac_fac.js",
-  "/students/bacAlafac/generalite": "pages/students/bacAlafac/generalite.js",
-  "/students/bacAlafac/preparerSonBac": "pages/students/bacAlafac/preparerSonBac.js"
+  "/institut/promotion": "pages/institut/promotion.js",
+  "/institut/referencer": "pages/institut/referencer.js",
+  "/institut/stage": "pages/institut/stage.js"
 }

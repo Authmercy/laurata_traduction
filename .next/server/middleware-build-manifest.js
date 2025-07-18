@@ -20,20 +20,15 @@ self.__BUILD_MANIFEST = {
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/students/bacAlafac/bac_fac": [
+    "/institut/promotion": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/students/bacAlafac/bac_fac.js"
+      "static/chunks/pages/institut/promotion.js"
     ],
-    "/students/bacAlafac/generalite": [
+    "/institut/stage": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/students/bacAlafac/generalite.js"
-    ],
-    "/students/bacAlafac/preparerSonBac": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/students/bacAlafac/preparerSonBac.js"
+      "static/chunks/pages/institut/stage.js"
     ]
   },
   "ampFirstPages": []
