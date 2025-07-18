@@ -64,8 +64,8 @@ export default function WelcomePage2() {
 
 
           <div className="flex    mt-44   justify-end text-end   text-white ">
-            <p className="text-4xl  text-end uppercase ">Vitrine des <b>
-            offres  de stage   </b> <br /> au Cameroun</p>
+            <p className="text-5xl  text-end uppercase ">Vitrine des <b>
+          <span className="underline decoration-dotted decoration-[#f1ab49]  ">  offres de stage </span>    </b> <br /> au Cameroun</p>
           </div>
 
           <div className="flex mr-2   mt-36   justify-end text-end   text-white ">
@@ -82,8 +82,8 @@ export default function WelcomePage2() {
             </p>
           </div>
         </div>
-        <div className="flex  my-4 mb-8 ">
-           <div className=" flex  ml-[24%]">
+        <div className="flex  my-4 mb-8 mr-2   px-4   justify-end ">
+           <div className=" flex justify-end">
             <ButtonAccueil />
           </div>
         </div>
