@@ -23,15 +23,20 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/entreprise/poster": [
+    "/students/bacAlafac/bac_fac": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/entreprise/poster.js"
+      "static/chunks/pages/students/bacAlafac/bac_fac.js"
     ],
-    "/students/offresStage": [
+    "/students/bacAlafac/generalite": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/students/offresStage.js"
+      "static/chunks/pages/students/bacAlafac/generalite.js"
+    ],
+    "/students/bacAlafac/preparerSonBac": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/students/bacAlafac/preparerSonBac.js"
     ]
   },
   "ampFirstPages": []
