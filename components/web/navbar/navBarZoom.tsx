@@ -29,7 +29,7 @@ export default function NavbarZoom() {
 
 
                     <div className="text-white uppercase text-2xl font-bold">
-                        <p> {locale === 'en' ? 'Focus' : 'Zoom sur'} </p>
+                        <p> {locale === 'en' ? 'Focus On' : 'Zoom sur'} </p>
                     </div>
 
 

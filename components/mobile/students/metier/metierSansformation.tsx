@@ -6,7 +6,9 @@ import BackToTopButton from "@/components/buttonTop";
 import Navbar from "../../navbar/navbar";
 import FooterMobile from "../../footer/footerEnd";
 import { URLS } from "@/service/url";
-
+import en from '@/i18/en/student/metier.json';
+import fr from '@/i18/fr/student/metier.json';
+import { useRouter } from "next/router";
 
 type Metier = {
   id: number;
@@ -17,6 +19,10 @@ type Metier = {
 
 
 export default function MetierComponentFormationMobile() {
+    const router = useRouter();
+  
+      const { locale } = router;
+      const t = locale === 'en' ? en : fr;
   const [metiers, setMetier] = useState<Metier[]>([]);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
@@ -81,8 +87,7 @@ export default function MetierComponentFormationMobile() {
           >
             <p>
 
-              Vous souhaitez devenir <b>  contrôleur de la circulation aérienne </b> ou   <b> orthophoniste </b> ? Pour ces deux métiers comme pour beaucoup d’autres, le Cameroun n’abrite aucune école de formation, il faudra vous rendre à l’étranger. Informez-vous et préparez-vous en conséquence le cas échéant.
-            </p>
+         {t.jobsWithoutTraining}   </p>
 
 
           </div>

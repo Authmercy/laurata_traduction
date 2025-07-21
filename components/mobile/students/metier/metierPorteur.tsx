@@ -1,9 +1,11 @@
 "use client";
-import router from "next/router";
+import router, { useRouter } from "next/router";
 import React, { useEffect, useRef, useState } from "react";
 import Navbar from "../../navbar/navbar";
 import BackToTopButton from "@/components/buttonTop";
 import FooterMobile from "../../footer/footerEnd";
+import en from '@/i18/en/student/metier.json';
+import fr from '@/i18/fr/student/metier.json';
 import { URLS } from "@/service/url";
 
 type Metier = {
@@ -49,6 +51,10 @@ export default function MetierPorterComponentMobile() {
 
     fetchMetier();
   }, []);
+      const router = useRouter();
+
+    const { locale } = router;
+    const t = locale === 'en' ? en : fr;
   const handleClick = (letter: string) => {
 
     router.push(`/students/metier/${letter}`);
@@ -72,7 +78,7 @@ export default function MetierPorterComponentMobile() {
           <div className="justify-center p-2 text-center text-xl font-bold uppercase bg-[#9b6e0f] text-white">
 
             <p>
-              Métiers Porteurs
+     {t.promisingJobs} 
             </p>
           </div>
 
@@ -83,7 +89,7 @@ export default function MetierPorterComponentMobile() {
           >
             <p>
 
-              Plusieurs métiers et secteurs d’activités sont révolutionnés à mesure que les technologies se perfectionnent : ingénierie automobile, imagerie médicale, énergies écologiques, etc.   </p>
+              {t.promisingJobsIntro}  </p>
 
 
           </div>

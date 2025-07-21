@@ -3,10 +3,16 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Navbar from "../navbar/navbar";
 import FooterMobile from "../footer/footerEnd";
+import en from '@/i18/en/student/service.json';
+import fr from '@/i18/fr/student/service.json';
+import { useRouter } from "next/router";
 
 export default function ServicesComponentMobile() {
 
+  const router = useRouter();
 
+  const { locale } = router;
+    const t = locale === 'en' ? en : fr;
 
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -27,7 +33,7 @@ export default function ServicesComponentMobile() {
           } ${isMobileMenuOpen2 ? "blur-sm " : ""
           } `}>
           <div className="justify-center p-2 text-center text-xl font-bold uppercase bg-[#9b6e0f] text-white">
-            <p> Services aux étudiants</p>
+            <p>    {t.title}</p>
           </div>
 
 
@@ -35,40 +41,37 @@ export default function ServicesComponentMobile() {
           <div className="bg-white w-full px-3 py-6">
             <div className=" ">
               <p className="font-bold  text-lg text-center">
-                Mieux se connaitre pour bien s'orienter et mieux préparer son insertion professionnelle
+               {t.subtitle}
               </p>
               <p className="mt-6 text-black">
-                Une équipe de professionnels dédiée à vous accompagner dans le choix de la filière d'étude et à faciliter votre insertion professionnelle.
-              </p>
+              {t.description}</p>
             </div>
 
             <div className="grid gap-4 sm:gap-6 sm:grid-cols-2 md:grid-cols-3 mt-2 p-4 sm:px-6 lg:px-10">
               <div className="bg-[#A87A38] rounded-2xl text-white shadow-lg">
 
                 <div className="p-5">
-                  <p className="font-semibold text-center ">ORIENTATION</p>
+                  <p className="font-semibold text-center ">{t.services.orientation.title}</p>
                   <p className="mt-2 ">
-                    Nos conseillers en orientation vous aident à identifier et à choisir la(les) filière(s) ou le(s) métier(s) selon le mieux vos compétences, vos objectifs et votre personnalité.
-                  </p>
+                 {t.services.orientation.description}  </p>
                 </div>
               </div>
 
               <div className="bg-[#3f5eaa]  rounded-2xl text-white shadow-lg">
 
                 <div className="p-5">
-                  <p className="font-semibold text-center">MÉMOIRES & THÈSES</p>
+                  <p className="font-semibold text-center">{t.services.thesis.title}</p>
                   <p className="mt-2 ">
-                    Relecture et révision des mémoires de fin d’études, thèses et autres travaux par des linguistes et rédacteurs chevronnés en langue anglaise, française, allemande ou espagnole.
-                  </p>
+                {t.services.thesis.description}</p>
                 </div>
               </div>
 
               <div className="bg-[#254745] text-white  rounded-2xl shadow-lg">
 
                 <div className="p-5">
-                  <p className="font-semibold  text-center">ÉTUDIANTS ÉTRANGERS</p>
+                  <p className="font-semibold  text-center">{t.services.international.title}</p>
                   <p className="mt-2 ">
-                    Assistance pour les démarches concernant : la pré-inscription, l’obtention d’un visa étudiant ; l’installation : recherche de logement, etc.
+                  {t.services.international.description}
                   </p>
                 </div>
               </div>
@@ -76,9 +79,9 @@ export default function ServicesComponentMobile() {
               <div className="bg-[#fcdaa7] text-black rounded-2xl shadow-lg">
 
                 <div className="p-5">
-                  <p className="font-semibold  text-center">RENCONTRES AVEC DES PROFESSIONNELS</p>
+                  <p className="font-semibold  text-center">{t.services.professionals.title}</p>
                   <p className="mt-2 ">
-                    Découvre les métiers qui t’intéressent et échange avec des professionnels qui les exercent.
+                   {t.services.professionals.description}
                   </p>
                 </div>
               </div>
@@ -86,9 +89,9 @@ export default function ServicesComponentMobile() {
               <div className="bg-[#A87A38] rounded-2xl text-white shadow-lg">
 
                 <div className="p-5">
-                  <p className="font-semibold text-center ">MENTORAT & INSERTION PROFESSIONNELLE</p>
+                  <p className="font-semibold text-center ">{t.services.mentoring.title}</p>
                   <p className="mt-2 ">
-                    Nos experts vous accompagnent dans la réalisation de votre projet professionnel (techniques de recherche d’emploi, plan d’affaires, etc.).
+                  {t.services.mentoring.description}
                   </p>
                 </div>
               </div>
@@ -96,20 +99,18 @@ export default function ServicesComponentMobile() {
               <div className="bg-[#3f5eaa]  rounded-2xl text-white shadow-lg">
 
                 <div className="p-5">
-                  <p className="font-semibold  text-center">ÉTUDIER EN ALLEMAGNE</p>
+                  <p className="font-semibold  text-center">{t.services.germany.title}</p>
                   <p className="mt-2 ">
-                    Notre réseau de professionnels formés en Allemagne vous donne tous les conseils pour postuler et bien préparer vos études dans les universités et écoles d’ingénieurs allemandes.
-                  </p>
+                {t.services.germany.description} </p>
                 </div>
               </div>
             </div>
 
             <div className="text-center mt-6 px-4">
               <p className=" text-black ">
-                <Link href="/misc/nous_contacter" className="font-bold hover:text-xl">
-                  Contactez-nous
-                </Link>{" "}
-                pour plus d’informations ou pour faire part d’une requête particulière.
+                <Link href="/misc/nous_contacter" className="hover:text-xl">
+          {t.contact.split(' ')[0]}
+        </Link> {t.contact.split(' ').slice(1).join(' ')}
               </p>
             </div>
 

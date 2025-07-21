@@ -3,8 +3,8 @@ import React, { useRef } from "react";
 import Link from "next/link";
 import UseBourseService from "@/service/service_bourse";
 
-import en from '../../../../i18/en/student/concous_bourse.json';
-import fr from '../../../../i18/fr/student/concous_bourse.json';
+import en from '@/i18/en/student/concous_bourse.json';
+import fr from '@/i18/fr/student/concous_bourse.json';
 import { useRouter } from "next/router";
 
 
@@ -23,7 +23,7 @@ export default function BourseComponent() {
 
   } = UseBourseService()
 
- const router = useRouter();
+  const router = useRouter();
 
   const { locale } = router;
   const t = locale === 'en' ? en : fr;
@@ -43,7 +43,7 @@ export default function BourseComponent() {
 
 
             <div className="p-3 px-8  text-xl text-center bg-[#A87A38] h-12 mt-4 flex items-center justify-center">
- {t.scholarships.subtitle}
+              {t.scholarships.subtitle}
             </div>
           </div>
 
@@ -58,44 +58,44 @@ export default function BourseComponent() {
             </div>
           </div>
 
-          
-
-               <div
-
-                onClick={() => {
-                  handleToggle(10);
-                 
-                }}
-                className="py-2 px-4 mt-2 w-full bg-[#4A62AA] text-white font-bold flex justify-between items-center"
-              >
-                <span className="font-bold text-center text-xl">  {t.scholarships.guideTitle}</span>
-                <span className="text-xl">{open === 10 ? "▲" : "▼"}</span>
-              </div>
 
 
-            {open === 10 && (
-   <div className="mt-1  text-black bg-white/70 p-8 space-y-4">
-       
-            {t.scholarships.guideTips.map((tip, index) => (
-  <p key={index}>
-    <span className="text-[#4A62AA]">■</span>&nbsp;&nbsp;{tip}
-  </p>
-))}
+          <div
 
-<p>
-  <span className="text-[#4A62AA] font-bold">NB:</span> {t.scholarships.note}
-</p>
+            onClick={() => {
+              handleToggle(10);
 
-<p>
-  <span className="text-[#e63636] font-bold">{t.scholarships.warningTitle}</span>
-  <br />
-  {t.scholarships.warningText}
-</p>
-
-
-
+            }}
+            className="py-2 px-4 mt-2 w-full bg-[#4A62AA] text-white font-bold flex justify-between items-center"
+          >
+            <span className="font-bold text-center text-xl">  {t.scholarships.guideTitle}</span>
+            <span className="text-xl">{open === 10 ? "▲" : "▼"}</span>
           </div>
-)}
+
+
+          {open === 10 && (
+            <div className="mt-1  text-black bg-white/70 p-8 space-y-4">
+
+              {t.scholarships.guideTips.map((tip, index) => (
+                <p key={index}>
+                  <span className="text-[#4A62AA]">■</span>&nbsp;&nbsp;{tip}
+                </p>
+              ))}
+
+              <p>
+                <span className="text-[#4A62AA] font-bold">NB:</span> {t.scholarships.note}
+              </p>
+
+              <p>
+                <span className="text-[#e63636] font-bold">{t.scholarships.warningTitle}</span>
+                <br />
+                {t.scholarships.warningText}
+              </p>
+
+
+
+            </div>
+          )}
           <div className="bg-[#A87A38] text-center p-3 mt-2">
             <p> <span className="text-white  text-xl uppercase font-bold">  {t.scholarships.tableTitle}
             </span>
@@ -130,65 +130,64 @@ export default function BourseComponent() {
               </div>
 
 
-            {open === index && (
-    <div className="bg-white/70 w-full shadow-sm p-4">
-        <table className="text-start border-collapse w-full">
-            <thead>
-                <tr>
-                    <th>{t.scholarships.table.country}</th>
-    <th>{t.scholarships.table.organization}</th>
-    <th>{t.scholarships.table.descriptionLink}</th>
-                </tr>
-            </thead>
-            <tbody>
-                {offers
-           
-                    .map(offer => ({
-                        ...offer,
-                        countryName: offer.countryName || 'Tous pays'
-                    }))
-                
-                    .sort((a, b) => {
-             
-                        if (a.countryName === 'Tous pays') return -1;
-                        if (b.countryName === 'Tous pays') return 1;
-                        return 0;
-                        
-                      
-                    })
-                    .map((offer, index) => (
-                        <tr 
-                            key={index} 
-                            className={`text-black text-start ${
-                                index % 2 === 0 ? 'bg-[#f1d9b6]/70' : 'bg-gray-200'
-                            }`}
-                        >
+              {open === index && (
+                <div className="bg-white/70 w-full shadow-sm p-4">
+                  <table className="text-start border-collapse w-full">
+                    <thead>
+                      <tr>
+                        <th>{t.scholarships.table.country}</th>
+                        <th>{t.scholarships.table.organization}</th>
+                        <th>{t.scholarships.table.descriptionLink}</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {offers
+
+                        .map(offer => ({
+                          ...offer,
+                          countryName: offer.countryName || t.scholarships.table.tous
+                        }))
+
+                        .sort((a, b) => {
+
+                          if (a.countryName ===  t.scholarships.table.tous) return -1;
+                          if (b.countryName ===  t.scholarships.table.tous) return 1;
+                          return 0;
+
+
+                        })
+                        .map((offer, index) => (
+                          <tr
+                            key={index}
+                            className={`text-black text-start ${index % 2 === 0 ? 'bg-[#f1d9b6]/70' : 'bg-gray-200'
+                              }`}
+                          >
                             <td className="border border-x-0 font-bold p-4">
-                                {offer.countryName}
+                              {offer.countryName}
                             </td>
                             <td className="border border-x-0 p-2">
-                                {offer.sponsor}
+                              {offer.sponsor}
                             </td>
                             <td className="border border-x-0 p-2">
-                                <p>{offer.description}</p>
-                                <p> {t.scholarships.table.linkLabel}:
-                                    <a 
-                                        href={offer.website} 
-                                        className="text-[#4A62AA] hover:underline ml-1"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
-                                        {offer.website}
-                                    </a>
-                                </p>
+                              <p>{offer.description}</p>
+                              <p> {t.scholarships.table.linkLabel}:
+                                <a
+                                  href={offer.website}
+                                  className="text-[#4A62AA] hover:underline ml-1"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                  {offer.website}
+                                </a>
+                              </p>
                             </td>
-                        </tr>
-                    ))
-                }
-            </tbody>
-        </table>
-    </div>
-)}
+                          </tr>
+                        ))
+                      }
+                    </tbody>
+                  </table>
+                </div>
+              )}
             </div>
 
           ))}

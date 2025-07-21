@@ -4,6 +4,8 @@ import Image from "next/image";
 import Navbar from "../../navbar/navbar";
 import FooterMobile from "../../footer/footerEnd";
 import ServiceFormationDetail from "@/service/service_Formation_Descriptif";
+import en from '@/i18/en/student/formation.json';
+import fr from '@/i18/fr/student/formation.json';
 export default function DetailDescriptifFormationMobile() {
   const router = useRouter();
   const { id } = router.query;
@@ -43,7 +45,9 @@ export default function DetailDescriptifFormationMobile() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobileMenuOpen2, setIsMobileMenuOpen2] = useState(false);
 
-
+  
+ const { locale } = router;
+  const t = locale === 'en' ? en : fr
 
   return (
     <div>
@@ -59,7 +63,7 @@ export default function DetailDescriptifFormationMobile() {
           } ${isMobileMenuOpen2 ? "blur-sm " : ""
           } `}>
           <div className="justify-center p-2 text-center text-xl font-bold uppercase bg-[#9b6e0f] text-white">
-            <p>               Informations sur la Formation </p>
+            <p>                       {t.searchDescription.descriptif} </p>
           </div>
 
 
@@ -107,14 +111,14 @@ export default function DetailDescriptifFormationMobile() {
 
               </div>
 
-              <div className="bg-white p-4">
-                <div id="domain" className="mb-4">
-                  <h4 className="uppercase text-[#1942bd] text-lg">Domaine</h4>
-                  <p className="text-black ">{formationData.studyField}</p>
-                </div>
-                <div id="admission" className="mb-4">
-                  <h4 className="uppercase text-[#1942bd] text-lg">Admission & Durée</h4>
-                  <p className="text-black ">
+               <div className="bg-white p-4">
+              <div id="domain" className="mb-4">
+                <h4 className="uppercase">{t.searchDescription.domaine}</h4>
+                <p className="text-black ">{formationData.studyField}</p>
+              </div>
+              <div id="admission" className="mb-4">
+                <h4 className="uppercase">{t.searchDescription.admission}</h4>
+              <div className="mx-4">   <p className="text-black ">
                   {formationData.requirements.text} 
                
                 </p>
@@ -122,7 +126,7 @@ export default function DetailDescriptifFormationMobile() {
                {Array.isArray(formationData.requirements.admissionTypes) && formationData.requirements.admissionTypes.length > 0 ? (
                                     <div className="space-y-2">
                                       <p>
-                                        Type d'admissions
+                                    {t.searchDescription.type}
                                       </p>
                                         {formationData.requirements.admissionTypes.map((fee:any, index:any) => (
                                             <p className="text-black  " key={index}>- {fee}</p>
@@ -134,7 +138,7 @@ export default function DetailDescriptifFormationMobile() {
                     {Array.isArray(formationData.requirements.degrees) && formationData.requirements.degrees.length > 0 ? (
                                     <div className="space-y-2">
                                       <p>
-                                        Diplômes requis
+                                     {t.searchDescription.requirement}
                                       </p>
                                         {formationData.requirements.degrees.map((fee:any, index:any) => (
                                             <p className="text-black  " key={index}>- {fee}</p>
@@ -143,10 +147,12 @@ export default function DetailDescriptifFormationMobile() {
                                 ) : (
                                     <p></p>
                                 )}
-                </div>
-                <div id="cout" className="mb-4">
-                  <h4 className="uppercase text-[#1942bd] text-lg">Pension</h4>
-            <p className="text-black ">{formationData.fees.text}</p>
+               </div>
+                
+              </div>
+              <div id="cout" className="mb-4">
+                <h4 className="uppercase">Pension</h4>
+                <p className="text-black ">{formationData.fees.text}</p>
 
                                 {Array.isArray(formationData.fees.categories) && formationData.fees.categories.length > 0 ? (
                                     <div className="space-y-2">
@@ -158,22 +164,22 @@ export default function DetailDescriptifFormationMobile() {
                                     <p></p>
                                 )}
                
-                </div>
-                <div id="langue" className="mb-4">
-                  <h4 className="uppercase text-[#1942bd] text-lg">Langue d’enseignement</h4>
-                  <p className="text-black ">{formationData.languages}</p>
-                </div>
+              </div>
+              <div id="langue" className="mb-4">
+                <h4 className="uppercase">{t.searchResult.langage}</h4>
+                <p className="text-black ">{formationData.languages}</p>
+              </div>
 
 
-                <div id="contact" className="mb-6">
-                  <h4 className="uppercase text-[#1942bd] text-lg">Contact</h4>
-                  <p className="text-black text-justify">
+             <div id="contact" className="mb-8">
+  <h4 className="uppercase">Contact</h4>
+  <p className="text-black">
     <h2 className=" font-bold mb-2">{formationData.schoolName}</h2>
-    Boîte postale : {formationData.contacts?.postalBox || ""}<br />
-    Adresse : {formationData.contacts?.address || ""}<br />
-    Tél. : {formationData.contacts?.phone || ""}<br />
-    Courriel : {formationData.contacts?.email || ""}<br />
-    Internet : {formationData.contacts?.website ? (
+    {t.searchDescription.pobox} : {formationData.contacts?.postalBox || ""}<br />
+   {t.searchDescription.addresse}  : {formationData.contacts?.address || ""}<br />
+    {t.searchDescription.tel} : {formationData.contacts?.phone || ""}<br />
+   {t.searchDescription.mail}   : {formationData.contacts?.email || ""}<br />
+   {t.searchDescription.internet}   : {formationData.contacts?.website ? (
       <a
         href={`https://${formationData.contacts.website}`}
         className="text-blue-500 hover:underline"
@@ -183,9 +189,9 @@ export default function DetailDescriptifFormationMobile() {
     ) : "Non disponible"}
 
   </p>
-                </div>
+</div>
 
-              </div>
+            </div>
             </div>
           </div>
 
@@ -219,20 +225,20 @@ export default function DetailDescriptifFormationMobile() {
             onClick={handleSearch}
             className="bg-[#1942bd] text-white  w-44 py-2 rounded-2xl hover:bg-gray-200 hover:text-[#4A62AA]"
           >
-            Plaquette
+       {t.searchDescription.plaquette} 
           </button>
           <button className="bg-[#9b6e0f] text-white w-44  py-2 rounded-2xl hover:bg-gray-200 hover:text-[#4A62AA]">
-            Fiche d'inscription
+          {t.searchDescription.fiche} 
           </button>
 
         </div>
         </div>
         <div className="flex justify-center mt-1 px-1 gap-4 py-5   font-bold ">
           <button onClick={() => handleClick2()} className="bg-[#9b6e0f] text-white w-44  py-2 rounded-2xl hover:bg-gray-200 hover:text-[#4A62AA]">
-            Retour aux résultats
+                  {t.searchDescription.Retour} 
           </button>
           <button onClick={() => handleClick3()} className="bg-[#1942bd] text-white w-44  py-2 rounded-2xl hover:bg-gray-200 hover:text-[#4A62AA]">
-            Nouvelle recherche
+                  {t.searchResult.nexSearch}
           </button>
         </div>
       </div>

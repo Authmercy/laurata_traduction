@@ -4,7 +4,9 @@ import { useEffect, useState } from "react";
 import Navbar from "../../navbar/navbar";
 import FooterMobile from "../../footer/footerEnd";
 import { URLS } from "@/service/url";
-
+import en from '@/i18/en/student/lexique.json';
+import fr from '@/i18/fr/student/lexique.json';
+import { useRouter } from "next/router";
 type Glossary = {
     id: number;
     name: string;
@@ -13,6 +15,10 @@ type Glossary = {
 };
 
 export default function LexiqueComponentMobile() {
+     const router = useRouter();
+
+    const { locale } = router;
+    const t = locale === 'en' ? en : fr;
     const [open, setOpen] = useState(null);
     const handleToggle = (index: any) => {
         setOpen(open === index ? null : index);
@@ -88,13 +94,13 @@ export default function LexiqueComponentMobile() {
                     <div className="justify-center p-2 text-center text-xl font-bold uppercase bg-[#9b6e0f] hover:bg-[#dac393] text-white">
 
                         <p>
-                            LEXIQUE
+                               {t.lexiconTitle}
                         </p>  </div>
 
 
 
                     <div className="text-black bg-white/70 p-4 md:p-8 space-y-4">
-                        <p>Petit lexique des termes usuels pour vous familiariser avec le vocabulaire du supérieur.</p>
+                 <p>{t.intro}</p>
                         <div className="w-full">
                             <div className="flex flex-wrap gap-2 w-full">
                                 {Array.from({ length: 26 }, (_, index) => {

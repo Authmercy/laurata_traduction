@@ -1,8 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
-import { useRouter } from "next/router";
-import Image from "next/image";
-import Link from "next/link";
+import en from '@/i18/en/student/formation.json';
+import fr from '@/i18/fr/student/formation.json';
 import Navbar from "../../navbar/navbar";
 import { Brand } from "@/service/Brand";
 import FooterMobile from "../../footer/footerEnd";
@@ -87,7 +86,8 @@ export default function OffreFormationMobile() {
  
  
    } = ServiceFormationFilter()
- 
+   const { locale } = router;
+  const t = locale === 'en' ? en : fr;
 
 
   return (
@@ -102,15 +102,14 @@ export default function OffreFormationMobile() {
         />
 
         <div className="justify-center p-2 text-center text-xl font-bold uppercase bg-[#9b6e0f] text-white">
-          <p>RECHERCHER UNE FORMATION</p>
+          <p>           {t.searchForm.formation} </p>
         </div>
         <form>
 
 
           <div className="flex flex-col gap-2   text-white mx-10 mt-8 ">
             <div className=" items-center text-center pb-1">
-              Répertoire des formations post-bac offertes par les Universités d'État, les Établissements Publics à Statut Particulier,
-              les Institutions Privées d'Enseignement Supérieur agréées et les Institutions  Sous-régionales.
+                 <b>  {t.searchForm.repertoire}</b> {t.searchForm.text}
 
             </div>
 
@@ -119,7 +118,7 @@ export default function OffreFormationMobile() {
           <div className="grid grid-cols sm:flex  sm:flex-col text-[#4A62AA] md:grid-cols-8 gap-1 p-6 pb-2">
             <input
               type="text"
-                  placeholder="Mot clé "
+               placeholder=   {t.searchForm.keyword}
                   name="school"
               value={filters.school}
     onChange={handleChange}
@@ -139,7 +138,8 @@ export default function OffreFormationMobile() {
                           .filter(c => selectedDegreeLevels.includes(c.key))
                           .map(c => c.text)
                           .join(', ')
-                        : 'Diplôme'}
+                          : t.searchForm.diplome}
+
 
                     </span>
                     <span className="text-xl">{open === 4 ? "▲" : "▼"}</span>
@@ -211,7 +211,7 @@ export default function OffreFormationMobile() {
                        <input
     type="text"
     name="city"
-    placeholder="Ville"
+    placeholder=   {t.searchForm.city}
     value={filters.city}
     onChange={handleChange}
       className="bg-white/70  text-sm placeholder-[#4A62AA] required:  p-2 px-6 "
@@ -240,7 +240,7 @@ export default function OffreFormationMobile() {
                     }
          ] '`}
                   >
-                    Lancer ma recherche
+                {t.searchForm.submit}
                   </button>
             </div>
 

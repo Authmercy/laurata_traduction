@@ -84,7 +84,7 @@ export default function Expertise() {
 
                     </div>
                     <div className="text-center bg-white/70 p-2 ">
-                        <p className="text-[#4A62AA] text-xl"> {t.IlsOntBeneficier}</p>
+                        <p className="text-[#4A62AA] uppercase text-xl"> {t.IlsOntBeneficier}</p>
                         <div className=" grid grid-cols-4 bg-white pl-10  ">
 
                             {brand.map((item, index) => (

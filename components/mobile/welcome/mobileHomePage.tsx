@@ -7,6 +7,8 @@ import BandeauMobile from "../footer/footer";
 import Navbar2 from "../navbar/navbar2";
 import FooterMobile from "../footer/footerEnd";
 import Navbar from "../navbar/navbar";
+import en from '@/i18/fr/moreInfo.json';
+import fr from '@/i18/fr/moreInfo.json';
 
 export default function MobileHomePage() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -18,7 +20,8 @@ export default function MobileHomePage() {
     router.push(`/students/offresStage`);
 
   };
-
+    const { locale } = router;
+    const t = locale === 'en' ? en : fr;
 
 
 
@@ -108,21 +111,15 @@ export default function MobileHomePage() {
 
 
                 <p className="text-[#A38340] font-bold text-center">
-                  Étudiants & Diplômés
+                   {t.sections.students.title}
                 </p>
               </div>
 
 
-              <div className="bg-[#9b7d3c] text-white text-start -mt-2 w-full py-4 px-2">
-                <p> <span className=""> ■
-                </span> Consultez la liste centralisée et vérifiée des offres de stage et optimisez votre temps de recherche.</p>
-                <br />
-                <p className=""> ■
-                                Astuces et conseils pratiques pour trouver et réussir son stage ou son premier emploi.</p>
-  <br />
-                <p>
-                  ■ Guides d’orientation et de préparation à l’insertion professionnelle.
-                </p>
+              <div className="bg-[#9b7d3c] text-white text-start    space-y-4  -mt-2 w-full py-4 px-2">
+                 {t.sections.students.points.map((point, index) => (
+              <p key={index}>■ {point} <br /> </p> 
+            ))}
               </div>
             </div>
 
@@ -134,16 +131,12 @@ export default function MobileHomePage() {
                 <Image src="/icons/entreprise2.png" alt="" width={50} height={100} />
 
 
-                <p className="text-[#747272] mt-2  font-bold text-center">Entreprises & Organisations</p>
+                <p className="text-[#747272] mt-2  font-bold text-center">  {t.sections.companies.title}</p>
               </div>
-              <div className="bg-[#747272] text-white text-start w-full py-4 px-2">
-                <p className="pt-2">  ■ Déposez gratuitement vos offres de stage et d’emploi pour en décupler la visibilité ; Obtenez des CV de diplômés talentueux.</p>
-                <br />
-                <p > ■ Renforcez la présence numérique de vos produits, services, bourses, etc. ;  </p>
-                <br />
-                <p>
-                  ■ Communiquez sur votre secteur d’activité, vos métiers, vos faits majeurs.
-                </p>
+              <div className="bg-[#747272] space-y-4  text-white text-start w-full py-4 px-2">
+                 {t.sections.companies.points.map((point, index) => (
+              <p key={index}>■ {point}</p>
+            ))}
               </div>
             </div>
 
@@ -155,16 +148,12 @@ export default function MobileHomePage() {
               <div className="flex flex-row gap-4 items-center ">
 
                 <Image src="/icons/institutsup2.png" alt="" width={60} height={100} />
-                <p className="text-[#4A62AA]  font-bold text-center">Institutions du Supérieur</p>
+                <p className="text-[#4A62AA]  font-bold text-center">{t.sections.institutions.title}</p>
               </div>
-              <div className="bg-[#4A62AA] text-white text-start w-full py-4 px-2">
-                <p className="pt-2">■  Obtenez des opportunités de stages et premiers emplois à vos étudiants et diplômés.</p>
-                <br />
-                <p className=""> ■ Renforcez la présence numérique de vos formations et de votre institution.</p>
-                <br />
-                <p>
-                  ■  Envoi ciblé de votre offre de formations à nos abonnés élèves, étudiants et parents.
-                </p>
+              <div className="bg-[#4A62AA]  space-y-4  text-white text-start w-full py-4 px-2">
+                 {t.sections.institutions.points.map((point, index) => (
+              <p key={index}>■ {point}</p>
+            ))}
               </div>
             </div>
           </div>

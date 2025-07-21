@@ -28,7 +28,7 @@
         "majorite4": " they took action as soon as possible and progressed by learning from their mistakes."
     },
     "content2": {
-        "title": "CORE QUALITIES OF AN ENTREPRENEUR",
+        "title": "Core qualities of an entrepreneur",
         "intro": "In order to avoid being overwhelmed by the euphoria of success, the pressure, the stress and the risk of failure inherent in any entrepreneurial project, the young graduate who wants to succeed must, in addition to his competences, develop the following fundamental skills and qualities possessed by the majority of successful entrepreneurs:",
         "item1": {
             "title": "Be ambitious and bold",
@@ -95,8 +95,8 @@
         },
         "moins": {
             "title": "Disadvantages",
-            "item1": {
-                "title": "you will not have fixed working hours and your private life may suffer, hence the importance of good organisation and self-discipline."
+            "item1": {  "title": "Unlimited working hours:  ",
+                "text": "you will not have fixed working hours and your private life may suffer, hence the importance of good organisation and self-discipline."
             },
             "item2": {
                 "title": "Financial insecurity: ",
@@ -185,12 +185,140 @@
         "p4": " Intellectual curiosity and a strong desire to expand one's knowledge are the main driving forces behind the development of general knowledge in the individual.",
         "p5": " One of the most effective ways of developing general knowledge is to read every day, as this amplifies the capacity to memorise. Reading can be done either in the traditional way in a library with different books, or through the panoply of media available: online or paper press, specialised or generalist magazines online or on paper.Besides reading, you can also enrich your knowledge by taking part in lectures on campus or in cultural centres, book signings, visiting museums, etc. and even learning to play a musical instrument.",
         "plusLoin": " Related websites ",
-        "consulter": " ",
-        "zoom": " "
+        "consulter": "  Consulter le dossier consacré  dans la rubrique ",
+        "zoom": " Focus On"
     },
     "content8":{
- "title": "Structures et programmes d’accompagnement à l’entrepreneuriat  ",
- "intro":"Bien qu’il existe plusieurs cas de (jeunes) diplômés ayant mené à bien leur projet immédiatement à la sortie des bancs, il n’en demeure pas moins qu’<b>une première expérience professionnelle présente à bien des égards un atout majeur lorsqu’on se lance dans l’entrepreneuriat. "
+ "title": "Structures and programmes to support entrepreneurship ",
+ "intro":" ",
+  "sections": [
+      {
+        "title": "1. Centres of Enterprises Creation Formalities (CFCE)",
+        "content": "The CFCE offer a single window to simplify and facilitate the creation of businesses with capital of between CFA francs 100,000 and less than one million; beyond that, formalities are carried out by a notary",
+        "link": {
+          "text": "For further information go to: ",
+          "url": " https://yaounde.eregulations.org/?l=fr",
+          "display": " https://yaounde.eregulations.org/?l=fr"
+        }
+      },
+      {
+        "title": "2. Public agencies for promoting employment and support start-ups",
+        "subsections": [
+          {
+            "title": "Agence de Promotion des PME (APME)",
+            "missions": [
+              ""
+            ],
+            "location": "Head office: Yaoundé."
+          },
+          {
+            "title": "National Employment Fund (FNE)",
+            "mission": "Promoting employment. Head office: Yaoundé (Elig-Essono) and local offices in the 10 regions.",
+            "link": {
+              "url": "https://www.fnecm.org/index.php/fr",
+              "display": "https://www.fnecm.org/index.php/fr"
+            }
+          },
+          {
+            "title": "Banque Camerounaise des Petites et Moyennes Entreprises (BC-PME SA)",
+            "mission": "Mission: Financing SME’s and Handicraft. Head office: Yaoundé. ",
+            "link": {
+              "url": "https://bc-pme.com/",
+              "display": "https://bc-pme.com/"
+            }
+          },
+          {
+            "title": "Cameroon Investment Promotion Agency (IPA Cameroon)",
+            "mission": "One-stop-shop for private investments in Cameroon. Head office: Yaoundé, nouvelle route Bastos.",
+            "link": {
+              "url": "https://www.investincameroon.net/language/en/",
+              "display": "https://www.investincameroon.net/language/en/"
+            }
+          },
+          {
+            "title": "State approved Management Centers (Centre de gestion agréé, CGA)",
+            "description": "Association approved by the Ministry of Finance whose aim is to provide technical assistance regarding tax and accounting obligations to SMEs with an annual turnover of between CFAF 15 and 100 million.",
+            "link": {
+              "url": "https://minfi.gov.cm/les-centres-de-gestion-agrees-cadres-de-partenariat-par-excellence-de-ladministration-fiscale-et-des-pme9/",
+              "display": "https://minfi.gov.cm/les-centres-de-gestion-agrees-cadres-de-partenariat-par-excellence-de-ladministration-fiscale-et-des-pme9/"
+            }
+          }
+        ]
+      },
+      {
+        "title": "3. Consular chambers and Employers Organisations",
+        "subsections": [
+          {
+            "title": "Cameroon Chamber of Commerce, Industry, Mines and Crafts (CCIMA)",
+            "description": "Located in Douala, the CCIMC is a consultative organ representing the business community in the spheres of trade, industry, mines and crafts. The CCIMC is assigned the main missions of acting as a link between the business community and public authorities in the areas of consultation and representation in many domains, prominent among which is the economy.",
+            "link": {
+              "url": "https://www.ccima.cm/interne.php?idsmenu=269",
+              "display": "https://www.ccima.cm/interne.php?idsmenu=269"
+            }
+          },
+          {
+            "title": "Chamber of Agriculture, Fisheries, Livestock and Forest (CAPEF)",
+            "description": "The Chamber of Agriculture is a Consular Institution whose basic mission is to ensure the representation of the interests of Farmers, Breeders and Foresters it frames. Head office: Yaoundé."
+          },
+          {
+            "title": "Cameroon Employer’s Organisation (GECAM)",
+            "description": "Located in Douala, the GICAM is the leading Cameroon Employer’s Organisation.",
+            "link": {
+              "url": "https://legecam.cm",
+              "display": "https://legecam.cm"
+            }
+          }
+        ]
+      },
+      {
+        "title": "4. Main programmes for youth employment / promotion of entrepreneurship",
+        "subsections": [
+          {
+            "title": "Programme d’appui à la jeunesse rurale et urbaine (PAJER-U).",
+            "description": "Le Pajer-U est mis en place par le biais du ministère de la jeunesse et de l'éducation civique.",
+            "link": {
+              "url": "www.pajeru-pifma.com",
+              "display": "www.pajeru-pifma.com"
+            }
+          },
+          {
+            "title": "Programme de promotion de l'entrepreneuriat agropastoral des jeunes (PEA-Jeune)",
+            "description": "Le PIPMAS promeut l'emploi et l'auto-emploi des jeunes.",
+            "link": {
+              "url": "www.pajeru-pifma.com",
+              "display": "www.pajeru-pifma.com"
+            }
+          },
+          {
+            "title": "Programme de Promotion de l'Entrepreneuriat des Femmes et des Jeunes au Cameroun (PPEFJC)",
+            "description": "Programme initié par l'OIF, en vue d'appuyer les efforts du Gouvernement en faveur de la recherche des opportunités de création d'emploi."
+          },
+          {
+            "title": "Programme d'aide au retour et à l'insertion des jeunes de la diaspora (PARU-JEDI)"
+          },
+          {
+            "title": "Programme d'Appui aux acteurs du secteur informel (PIAASI)",
+            "description": "Structure gouvernementale rattachée au ministère de l'emploi et de la formation professionnelle."
+          },
+          {
+            "title": "Programme Intégré de Renforcement des Capacités des Entrepreneurs Locaux (EMPRETEC)",
+            "description": "Structure gouvernementale rattachée au ministère des PME."
+          },
+          {
+            "title": "Programme KAIZEN – Amélioration de la Productivité et de la Qualité",
+            "description": "Structure gouvernementale rattachée au ministère des PME."
+          },
+          {
+            "title": "Programme National d'Incubation (INCUB'CAM)",
+            "description": "Structure gouvernementale rattachée au ministère des PME."
+          },
+          {
+            "title": "Pépinière Nationale Pilote d'Entreprises d'Édéa (PNPE)",
+            "description": "Structure gouvernementale rattachée au ministère des PME."
+          }
+        ]
+      }
+    ]
     },
 
     "content9": {

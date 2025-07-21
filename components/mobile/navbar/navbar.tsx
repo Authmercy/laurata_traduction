@@ -4,6 +4,8 @@ import Link from "next/link";
 import { Dispatch, SetStateAction, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { useRouter } from "next/router";
+import en from '@/i18/en/navbar/navbarMobile.json';
+import fr from '@/i18/fr/navbar/navbarMobile.json';
 interface NavbarMobileProps {
   isMobileMenuOpen: boolean;
   setIsMobileMenuOpen: Dispatch<SetStateAction<boolean>>;
@@ -18,6 +20,9 @@ export default function Navbar({ isMobileMenuOpen, setIsMobileMenuOpen, isMobile
   const [isOpen2, setIsOpen2] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
 
+
+    const { locale } = router;
+    const t = locale === 'en' ? en : fr;
   const toggleMenu = () => {
     const newState = !isMobileMenuOpen;
     setIsOpen(newState);
@@ -27,36 +32,36 @@ export default function Navbar({ isMobileMenuOpen, setIsMobileMenuOpen, isMobile
   const [clickedLink, setClickedLink] = useState('');
   const [clicked, setClicked] = useState('');
   const links = [
-    { href: '/students/offresStage', label: 'Offres de stage' },
-    { href: '/students/formations', label: 'Annuaire des formations' },
-    { href: '/students/concoursBourse', label: 'Concours & Bourses' },
-    { href: '/students/bacAlafac/bac_fac', label: 'Orientation' },
-    { href: '/students/metier/metier', label: 'Métiers' },
-    { href: '/students/carrier', label: 'Carrière' },
-    { href: '/students/entrepreneuriat', label: 'Entrepreneuriat' },
-    { href: "/entreprise/employeur", label: 'Employeur à  la une' },
-    { href: '/students/classements', label: 'Classements' },
-    { href: '/jpo/jpo', label: 'Journées Portes Ouvertes' },
-    { href: "/institut/institutAlaUne", label: '        Institution à  la une' },
-    { href: '/students/sondage_enquetes', label: 'Sondages' },
-    { href: '/femme/femme', label: "Femme d'impact" },
-    { href: '/parole_dexpert/parole_expert', label: "Parole d'expert" },
-    { href: '/students/service', label: 'Services' },
+    { href: '/students/offresStage', label: t.links.offresStage },
+    { href: '/students/formations', label: t.links.formations },
+    { href: '/students/concoursBourse', label: t.links.concoursBourse },
+    { href: '/students/bacAlafac/bac_fac', label: t.links.orientation },
+    { href: '/students/metier/metier', label: t.links.metier },
+    { href: '/students/carrier', label: t.links.carrier },
+    { href: '/students/entrepreneuriat', label: t.links.entrepreneuriat },
+    { href: "/entreprise/employeur", label: t.links.employeur },
+    { href: '/students/classements', label: t.links.classements },
+    { href: '/jpo/jpo', label: t.links.jpo },
+    { href: "/institut/institutAlaUne", label: t.links.institution },
+    { href: '/students/sondage_enquetes', label: t.links.sondage_enquetes },
+    { href: '/femme/femme', label: t.links.femme },
+    { href: '/parole_dexpert/parole_expert', label: t.links.parole_expert },
+    { href: '/students/service', label: t.links.service },
   ];
+  
   const linksEntreprise = [
-
-    { href: '/entreprise/poster', label: 'Poster un stage' },
-    { href: "/entreprise/expertise", label: 'Experts Allemands du SES' },
-    { href: '/entreprise/talents', label: 'Trouver des talents' },
-    { href: "/entreprise/promotion", label: 'Promouvoir sa structure' },
-    { href: "/entreprise/employeur", label: 'Employeur à  la une' },
-
+    { href: '/entreprise/poster', label: t.links.poster },
+    { href: "/entreprise/expertise", label: t.links.expertise },
+    { href: '/entreprise/talents', label: t.links.talents },
+    { href: "/entreprise/promotion", label: t.links.promotion },
+    { href: "/entreprise/employeur", label: t.links.employeur },
   ];
+  
   const linksInstituion = [
-    { href: "/institut/stage", label: '   Obtenir des stages à ses étudiants' },
-    { href: "/institut/referencer", label: ' Référencer ses formations' },
-    { href: "/institut/promotion", label: '       Promouvoir son institution' },
-    { href: "/institut/institutAlaUne", label: '        Institution à  la une' },
+    { href: "/institut/stage", label: t.links.stage },
+    { href: "/institut/referencer", label: t.links.referencer },
+    { href: "/institut/promotion", label: t.links.promotion_institution },
+    { href: "/institut/institutAlaUne", label: t.links.institution },
   ];
 
   useEffect(() => {
@@ -87,37 +92,48 @@ export default function Navbar({ isMobileMenuOpen, setIsMobileMenuOpen, isMobile
 
   return (
     <div>
-      <div className="flex justify-between  text-sm items-center w-full px-4 py-4">
-        {/* Left Links */}
+      <div className="flex justify-between text-sm items-center w-full px-4 py-4">
+ 
         <div className="text-white flex space-x-3">
           <Link href="/">
             <div className="flex items-center p-2 py-4">
-              <Image src="/images/logo.png" alt="home" width={150} height={240} />
+              <Image 
+                src="/images/logo.png" 
+                alt="home" 
+                width={150} 
+                height={240} 
+              />
             </div>
           </Link>
-
-
         </div>
 
-
-        {/* Hamburger Menu */}
+    
         <div className="flex flex-row gap-8">
           <div className="text-white flex space-x-3 relative">
             <button onClick={toggleMenu2} type="button">
-              <img src="/images/avatar.png" alt="" className="w-8 h-auto" />
+              <img 
+                src="/images/avatar.png" 
+                alt="User menu" 
+                className="w-8 h-auto" 
+              />
             </button>
 
             {isMobileMenuOpen2 && (
               <div className="absolute w-[350%] top-full -left-10 mt-2 bg-white space-y-4 text-[#1f386d] p-2 rounded z-50 bg-opacity-80">
-
                 <p>
-                  <Link href="/authentification/login" className="hover:underline mt-2">
-                    Se connecter
+                  <Link 
+                    href="/authentification/login" 
+                    className="hover:underline mt-2"
+                  >
+                    {t.auth.login}
                   </Link>
                 </p>
                 <p className="mt-2">
-                  <Link href="/authentification/signup" className="hover:underline mt-2">
-                    S'inscrire
+                  <Link 
+                    href="/authentification/signup" 
+                    className="hover:underline mt-2"
+                  >
+                    {t.auth.signup}
                   </Link>
                 </p>
               </div>
@@ -152,42 +168,37 @@ export default function Navbar({ isMobileMenuOpen, setIsMobileMenuOpen, isMobile
                 </>
               )}
             </svg>
-
           </button>
         </div>
       </div>
-      {isMobileMenuOpen && (
-        <div className=" w-full absolute top-24   text-[#1f386d] p-2 rounded z-50 bg-opacity-80">
-
-          <button
-
-
-            className={`flex w-full justify-end text-center bg-gray-300   px-4 py-2 mt-2 " `}
-          >
-            <p>
-
+      
+     
+      {isOpen && (
+        <div className="w-full absolute top-24 text-[#1f386d] p-2 rounded z-50 bg-opacity-80">
+          <button className="flex w-full justify-end text-center bg-gray-300 px-4 py-2 mt-2">
+            <p className="text-end text-[#bd7a1d]">
+              {t.menu.switch_language}
             </p>
-            <p className="text-end text-[#bd7a1d]"> English</p>
           </button>
 
-
-          {/* Étudiants et diplômés */}
+      
           <div>
-
             <button
               onClick={() => toggleSubMenu("students")}
-
-              className={`flex justify-between text-lg items-center w-full text-left bg-gray-300 px-4 py-2 mt-1 hover:text-neutral-950 transition  duration-200 " ${openSubMenu === "students" ? "font-bold" : "  font-normal"
-                } ${openSubMenu === "students" ? " text-[#bd7a1d] " : "text-[#1f386d]  "
-                }`}
+              className={`flex justify-between text-lg items-center w-full text-left bg-gray-300 px-4 py-2 mt-1 hover:text-neutral-950 transition duration-200 ${
+                openSubMenu === "students" 
+                  ? "font-bold text-[#bd7a1d]" 
+                  : "font-normal text-[#1f386d]"
+              }`}
             >
-              Étudiants et diplômés  <span
-                className={`transition-transform  duration-200  ${openSubMenu === "students" ? "rotate-180 font-normal" : " rotate-0 font-bold"
-                  }`}
-              >
+              {t.menu.students}
+              <span className={`transition-transform duration-200 ${
+                openSubMenu === "students" ? "rotate-180" : ""
+              }`}>
                 ▼
               </span>
             </button>
+            
             {openSubMenu === "students" && (
               <div className="bg-gray-300 p-2 pl-6">
                 {links.map(({ href, label }) => (
@@ -195,11 +206,11 @@ export default function Navbar({ isMobileMenuOpen, setIsMobileMenuOpen, isMobile
                     key={href}
                     href={href}
                     onClick={() => setClickedLink(href)}
-                    className={` block px-2 py-1
-            ${clickedLink === href
-                        ? " text-[#bd7a1d] " : "text-[#1f386d]  "
-                      }
-           `}
+                    className={`block px-2 py-1 ${
+                      clickedLink === href 
+                        ? "text-[#bd7a1d]" 
+                        : "text-[#1f386d]"
+                    }`}
                   >
                     {label}
                   </Link>
@@ -208,21 +219,24 @@ export default function Navbar({ isMobileMenuOpen, setIsMobileMenuOpen, isMobile
             )}
           </div>
 
-          {/* Entreprises et Organisations */}
+   
           <div>
             <button
               onClick={() => toggleSubMenu("entreprises")}
-              className={`flex justify-between text-lg items-center w-full text-left bg-gray-300 px-4 py-2  hover:text-neutral-950 transition  duration-200 " ${openSubMenu === "entreprises" ? "font-bold" : "  font-normal"
-                } ${openSubMenu === "entreprises" ? " text-[#bd7a1d] " : "text-[#1f386d]  "
-                }`} >
-              Entreprises et organisations
-              <span
-                className={`transition-transform  duration-200  ${openSubMenu === "entreprises" ? "rotate-180" : ""
-                  }`}
-              >
+              className={`flex justify-between text-lg items-center w-full text-left bg-gray-300 px-4 py-2 hover:text-neutral-950 transition duration-200 ${
+                openSubMenu === "entreprises" 
+                  ? "font-bold text-[#bd7a1d]" 
+                  : "font-normal text-[#1f386d]"
+              }`}
+            >
+              {t.menu.companies}
+              <span className={`transition-transform duration-200 ${
+                openSubMenu === "entreprises" ? "rotate-180" : ""
+              }`}>
                 ▼
               </span>
             </button>
+            
             {openSubMenu === "entreprises" && (
               <div className="bg-gray-300 p-2 pl-6">
                 {linksEntreprise.map(({ href, label }) => (
@@ -230,11 +244,11 @@ export default function Navbar({ isMobileMenuOpen, setIsMobileMenuOpen, isMobile
                     key={href}
                     href={href}
                     onClick={() => setClickedLink(href)}
-                    className={` block px-2 py-1
-            ${clickedLink === href
-                        ? " text-[#bd7a1d] " : "text-[#1f386d]  "
-                      }
-           `}
+                    className={`block px-2 py-1 ${
+                      clickedLink === href 
+                        ? "text-[#bd7a1d]" 
+                        : "text-[#1f386d]"
+                    }`}
                   >
                     {label}
                   </Link>
@@ -243,22 +257,24 @@ export default function Navbar({ isMobileMenuOpen, setIsMobileMenuOpen, isMobile
             )}
           </div>
 
-
-          {/* Institutions du supérieur */}
+       
           <div>
             <button
               onClick={() => toggleSubMenu("institutions")}
-              className={`flex justify-between text-lg items-center w-full text-left bg-gray-300 px-4 py-2  hover:text-neutral-950 transition  duration-200 " ${openSubMenu === "institutions" ? "font-bold" : "  font-normal"
-                } ${openSubMenu === "institutions" ? " text-[#bd7a1d] " : "text-[#1f386d]  "
-                }`}
+              className={`flex justify-between text-lg items-center w-full text-left bg-gray-300 px-4 py-2 hover:text-neutral-950 transition duration-200 ${
+                openSubMenu === "institutions" 
+                  ? "font-bold text-[#bd7a1d]" 
+                  : "font-normal text-[#1f386d]"
+              }`}
             >
-              Institutions du supérieur    <span
-                className={`transition-transform  duration-200  ${openSubMenu === "institutions" ? "rotate-180" : ""
-                  }`}
-              >
+              {t.menu.institutions}
+              <span className={`transition-transform duration-200 ${
+                openSubMenu === "institutions" ? "rotate-180" : ""
+              }`}>
                 ▼
               </span>
             </button>
+            
             {openSubMenu === "institutions" && (
               <div className="bg-gray-300 p-2 pl-6">
                 {linksInstituion.map(({ href, label }) => (
@@ -266,11 +282,11 @@ export default function Navbar({ isMobileMenuOpen, setIsMobileMenuOpen, isMobile
                     key={href}
                     href={href}
                     onClick={() => setClickedLink(href)}
-                    className={` block px-2 py-1
-            ${clickedLink === href
-                        ? " text-[#bd7a1d] " : "text-[#1f386d]  "
-                      }
-           `}
+                    className={`block px-2 py-1 ${
+                      clickedLink === href 
+                        ? "text-[#bd7a1d]" 
+                        : "text-[#1f386d]"
+                    }`}
                   >
                     {label}
                   </Link>
@@ -279,94 +295,109 @@ export default function Navbar({ isMobileMenuOpen, setIsMobileMenuOpen, isMobile
             )}
           </div>
 
-
-
-
+     
           <div>
-            <button
-
-              className="flex justify-between text-lg items-center w-full text-left bg-gray-300 px-2 py-2  hover:text-neutral-950 transition  duration-200 "
-            >
-              <Link href="/zoom" className={` block px-2 py-1
-            ${clicked ? " text-[#bd7a1d] " : "text-[#1f386d]  "
-                      }
-           `}>
-                Zoom sur
+            <button className="flex justify-between text-lg items-center w-full text-left bg-gray-300 px-2 py-2 hover:text-neutral-950 transition duration-200">
+              <Link 
+                href="/zoom" 
+                className={`block px-2 py-1 ${
+                  clickedLink === "/zoom" 
+                    ? "text-[#bd7a1d]" 
+                    : "text-[#1f386d]"
+                }`}
+              >
+                {t.menu.spotlight}
               </Link>
             </button>
-
           </div>
-          <div>
-            <button
 
-              className="flex justify-between  text-lg items-center w-full text-left bg-gray-300 px-2 py-2 hover:text-neutral-950 transition  duration-200 "
-            >
-              <Link href="/actualite" className={` block px-2 py-1
-            ${clicked ? " text-[#bd7a1d] " : "text-[#1f386d]  "
-                      }
-           `} >
-                Actualités
+          <div>
+            <button className="flex justify-between text-lg items-center w-full text-left bg-gray-300 px-2 py-2 hover:text-neutral-950 transition duration-200">
+              <Link 
+                href="/actualite" 
+                className={`block px-2 py-1 ${
+                  clickedLink === "/actualite" 
+                    ? "text-[#bd7a1d]" 
+                    : "text-[#1f386d]"
+                }`}
+              >
+                {t.menu.news}
               </Link>
             </button>
-
           </div>
-          <div>
-            <button
 
-              className="flex justify-between  text-lg items-center w-full text-left bg-gray-300 px-2 py-2 hover:text-neutral-950 transition  duration-200 "
-            >
-              <Link href="/partners"   className={` block px-2 py-1
-            ${clicked ? " text-[#bd7a1d] " : "text-[#1f386d]  "
-                      }
-           `}>
-                Partenaires
+          <div>
+            <button className="flex justify-between text-lg items-center w-full text-left bg-gray-300 px-2 py-2 hover:text-neutral-950 transition duration-200">
+              <Link 
+                href="/partners" 
+                className={`block px-2 py-1 ${
+                  clickedLink === "/partners" 
+                    ? "text-[#bd7a1d]" 
+                    : "text-[#1f386d]"
+                }`}
+              >
+                {t.menu.partners}
               </Link>
             </button>
-
           </div>
+
+        
           <div>
             <button
               onClick={() => toggleSubMenu("autres")}
-
-              className={`flex justify-between text-lg items-center w-full text-left bg-gray-300 px-4 py-2  hover:text-neutral-950 transition  duration-200 " ${openSubMenu === "autres" ? "font-bold" : "  font-normal"
-                } ${openSubMenu === "autres" ? " text-[#bd7a1d] " : "text-[#1f386d]  "
-                }`}  >
-              À propos <span
-                className={`transition-transform  duration-200  ${openSubMenu === "autres" ? "rotate-180" : ""
-                  }`}
-              >
+              className={`flex justify-between text-lg items-center w-full text-left bg-gray-300 px-4 py-2 hover:text-neutral-950 transition duration-200 ${
+                openSubMenu === "autres" 
+                  ? "font-bold text-[#bd7a1d]" 
+                  : "font-normal text-[#1f386d]"
+              }`}
+            >
+              {t.menu.about}
+              <span className={`transition-transform duration-200 ${
+                openSubMenu === "autres" ? "rotate-180" : ""
+              }`}>
                 ▼
               </span>
             </button>
+            
             {openSubMenu === "autres" && (
-              <div className=" bg-gray-300 p-2 pl-6 ">
-                <Link href="/misc/presentaionDuSite"  className={` block px-2 py-1
-            ${clicked ? " text-[#bd7a1d] " : "text-[#1f386d]  "
-                      }
-           `}>
-                  Présentation
+              <div className="bg-gray-300 p-2 pl-6">
+                <Link 
+                  href="/misc/presentaionDuSite" 
+                  className={`block px-2 py-1 ${
+                    clickedLink === "/misc/presentaionDuSite" 
+                      ? "text-[#bd7a1d]" 
+                      : "text-[#1f386d]"
+                  }`}
+                >
+                  {t.about.presentation}
                 </Link>
 
-                <Link href="/misc/legal" className={` block px-2 py-1
-            ${clicked ? " text-[#bd7a1d] " : "text-[#1f386d]  "
-                      }
-           `}>
-                  Mentions Légales
+                <Link 
+                  href="/misc/legal" 
+                  className={`block px-2 py-1 ${
+                    clickedLink === "/misc/legal" 
+                      ? "text-[#bd7a1d]" 
+                      : "text-[#1f386d]"
+                  }`}
+                >
+                  {t.about.legal}
                 </Link>
-                <Link href="/misc/cgu" className={` block px-2 py-1
-            ${clicked ? " text-[#bd7a1d] " : "text-[#1f386d]  "
-                      }
-           `}>
-                  Conditions Générales d'Utilisation
+                
+                <Link 
+                  href="/misc/cgu" 
+                  className={`block px-2 py-1 ${
+                    clickedLink === "/misc/cgu" 
+                      ? "text-[#bd7a1d]" 
+                      : "text-[#1f386d]"
+                  }`}
+                >
+                  {t.about.terms}
                 </Link>
-
               </div>
             )}
           </div>
         </div>
       )}
-
-
     </div>
-  )
+  );
 }

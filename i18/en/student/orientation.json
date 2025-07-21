@@ -1,12 +1,12 @@
 
 {
   "orientation": "Orientation",
-  "generalites": "Généralités sur le supérieur",
-  "institutions": "Institutions du supérieur",
-  "preparerBac": "Préparer son baccalauréat",
-  "choisirCursus": "Choisir son cursus supérieur",
-  "handicap": "Handicap et études supérieures",
-  "etudeEtranger": "Étudier à l'étranger",
-  "atouts": "Atouts du supérieur Camerounais",
-  "lexique": "Lexique"
+  "generalites": "Overview of the cameroonian higher education system",
+  "institutions": " Higher education institutions ",
+  "preparerBac": "Tips to prepare for gce axams",
+  "choisirCursus": "How to choose a study program",
+  "handicap": "Study with disabilities",
+  "etudeEtranger": "Study Abroad",
+  "atouts": "Strengths of the cameroonian higher education sytem",
+  "lexique": "Glossary"
 }

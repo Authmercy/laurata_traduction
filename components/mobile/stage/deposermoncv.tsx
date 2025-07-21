@@ -104,7 +104,7 @@ open,
             <form className="mt-6 space-y-1 w-10/12" onSubmit={handleSubmit}>
 
               <input type="text" name="firstname" value={elements.firstname}
-                onChange={handleChange} placeholder="Nom *" className="w-full border placeholder:text-[#4A62AA] bg-white/70  border-gray-300 p-2 px-8 focus:ring-2 focus:ring-[#4A62AA]" />
+                onChange={handleChange} placeholder="Nom *"  className="w-full border placeholder:text-[#4A62AA] bg-white/70  border-gray-300 p-2 px-8 focus:ring-2 focus:ring-[#4A62AA]" />
               <input type="text" name="lastname" value={elements.lastname}
                 onChange={handleChange} placeholder="Prénom *" className="w-full border placeholder:text-[#4A62AA] bg-white/70  border-gray-300 p-2 px-8  focus:ring-2 focus:ring-[#4A62AA]" />
               <input type="email" value={elements.email}

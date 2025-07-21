@@ -7,7 +7,8 @@ import BandeauMobile from "../footer/footer";
 import FooterMobile from "../footer/footerEnd";
 import Navbar from "../navbar/navbar";
 
-
+import en from '@/i18/fr/moreInfo.json';
+import fr from '@/i18/fr/moreInfo.json';
 
 export default function MobileHomePage1() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -22,7 +23,8 @@ export default function MobileHomePage1() {
 
 
 
-
+ const { locale } = router;
+    const t = locale === 'en' ? en : fr;
 
   return (
     <div>
@@ -134,7 +136,7 @@ export default function MobileHomePage1() {
                 <Image src="/icons/entreprise2.png" alt="" width={50} height={100} />
 
 
-                <p className="text-[#747272] mt-2  font-bold text-center">Entreprises & Organisations</p>
+                <p className="text-[#747272] mt-2  font-bold text-center">   {t.sections.companies.title}</p>
               </div>
               <div className="bg-[#747272] text-white text-start w-full py-4 px-2">
                 <p className="pt-2">  ■ Déposez gratuitement vos offres de stage et d’emploi pour en décupler la visibilité ; Obtenez des CV de diplômés talentueux.</p>

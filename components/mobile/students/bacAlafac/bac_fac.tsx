@@ -4,12 +4,17 @@ import Link from "next/link";
 import Navbar from "../../navbar/navbar";
 import FooterMobile from "../../footer/footerEnd";
 import { Brand } from "@/service/Brand";
-
+import en from '@/i18/en/student/orientation.json';
+import fr from '@/i18/fr/student/orientation.json';
+import { useRouter } from "next/router";
 
 export default function BacAlaFacMobile() {
 
     const [open, setOpen] = useState(null);
+    const router = useRouter();
 
+    const { locale } = router;
+    const t = locale === 'en' ? en : fr;
 
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isMobileMenuOpen2, setIsMobileMenuOpen2] = useState(false);
@@ -50,7 +55,7 @@ export default function BacAlaFacMobile() {
                     } ${isMobileMenuOpen2 ? "blur-sm " : ""
                     } `}>
                     <div className="justify-center  p-2 text-center text-xl font-bold uppercase bg-[#9b6e0f] hover:bg-[#dac393] text-white">
-                        <p>     Orientation </p>
+                        <p>          {t.orientation} </p>
                     </div>
 
                     <div className="bg-white/70 mt-8  p-4  uppercase shadow-sm mb-2 hover:shadow-md transition-shadow">
@@ -58,7 +63,7 @@ export default function BacAlaFacMobile() {
 
                             <div className="flex items-center gap-2 py-2">
                                 <img src="/icons/puces_1.png" alt="" className="w-5" />
-                                <p className="text-[#4A62AA] font-bold hover:text-[#A87A38] ">Généralités sur le supérieur </p>
+                                <p className="text-[#4A62AA] font-bold hover:text-[#A87A38] ">   {t.generalites} </p>
                             </div>
                         </Link>
  
@@ -66,14 +71,14 @@ export default function BacAlaFacMobile() {
 
                             <div className="flex items-center gap-2 py-2">
                                 <img src="/icons/puces_1.png" alt="" className="w-5" />
-                                <p className="text-[#4A62AA] font-bold hover:text-[#A87A38] ">Institutions du supérieur</p>
+                                <p className="text-[#4A62AA] font-bold hover:text-[#A87A38] ">  {t.institutions}</p>
                             </div>
                         </Link>
  <Link href="/students/bacAlafac/preparerSonBac">
 
                             <div className="flex items-center gap-2 py-2">
                                 <img src="/icons/puces_1.png" alt="" className="w-5" />
-                                <p className="text-[#4A62AA] font-bold hover:text-[#A87A38] ">Préparer son baccalauréat</p>  </div>
+                                <p className="text-[#4A62AA] font-bold hover:text-[#A87A38] "> {t.preparerBac}</p>  </div>
                         </Link>
                        
 
@@ -84,21 +89,21 @@ export default function BacAlaFacMobile() {
 
                             <div className="flex items-center gap-2 py-2">
                                 <img src="/icons/puces_1.png" alt="" className="w-5" />
-                                <p className="text-[#4A62AA] font-bold hover:text-[#A87A38] "> Choisir son cursus supérieur </p>
+                                <p className="text-[#4A62AA] font-bold hover:text-[#A87A38] ">      {t.choisirCursus}</p>
                             </div>
                         </Link>
 
                         <Link href="/students/bacAlafac/Handicap">
                             <div className="flex items-center gap-2 py-2">
                                 <img src="/icons/puces_1.png" alt="" className="w-5" />
-                                <p className="text-[#4A62AA] font-bold hover:text-[#A87A38] "> Handicap et études supérieures </p>
+                                <p className="text-[#4A62AA] font-bold hover:text-[#A87A38] ">  {t.handicap} </p>
                             </div>
                         </Link>
 
                         <Link href="/students/bacAlafac/etudeEtranger">
                             <div className="flex items-center gap-2 py-2">
                                 <img src="/icons/puces_1.png" alt="" className="w-5" />
-                                <p className="text-[#4A62AA] font-bold hover:text-[#A87A38] "> Étudier à l’étranger</p>
+                                <p className="text-[#4A62AA] font-bold hover:text-[#A87A38] ">     {t.etudeEtranger}</p>
                             </div>
                         </Link>
 
@@ -106,7 +111,7 @@ export default function BacAlaFacMobile() {
 
                             <div className="flex items-center gap-2 py-2">
                                 <img src="/icons/puces_1.png" alt="" className="w-5" />
-                                <p className="text-[#4A62AA] font-bold hover:text-[#A87A38] "> Atouts du supérieur Camerounais</p>
+                                <p className="text-[#4A62AA] font-bold hover:text-[#A87A38] ">   {t.atouts}</p>
                             </div>
                         </Link>
 
@@ -114,7 +119,7 @@ export default function BacAlaFacMobile() {
 
                             <div className="flex items-center gap-2 py-2">
                                 <img src="/icons/puces_1.png" alt="" className="w-5" />
-                                <p className="text-[#4A62AA] font-bold hover:text-[#A87A38] ">Lexique</p>
+                                <p className="text-[#4A62AA] font-bold hover:text-[#A87A38] ">             {t.lexique}</p>
                             </div>
                         </Link>
                     </div>

@@ -4,8 +4,8 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 
 
-import en from '../../../../i18/en/student/metier.json';
-import fr from '../../../../i18/fr/student/metier.json';
+import en from '@/i18/en/student/metier.json';
+import fr from '@/i18/fr/student/metier.json';
 import { useRouter } from "next/router";
 
 

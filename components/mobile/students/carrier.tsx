@@ -4,9 +4,14 @@ import { useEffect, useState } from "react";
 import Navbar from "../navbar/navbar";
 import FooterMobile from "../footer/footerEnd";
 import { Brand } from "@/service/Brand";
-
+import en from '@/i18/en/student/career.json';
+import fr from '@/i18/fr/student/career.json';
+import { useRouter } from "next/router";
 export default function CarrierComponentMobile() {
+  const router = useRouter();
 
+    const { locale } = router;
+    const t = locale === 'en' ? en : fr;
     const [open, setOpen] = useState(null);
 
     const handleToggle = (index: any) => {
@@ -49,7 +54,7 @@ export default function CarrierComponentMobile() {
                     } ${isMobileMenuOpen2 ? "blur-sm " : ""
                     } `}>
                     <div className="justify-center p-2 text-center text-xl font-bold uppercase bg-[#9b6e0f] text-white">
-                        <p>            CARRIÈRE</p>
+                        <p>               {t.title}</p>
                     </div>
 
 
@@ -68,7 +73,7 @@ export default function CarrierComponentMobile() {
                                     className="w-full sm:w-4/12 py-2 px-4  bg-[#4c75f0] text-white flex justify-between items-center sm:justify-center"
                                     onClick={() => handleToggle(4)}
                                 >
-                                    <span className="text-start">Statistiques clés du marché du travail</span>
+                                    <span className="text-start">{t.content1.topic1}</span>
                                     <span className="sm:ml-6  text-2xl    ">{open === 4 ? "▲" : "▼"}</span>
                                 </button>
 
@@ -78,54 +83,37 @@ export default function CarrierComponentMobile() {
                             {open === 4 && (
                                 <div className="bg-white text-justify ">
                                     <div className="w-full">
-                                        <div className="space-y-4 text-black bg-white/80">
-                                            <p className=" p-3  py-2"><b> Le secteur informel </b> est le plus grand pourvoyeur d’emplois ( <b>  90,5%</b> de l’emploi en 2018. Source : 3ème enquête sur l’emploi et le secteur informel 2018, INS).
-                                            </p>
-                                            <p className="bg-[#f1d9b6] p-3  py-2">
-                                                <b>Nombre d’agents publics employés par l’État  en</b> fin 2024 : 411 750. Source : MINFOPRA.
-
-                                            </p>
-                                            <p className=" p-3  py-2">
-                                                <b>  Nombre de salariés employés par le secteur privé </b>formel en 2023: <b> 1 178 043 </b> répartis dans 438 893 unités économiques.  (Source : 3ème Recensement Général des Entreprises,2023).
+                                      <div className="space-y-4 bg-white/80">
+                              
+                                        <p className="bg-[#f1d9b6] p-3  py-2" dangerouslySetInnerHTML={{ __html: t.content1.p1 }}/>
+                                        <p className=" p-3  py-2" dangerouslySetInnerHTML={{ __html: t.content1.p2 }}/>
 
 
+                                       
+                                        <p className="bg-[#f1d9b6] p-3 py-2" dangerouslySetInnerHTML={{ __html: t.content1.p3 }}/>
+                                        <p className=" p-3 py-2" dangerouslySetInnerHTML={{ __html: t.content1.p4 }}/>
+                                        <p className="bg-[#f1d9b6] p-3 py-2">
+                                            <span dangerouslySetInnerHTML={{ __html: t.content1.p5 }} />
 
-                                            </p>
-                                            <p className="bg-[#f1d9b6] p-3 py-2">
-                                                Nombre de diplômés demandeurs d’emplois arrivant chaque année sur le marché du travail : environ <b> 150 000. </b>
+                                            <p dangerouslySetInnerHTML={{ __html: t.content1.p6 }}/>
 
+                                    
+                                        </p>
+                                        <p className=" p-3 py-2">
+                                         <span dangerouslySetInnerHTML={{ __html: t.content1.p7 }}/>
+                                            <p>
+                                                <b> 1.  </b> SNH (788,3) ;
+                                                <b> 2.  </b>  ENEO (394,5) ;
+                                                <b> 3.  </b> SABC (362,9) ;     <b> 4.  </b>  Tradex (350) ;
+                                                <b> 5.  </b> MTN (282,3) ;     <b> 6.  </b>  Orange (250,2) ;
+                                                <b> 7.  </b>  FEICOM (243,7) ;     <b> 8.  </b>  CNPS (242,6) ;
+                                                <b> 9.  </b>  SODECOTON (171) ;     <b> 10.  </b>  DANGOTE Cement Cameroon (92,5). <i> {t.content1.i1}  </i>  </p>
 
-                                            </p>
-                                            <p className=" p-3 py-2"><b> Pour un poste à pourvoir, une PME/PMI camerounaise reçoit en moyenne 200 à 500 candidatures. </b> Celles-ci sont encore plus élevées lorsqu’il s’agit de grandes entreprises ou des filiales de multinationales ou pour un recrutement à la fonction publique.
-                                            </p>
-                                            <p className="bg-[#f1d9b6] p-3 py-2">
-                                                <b className="text-[#4A62AA]">10 plus grands employeurs du secteur privé </b> (en nombre de salariés permanents)
-
-                                                <p>
-                                                    <b> 1.  </b> CDC (18 989) ; <b>2.  </b>  Société des Plantations du Haut-Penja, PHP (6 000) ;
-                                                    <b> 3.  </b>  HEVECAM (4 908) ; <b> 4.  </b>  ENEO (3 700) ;
-                                                    <b> 5.  </b>  SABC (3 082) ; <b> 6.  </b> SOCAPALM (2 244) ;
-                                                    <b> 7.  </b> SODECOTON (2 000) ; <b> 8.  </b>  CONGELCAM (2 000 env.) ;
-                                                    <b> 9.  </b>  Guinness Cameroun S.A. (1 900 env.) ;<b> 10.  </b>  Groupe Fotso Victor (1 850 env.).
-                                                </p>
-
-                                            </p>
-                                            <p className=" p-3 py-2">
-                                                <b className="text-[#4A62AA]">10 entreprises les plus performantes en 2021</b> (chiffre d’affaires en milliards de FCFA)
-
-                                                <p>
-                                                    <b> 1.  </b> SNH (788,3) ;
-                                                    <b> 2.  </b>  ENEO (394,5) ;
-                                                    <b> 3.  </b> SABC (362,9) ;     <b> 4.  </b>  Tradex (350) ;
-                                                    <b> 5.  </b> MTN (282,3) ;     <b> 6.  </b>  Orange (250,2) ;
-                                                    <b> 7.  </b>  FEICOM (243,7) ;     <b> 8.  </b>  CNPS (242,6) ;
-                                                    <b> 9.  </b>  SODECOTON (171) ;     <b> 10.  </b>  DANGOTE Cement Cameroon (92,5). <i> Source : Classement 2022 des 500 premières entreprises africaines, Jeune Afrique, avril 2022.  </i>  </p>
-
-                                            </p>
-                                        </div>
+                                        </p>
+                                    </div>
                                         <div className=" bg-[#f1d9b6]  ">
                                             <p className="text-start p-3 text-[#4A62AA] font-bold">
-                                                Les réseaux personnels sont essentiels pour trouver un emploi salarié
+                                            {t.content1.p8}
                                             </p>
                                             <div className="flex flex-col gap-2 p-4">
                                                 <div className="flex-1">
@@ -133,8 +121,7 @@ export default function CarrierComponentMobile() {
                                                 </div>
 
                                                 <div className="flex-1 text-black flex justify-center">
-                                                    Source : Sur la base des enquêtes de la Banque mondiale auprès des entreprises (statistiques agrégées à partir des enquêtes réalisées en Angola, au Botswana, au Burundi, au Cameroun, en Gambie, en Guinée, en Mauritanie, en Namibie, au Niger, en Ouganda, en République démocratique du Congo, au Rwanda, au Swaziland, en Tanzanie en 2006–07).
-
+                                                            {t.content1.p9}
                                                 </div></div>
 
                                         </div>
@@ -152,7 +139,7 @@ export default function CarrierComponentMobile() {
                                     className="w-full sm:w-4/12 py-2 px-4  bg-[#4c75f0] text-white flex justify-between items-center sm:justify-center"
                                     onClick={() => handleToggle(5)}
                                 >
-                                    <span className="text-start"> Dans quel secteur travailler : public, privé ou profession libérale ?</span>
+                                    <span className="text-start"> {t.content2.topic2}</span>
                                     <span className="sm:ml-6  text-2xl    ">{open === 5 ? "▲" : "▼"}</span>
                                 </button>
 
@@ -165,165 +152,154 @@ export default function CarrierComponentMobile() {
                                         <div className="space-y-4 text-black">
 
                                             <p>
-                                                Ce choix est subjectif et dépend principalement de la personnalité, des capacités et des ambitions personnelles de chacun. Il est judicieux de s’y pencher au moment de la réflexion sur le choix de votre profession ou dès les premières années d’université. </p>
+                                        {t.content2.p1} </p>
 
-                                            <p>
-                                                Pour vous y aider, ci-dessous un tableau comparatif des 5 points de différences les plus notables entre chaque secteur :
-                                            </p>
+                                        <p>
+                                          {t.content2.p3}
+                                        </p>
                                             <div className="overflow-x-auto">
                                                 <table className="table-auto border-collapse border min-w-[800px] shadow-lg w-full">
                                                     <thead>
                                                         <tr className="">
 
                                                             <th className="border-y-2 border-[#A87A38]   px-4 py-2 text-[#4A62AA] text-left"> </th>
-                                                            <th className="border-y-2 border-[#A87A38]   px-4 py-2 text-[#4A62AA] text-left">Public </th>
-                                                            <th className="border-y-2 border-[#A87A38]   px-4 py-2 text-[#4A62AA] text-left">Privé </th>
-                                                            <th className="border-y-2 border-[#A87A38]   px-4 py-2 text-[#4A62AA] text-left"> Profession libérale réglementée</th>
+                                                    <th className="border-y-2 border-[#A87A38]   px-4 py-2 text-[#4A62AA] text-left"> {t.content2.h1} </th>
+                                                    <th className="border-y-2 border-[#A87A38]   px-4 py-2 text-[#4A62AA] text-left"> {t.content2.h2} </th>
+                                                    <th className="border-y-2 border-[#A87A38]   px-4 py-2 text-[#4A62AA] text-left">  {t.content2.h3}</th>
 
                                                         </tr>
                                                     </thead>
                                                     <tbody className="text-start">
 
-                                                        <tr className="  bg-[#d8c6ad]  ">
+                                                         <tr className="  bg-[#d8c6ad] text-justify ">
 
-                                                            <td className="  px-4 py-2  text-center">
-                                                                <span className="font-bold  text-[#4A62AA]">
-                                                                    <p>   1.</p>
-                                                                    Recrutement
-                                                                </span>
-                                                            </td>
-                                                            <td className="   px-4 py-2 ">
-                                                                <p>   <b> Fonction publique </b>: Par voie de concours ou sur titre suivant les modalités précisées par les statuts particuliers ou spéciaux.
-                                                                </p>
-                                                                <p>  <b> Entreprises publiques</b>: en principe, après appel à candidatures suivi d’étude de dossier et/ou test, et entretien d’embauche.</p>
+                                                    <td className="  px-4 py-2  text-center">
+                                                        <span className="font-bold  text-[#4A62AA]">
+                                                            <p>   1.</p>
+                                                          {t.content2.r1}
+                                                        </span>
+                                                    </td>
+                                                    <td className="   px-4 py-2 ">
+                                                        <p>         {t.content2.p3}
+                                                        </p>
+                         <p>         {t.content2.p4}
+                                                        </p>
 
-
-                                                            </td>
-                                                            <td className="  px-4 py-2 ">
-                                                                <p>      Liberté pour l’employeur de recruter le collaborateur de son choix et à ce dernier de choisir où postuler.
-                                                                </p>
-
-                                                            </td>
-                                                            <td className="   px-4 py-2 ">
-                                                                Accès et exercice conditionnés à l’obtention du diplôme requis (après concours), à l’inscription à l’ordre de la profession concernée (notaire, huissier, pharmacien, architecte, etc.) et à l’octroi d’un agrément ou d’une autorisation d’exercice par l’autorité compétente.
-                                                            </td>
-
-
-                                                        </tr>
-                                                        <tr className=" ">
-
-                                                            <td className="   px-4 py-2 text-center">
-                                                                <span className="font-bold text-center  text-[#4A62AA]">
-                                                                    <p>   2.</p>
-                                                                    Rémunération
-                                                                </span>
-                                                            </td>
-                                                            <td className="   px-4 py-2 text-left">
-
-                                                                <p>    Déterminée par la catégorie et l’indice de l’agent (découlant de l’ancienneté).
-                                                                </p>
-                                                            </td>
-                                                            <td className="   px-4 py-2 text-left">
-                                                                Négociée librement entre le salarié et l’employeur et indiquée dans le contrat de travail ; le cas échéant, la Convention collective de branche peut servir de base de négociation.
+                                                    </td>
+                                                    <td className="  px-4 py-2 ">
+                                                          <p>         {t.content2.p5}
+                                                        </p>
+                                                        <p>  <i>  {t.content2.p6}</i>
+                                                        </p>
+                                                    </td>
+                                                    <td className="   px-4 py-2 ">
+                                                    {t.content2.p7} </td>
 
 
-                                                            </td>
-                                                            <td className="   px-4 py-2 text-left">
-                                                                Négociée librement entre le spécialiste et son client. Elle est élevée mais proportionnelle à la réputation et fonction du volume d’activité (ce dernier étant impacté par le poids économique de la ville d’exercice) et de la qualité de la clientèle.
+                                                </tr>
+                                                <tr className="text-justify ">
 
-                                                            </td>
+                                                    <td className="   px-4 py-2 text-center">
+                                                        <span className="font-bold text-center  text-[#4A62AA]">
+                                                            <p>   2.</p>
+                                                           {t.content2.r2}
+                                                        </span>
+                                                    </td>
+                                                    <td className="   px-4 py-2 text-left">
 
-
-                                                        </tr>
-
-                                                        <tr className=" bg-[#d8c6ad]  ">
-
-                                                            <td className="   px-4 py-2 text-center">
-                                                                <span className=" text-center font-bold text-[#4A62AA]">
-                                                                    <p>   3.</p>
-                                                                    Sécurité de l’emploi
-                                                                </span>
-                                                            </td>
-                                                            <td className="   px-4 py-2 text-left">
-
-                                                                Très élevée <br />
-                                                                <i> (Révocations rares, uniquement en cas de manquements graves ou fautes très lourdes)
-                                                                </i>
-                                                            </td>
-                                                            <td className="   px-4 py-2 text-left">
-                                                                Faible dans les PME/PMI (  Contrats de travail non systématiques ; CDD et licenciements abusifs / économiques fréquents).
-                                                                <br /> Élevée dans les grandes entreprises et multinationales.
-                                                            </td>
-                                                            <td className="   px-4 py-2 text-left">
-                                                                Très élevée <br />
-                                                                <i>  (Révocation et/ou radiation de l’Ordre en cas de fautes lourdes) ;</i>
-
-                                                            </td>
-
-
-                                                        </tr>
-
-                                                        <tr className=" text-justify ">
-
-                                                            <td className="   px-4 py-2 text-center">
-                                                                <span className="text-center font-bold text-[#4A62AA]">
-                                                                    <p>   4.</p>
-                                                                    Déroulement de carrière
-                                                                </span>
-                                                            </td>
-                                                            <td className="    px-4 py-2 text-left">
-                                                                <p>
-                                                                    Promotion et avancement organisés par voie réglementaire.
-
-                                                                </p>
-                                                                <p>
-                                                                    <i>(Base : ancienneté et titre).
-
-                                                                    </i>
-                                                                </p>
-
-                                                            </td>
-                                                            <td className="   px-4 py-2 text-left">
-                                                                Promotion découlant du mérite personnel, des performances, du rendement et/ou de la puissance du réseau relationnel.
-                                                            </td>
-                                                            <td className="   px-4 py-2 text-left">
-                                                                Hausse de la notoriété selon le mérite personnel et les performances <i>  (Processus transparent) </i>;
-                                                            </td>
+                                                        <p>   {t.content2.p8}
+                                                        </p>
+                                                        <p className=" font-bold  text-[#A87A38] "> {t.content2.bon} </p>
+                                                        <p>  <span className="text-[#A87A38]">  ► </span>  {t.content2.p9}</p>
+                                                        <p>
+                                                            <span className="text-[#A87A38]">  ► </span>  {t.content2.p10}</p>
+                                                        <p>
+                                                            <span className="text-[#A87A38]">  ► </span> {t.content2.p11}
+                                                        </p>   </td>
+                                                    <td className="   px-4 py-2 text-left">
+                                       {t.content2.p12}
+                                                        <p className=" font-bold text-[#A87A38]">  {t.content2.bon}</p>
+                                                        <p>    < span className="text-[#A87A38]">  ► </span> {t.content2.p13}
+                                                        </p>  <p> <span className="text-[#A87A38]">  ► </span> {t.content2.p14}
+                                                        </p>
+                                                    </td>
+                                                    <td className="   px-4 py-2 text-left">
+                                                     {t.content2.p15}  <p className=" font-bold text-[#A87A38] ">  {t.content2.bon}</p>
+                                                        <p>  <span className="text-[#A87A38]">  ► </span> {t.content2.p15}
+                                                        </p>
+                                                    </td>
 
 
-                                                        </tr>
+                                                </tr>
 
-                                                        <tr className=" bg-[#d8c6ad] text-justify ">
+                                                <tr className=" bg-[#d8c6ad] text-justify ">
 
-                                                            <td className="   px-4 py-2 text-center ">
-                                                                <span className="font-bold text-center text-[#4A62AA]">
-                                                                    <p>   5.</p>
-                                                                    Départ à la retraite
-                                                                </span>
-                                                            </td>
+                                                    <td className="   px-4 py-2 text-center">
+                                                        <span className=" text-center font-bold text-[#4A62AA]">
+                                                            <p>   3.</p>
+                                                          {t.content2.r3}
+                                                        </span>
+                                                    </td>
+                                                    <td className="   px-4 py-2 text-left" dangerouslySetInnerHTML={{ __html: t.content2.p17 }}/>
+                                                    <td className="   px-4 py-2 text-left" dangerouslySetInnerHTML={{ __html: t.content2.p18 }}/>
+                                                    <td className="   px-4 py-2 text-left" dangerouslySetInnerHTML={{ __html: t.content2.p19 }}/>
 
-                                                            <td className="   px-4 py-2 text-left">
-                                                                <p>
-                                                                    Automatique à l’atteinte de l’âge réglementaire de départ  <i>(sauf prorogation exceptionnelle par l’autorité compétente). </i>
-                                                                </p>
-                                                            </td>
-                                                            <td className="   px-4 py-2 text-left">
-                                                                <p>
-                                                                    Selon la convention collective de branche ou négocié librement entre l’employeur et le salarié.
+                                                </tr>
 
-                                                                </p>
+                                                <tr className=" text-justify ">
 
-                                                            </td>
-                                                            <td className="   px-4 py-2 text-left">
-                                                                <p>Automatique à l’atteinte de l’âge de départ
+                                                    <td className="   px-4 py-2 text-center">
+                                                        <span className="text-center font-bold text-[#4A62AA]">
+                                                            <p>   4.</p>
+                                                    {t.content2.r4}
+                                                        </span>
+                                                    </td>
+                                                    <td className="    px-4 py-2 text-left">
+                                                        <p>
+                                                            {t.content2.p29}
+                                                        </p>
+                                                        <p>
+                                                            <i  dangerouslySetInnerHTML={{ __html: t.content2.p28 }}/>
+                                                        </p>
 
-                                                                </p>
+                                                    </td>
+                                                    <td className="   px-4 py-2 text-left">
+                                                        {t.content2.p22}
+                                                    </td>
+                                                    <td className="   px-4 py-2 text-left" dangerouslySetInnerHTML={{ __html: t.content2.p23 }}/>
 
-                                                                <p>
-                                                                    <i>
-                                                                        (sauf prorogation exceptionnelle par l’autorité compétente.). </i></p>               </td>
 
-                                                        </tr>
+                                                </tr>
+
+                                                <tr className=" bg-[#d8c6ad] text-justify ">
+
+                                                    <td className="   px-4 py-2 text-center ">
+                                                        <span className="font-bold text-center text-[#4A62AA]">
+                                                            <p>   5.</p>
+                                                       {t.content2.r5}
+                                                        </span>
+                                                    </td>
+
+                                                    <td className="   px-4 py-2 text-left">
+                                                        <p dangerouslySetInnerHTML={{ __html: t.content2.p24 }}/>
+                                                    </td>
+                                                    <td className="   px-4 py-2 text-left">
+                                                        <p>
+                                           
+{t.content2.p25}
+                                                        </p>
+
+                                                    </td>
+                                                    <td className="   px-4 py-2 text-left">
+                                                        <p>{t.content2.p26}
+
+                                                        </p>
+
+                                                        <p>
+                                                            <i>
+                                                              {t.content2.p27}</i></p>               </td>
+
+                                                </tr>
 
 
 
@@ -349,7 +325,7 @@ export default function CarrierComponentMobile() {
                                     className="w-full py-2 px-4 text-center bg-[#4c75f0] text-white flex items-center justify-between"
                                     onClick={() => handleToggle(7)}
                                 >
-                                    <span className="flex-grow text-start">  Dans la peau d’un employeur ou recruteur</span>
+                                    <span className="flex-grow text-start">   {t.topic3} </span>
                                     <span className="sm:ml-6  text-2xl    ">{open === 7 ? "▲" : "▼"}</span>
                                 </button>
 
@@ -362,22 +338,21 @@ export default function CarrierComponentMobile() {
 
                                         <div className="space-y-4 p-4 text-black">
 
-                                            <p>
-                                                <b>  Les organisations et entreprises, publiques comme privées, recherchent des diplômés possédant des compétences</b>, autrement dit un mix :
-                                            </p>
-                                            <p>
-                                                <span className="text-[#4A62AA] ml-6  ">■ </span>de connaissances théoriques ou académiques dans un domaine précis : les  <b className="text-[#9b6e0f] ">  savoirs  </b>(exemple : connaissances en informatique, en droit, etc.) ;
-                                            </p>
-                                            <p>
-                                                <span className="text-[#4A62AA] ml-6  ">■ </span>  de connaissances opérationnelles, c’est-à-dire des capacités techniques concrètes à exécuter des tâches précises : les    <b className="text-[#9b6e0f] ">  savoir-faire  </b>(effectuer un audit, rédiger un contrat, etc.) ; et enfin,
-                                            </p>
-                                            <p>
+                                          <p>
+                                            <b>{t.skills.intro}</b>
+                                        </p>
 
-                                                <span className="text-[#4A62AA] ml-6  ">■ </span> de compétences humaines, indispensables à la réussite dans le monde professionnel : les  <b className="text-[#9b6e0f] ">   soft skills </b>ou  <b className="text-[#9b6e0f] "> savoir-être</b> (exemplarité, créativité, esprit d’équipe, etc.).
+                                        {t.skills.points.map((point, index) => (
+                                            <p key={index}>
+                                                <span className="text-[#4A62AA] ml-10">■ </span>
+                                                {point.prefix} <b className="text-[#4A62AA]">{point.highlight}</b> {point.suffix}
+                                                {point.highlight2 && (
+                                                    <> <b className="text-[#4A62AA]">{point.highlight2}</b> {point.suffix2}</>
+                                                )}
                                             </p>
-                                            <p>
-                                                <b>  Chaque processus de recrutement a donc pour but d’identifier et de choisir le candidat qui possède le plus grand nombre des compétences recherchées pour le poste à pourvoir.</b> Par conséquent, il vous reviendra de démontrer que vous possédez lesdites compétences ; et, d’autre part, que vous saurez les mettre en œuvre efficacement pour mener à bien vos missions.
-                                            </p>
+                                        ))}
+
+                                        <p dangerouslySetInnerHTML={{ __html: t.skills.conclusion }} />
 
 
                                         </div>
@@ -395,7 +370,7 @@ export default function CarrierComponentMobile() {
                                     className="w-full sm:w-4/12 py-2 px-4  bg-[#4c75f0] text-white flex justify-between items-center sm:justify-center"
                                     onClick={() => handleToggle(8)}
                                 >
-                                    <span className="text-start"> Conseils pratiques pour vous préparer au monde du travail </span>
+                                    <span className="text-start">  {t.topic4}  </span>
                                     <span className="sm:ml-6  text-2xl    ">{open === 8 ? "▲" : "▼"}</span>
                                 </button>
 
@@ -405,32 +380,16 @@ export default function CarrierComponentMobile() {
                             {open === 8 && (
                                 <div className="bg-white/60 text-justify ">
                                     <div className="w-full  text-black space-y-2">
-                                        <p className="bg-[#b3c2ee] p-3">
-                                            <span className="text-[#4A62AA] ">■ </span> Choisissez méticuleusement votre profession ; développez et densifiez pendant et après vos études les compétences requises dans votre profession et dans votre branche d’activités.
-                                        </p>
-                                        <p className="bg-[#f1d9b6] p-3 ">
-                                            <span className="text-[#4A62AA] ">■</span>&nbsp; Constituez et développez un réseau relationnel pendant et après vos études.
-                                        </p>
-                                        <p className="bg-[#b3c2ee] p-3">
-                                            <span className="text-[#4A62AA]  ">■</span>&nbsp; &nbsp; &nbsp;  Apprenez à rédiger un CV et une lettre de motivation vendeurs et convaincants.
-
-                                        </p>
-                                        <p className="bg-[#f1d9b6] p-3">
-                                            <span className="text-[#4A62AA] ">■</span>&nbsp;&nbsp; Lisez impérativement le <b> « Guide du travailleur au Cameroun »   </b> et le  <b> « Code du travail »</b>. Informez-vous sur les prestations de la Caisse Nationale de Prévoyance Sociale (CNPS).
-                                        </p>
-                                        <p className="bg-[#b3c2ee] p-3 ">
-                                            <span className="text-[#4A62AA] ">■</span> &nbsp; &nbsp;Soyez persévérant et flexible pendant la recherche d’emploi.
-                                        </p>
-
-                                        <p className="bg-[#f1d9b6] p-3">
-                                            <span className="text-[#4A62AA]  ">■ </span> &nbsp; &nbsp;Et si vous étiez fait pour le milieu associatif ? N’hésitez pas à explorer cette voie et à vous engager dans une association qui œuvre pour une cause qui vous tient à cœur (y compris pendant vos études).
-                                        </p>
-                                        <p className="bg-[#b3c2ee] p-3 ">
-                                            <span className="text-[#4A62AA]  ">■</span>&nbsp; &nbsp; N’hésitez pas à envisager une reconversion professionnelle si vous en éprouvez l’envie ou à vous lancer dans l’entrepreneuriat si vous avez une idée originale répondant à un besoin ou identifiez une opportunité d’affaire.
-                                        </p>
-                                        <p className="bg-[#f1d9b6] p-3">
-                                            <span className="text-[#4A62AA]  ">■</span>&nbsp; &nbsp; Inscrivez-vous sur les sites web des cabinets de recrutement et sur les réseaux sociaux professionnels.
-                                        </p>
+                                        {t.tips.map((tip, index) => (
+                                            <p
+                                                key={index}
+                                                className={`${tip.bgColor} p-3`}
+                                            >
+                                                <span className="text-[#4A62AA] ml-10">■ </span>
+                                                <span dangerouslySetInnerHTML={{ __html: tip.text }} />
+                                            </p>
+                                        ))}
+                                       
 
                                     </div>
                                 </div>
@@ -447,7 +406,7 @@ export default function CarrierComponentMobile() {
                                     className="w-full sm:w-4/12 py-2 px-4  bg-[#4c75f0] text-white flex justify-between items-center sm:justify-center"
                                     onClick={() => handleToggle(18)}
                                 >
-                                    <span className="text-start"> Arnaques à l’emploi : les repérer et s’en prémunir             </span>
+                                    <span className="text-start"> {t.topic5}           </span>
                                     <span className="sm:ml-6  text-2xl    ">{open === 18 ? "▲" : "▼"}</span>
                                 </button>
 
@@ -457,27 +416,15 @@ export default function CarrierComponentMobile() {
                             {open === 18 && (
                                 <div className="bg-white/60 text-justify ">
                                     <div className="w-full  text-black space-y-2">
-                                        <p className="bg-[#b3c2ee] p-3">
-                                            <span className="text-[#4A62AA] ">■ </span> Méfiez-vous des offres trop attractives ou des annonces contenant une pléthore de fautes d’orthographe.
-                                        </p>
-                                        <p className="bg-[#f1d9b6] p-3 ">
-                                            <span className="text-[#4A62AA] ">■</span>&nbsp; Méfiez-vous d’un mail ou d’un appel proposant un emploi provenant d’un recruteur ou d'une agence de recrutement que vous n’avez jamais contacté(e).
-                                        </p>
-                                        <p className="bg-[#b3c2ee] p-3">
-                                            <span className="text-[#4A62AA]  ">■</span>&nbsp; &nbsp; &nbsp;  Renseignez-vous toujours sur l’existence légale de l’entreprise à l’origine de l’offre de stage ou d’emploi.
-
-                                        </p>
-                                        <p className="bg-[#f1d9b6] p-3">
-                                            <span className="text-[#4A62AA] ">■</span>&nbsp;&nbsp;Rendez-vous sur le site Internet du recruteur ou, si nécessaire, à son siège pour vous assurer que l’offre émane bien de lui.
-                                        </p>
-                                        <p className="bg-[#b3c2ee] p-3 ">
-                                            <span className="text-[#4A62AA] ">■</span> &nbsp; &nbsp;Ne versez aucune somme d’argent à un employeur potentiel quel que soit le motif évoqué pendant le processus de recrutement.
-                                        </p>
-
-                                        <p className="bg-[#f1d9b6] p-3">
-                                            <span className="text-[#4A62AA]  ">■ </span> &nbsp; &nbsp; Ne transmettez jamais vos données personnelles ou bancaires avant un entretien formel et la signature du contrat de travail.
-
-                                        </p>
+                                        {t.scam.map((tip, index) => (
+                                                    <p
+                                                        key={index}
+                                                        className={`${tip.bgColor} p-3`}
+                                                    >
+                                                        <span className="text-[#4A62AA] ml-10">■ </span>
+                                                        <span dangerouslySetInnerHTML={{ __html: tip.text }} />
+                                                    </p>
+                                                ))}
 
                                     </div>
                                 </div>
@@ -512,7 +459,7 @@ export default function CarrierComponentMobile() {
                                     className="w-full sm:w-4/12 py-2 px-4  bg-[#4c75f0] text-white flex justify-between items-center sm:justify-center"
                                     onClick={() => handleToggle(9)}
                                 >
-                                    <span>Références bibliographiques</span>
+                                    <span> {t.topic6}</span>
                                     <span className="sm:ml-6  text-2xl    ">{open === 9 ? "▲" : "▼"}</span>
                                 </button>
 
@@ -566,7 +513,7 @@ export default function CarrierComponentMobile() {
                                     className="w-full sm:w-4/12 py-2 px-4  bg-[#4c75f0] text-white flex justify-between items-center sm:justify-center"
                                     onClick={() => handleToggle(10)}
                                 >
-                                    <span className="flex-grow text-start">Liens utiles</span>
+                                    <span className="flex-grow text-start"> {t.intro}</span>
                                     <span className="text-2xl    ">{open === 10 ? "▲" : "▼"}</span>
                                 </button>
 
@@ -578,17 +525,17 @@ export default function CarrierComponentMobile() {
                                     <div className="w-full ">
                                         <div className="space-y-4 text-black">
 
-                                            <p>
-                                                <span className="text-[#4A62AA]">■ </span>  Ministère du travail et de la sécurité sociale
-                                                <br /> <a href="https://www.cnps.cm/index.php/fr/" className="text-blue-600" target="_blank" rel="noopener noreferrer"> <i>http://www.mintss.cm/m/web/</i></a>
-                                            </p>
+                                             {t.liens.map((tip, index) => (
+                                            <p
+                                                key={index}
 
-                                            <p>
-                                                <span className="text-[#4A62AA]">■ </span>  Organisation Internationale du Travail  <br /> <a href="https://www.ilo.org/global/lang--fr/index.htm" className="text-blue-600" target="_blank" rel="noopener noreferrer"> <i> https://www.ilo.org/global/lang--fr/index.htm</i></a>
+                                            >
+                                                <span className="text-[#4A62AA]">■ </span>
+                                                <span dangerouslySetInnerHTML={{ __html: tip.text }} />
+                                                <br />
+                                                <a href={tip.link} className="text-blue-600" target="_blank" rel="noopener noreferrer"> <i>{tip.link} </i></a>
                                             </p>
-                                            <p>
-                                                <span className="text-[#4A62AA]">■ </span> Caisse Nationale de Prévoyance Sociale, CNPS,  <br />    <a href="https://www.cnps.cm/index.php/fr/" className="text-blue-600" target="_blank" rel="noopener noreferrer"> <i> https://www.cnps.cm/index.php/fr/</i></a>
-                                            </p>
+                                        ))}
 
                                         </div>
 

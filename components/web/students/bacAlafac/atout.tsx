@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef } from "react";
+import React from "react";
 import Link from "next/link";
 
 
@@ -45,25 +45,25 @@ return (
           <div className="mt-1 text-black bg-white/70 p-8 space-y-4">
             <div>
               <p className="text-[#4A62AA] font-bold text-lg">
-                {t.bilinguismeTitle}
+             ■    {t.bilinguismeTitle}
               </p>
               <p>{t.bilinguismeText}</p>
             </div>
             <div>
               <p className="text-[#4A62AA] font-bold text-lg">
-                {t.lmdTitle}
+              ■   {t.lmdTitle}
               </p>
               <p>{t.lmdText}</p>
             </div>
             <div>
               <p className="text-[#4A62AA] font-bold text-lg">
-                {t.siegeTitle}
+            ■     {t.siegeTitle}
               </p>
               <p>{t.siegeText}</p>
             </div>
             <div>
               <p className="text-[#4A62AA] font-bold text-lg">
-                {t.ipesTitle}
+          ■       {t.ipesTitle}
               </p>
               <p>{t.ipesText}</p>
             </div>

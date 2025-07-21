@@ -14,7 +14,7 @@ export default function UseDepotCVService() {
 
   const {
  
-    headers
+    headers,locale
  
  
      } = UseLanguageService()
@@ -135,7 +135,8 @@ export default function UseDepotCVService() {
       if (elements.cv) {
         data.append("cv", elements.cv);
       } else {
-        alert("Veuillez sélectionner un fichier CV.");
+   
+        alert( locale === 'en' ? 'Please enter your CV ' : 'Veuillez sélectionner un fichier CV.');
         return;
       }
   
@@ -153,7 +154,10 @@ export default function UseDepotCVService() {
   
   
         const result = await response.json();
-        setSuccessMessage("🎉 Votre CV a été bien envoyé, Nous vous reconterons  !");
+           if (!response.ok) {
+        throw new Error(`HTTP error! status: Erreur serveur, veuillez réessayer plus tard`);
+      }
+        setSuccessMessage(  locale === 'en' ? '🎉 Your CV has been sent. We will contact you later  !' : '🎉 Votre CV a été bien envoyé, Nous vous reconterons  !' );
   
   
         console.log("Formulaire soumis avec succès:", result);

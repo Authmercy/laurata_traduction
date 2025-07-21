@@ -46,7 +46,7 @@ export default function ConcourComponent() {
                         <div className="flex-1  ">
                         </div>
                         <div className="flex-2 bg-white  text-black p-4 text-end"> <p className="">
-                               {t.concours.quote}
+                            {t.concours.quote}
                             <br />  <span className="text-[#4A62AA] font-semibold "> Paulo Coelho </span>
                         </p>
 
@@ -67,25 +67,25 @@ export default function ConcourComponent() {
                             <div className="w-full  py-4 px-8 text-black">
 
                                 <p className=" font-bold mb-4">
-                                 {t.concours.avant}
+                                    {t.concours.avant}
                                 </p>
                                 {t.concours.instructions.map((item, idx) => (
-              <p key={idx}>
-                <span className="text-[#4A62AA] font-bold">{['i)', 'ii)', 'iii)', 'iv)'][idx]}</span>&nbsp;&nbsp;{item}
-              </p>
-            ))}
+                                    <p key={idx}>
+                                        <span className="text-[#4A62AA] font-bold">{['i)', 'ii)', 'iii)', 'iv)'][idx]}</span>&nbsp;&nbsp;{item}
+                                    </p>
+                                ))}
 
-                               <p className="mt-4">
-              <span className="text-red-600 font-bold">{t.concours.warningTitle}<br /></span>
-              - {t.concours.warning1}
-            </p>
-            <p>
-              <span className="text-[#4A62AA] font-bold">-</span>
-              <span className="text-red-600"> {t.concours.warning2} </span>
-              {t.concours.warning3}
-            </p>
-            <p>- {t.concours.warning4}</p>
-          </div>
+                                <p className="mt-4">
+                                    <span className="text-red-600 font-bold">{t.concours.warningTitle}<br /></span>
+                                    - {t.concours.warning1}
+                                </p>
+                                <p>
+                                    <span className="text-[#4A62AA] font-bold">-</span>
+                                    <span className="text-red-600"> {t.concours.warning2} </span>
+                                    {t.concours.warning3}
+                                </p>
+                                <p>- {t.concours.warning4}</p>
+                            </div>
 
 
 
@@ -109,8 +109,8 @@ export default function ConcourComponent() {
 
                             </div>
                             <p className="text-lg text-center text-black p-2 bg-white">
-                                  {t.concours.calendarHint} <b className="underline text-[#4A62AA] ">
-                                    ici</b>.
+                                {t.concours.calendarHint} <b className="underline text-[#4A62AA] ">
+                                    {locale === 'en' ? 'here' : 'ici'}</b>.
                             </p>
                             <InstitutionsPublicTable></InstitutionsPublicTable>
 

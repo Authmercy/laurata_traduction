@@ -3,9 +3,10 @@ import { URLS } from "@/service/url";
 import Link from "next/link";
 import router from "next/router";
 import React, { useEffect, useRef, useState } from "react";
-import en from '../../../../i18/en/student/metier.json';
-import fr from '../../../../i18/fr/student/metier.json';
+import en from '@/i18/en/student/metier.json';
+import fr from '@/i18/fr/student/metier.json';
 import { useRouter } from "next/router";
+import UseLanguageService from "@/service/language_switch";
 
 type Metier = {
   id: number;
@@ -15,6 +16,12 @@ type Metier = {
 };
 
 export default function MetierSansDeboucheComponent() {
+   const {
+
+   headers
+
+
+    } = UseLanguageService()
   const [metiers, setMetier] = useState<Metier[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -29,10 +36,7 @@ export default function MetierSansDeboucheComponent() {
         url.searchParams.append("category", "NOFUTURE");
         const response = await fetch(url.toString(), {
           method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-            locale: "fr",
-          },
+          headers
         });
 
        

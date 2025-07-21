@@ -5,14 +5,17 @@ import Image from "next/image";
 import Navbar from "../navbar/navbar";
 import { useState } from "react";
 import FooterMobile from "../footer/footerEnd";
-
+import en from '@/i18/en/entreprise/Poster.json';
+import fr from '@/i18/fr/entreprise/Poster.json';
 
 export default function PosterMobile() {
   const handleClick = () => {
     router.push("/entreprise/edition");
   };
 
-
+    const router = useRouter();
+      const { locale } = router;
+      const t = locale === 'en' ? en : fr;
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobileMenuOpen2, setIsMobileMenuOpen2] = useState(false);
 
@@ -28,7 +31,7 @@ export default function PosterMobile() {
         />
         <div className="">
           <div className="justify-center p-2 text-center text-xl font-bold uppercase bg-[#414040] text-white">
-            <p>     POSTER UN STAGE </p>
+            <p>     {t.title} </p>
           </div>
 
 
@@ -44,7 +47,7 @@ export default function PosterMobile() {
               <div className="flex px-4 my-2  bg-white flex-col lg:flex-row flex-grow justify-center border-4 border-orange-700  gap-8 border-x-0 p-4 ">
 
                 <div className="">
-                  <p className="text-[#4A62AA] text-center  font-bold text-lg"> Trois principales raisons de déposer vos offres de stage sur notre plateforme  </p>
+                  <p className="text-[#4A62AA] text-center  font-bold text-lg"> {t.heading}  </p>
 
                 </div>
                 <div className="   text-black  " >
@@ -52,10 +55,10 @@ export default function PosterMobile() {
 
                   </div>
                   <div className="bg-[#facd6c] p-4     offerDetails text-center rounded-md flex-1">
-                    <p className=" font-bold  text-[#4A62AA]"> PUBLICATION GRATUITE</p>
-                    <p className="pt-2"> de vos offres de stage ou de premiers emplois</p> </div>
+                    <p className=" font-bold  text-[#4A62AA]">{t.reasons.free.title}</p>
+                    <p className="pt-2"> {t.reasons.free.text}</p></div>
                   <div className="bg-[#b1b3b9]/70 text-center      rounded-md   mt-2 p-4 flex-1">
-                    <p className="text-[#4A62AA] uppercase mt-1 font-bold ">réalisation des odd 4 & 10</p>
+                    <p className="text-[#4A62AA] uppercase mt-1 font-bold ">{t.reasons.contribute.title}</p>
                     <div className="flex flex-row  gap-8 justify-center">
                       <div>
                         <Image
@@ -86,11 +89,11 @@ export default function PosterMobile() {
                       </div>
 
                     </div>
-                    <p className="pt-2">En garantissant un accès transparent et équitable à vos offres de stage en ligne </p>
+                    <p className="pt-2">{t.reasons.contribute.text}</p>
                   </div>
                   <div className="bg-[#A87A38]/70 mt-2   text-white text-center p-4 rounded-md flex-1">
-                    <p className=" font-bold">VISIBILITÉ MAXIMALE ET ILLIMITÉE</p>
-                    <p className="pt-2">à vos offres de stage et de premiers emplois auprès de leurs cibles</p>
+                    <p className=" font-bold">{t.reasons.visibility.title}</p>
+                    <p className="pt-2">{t.reasons.visibility.text}</p>
 
 
                   </div>
@@ -100,14 +103,14 @@ export default function PosterMobile() {
                 <div className="bg-white pb-2 " >
 
                   <h1 className="bg-[#4A62AA] text-white text-center  mt-2 p-2  ">
-                    COMMENT FAIRE PUBLIER VOS OFFRES ?
+                        {t.how_to.title}
                   </h1>
-                  <p className="text-black m-2 mt-6"> <span className="text-[#4A62AA]  font-bold">1.</span> Envoyez votre annonce au format PDF à <span className="text-[#4A62AA]  font-bold"> info@laurata.com </span></p>
+                  <p className="text-black m-2 mt-6"> <span className="text-[#4A62AA]  font-bold">1.</span> {t.how_to.step1} <span className="text-[#4A62AA]  font-bold"> info@laurata.com </span></p>
 
-                  <p className="text-black m-2 "> <span className="text-[#4A62AA] font-bold">2.</span> Éditez vous-même votre annonce à l’aide du formulaire ci-dessous.</p>
+                  <p className="text-black m-2 "> <span className="text-[#4A62AA] font-bold">2.</span> {t.how_to.step2}</p>
                 </div>
                 <button onClick={handleClick} className="w-[75%]  bg-orange-500  text-white sm:w-[55%]  sm:ml-[20%] ml-[10%]  py-1   font-bold rounded-xl ">
-                  ÉDITER VOTRE OFFRE
+                 {t.title2}
                 </button>
                 <div>
 

@@ -3,9 +3,11 @@ import { URLS } from "@/service/url";
 import Link from "next/link";
 import router from "next/router";
 import React, { useEffect, useMemo, useState } from "react";
-import en from '../../../../i18/en/student/metier.json';
-import fr from '../../../../i18/fr/student/metier.json';
+
+import en from '@/i18/en/student/metier.json';
+import fr from '@/i18/fr/student/metier.json';
 import { useRouter } from "next/router";
+import UseLanguageService from "@/service/language_switch";
 
 type Jobsheet = {
   id: number;
@@ -25,7 +27,12 @@ type Jobsheet = {
 
 export default function MetierComponent() {
   const router = useRouter();
+ const {
 
+   headers
+
+
+    } = UseLanguageService()
   const { locale } = router;
   const t = locale === 'en' ? en : fr;
   const handleClick = (letter: string) => {
@@ -59,10 +66,7 @@ export default function MetierComponent() {
 
         const response = await fetch(url.toString(), {
           method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-            locale: "fr",
-          },
+          headers
         });
 
 

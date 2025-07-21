@@ -1,7 +1,8 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
-import metiersData from '@/public/data/metier.json'
+import en from '@/i18/en/student/metier.json';
+import fr from '@/i18/fr/student/metier.json';
 import Navbar from "../../navbar/navbar";
 import FooterMobile from "../../footer/footerEnd";
 type Jobsheet = {
@@ -21,6 +22,8 @@ type Jobsheet = {
 
 export default function MetierDetailleMobile() {
    const router = useRouter();
+     const { locale } = router;
+  const t = locale === 'en' ? en : fr;
       const [jobOffers, setJobsheets] = useState<Jobsheet[]>([]);
       const [filteredMetiers, setFilteredMetiers] = useState<any[]>([]);
       const [loading, setLoading] = useState(true);
@@ -75,7 +78,7 @@ export default function MetierDetailleMobile() {
           } ${isMobileMenuOpen2 ? "blur-sm " : ""
           } `}>
           <div className="justify-center p-2 text-center text-xl font-bold uppercase bg-[#9b6e0f] text-white">
-            <p>        FICHE MÉTIER - {letter}</p>
+            <p>        {t.jobSheets}  - {letter}</p>
           </div>
 
 

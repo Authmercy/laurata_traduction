@@ -32,10 +32,9 @@ export default function NavBarAccueil() {
 
                     <div className="flex justify-end items-center text-white gap-x-32">
                         <div className="flex items-center space-x-3">
-                            <Link href="/authentification/signup" className="hover:underline font-bold">S'inscrire</Link>
+                      <Link href="/authentification/signup" className="hover:underline font-bold">    {locale === 'en' ?  'Sign Up' : 'S\'inscrire ' }</Link>
                             <span>|</span>
-                            <Link href="/authentification/login" className="hover:underline font-bold">Se connecter</Link>
-                        </div>
+                            <Link href="/authentification/login" className="hover:underline font-bold">    {locale === 'en' ? 'Login':'Se connecter '  }</Link> </div>
                         <div className="flex justify-end">
                        <button
             onClick={() => changeLanguage(locale === 'en' ? 'fr' : 'en')}

@@ -1,78 +1,78 @@
 {
  
     "orientation": "Orientation",
-    "prepare": "PRÉPARER SON BACCALAURÉAT",
+    "prepare": "TIPS TO PREPARE FOR GCE EXAMS",
     "quote": {
-      "text": "S’attendre à obtenir un bon travail sans étudier, c’est comme s’attendre à gagner un marathon sans le courir.",
-      "author": "Albert Einstein"
+      "text": "There are no secrets to success. It is the result of preparation, hard work, and learning from failure.",
+      "author": " Colin Powell"
     },
     "intro": [
-      "L’élève qui a une méthode de révision efficace et optimise son temps de travail, réussira à coup sûr le baccalauréat.",
-      "Pour une préparation optimale au baccalauréat, l’élève :"
+      "Only those students who have an effective study method and who plan and optimize their study sessions are more likely to easier pass the GCE-A/OL exams than others.",
+      "The student who wants to pass his O/A-Level exam:"
     ],
     "sections": {
       "enClasse": {
-        "title": "En classe",
+        "title": "At school",
         "points": [
-          "   <b> Est assidu, attentif et participe activement  </b> aux cours dès le premier jour ;",
-          "   <b>     Ne sous-estime aucune matière   </b> <i> (le bonus d'une matière facultative peut permettre de relever votre note finale) ; </i>",
-          " <b>           Est toujours motivé et déterminé à apprendre.   </b>"
+          "   <b> Is diligent </b>, attentive and actively participates in classes from day one;",
+          "   <b>Doesn't underestimate </b> any subject",
+          " <b>Is always motivated</b> and determined to learn and succeed."
         ]
       },
       "aLaMaison": {
-        "title": "À la maison",
+        "title": "At home",
         "points": [
-          "<b>  Effectue ses révisions </b> sur la bases d'un calendrier de révision, au besoin réaménagé périodiquement, et qu'il respecte scrupuleusement dès la rentrée ;",
-          " <b> Résume jour après jour l'essentiel de chaque leçon pour chaque matière   à  l'aide de fiches de synthèse bien élaborées et structurées qu'il révise ensuite intelligemment. </b>"
+          "<b>Plans </b> his study sessions with a revision schedule, periodically adjusted if necessary, and which he scrupulously follow;",
+          " <b> Summarizes </b> on a daily basis each lesson for each subject with help of well-prepared and structured summary sheets which he then learns intelligently"
         ]
       },
       "avecCamarades": {
-        "title": "Avec ses camarades",
-        "text": "   <b>   Travaille en groupe et séexerce continuellement    à l'aide d'exercices résolus en classe ou d'anciennes épreuves <i>   voir Annales du Bac.   </i> </b>"
+        "title": "With his class mates",
+        "text": "   <b>Learn</b> in study groups and practise continuously using sample-tests in class or old papers"
       },
       "internet": {
         "title": "Internet",
-        "text": "   <b> Utilise Internet pour optimiser ses révisions,  </b>télécharger ou consulter les Annales d'anciennes épreuves et leur corrigés, densifier ses lectures et approfondir sa culture générale.<i> Consultez uniquement les sites aux contenus vérifiés ; évitez de perdre du temps sur les réseaux sociaux.</i>"
+        "text": "<b> Use Internet to optimize his study session </b> download or consult sample-tests and hold papers"
       },
       "sport": {
         "title": "Sport",
-        "text": "  <b> Prend soin de sa condition physique  </b> par une alimentation saine et équilibrée, des heures de repos appropriées et, par une pratique régulière de sport pour se détendre."
+        "text": "  <b> By eating a healthy and balanced diet; by having adequate and constant rest</b> (at leas t 7 hours of sleep per day) <b>practising sport</b> regularly to relax. <b>By avoiding alcohol, drugs and narcotics consumption</b>, which not only impair thinking, judgement and working ability but also, more importantly, damage health irreversibly."
       }
     },
     "astuces": {
-      "title": "Astuces pour les révisions",
-      "intro": "<b>  Identifie ton(tes) profil(s) d’apprentissage et ajuste ta méthode de révision </b> en conséquence :",
+      "title": "Tips for your study sessions",
+      "intro": "<b>Identify what kind of leaner you are </b> and adjust your study method accordingly:",
       "profils": [
         {
-          "label": "Profil visuel :",
-          "text": "tu apprends et mémorises plus facilement les contenus à l’aide de supports graphiques, schémas, vidéos, fiches de synthèse, etc."
+          "label": "Visually:",
+          "text": "you learn best with the help of graphics, diagrams, videos, summary sheets, etc."
         },
         {
-          "label": "Profil auditif :",
-          "text": "tu retiens plus facilement à l’oral, tu seras porté vers l’apprentissage par cœur ;"
+          "label": "Auditory:",
+          "text": "you learn best by listening; you will tend to learn by heart;"
         },
         {
-          "label": "Profil kinesthésique :",
-          "text": "tu as besoin de pratique pour comprendre et assimiler ;"
+          "label": "Kinesthetic:",
+          "text": "you need practice and do it yourself to understand and assimilate;"
         },
         {
-          "label": "Profil communicatif :",
-          "text": "tu apprends plus facilement en binôme ou en groupe."
+          "label": "Communicative:",
+          "text": " you learn more easily in pairs or groups."
         }
       ],
-      "conclusion": " <b>  Mets à contribution le maximum de canaux d’apprentissage possible à la fois : </b>  canal visuel, auditif, kinesthésique."
+      "conclusion": " <b>  Use as many learning channels as possible</b>  at once: visual, auditory, kinaesthetic."
     },
     "veilleExam": {
-      "title": "La veille et le jour de l’examen",
+      "title": "The day before and the day of the exam",
       "points": [
-        "Va tôt au lit après avoir rassemblé les effets à emporter le lendemain (pièce d’identité, calculatrice, stylos, etc.) ; NB : porte une tenue dans laquelle tu seras à ton aise ;",
-        "Le jour de l’examen, prends toutes les dispositions nécessaires pour être à l’heure dans la salle d’examen ; exécute à la lettre les instructions des surveillants ;",
-        "     Prends le temps de lire attentivement les énoncés de chaque épreuve, plusieurs fois si nécessaire.  Ensuite, traite sans précipitation les sujets en commençant par les plus faciles. ",
-        "Prévoir du temps pour relire ta copie afin d’éviter les fautes, erreurs de calcul, contresens, omissions, etc."
+        "─ Go to bed early after gathering documents and tools needed for the next day (National ID-Card, calculator, pens, etc.)",
+        "Important: wear something you are comfortable in;",
+        "On exam’s day, make sure to be at the exam’s place on time; follow the invigilators' instructions; take the time to read each paper carefully, several times if necessary. Then deal with the subjects without haste, starting with the easiest ones",
+        "N.B.: allow time to re-read your paper to avoid mistakes, miscalculations, misunderstandings, etc."
       ]
     },
     "references": {
-      "title": "Références bibliographiques",
+      "title": "References",
       "list": [
           {
                 "name": "      Jean-François Michel (2005).  ",
@@ -88,7 +88,7 @@
       ]
     },
     "liensUtiles": {
-      "title": "Liens utiles",
+      "title": "Useful links",
       "links": [
         {
           "name": "Cameroon GCE Board (GCEB)",

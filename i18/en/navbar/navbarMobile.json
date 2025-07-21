@@ -1,0 +1,45 @@
+ {
+    "menu": {
+      "students": "Students and graduates",
+      "companies": "Companies and organizations",
+      "institutions": "Higher education institutions",
+      "spotlight": "Focus On",
+      "news": "News",
+      "partners": "Partners",
+      "about": "About",
+      "switch_language": "English"
+    },
+    "links": {
+      "offresStage": "Explore Internships",
+      "formations": "Find a program ",
+      "concoursBourse": "exams & Scholarships",
+      "orientation": "Orientation",
+      "metier": "Professions",
+      "carrier": "Career",
+      "entrepreneuriat": "Entrepreneurship",
+      "employeur": "Featured Employer",
+      "classements": "Rankings",
+      "jpo": "Open Days & Announcements",
+      "institution": "Featured Institution",
+      "sondage_enquetes": "Surveys & Polls",
+      "femme": "Woman of Impact",
+      "parole_expert": "Experts Speak",
+      "service": "Services",
+      "poster": "Post an internship",
+      "expertise": "Request German SES Experts  ",
+      "talents": "Find a talent",
+      "promotion": "Promote your company",
+      "stage": "Guanrantee your students internships",
+      "referencer": "Get your programs listed",
+      "promotion_institution": "Promote your institution"
+    },
+    "auth": {
+      "login": "Login",
+      "signup": "Sign up"
+    },
+    "about": {
+      "presentation": "Presentation",
+      "legal": "Legal Notice",
+      "terms": "Terms of Service"
+    }
+  }

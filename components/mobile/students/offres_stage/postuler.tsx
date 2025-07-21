@@ -4,7 +4,9 @@ import Image from "next/image";
 import Navbar from "../../navbar/navbar";
 import { URLS } from "@/service/url";
 import FooterMobile from "../../footer/footerEnd";
-
+import en from '@/i18/en/student/internship.json';
+import fr from '@/i18/fr/student/internship.json';
+import UseLanguageService from "@/service/language_switch";
 
 export default function PostulerAuPostMobile() {
   const router = useRouter();
@@ -14,7 +16,15 @@ export default function PostulerAuPostMobile() {
   const [offerDetails, setOfferDetails] = useState<any>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobileMenuOpen2, setIsMobileMenuOpen2] = useState(false);
+  const { locale } = router;
+    const t = locale === 'en' ? en : fr;
 
+  const {
+
+    headers
+
+
+  } = UseLanguageService()
 
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -29,10 +39,7 @@ export default function PostulerAuPostMobile() {
         try {
           const response = await fetch(`${BACKEND_URL}/${id}`, {
             method: 'GET',
-            headers: {
-              'Content-Type': 'application/json',
-              'locale': 'fr',
-            },
+             headers,
           });
 
 
@@ -106,7 +113,7 @@ export default function PostulerAuPostMobile() {
           } ${isMobileMenuOpen2 ? "blur-sm " : ""
           } `}>
           <div className="justify-center p-2 text-center text-xl font-bold uppercase bg-[#9b6e0f] text-white">
-            <p>  POstuler au  poste </p>
+            <p>   {t.postuler} </p>
           </div>
 
 
@@ -142,13 +149,13 @@ export default function PostulerAuPostMobile() {
                                       {offerDetails.city}
                                     </p>
                                       <p className="">
-                                    <span>Publié le : </span> 25-06-08
+                                    <span>{t.searchResult.published} </span>   {offerDetails.parutions}
                                   </p>
                                   </div>
 
                   <div className="bg-white/70  p-4 mt-2">
                     <div className="mt-4 text-black">
-                      <h3 className="text-xl  text-center font-bold  text-[#9b6e0f]">Postuler </h3>
+                      <h3 className="text-xl  text-center font-bold  text-[#9b6e0f]">{t.searchDescription.Postuler} </h3>
                           {offerDetails.application ? ( 
                 offerDetails.application.map((degree: string, index: number) => (
                                             <p key={index}>{degree}</p>
@@ -165,14 +172,14 @@ export default function PostulerAuPostMobile() {
                    className={` px-6 py-1 transition-transform  duration-200 
           ${clicked ? 'bg-white text-[#4A62AA] border-[#4A62AA]' : 'bg-[#9b6e0f]  text-white hover:bg-gray-200  '}
    '`} >
-                    Nouvelle recherche
+              {t.searchResult.nexSearch} 
                   </button>
                   <button onClick={handleClick1} 
                  
                      className={` px-6 py-1 transition-transform  duration-200 
           ${clicked1 ? 'bg-white text-[#4A62AA] border-[#4A62AA]' : 'bg-[#2848a8]  text-white hover:bg-gray-200  '}
  '`} >
-                    Retour aux résultats
+                    {t.searchDescription.Retour} 
                   </button>
                 </div>
 

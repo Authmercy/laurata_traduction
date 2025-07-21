@@ -1,4 +1,4 @@
-
+"use client";
 import ButtonAccueil from "../buttons/buttonAccueil";
 import UseSondageService from "@/service/service_sondage";
 

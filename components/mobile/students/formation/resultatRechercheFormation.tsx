@@ -4,7 +4,8 @@ import { useRouter } from "next/router";
 import Navbar from "../../navbar/navbar";
 import FooterMobile from "../../footer/footerEnd";
 import ServiceFormationResult from "@/service/service_Formation_Result";
-
+import en from '@/i18/en/student/formation.json';
+import fr from '@/i18/fr/student/formation.json';
 
 export default function SearchResultsFormationMobile() {
 
@@ -77,6 +78,9 @@ handleClick
 
 
 
+  const { locale } = router;
+  const t = locale === 'en' ? en : fr;
+
  
   const handleSearch = () => {
     router.push("/students/formations");
@@ -101,7 +105,7 @@ handleClick
           } ${isMobileMenuOpen2 ? "blur-sm " : ""
           } `}>
           <div className="justify-center p-2 text-center text-xl font-bold uppercase bg-[#9b6e0f] text-white">
-            <p>         RÉSULTATS DE LA RECHERCHE</p>
+            <p>              {t.searchResult.result}</p>
           </div>
 
           <div onClick={toggleFilter}
@@ -124,7 +128,7 @@ handleClick
                         <input
                             type="text"
                             name="school"
-                            placeholder="Mot clé"
+                               placeholder={t.searchForm.keyword}
                             value={formValues.school}
                             onChange={handleInputChange}
                             className="border border-[#7b92d6] p-2"
@@ -132,8 +136,8 @@ handleClick
                         <input
                             type="text"
                             name="city"
-                            placeholder="Ville"
-                            value={formValues.city}
+                            
+                               placeholder={t.searchForm.city}
                             onChange={handleInputChange}
                             className="border border-[#7b92d6] p-2"
                         />
@@ -157,7 +161,7 @@ handleClick
                                             .filter(opt => formValues.degreeLevels?.values.includes(opt.key))
                                             .map(opt => opt.text)
                                             .join(', ')
-                                        : 'Diplôme'}
+                                        : t.searchForm.diplome}
                                 </span>
                                 <span className="text-xl">{open === 1 ? '▲' : '▼'}</span>
                             </div>
@@ -236,7 +240,7 @@ handleClick
                                 <span className="truncate text-sm max-w-[250px]" title={formValues.training?.values.map(key => training.find(s => s.key === key)?.text).join(', ')}>
                                     {formValues.training?.values.length
                                         ? training.filter(s => formValues.training?.values.includes(s.key)).map(s => s.text).join(', ')
-                                        : 'Formation'}
+                                        : t.searchResult.formation }
                                 </span>
                                 <span className="text-xl">{open === 2 ? "▲" : "▼"}</span>
                             </div>
@@ -263,7 +267,7 @@ handleClick
                                 <span className="truncate text-sm max-w-[250px]" title={formValues.studyFields?.values.map(key => studyFields.find(s => s.key === key)?.text).join(', ')}>
                                     {formValues.studyFields?.values.length
                                         ? studyFields.filter(s => formValues.studyFields?.values.includes(s.key)).map(s => s.text).join(', ')
-                                        : 'studyFields'}
+                                        : t.searchResult.domain }
                                 </span>
                                 <span className="text-xl">{open === 3 ? "▲" : "▼"}</span>
                             </div>
@@ -293,7 +297,7 @@ handleClick
                                 <span className="truncate text-sm max-w-[250px]" title={formValues.admission?.values.map(key => admission.find(f => f.key === key)?.text).join(', ')}>
                                     {formValues.admission?.values.length
                                         ? admission.filter(f => formValues.admission?.values.includes(f.key)).map(f => f.text).join(', ')
-                                        : 'Secteur'}
+                                         : t.searchResult.sector }
                                 </span>
                                 <span className="text-xl">{open === 4 ? "▲" : "▼"}</span>
                             </div>
@@ -321,7 +325,7 @@ handleClick
                                 <span className="truncate text-sm max-w-[250px]" title={formValues.disabilities?.values.map(key => disabilities.find(f => f.key === key)?.text).join(', ')}>
                                     {formValues.disabilities?.values.length
                                         ? disabilities.filter(f => formValues.disabilities?.values.includes(f.key)).map(f => f.text).join(', ')
-                                        : 'Handicap'}
+                               : t.searchResult.handicap}
                                 </span>
                                 <span className="text-xl">{open === 5 ? "▲" : "▼"}</span>
                             </div>
@@ -348,7 +352,7 @@ handleClick
                                 <span className="truncate text-sm max-w-[250px]" title={formValues.trainingMode?.values.map(key => trainingMode.find(s => s.key === key)?.text).join(', ')}>
                                     {formValues.trainingMode?.values.length
                                         ? trainingMode.filter(s => formValues.trainingMode?.values.includes(s.key)).map(s => s.text).join(', ')
-                                        : "Mode d'enseignement"}
+                                  : t.searchResult.mode}
                                 </span>
                                 <span className="text-xl">{open === 6 ? "▲" : "▼"}</span>
                             </div>
@@ -373,7 +377,7 @@ handleClick
                         <input
                             type="text"
                             name="enumFees"
-                            placeholder="Pension"
+                   placeholder={t.searchResult.fees}
                             value={formValues.enumFees}
                             onChange={handleInputChange}
                             className="border border-[#7b92d6] p-2"
@@ -383,7 +387,7 @@ handleClick
                         <input
                             type="text"
                             name="enumLanguage"
-                            placeholder="Langue d'enseignement"
+                         placeholder={t.searchResult.langage}
                             value={formValues.enumLanguage}
                             onChange={handleInputChange}
                             className="border border-[#7b92d6] p-2"
@@ -395,7 +399,7 @@ handleClick
                                 <span className="truncate text-sm max-w-[250px]" title={formValues.schoolType?.values.map(key => schoolTypes.find(s => s.key === key)?.text).join(', ')}>
                                     {formValues.schoolType?.values.length
                                         ? schoolTypes.filter(s => formValues.schoolType?.values.includes(s.key)).map(s => s.text).join(', ')
-                                        : "Statut de l'institution"}
+                                         : t.searchResult.statut}
                                 </span>
                                 <span className="text-xl">{open === 7 ? "▲" : "▼"}</span>
                             </div>
@@ -424,7 +428,7 @@ handleClick
                                              className={`px-6 py-2 flex items-center text-white rounded
     ${clicked ? 'bg-[#9b6e0f] text-white border-white' : 'bg-[#cf6a17]'}
   `} >
-                                    Appliquer les filtres
+                               {t.searchResult.filter}
                                 </button>
                             </div>
                         </div>
@@ -458,15 +462,18 @@ handleClick
             <div className="flex-grow ">
               {loading ? (
 
-                <div className=" text-2xl text-center"><p>Chargement en cours</p>
-
-
-                </div>
-              ) : (programs.length > 0 ? (
+                
+                                    <div className=" text-2xl text-center"><p></p>
+                                        <SkeletonLoader />
+                                        <SkeletonLoader />
+                                        <SkeletonLoader />
+                                    </div>
+                                ) : (
+                                  programs.length > 0 ? (
 
                 <div className="flex-grow ">
                   <p className=" text-white  text-center text-lg p-2 mb-4">
-                    <b>  {totalElements} Formation(s) </b>   trouvée(s)
+                     <b>  {totalElements}  </b>   {t.searchResult.found}
                   </p>
 
                 </div>
@@ -475,7 +482,7 @@ handleClick
               ) : (<div className="">
                 <div className="flex-grow  ">
                   <p className=" text-white  text-center text-lg p-2 mb-4">
-                    <b>  {totalElements} Formation(s) </b>   trouvée(s)
+                     <b>  {totalElements}  </b>   {t.searchResult.found}
                   </p>
 
                 </div>
@@ -532,7 +539,7 @@ programs.length > 0 ? (
                                   ←
                                 </button>
                                 <span className="text-sm text-white mt-2">
-                                  Page {pagination.pageNumber + 1} sur {pagination.totalPages}
+                                  Page {pagination.pageNumber + 1} {t.searchResult.sur} {pagination.totalPages}
                                 </span>
                                 <button
                                   onClick={handleNextPage}
@@ -559,7 +566,7 @@ programs.length > 0 ? (
                           onClick={handleSearch}
                           className="px-6 py-2 bg-[#ac911d] text-white font-bold"
                         >
-                          Nouvelle recherche
+                              {t.searchResult.nexSearch}
                         </button>
                       </div>
                     </>
@@ -567,16 +574,14 @@ programs.length > 0 ? (
                     <div>
                       <div className="p-8 border-2 bg-white  mt-10">
                         <p className="text-center text-black justify-center text-lg">
-                          Aucune offre ne correspond à vos critères de recherche. <br />
-                          Vous pouvez déposer votre CV pour recevoir les nouvelles annonces automatiquement !
-                        </p>
+                         {t.searchResult.noData}   </p>
                       </div>
                       <div className="mt-4 text-center">
                         <button
                           onClick={handleSearch}
                           className="px-6 py-2 bg-blue-600 text-white font-bold"
                         >
-                          Nouvelle recherche
+                          {t.searchResult.nexSearch}
                         </button>
                       </div>
                     </div>

@@ -1,67 +1,67 @@
 {
     "internshipTips": {
-        "title": "Conseils pour réussir son stage",
-        "intro": "Le stagiaire qui veut réussir son stage :",
-        "before": "AVANT LE DÉBUT DU STAGE",
+        "title": "TIPS FOR A SUCCESSFUL INTERNSHIP",
+        "intro": " ",
+        "before": "BEFORE YOU START",
         "blocks": {
-            "general": "Généralités",
-            "dress": "Code vestimentaire",
-            "interview": "Entretien d’embauche"
+            "general": "General",
+            "dress": "Dresscode",
+            "interview": "Interview"
         },
         "tips": {
-            "1": "S’informe sur l’entreprise, son secteur d’activité et ses concurrents sur Internet.",
-            "2": "Se renseigne sur les horaires de travail et de pauses lors de l’entretien.",
-            "3": "Évalue le trajet (en taxi, moto, etc.) entre son domicile et le lieu du stage pour éviter les retards.",
-            "4": "Demande à avoir un accès minimum au matériel de travail et si ce dernier est fourni par l’entreprise.",
-            "5": "S’informe sur l’existence ou non d’un code vestimentaire au sein de l’entreprise. Si oui, le respecte.",
-            "6": "S’exerce à se présenter en moins de 3 minutes, en synthétisant son parcours autour de quelques axes majeurs.",
-            "7": "Est ponctuel le jour de l’entretien et porte une tenue décente et formelle.",
-            "8": "Se munit de moyens de montrer son expérience, son savoir-faire et ses compétences ainsi que quelques références en lien avec ses engagements associatifs ou de candidatures idéales.",
-            "9": "Lorsqu’il ne comprend pas bien une expression ou un terme, il prend des notes et demande à son interlocuteur de la répéter."
+            "1": "Find out about the company, its sector of activity and its competitors on the Internet.",
+            "2": "Find out about working hours and breaks during the interview.",
+            "3": "Evaluate the journey time (by taxi, motorbike, etc.) between your home and the internship location to avoid delays.",
+            "4": "Ask what work equipment you will need and whether it will be provided by the company.",
+            "5": "Finds out whether the company has a dress code.",
+            "6": "Practice presenting yourself in under 3 minutes, summarizing your career around a few key points.",
+            "7": "Is punctual on the day of the interview and wears decent, formal clothing.",
+            "8": "Is able to show, without exaggeration, how his or her experience, skills and qualities will help him or her to carry out his or her duties and make him or her the ideal candidate.",
+            "9": "When unable to hear or understand a question or phrase, always politely asks the interviewer to repeat it."
         }
     },
     "internshipTipsDuringStage": {
-        "title": "PENDANT LE STAGE",
+        "title": "DURING THE INTERNSHIP",
         "blocks": {
-            "punctuality": "Ponctualité, retard, absence",
-            "appearance": "Habillement & Savoir-être",
-            "involvement": "Implication, engagement",
-            "company": "Connaissance de l’entreprise",
-            "notCanteen": "Pour éviter d’être cantonné au photocopieur ou à la machine à café",
-            "supervisor": "Entretien régulier avec l’encadreur",
-            "report": "Rédaction du rapport de stage",
-            "issues": "Abus, difficultés, etc."
+            "punctuality": "Punctuality and absence",
+            "appearance": "Clothing & Soft skills",
+            "involvement": "Dedication & Commitment",
+            "company": "Get to know the company",
+            "notCanteen": "To avoid being confined to the photocopier or coffee machine",
+            "supervisor": "Regular meetings with the supervisor",
+            "report": "Internship report",
+            "issues": "Abuses, etc."
         },
         "tips": {
-            "10": "Prend ses dispositions pour JAMAIS arriver en retard ou s’absenter sans autorisation préalable. (Lorsqu’il doit s’absenter pour une raison quelconque (maladie, deuil, etc.), il n’attend pas la veille pour en informer le responsable et demander l’autorisation d’absence mais le fait une semaine avant. Demande à avoir un accès minimum au matériel de travail et si ce dernier est fourni par l’entreprise.)",
-            "11": "Est toujours propre sur lui, habillé décemment et sans extravagance dans le respect du code vestimentaire.",
-            "12": "Est, en toutes circonstances, poli et courtois avec l’ensemble du personnel, du vigile au grand patron.",
-            "13": "Évite le vol, les intrigues et les ragots.",
-            "14": "Dès le premier jour, s’implique totalement dans l’exécution des tâches qui lui sont confiées. Muni d’un bloc-notes, il note toutes les informations nécessaires à l’exécution de celles-ci. Il prend des initiatives et pose des questions et n’hésite pas à les faire savoir lorsqu’il n’a pas bien compris une tâche ou des explications.",
-            "15": "Au bout de la 1ère semaine, il possède une parfaite connaissance de l’entreprise et ses produits et comprend l’organigramme et les différentes directions et leurs fonctions respectives.",
-            "16": "Indique dès le premier jour à son encadreur que son rapport de stage devra expliquer sa contribution à l’exécution d’une tâche quotidienne, hebdomadaire ou à la résolution d’une problématique précise, etc.",
-            "17": "Se montre disposé à apprendre et intéressé par de nouvelles tâches.",
-            "18": "Fait un point régulier avec son encadreur (chaque semaine ou après deux semaines) sur la progression de son apprentissage. Le cas échéant, il lui fait part des difficultés rencontrées.",
-            "19": "Élabore dès la première semaine un planning de rédaction et commence dès que possible.",
-            "20": "Informe l’encadreur dès la 1ère semaine de la date butoir pour le dépôt du rapport de stage à l’établissement.",
-            "21": "Évite le plagiat d’autres rapports sur Internet car il existe de nos jours des logiciels qui détectent les plagiats, allant du simple paragraphe à des pages entières. Pensez aux sanctions académiques voire pénales.",
-            "22": "Se réfère toujours en premier à son encadreur quelle que soit la nature des difficultés ou des soucis qu’il rencontre. S’il s’agit d’un sujet sensible, fais-le par écrit."
+            "10": "NEVER arrive late or be absent without prior permission. (When he/she has to be absent for any reason (illness, bereavement, etc.), does not wait until the day before to inform the person in charge and ask for permission to be absent, but does so a week beforehand.",
+            "11": "Is always clean-cut, dressed decently and without extravagance, in accordance with the dress code.",
+            "12": "EIs polite and courteous to all staff at all times, from security guards to senior managers.",
+            "13": "Avoids theft, intrigue and gossip.",
+            "14": "From day one, get fully involved in the tasks assigned to him/her. Carry a notepad and writes down all the information needed to carry out the tasks. He takes the initiative and asks questions, and doesn't hesitate to let others know when he hasn't fully understood a task or explanation.",
+            "15": "At the end of the first week, you have a perfect knowledge of the company and its products and services, the different departments and their respective functions.",
+            "16": "From the very first day, tell your supervisor that your placement report will have to explain your contribution to carrying out a daily or weekly task or to solving a specific problem. In this way, the company will be obliged to give you real, concrete assignments.",
+            "17": "Is willing to learn and interested in new tasks.",
+            "18": "Conduct regular reviews with his coach (every week or after two weeks) of his learning progress. If necessary, informs him/her of any difficulties encountered.",
+            "19": "Draw up a writing schedule in the 1st week and start as soon as possible.",
+            "20": "Informs the supervisor in the 1st week of the deadline for submitting the placement report to the establishment.",
+            "21": "Avoid plagiarising other reports on the Internet, as there is nowadays software that detects plagiarism, ranging from a single paragraph to entire pages. Be aware of academic and even criminal sanctions.",
+            "22": "Always refer to his supervisor first, whatever the nature of the difficulties or worries he encounters. If the subject is sensitive, put it in writing."
         }
     },
     "internshipTipsAfterStage": {
-     "title": "AVANT/À LA FIN DU STAGE ",
+     "title": "before/At the end of STAGE ",
         "blocks": {
-            "certificate": "Attestation de stage",
-            "networking": "Nouer des contacts",
-            "recruitment": "Recrutement",
-            "thanks": "Remerciements"
+            "certificate": "Certificate",
+            "networking": "Networking",
+            "recruitment": "Recruitment",
+            "thanks": "Thanks"
         },
         "tips": {
-            "23": "Se renseigne assez tôt (au moins 2 semaines avant la fin du stage) des formalités à remplir au sein de l’entreprise pour la délivrance de l’attestation de stage.",
-            "24": " Informe son encadreur et la direction du personnel suffisamment tôt de la date à laquelle il doit être en possession de cette attestation.",
-            "25": " Noue le maximum de contacts possibles. Ils pourront être d’une grande utilité dans la recherche d’un premier emploi.",
-            "26": "Se renseigne auprès de son encadreur ou des ressources humaines si un recrutement est envisagé à court ou moyen dans son domaine dans la structure. Fais part de son intérêt le cas échéant.",
-            "27": "Adresse ses remerciements à son encadreur ainsi qu’à l’équipe au sein de laquelle il a effectué son stage. Voire à la direction générale s’il pense que cela est justifié."
+            "23": "Find out in good time (at least 2 weeks before the end of the placement) about the formalities to be completed at the company before the certificate can be issued.",
+            "24": "Informs his supervisor and the personnel department in good time of the date by which he must receive his certificate.",
+            "25": "Make as many contacts as possible. They can be very useful when you're looking for your first job.",
+            "26": "Find out from your supervisor or human resources department whether recruitment is envisaged in the short or medium term in your field within the organization.",
+            "27": "Thank his/her supervisor and the team in which he/she completed his/her placement. He/she may even thank senior management if he/she feels this is justified."
         }
     }
 }

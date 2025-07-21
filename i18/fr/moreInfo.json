@@ -1,0 +1,31 @@
+ {
+    "sections": {
+      "students": {
+        "title": "Étudiants & Diplômés",
+        "points": [
+          "Consultez la liste centralisée et vérifiée des offres de stage et optimisez votre temps de recherche.",
+          "Astuces et conseils pratiques pour trouver et réussir son stage ou son premier emploi.",
+          "Guides d'orientation et de préparation à l'insertion professionnelle."
+        ],
+        "button": "Offres de stage"
+      },
+      "companies": {
+        "title": "Entreprises & Organisations",
+        "points": [
+          "Déposez gratuitement vos offres de stage et d'emploi pour en décupler la visibilité ; Obtenez des CV de diplômés talentueux.",
+          "Renforcez la présence numérique de vos produits, services, bourses, etc.",
+          "Communiquez sur votre secteur d'activité, vos métiers, vos faits majeurs."
+        ],
+        "button": "Promouvoir sa structure"
+      },
+      "institutions": {
+        "title": "Institutions du Supérieur",
+        "points": [
+          "Obtenez des opportunités de stages et premiers emplois à vos étudiants et diplômés.",
+          "Renforcez la présence numérique de vos formations par leur référencement dans l'annuaire des formations.",
+          "Envoi ciblé de votre offre de formations à nos abonnés élèves, étudiants et parents."
+        ],
+        "button": "Réferencer ses formations"
+      }
+    }
+  }

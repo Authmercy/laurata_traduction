@@ -1,19 +1,18 @@
 "use client";
 
-import { useRouter } from "next/router";
-import React, { ChangeEvent, FormEvent, useEffect, useState } from 'react';
-
+import React, { useEffect, useState } from 'react';
 
 import Navbar from "../../navbar/navbar";
 import { Brand } from "@/service/Brand";
 import FooterMobile from "../../footer/footerEnd";
 import ServiceInternshipFilter from "@/service/service_Internship";
 
+import en from '../../../../i18/en/student/internship.json';
+import fr from '../../../../i18/fr/student/internship.json';
+import { useRouter } from 'next/router';
 
 
 export default function OffreStageMobile() {
-
-
 
   const [clicked1, setClicked1] = useState(false);
   const [clicked2, setClicked2] = useState(false);
@@ -82,6 +81,8 @@ export default function OffreStageMobile() {
   } = ServiceInternshipFilter()
 
 
+  const { locale } = router;
+  const t = locale === 'en' ? en : fr;
   const [brand, setBrand] = useState<Brand[]>([]);
   useEffect(() => {
     const fetchsetBrand = async () => {
@@ -122,7 +123,7 @@ export default function OffreStageMobile() {
             } ${isMobileMenuOpen2 ? "blur-sm " : ""
             } `}>
             <div className="justify-center p-2 text-center text-xl font-bold uppercase bg-[#9b6e0f] text-white">
-              <p>Offres de stage</p>
+              <p> {t.title}</p>
             </div>
             <form onSubmit={handleSearch}>
 
@@ -141,7 +142,7 @@ export default function OffreStageMobile() {
 
                     className="w-8 h-5 accent-[#0842f0] rounded-md border-2"
                   />
-                  <p className="text-white ml-2 font-bold">Je cherche un stage</p>
+                  <p className="text-white ml-2 font-bold"> {t.searchForm.internship}</p>
                 </button>
                 <button
                   type="button"
@@ -156,7 +157,7 @@ export default function OffreStageMobile() {
 
                     className="w-8 h-5 accent-[#0842f0] rounded-md border-2"
                   />
-                  <p className="text-white text-start  ml-2 font-bold">Je cherche un premier emploi </p>
+                  <p className="text-white text-start  ml-2 font-bold"> {t.searchForm.firstJob} </p>
                 </button>
 
               </div>
@@ -165,8 +166,7 @@ export default function OffreStageMobile() {
                 <input
                   type="text"
                   name="keywords"
-                  placeholder="Mot clé"
-                  id="keywords"
+                  placeholder={t.searchForm.keyword}
                   value={filters.keywords}
                   onChange={handleChange}
                   className="bg-white/70  placeholder-[#4A62AA] required  p-2 px-6 "
@@ -180,7 +180,7 @@ export default function OffreStageMobile() {
                   <span className="truncate text-sm max-w-[250px]" title={selectedSectors.map(k => foas.find(f => f.key === k)?.text).join(', ')}>
                     {selectedSectors.length
                       ? foas.filter(f => selectedSectors.includes(f.key)).map(f => f.text).join(', ')
-                      : 'Secteur'}
+                      :  t.searchForm.sector}
                   </span>
                   <span className="text-xl">{open === 1 ? "▲" : "▼"}</span>
                 </div>
@@ -212,7 +212,7 @@ export default function OffreStageMobile() {
                   <span className="truncate  text-sm max-w-[250px]" title={selectedLevels.map(k => degreeLevels.find(d => d.key === k)?.text).join(', ')}>
                     {selectedLevels.length
                       ? degreeLevels.filter(d => selectedLevels.includes(d.key)).map(d => d.text).join(', ')
-                      : 'Niveau'}</span>
+                      : t.searchForm.level}</span>
                   <span className="text-xl">{open === 2 ? "▲" : "▼"}</span>
                 </div>
                 {open === 2 && (
@@ -240,7 +240,7 @@ export default function OffreStageMobile() {
                   <span className="truncate ">
                     {selectedDuration
                       ? durations.find(d => d.key === selectedDuration)?.text
-                      : 'Durée'}
+                      : t.searchForm.duration}
                   </span>
                   <span className="text-xl">{open === 3 ? "▲" : "▼"}</span>
                 </div>
@@ -269,7 +269,7 @@ export default function OffreStageMobile() {
                   <span className="truncate text-sm max-w-[250px]" title={selectedOrgTypes.map(k => status.find(s => s.key === k)?.text).join(', ')}>
                     {selectedOrgTypes.length
                       ? status.filter(s => selectedOrgTypes.includes(s.key)).map(s => s.text).join(', ')
-                      : 'Employeur'}
+                      : t.searchForm.employer}
                   </span>
                   <span className="text-xl">{open === 4 ? "▲" : "▼"}</span>
                 </div>
@@ -308,7 +308,7 @@ export default function OffreStageMobile() {
                         .filter(c => selectedContracts.includes(c.key))
                         .map(c => c.text)
                         .join(', ')
-                      : 'Contrat'}
+                      :  t.searchForm.contract}
 
                   </span>
                   <span className="text-xl">{open === 5 ? "▲" : "▼"}</span>
@@ -382,7 +382,7 @@ export default function OffreStageMobile() {
                   <span className="truncate ">
                     {selectedPublication
                       ? parutions.find(p => p.key === selectedPublication)?.text
-                      : 'Publication'}
+                      :  t.searchForm.publication}
                   </span>
                   <span className="text-xl">{open === 6 ? "▲" : "▼"}</span>
                 </div>
@@ -414,7 +414,7 @@ export default function OffreStageMobile() {
                 <input
                   type="text"
                   name="city"
-                  placeholder=" Ville"
+                 placeholder={t.searchForm.city}
                   className="border bg-white/70 0    p-2 px-4  placeholder-[#4A62AA]  border-[#7b92d6] "
                   value={filters.city}
 
@@ -446,7 +446,7 @@ export default function OffreStageMobile() {
                       }
          ] '`}
                   >
-                    Lancer ma recherche
+            {t.searchForm.submit}
                   </button>
                 </div>
 

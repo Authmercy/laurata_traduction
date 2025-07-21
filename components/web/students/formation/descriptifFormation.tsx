@@ -3,8 +3,8 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import ServiceFormationDetail from "@/service/service_Formation_Descriptif";
-import en from '../../../../i18/en/student/formation.json';
-import fr from '../../../../i18/fr/student/formation.json';
+import en from '@/i18/en/student/formation.json';
+import fr from '@/i18/fr/student/formation.json';
 export default function DetailDescriptifFormation() {
   const router = useRouter();
   const { id } = router.query;
@@ -175,7 +175,7 @@ export default function DetailDescriptifFormation() {
                 
               </div>
               <div id="cout" className="mb-4">
-                <h4 className="uppercase">Pension</h4>
+                <h4 className="uppercase">{t.searchDescription.fees}</h4>
                 <p className="text-black ">{formationData.fees.text}</p>
 
                                 {Array.isArray(formationData.fees.categories) && formationData.fees.categories.length > 0 ? (

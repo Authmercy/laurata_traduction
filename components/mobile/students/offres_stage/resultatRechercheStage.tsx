@@ -78,10 +78,8 @@ export default function SearchResultsMobile() {
   } = ServiceInternshipResult()
 
 
-
-
   const { locale } = router;
-  const t = locale === 'en' ? en : fr;
+    const t = locale === 'en' ? en : fr;
 
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);

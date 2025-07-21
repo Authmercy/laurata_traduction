@@ -8,7 +8,7 @@ import Bandeau from "../Ads/FooterPartenaire";
 
 export default function WelcomePage() {
     const router = useRouter();
-   
+  
     return (
         <div className="relative h-screen w-screen bg-cover bg-center bg-no-repeat "
             style={{ backgroundImage: "url('/images/background.png')" }}>

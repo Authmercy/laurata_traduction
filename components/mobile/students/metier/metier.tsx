@@ -1,10 +1,11 @@
 "use client";
-import router from "next/router";
+import router, { useRouter } from "next/router";
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import Navbar from "../../navbar/navbar";
 import { URLS } from "@/service/url";
 import FooterMobile from "../../footer/footerEnd";
-
+import en from '@/i18/en/student/metier.json';
+import fr from '@/i18/fr/student/metier.json';
 
 type Jobsheet = {
   id: number;
@@ -21,7 +22,10 @@ type Jobsheet = {
 
 };
 export default function MetierComponentMobile() {
+const router = useRouter();
 
+  const { locale } = router;
+  const t = locale === 'en' ? en : fr;
   const [jobsheet, setJobsheet] = useState<Jobsheet[]>([]);
  
    const [loading, setLoading] = useState(true);
@@ -88,7 +92,7 @@ export default function MetierComponentMobile() {
           } ${isMobileMenuOpen2 ? "blur-sm " : ""
           } `}>
           <div className="justify-center p-2 text-center text-xl font-bold uppercase bg-[#9b6e0f] text-white">
-            <p>             Fiches métiers</p>
+            <p>             {t.jobSheets}</p>
           </div>
 
 
@@ -98,7 +102,7 @@ export default function MetierComponentMobile() {
           >
             <div className="mt-6 bg-white/70 text-black p-4 w-full flex-grow">
               <p>
-                Cliquez sur les lettres pour consulter les fiches métiers s'y rapportant.
+                {t.jobSheetIntro} 
               </p>
               <div className="flex flex-row mt-4 gap-1">
 

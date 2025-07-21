@@ -3,9 +3,10 @@ import { URLS } from "@/service/url";
 import Link from "next/link";
 import router from "next/router";
 import React, { useEffect, useRef, useState } from "react";
-import en from '../../../../i18/en/student/metier.json';
-import fr from '../../../../i18/fr/student/metier.json';
+import en from '@/i18/en/student/metier.json';
+import fr from '@/i18/fr/student/metier.json';
 import { useRouter } from "next/router";
+import UseLanguageService from "@/service/language_switch";
 
 
 type Metier = {
@@ -16,6 +17,12 @@ type Metier = {
 };
 
 export default function MetierPorterComponent() {
+   const {
+
+   headers
+
+
+    } = UseLanguageService()
   const [metiers, setMetier] = useState<Metier[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -30,10 +37,7 @@ export default function MetierPorterComponent() {
         url.searchParams.append("category", "PROMISING");
         const response = await fetch(url.toString(), {
           method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-            locale: "fr",
-          },
+          headers
         });
 
        

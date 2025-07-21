@@ -22,7 +22,7 @@ export default function SignInComponent() {
 
 elements,
 
-open,
+
 
 
   } = UseRegistrationService()

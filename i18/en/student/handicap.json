@@ -1,0 +1,219 @@
+{
+    "orientation": "ACADEMIC ADVISING",
+    "title": "STUDY WITH DISABILITIES",
+    "quote": "Everybody is a genius. But if you judge a fish by its ability to climb a tree, it will live its whole life believing that it is stupid. ",
+    "quoteAuthor": "Albert Einstein",
+    "paragraph1": " Over the last two decades, the Cameroonian State has adopted an arsenal of legal texts to facilitate and guarantee access to higher education for students with disabilities.",
+    "paragraph2": "Although much remains to be done, particularly in terms of accessibility to buildings, availability of specialized teachers, development of appropriate teaching and learning materials (books in Braille or sign language, etc.), processing of requests for exemptions and other waivers, extension of exemptions from university fees to PHEIs, etc., the following major advances should be noted, which have contributed to an increase in the number of students with disabilities in Cameroonian state universities over the years.",
+  
+
+
+  "handicapTitle": "Legal Measures towards students with disabilities",
+  "rows": [
+    {
+      "title": "Admission",
+      "content": [
+        {
+          "boldText": " ",
+          "normalText": "A student's disability should not be a reason for rejection for admission to a higher education institution or ordinary training centers;"
+        }
+      ]
+    },
+    {
+      "title": "Access to infrastructures & buildings",
+      "content": [
+        {
+          "boldText": " ",
+          "normalText": "Obligation of public institutions to comply in order to accommodate students with disabilities: integration of the disability approach in the construction of buildings, public buildings, etc."
+        }
+      ]
+    },
+    {
+      "title": "Financial aid",
+      "content": [
+        {
+          "boldText": " ",
+          "normalText": "Effective implementation of full or partial exemption from university fees in state universities;"
+        },
+        {
+          "boldText": " ",
+          "normalText": "Taking into account the disability approach in the awarding of scholarships for academic excellence;"
+        },
+        {
+          "boldText": " ",
+          "normalText": "Granting of subsidies for the purchase of didactic equipment appropriate to special educational needs;"
+        }
+      ]
+    },
+    {
+      "title": "Accommodation",
+      "content": [
+        {
+          "boldText": " ",
+          "normalText": "Prioritizing disabled people in the allocation of student accommodation;"
+        }
+      ]
+    },
+    {
+      "title": "Employment in the public service",
+      "content": [
+        {
+          "boldText": " ",
+          "normalText": "Age dispense in administrative competitions for recruitment to public jobs; For equal qualifications, priority must be given to the disabled person."
+        }
+      ]
+    }
+  ],
+"usefulInfoTitle": "Good to know",
+  "exemptionInfo": {
+    "bold": "To benefit from exemption from university fees, ",
+    "text": "disabled students must apply to the Rector. Contact the Centre des Œuvres Universitaires at your university for more information on the assistance available for your disability and the procedure to follow to benefit from it."
+  },
+  "distanceLearning": {
+    "bold": "E-learning ",
+    "text": " is an ideal solution for people with motor disabilities to overcome travel difficulties."
+  },
+  "disabilityCertification": {
+    "bold": "The disability is established by a general practitioner",
+    "text": " of the public administration in a Special Medical Certificate and materialised by the National Invalidity Card, the application for which is submitted to the Regional Delegation of Social Affairs of the place of residence.",
+    "italic": "(Arrêté N°1011/MINAS du 14 août 2018 fixant les modalités d'établissement et de délivrance de la carte nationale d'invalidité, Art.5)."
+  },
+  "ipesExemption": {
+    "bold": "Unfortunately, the exemption from university fees does not yet apply to PHEIs.",
+    "text": " Each has its own policy in this area."
+  },
+
+    "content4": {
+        "title": "Useful addresses",
+        "paragraph1": " "
+    },
+    "resources": [
+    {
+      "title": "Ministry of Social Affairs",
+      "description": " ",
+      "location": "Yaoundé, behind the National Museum (old Presidency)",
+      "website": {
+        "url": "http://www.minas.cm/fr/",
+        "text": "http://www.minas.cm/fr/"
+      }
+    },
+    {
+      "title": "The National Rehabilitation Centre for People with Disabilities (NRCPD)",
+      "description": "Mission: Implement the government's policy on the rehabilitation of people with disabilities, provide the medico-social care of PWD’s, training and socio-professional conversion of PWD’s, promoting research to improve the intervention in rehabilitation, cooperating with other national and foreign centres for rehabilitation of PWD’s as well as organization of humanitarian associations.",
+      "location": "Yaoundé, Étoug-Ébé."
+    },
+    {
+      "title": "Plateforme Inclusive Society For Persons With Disabilities",
+      "description": "National Network of Organisations for the Promotion and Inclusion of People with Disabilities: a platform bringing together nearly 90 associations, including the Coordination of Associations of Students with Disabilities in Cameroonian Universities (CAEHUCAM);",
+      "location": "Yaoundé, quartier Biyem-assi, montée des Sœurs.",
+      "phone": "(+237) 242 161 044 – 674 978 761",
+      "website": {
+        "url": "https://plateformeinclusivesociety.org/",
+        "text": "https://plateformeinclusivesociety.org/"
+      }
+    },
+    {
+      "title": "PROMHANDICAM-Association",
+      "description": "Œuvre sociale privée pour la promotion des personnes handicapées au Cameroun.",
+      "location": "Yaoundé, quartier Mimboman, Rond-point petit marché.",
+      "phone": "(+237) 699 886 762",
+      "website": {
+        "url": "http://promhandicam-asso.org/",
+        "text": "http://promhandicam-asso.org/"
+      }
+    },
+    {
+      "title": "REHABILITATION INSTITUTE FOR THE BLIND IN BUEA",
+      "location": "Along Buea-Mutengene Highway.",
+      "phone": "(+237) 677 155 481"
+    },
+    {
+      "title": "CENTRE ORCHIDÉE HOME",
+      "description": "Association à but non lucratif reconnue d'utilité publique et, promotrice entre autres, d'un Centre de prise en charge d'enfants autistes mais également de l'Institut Supérieur de Psychopédagogie Appliquée (ISPPA) qui propose une formation de Licence Pro en Éducation Spécialisée.",
+      "location": "Bonamoussadi, Douala.",
+      "website": {
+        "url": "https://orchideehome.org/",
+        "text": "https://orchideehome.org/"
+      }
+    }
+  ],
+    "content5":"Fundamental Legal Texts ",
+     "text": [
+       
+        {
+      
+            "text": "If you are a future student with a disability, and in case you haven't done so yet, take a close look at the regulations framework below to find out about your rights and the obligations imposed on higher education institutions with regard to inclusion and support."
+        },
+          
+        {
+            "bold": "Law No. 2010 / 002 of 13 April 2010",
+            "text": " on the protection and promotion of persons with disabilities;"
+        },
+          
+
+        {
+            "bold": "Decree No. 2018/8233 IPM of 28 July 2018 ",
+            "text": "fixing the procedures for the application of law No. 2010/002 of 13 April 2010 on the protection and promotion of persons with disabilities in Cameroon;"
+        },
+          
+
+        {
+            "bold": "Joint Decision No.1/MINSANTE/MINAS of 13 August 2018",
+            "text": "fixing modalities of the establishment and issuance of a Special Medical Certificate;"
+        },
+          
+
+        {
+            "bold": "Order No. 040/PM of 19 May 2022",
+            "text": "to lay down terms and conditions for granting age exemption to persons with disabilities during competitive examinations and recruitment into public service;"
+        },
+          
+
+        {
+            "bold": " ",
+            "text": "Please contact us for the Compendium of Legal Texts on the Promotion and Protection of the Rights of Persons with Disabilities and a non-exhaustive list of occupations for persons with disabilities classified by type of disability."
+        },
+          
+        {
+            "bold": "  ",
+            "text": " "
+        }
+          
+
+       
+    ],
+    "content6": "References",
+    "references": [
+       
+        {
+            "authors": "Gabriel Ondoua Abah, (2002).",
+            "title": "Livre blanc sur la condition des personnes handicapées au Cameroun. ",
+            "publisher": "Presses universitaires d’Afrique."
+        },
+          
+        {
+            "authors": "Rosine Ntsama, (2002).  ",
+            "title": " Les jeunes et la gest ion du handicap en république du Cameroun. Entre modernité et tradition.",
+            "publisher": "Paris, Éditions L’Harmattan. In Jeunesse et discrimination, p.183-199, Presses universitaires de Perpignan."
+        },
+          
+        {
+            "authors": "Monique Amor Ndjabo, (2021). ",
+            "title": " Le handicap moteur dans la ville de Yaoundé : trajectoires et expériences de vie. ",
+            "publisher": "Paris, Éditions L’Harmattan."
+        },
+          
+        {
+            "authors": "Marie-Thérèse Mengue, (2021).",
+            "title": " Les handicaps e n contexte africain. De l’éthique aux pratiques. ",
+            "publisher": "Presses de l’UCAC."
+        },
+          
+      
+        {
+          
+            "authors": " Legal framework for the protection of the rights and promotion of persons with disabilities."
+        }
+    ]
+  
+}

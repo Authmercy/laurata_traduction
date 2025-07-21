@@ -5,5 +5,11 @@
     "orientation": "Orientation",
     "career": "CARRIÈRE",
     "featuredEmployer": "Employeur à la une",
-    "services": "Services"
+    "services": "Services",
+
+      "post": "Poster un stage",
+      "talent": "Trouver des talents",
+      "expert": "Experts allemands du SES",
+      "promote": "Promouvoir sa structure"
+  
   }

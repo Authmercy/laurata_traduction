@@ -309,7 +309,7 @@ export default function CursusSupComponent() {
                                 {open === 5 && (
                                     <div className="bg-white/80 p-4">
                                         <div className="w-full">
-                                            <p dangerouslySetInnerHTML={{ __html: t.stressManagement.intro }}></p>
+                                            <p dangerouslySetInnerHTML={{ __html: t.stressManagement.intro }} />
 
                                             <p className="font-bold mt-2">
                                                 {t.stressManagement.combatTitle}
@@ -330,7 +330,7 @@ export default function CursusSupComponent() {
                                                 </div>
                                             </div>
 
-                                            {/* Stressors Section */}
+                                      
                                             <div className="mt-2 p-2 grid grid-cols-[1fr_3fr] gap-8">
                                                 <div className="font-bold text-start">
                                                     {t.stressManagement.stressors.title}
@@ -345,7 +345,7 @@ export default function CursusSupComponent() {
                                                 </div>
                                             </div>
 
-                                            {/* Reactions Section */}
+                                        
                                             <div className="mt-2 bg-[#becbf3] p-2 grid grid-cols-[1fr_3fr] gap-8">
                                                 <div className="font-bold text-start">
                                                     {t.stressManagement.reactions.title}

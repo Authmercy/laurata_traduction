@@ -1,12 +1,13 @@
 "use client";
 import Link from "next/link";
-import router from "next/router";
+import { useRouter } from "next/router";
 import React, { useEffect, useRef, useState } from "react";
 import BackToTopButton from "@/components/buttonTop";
 import Navbar from "../../navbar/navbar";
 import FooterMobile from "../../footer/footerEnd";
 import { URLS } from "@/service/url";
-
+import en from '@/i18/en/student/metier.json';
+import fr from '@/i18/fr/student/metier.json';
 type Metier = {
   id: number;
   category: string;
@@ -15,6 +16,10 @@ type Metier = {
 };
 
 export default function MetierSansDeboucheComponentMobile() {
+      const router = useRouter();
+
+    const { locale } = router;
+    const t = locale === 'en' ? en : fr;
   const [metiers, setMetier] = useState<Metier[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -73,7 +78,7 @@ export default function MetierSansDeboucheComponentMobile() {
           <div className="justify-center p-2 text-center text-xl font-bold uppercase bg-[#9b6e0f] text-white">
 
             <p>
-              Métiers sans débouchés
+     {t.jobsWithoutProspects}
             </p>
           </div>
 
@@ -84,8 +89,7 @@ export default function MetierSansDeboucheComponentMobile() {
           >
             <p>
 
-              De nombreux secteurs et métiers n’offrent quasiment pas d’opportunités d’emplois au Cameroun car inexistants ou très peu développés : énergie nucléaire, nanotechnologies, beaux-arts, etc. Pensez-y avant de choisir votre métier, en particulier si vous envisagez de travailler au Cameroun après vos études.
-            </p>
+          {t.jobsWithoutProspectsIntro}   </p>
 
 
           </div>

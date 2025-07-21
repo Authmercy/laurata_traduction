@@ -68,24 +68,24 @@ export default function CarrierComponent() {
 
                                 <div className="w-full">
                                     <div className="space-y-4 bg-white/80">
-                              
-                                        <p className="bg-[#f1d9b6] p-3  py-2" dangerouslySetInnerHTML={{ __html: t.content1.p1 }}/>
-                                        <p className=" p-3  py-2" dangerouslySetInnerHTML={{ __html: t.content1.p2 }}/>
+
+                                        <p className="bg-[#f1d9b6] p-3  py-2" dangerouslySetInnerHTML={{ __html: t.content1.p1 }} />
+                                        <p className=" p-3  py-2" dangerouslySetInnerHTML={{ __html: t.content1.p2 }} />
 
 
-                                       
-                                        <p className="bg-[#f1d9b6] p-3 py-2" dangerouslySetInnerHTML={{ __html: t.content1.p3 }}/>
-                                        <p className=" p-3 py-2" dangerouslySetInnerHTML={{ __html: t.content1.p4 }}/>
+
+                                        <p className="bg-[#f1d9b6] p-3 py-2" dangerouslySetInnerHTML={{ __html: t.content1.p3 }} />
+                                        <p className=" p-3 py-2" dangerouslySetInnerHTML={{ __html: t.content1.p4 }} />
                                         <p className="bg-[#f1d9b6] p-3 py-2">
                                             <span dangerouslySetInnerHTML={{ __html: t.content1.p5 }} />
 
-                                            <p dangerouslySetInnerHTML={{ __html: t.content1.p6 }}/>
+                                            <p dangerouslySetInnerHTML={{ __html: t.content1.p6 }} />
 
-                                    
+
                                         </p>
                                         <p className=" p-3 py-2">
-                                            <b className="text-[#4A62AA]">10 entreprises les plus performantes en 2021</b> (chiffre d’affaires en milliards de FCFA)
-                                            <span dangerouslySetInnerHTML={{ __html: t.content1.p7 }}/>
+
+                                            <span dangerouslySetInnerHTML={{ __html: t.content1.p7 }} />
                                             <p>
                                                 <b> 1.  </b> SNH (788,3) ;
                                                 <b> 2.  </b>  ENEO (394,5) ;
@@ -141,10 +141,10 @@ export default function CarrierComponent() {
                                     <div className="space-y-4">
 
                                         <p>
-                                        {t.content2.p1} </p>
+                                            {t.content2.p1} </p>
 
                                         <p>
-                                          {t.content2.p3}
+                                            {t.content2.p3}
                                         </p>
                                         <table className="table-auto border-collapse border  shadow-lg w-full">
                                             <thead>
@@ -164,24 +164,24 @@ export default function CarrierComponent() {
                                                     <td className="  px-4 py-2  text-center">
                                                         <span className="font-bold  text-[#4A62AA]">
                                                             <p>   1.</p>
-                                                          {t.content2.r1}
+                                                            {t.content2.r1}
                                                         </span>
                                                     </td>
                                                     <td className="   px-4 py-2 ">
                                                         <p>         {t.content2.p3}
                                                         </p>
-                         <p>         {t.content2.p4}
+                                                        <p>         {t.content2.p4}
                                                         </p>
 
                                                     </td>
                                                     <td className="  px-4 py-2 ">
-                                                          <p>         {t.content2.p5}
+                                                        <p>         {t.content2.p5}
                                                         </p>
                                                         <p>  <i>  {t.content2.p6}</i>
                                                         </p>
                                                     </td>
                                                     <td className="   px-4 py-2 ">
-                                                    {t.content2.p7} </td>
+                                                        {t.content2.p7} </td>
 
 
                                                 </tr>
@@ -190,7 +190,7 @@ export default function CarrierComponent() {
                                                     <td className="   px-4 py-2 text-center">
                                                         <span className="font-bold text-center  text-[#4A62AA]">
                                                             <p>   2.</p>
-                                                           {t.content2.r2}
+                                                            {t.content2.r2}
                                                         </span>
                                                     </td>
                                                     <td className="   px-4 py-2 text-left">
@@ -205,14 +205,14 @@ export default function CarrierComponent() {
                                                             <span className="text-[#A87A38]">  ► </span> {t.content2.p11}
                                                         </p>   </td>
                                                     <td className="   px-4 py-2 text-left">
-                                       {t.content2.p12}
+                                                        {t.content2.p12}
                                                         <p className=" font-bold text-[#A87A38]">  {t.content2.bon}</p>
                                                         <p>    < span className="text-[#A87A38]">  ► </span> {t.content2.p13}
                                                         </p>  <p> <span className="text-[#A87A38]">  ► </span> {t.content2.p14}
                                                         </p>
                                                     </td>
                                                     <td className="   px-4 py-2 text-left">
-                                                     {t.content2.p15}  <p className=" font-bold text-[#A87A38] ">  {t.content2.bon}</p>
+                                                        {t.content2.p15}  <p className=" font-bold text-[#A87A38] ">  {t.content2.bon}</p>
                                                         <p>  <span className="text-[#A87A38]">  ► </span> {t.content2.p15}
                                                         </p>
                                                     </td>
@@ -225,12 +225,12 @@ export default function CarrierComponent() {
                                                     <td className="   px-4 py-2 text-center">
                                                         <span className=" text-center font-bold text-[#4A62AA]">
                                                             <p>   3.</p>
-                                                          {t.content2.r3}
+                                                            {t.content2.r3}
                                                         </span>
                                                     </td>
-                                                    <td className="   px-4 py-2 text-left" dangerouslySetInnerHTML={{ __html: t.content2.p17 }}/>
-                                                    <td className="   px-4 py-2 text-left" dangerouslySetInnerHTML={{ __html: t.content2.p18 }}/>
-                                                    <td className="   px-4 py-2 text-left" dangerouslySetInnerHTML={{ __html: t.content2.p19 }}/>
+                                                    <td className="   px-4 py-2 text-left" dangerouslySetInnerHTML={{ __html: t.content2.p17 }} />
+                                                    <td className="   px-4 py-2 text-left" dangerouslySetInnerHTML={{ __html: t.content2.p18 }} />
+                                                    <td className="   px-4 py-2 text-left" dangerouslySetInnerHTML={{ __html: t.content2.p19 }} />
 
                                                 </tr>
 
@@ -239,7 +239,7 @@ export default function CarrierComponent() {
                                                     <td className="   px-4 py-2 text-center">
                                                         <span className="text-center font-bold text-[#4A62AA]">
                                                             <p>   4.</p>
-                                                    {t.content2.r4}
+                                                            {t.content2.r4}
                                                         </span>
                                                     </td>
                                                     <td className="    px-4 py-2 text-left">
@@ -247,14 +247,14 @@ export default function CarrierComponent() {
                                                             {t.content2.p29}
                                                         </p>
                                                         <p>
-                                                            <i  dangerouslySetInnerHTML={{ __html: t.content2.p28 }}/>
+                                                            <i dangerouslySetInnerHTML={{ __html: t.content2.p28 }} />
                                                         </p>
 
                                                     </td>
                                                     <td className="   px-4 py-2 text-left">
                                                         {t.content2.p22}
                                                     </td>
-                                                    <td className="   px-4 py-2 text-left" dangerouslySetInnerHTML={{ __html: t.content2.p23 }}/>
+                                                    <td className="   px-4 py-2 text-left" dangerouslySetInnerHTML={{ __html: t.content2.p23 }} />
 
 
                                                 </tr>
@@ -264,17 +264,17 @@ export default function CarrierComponent() {
                                                     <td className="   px-4 py-2 text-center ">
                                                         <span className="font-bold text-center text-[#4A62AA]">
                                                             <p>   5.</p>
-                                                       {t.content2.r5}
+                                                            {t.content2.r5}
                                                         </span>
                                                     </td>
 
                                                     <td className="   px-4 py-2 text-left">
-                                                        <p dangerouslySetInnerHTML={{ __html: t.content2.p24 }}/>
+                                                        <p dangerouslySetInnerHTML={{ __html: t.content2.p24 }} />
                                                     </td>
                                                     <td className="   px-4 py-2 text-left">
                                                         <p>
-                                           
-{t.content2.p25}
+
+                                                            {t.content2.p25}
                                                         </p>
 
                                                     </td>
@@ -285,7 +285,7 @@ export default function CarrierComponent() {
 
                                                         <p>
                                                             <i>
-                                                              {t.content2.p27}</i></p>               </td>
+                                                                {t.content2.p27}</i></p>               </td>
 
                                                 </tr>
 
@@ -327,25 +327,25 @@ export default function CarrierComponent() {
                             {open === 3 && (<div className="bg-white/80  text-black p-4 ">
 
                                 <div className="w-full">
-                                   <div className="space-y-4">
-      <p>
-        <b>{t.skills.intro}</b>
-      </p>
-      
-      {t.skills.points.map((point, index) => (
-      <p key={index}>
-          <span className="text-[#4A62AA] ml-10">■ </span>
-          {point.prefix} <b className="text-[#4A62AA]">{point.highlight}</b> {point.suffix}
-          {point.highlight2 && (
-            <> <b className="text-[#4A62AA]">{point.highlight2}</b> {point.suffix2}</>
-          )}
-        </p>
-      ))}
+                                    <div className="space-y-4">
+                                        <p>
+                                            <b>{t.skills.intro}</b>
+                                        </p>
 
-      <p dangerouslySetInnerHTML={{ __html: t.skills.conclusion }}>
-      
-      </p>
-    </div>
+                                        {t.skills.points.map((point, index) => (
+                                            <p key={index}>
+                                                <span className="text-[#4A62AA] ml-10">■ </span>
+                                                {point.prefix} <b className="text-[#4A62AA]">{point.highlight}</b> {point.suffix}
+                                                {point.highlight2 && (
+                                                    <> <b className="text-[#4A62AA]">{point.highlight2}</b> {point.suffix2}</>
+                                                )}
+                                            </p>
+                                        ))}
+
+                                        <p dangerouslySetInnerHTML={{ __html: t.skills.conclusion }} />
+
+                                      
+                                    </div>
                                 </div>
                             </div>)}
 
@@ -373,22 +373,22 @@ export default function CarrierComponent() {
 
                             {open === 5 && (<div className="bg-white/80  text-black ">
 
-    
-  
-    <div className="w-full">
-      <div className="space-y-1">
-        {t.tips.map((tip, index) => (
-          <p 
-            key={index}
-            className={`${tip.bgColor} p-3`}
-          >
-            <span className="text-[#4A62AA] ml-10">■ </span>
-            <span dangerouslySetInnerHTML={{ __html: tip.text }} />
-          </p>
-        ))}
-      </div>
-    </div>
-                          </div>)}
+
+
+                                <div className="w-full">
+                                    <div className="space-y-1">
+                                        {t.tips.map((tip, index) => (
+                                            <p
+                                                key={index}
+                                                className={`${tip.bgColor} p-3`}
+                                            >
+                                                <span className="text-[#4A62AA] ml-10">■ </span>
+                                                <span dangerouslySetInnerHTML={{ __html: tip.text }} />
+                                            </p>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>)}
 
 
 
@@ -420,15 +420,15 @@ export default function CarrierComponent() {
                                     {open === 15 && (
                                         <div className=" text-start ">
                                             <div className="w-full  text-black space-y-2">
-                                               {t.scam.map((tip, index) => (
-          <p 
-            key={index}
-            className={`${tip.bgColor} p-3`}
-          >
-            <span className="text-[#4A62AA] ml-10">■ </span>
-            <span dangerouslySetInnerHTML={{ __html: tip.text }} />
-          </p>
-        ))}
+                                                {t.scam.map((tip, index) => (
+                                                    <p
+                                                        key={index}
+                                                        className={`${tip.bgColor} p-3`}
+                                                    >
+                                                        <span className="text-[#4A62AA] ml-10">■ </span>
+                                                        <span dangerouslySetInnerHTML={{ __html: tip.text }} />
+                                                    </p>
+                                                ))}
 
                                             </div>
                                         </div>
@@ -464,7 +464,7 @@ export default function CarrierComponent() {
 
                                 <div className="w-full">
                                     <div className="space-y-4">
-                                        <p className="text-[#A87A38] uppercase font-bold"> Références bibliographiques</p>
+                                        <p className="text-[#A87A38] uppercase font-bold"> {t.content} </p>
                                         <p>
                                             <span className="text-[#4A62AA]">■ </span>   Faustine Kede Ndouna, Roger Tsafack Nanfosso et Jean Aristide Biloa Essimi. (2018),<span className="text-[#4A62AA]">  Les déterminants du choix de l’emploi informel dans un marché du travail segmenté dans les pays en développement : cas du Cameroun.</span>
                                         </p>
@@ -490,20 +490,20 @@ export default function CarrierComponent() {
                                     </div>
 
                                     <div className=" mt-4  space-y-4">
-                                        <p className="text-[#A87A38] uppercase font-bold">  Liens utiles</p>
+                                        <p className="text-[#A87A38] uppercase font-bold"> {t.intro}</p>
 
                                         {t.liens.map((tip, index) => (
-          <p 
-            key={index}
-           
-          >
-            <span className="text-[#4A62AA]">■ </span>
-            <span dangerouslySetInnerHTML={{ __html: tip.text }} />
-            <br />
-            <a href={tip.link} className="text-blue-600" target="_blank" rel="noopener noreferrer"> <i>{tip.link} </i></a>
-          </p>
-        ))}
-                                      
+                                            <p
+                                                key={index}
+
+                                            >
+                                                <span className="text-[#4A62AA]">■ </span>
+                                                <span dangerouslySetInnerHTML={{ __html: tip.text }} />
+                                                <br />
+                                                <a href={tip.link} className="text-blue-600" target="_blank" rel="noopener noreferrer"> <i>{tip.link} </i></a>
+                                            </p>
+                                        ))}
+
                                     </div>
 
 

@@ -1,177 +1,177 @@
 {
-      "title": "  GUIDE POUR POSTULER À UNE OFFRE",
-      "stage": "Postuler à  un  stage ",
-      "emploi": "Postuler à  un premier emploi  ",
+      "title": "TIPS TO APPLY FOR AN INTERNSHIP / A JOB",
+      "stage": "Tips to apply for an internship",
+      "emploi": "Tips to apply for an entry-level job",
       "stageContent": {
-            "intro": " Ci-dessous deux options efficaces pour trouver votre stage :",
-            "consultez": " 1. Consultez régulièrement notre section « Offres de stage » ",
-            "consultezText": " pour voir les annonces publiées ;",
-            "envoyezText": "     2.   Envoyez ou déposez des candidatures spontanées",
-            "envoyezText2": " de qualité à des entreprises ciblées.",
-            "depot": " Déposez votre CV pour recevoir gratuitement les nouvelles offres de stages dans votre boîte mail.",
-            "postuler": "       Postuler",
-            "spontane": " Cantidature  spontanée",
-            "Cantidature": "Envoyez ou déposez votre dossier de candidature au moins 9 à 12 mois avant la date de début souhaitée du stage et relancez régulièrement l’entreprise. ",
-            "annonce": "Annonce ",
-            "format": " Envoyez votre candidature dans les délais et format requis (mail ou dossier physique).",
+            "intro": " ",
+            "consultez": " 1. Check our ‘Internship opportunities’ section regularly",
+            "consultezText": "to see and apply for new internships;",
+            "envoyezText": "2. Send or submit high-quality spontaneous applications ",
+            "envoyezText2": " to pre-selected companies.",
+            "depot": "Send us your CV to receive new internship vacancies.",
+            "postuler": "HOW TO APPLY",
+            "spontane": "Spontaneous application",
+            "Cantidature": "Send your application at least 9 to 12 months before the desired start date of the placement. It is best to submit your application in person, as emails often end up in spam or are not read. What's more, it will be easier for you to keep track of your application if you leave the form.",
+            "annonce": "Vacancy announcement  ",
+            "format": "Send your complete application by the deadline and in the required format (online or in person).",
             "redaction": "Rédiger un Curriculum Vitae (CV) et une lettre de motivation convaincants ",
             "Curriculum": " Curriculum Vitae (CV) ",
-            "CurriculumText": "   Votre CV doit susciter chez le recruteur l’envie de vous rencontrer. Pour plus d’informations, consultez la section «  Postuler à un premier emploi  ».",
-            "contactText": " pour obtenir un modèle de CV.",
-            "contact": " Contactez-nous ",
-            "motivationLetter": "         Lettre de motivation",
-            "motivationLetterText": "        Votre lettre de motivation doit exposer sur une page les raisons de votre demande de stage et convaincre le recruteur de votre motivation. Elle peut se présenter comme suit :",
-            "first": "  1ère partie ",
-            "firstText": "   Présentation (diplôme préparé et établissement) et formulation de votre demande de stage (nature du stage, fonction et durée).",
-            "second": "   2ème partie ",
-            "secondText": " Motivation du choix de l’entreprise et de l’intérêt pour le stage en expliquant ce que vous comptez y apprendre et en quoi cela vous aidera pour la suite de votre formation ou de votre parcours. Évoquez votre disposition à apprendre mais également vos qualités, notamment celles appréciées en entreprise : ponctualité, autonomie, fiabilité, minutie dans le travail et sociabilité, etc. ",
-            "third": "  3ème partie ",
-            "thirdText": " Exprimez vos attentes en relation avec les compétences que vous aurez développées.",
-            "contactModele": " pour obtenir un modèle de lettre de motivation pour stage.",
-            "dossier": "  Pièces du dossier de candidature ",
-            "lettre": " Lettre de motivation ",
-            "cv": " CV à jour, daté et signé",
-            "contion": " Convention de stage et/ou lettre de recommandation de l’institution de formation",
-            "diplome": "  Copies des diplômes, de la CNI",
-            "certificat": "Copie du certificat de scolarité, des attestations diverses. ",
+            "CurriculumText": "Your CV should make the recruiter want to meet you. For more information, see the ‘Applying for your first job’ section. ",
+            "contactText": "to receive cover letter and CV samples.",
+            "contact": "Contact-us ",
+            "motivationLetter": "Cover letter",
+            "motivationLetterText": "Purpose of the cover letter: explain why you are applying for an internship and convince the recruiter of your motivation. It can be written as follows:",
+            "first": "First part: ",
+            "firstText": "Opening and introduction – Explain who you are, degree prepared, institution and formulation of your internship’s application (nature of the internship’s, function and duration).",
+            "second": "Second part: ",
+            "secondText": "Body – Motivate your choice of company and your interest in the internship by explaining what you intend to learn there and how it will help you in your further training or career. Mention your willingness to learn but also your qualities, especially those appreciated in the company: punctuality, autonomy, reliability and sociability, etc. ",
+            "third": "Third part: ",
+            "thirdText": "Assertive closing. Express your expectations in relation to the skills you will have developed. Thank the person for taking the time to read your letter. Use an appropriate closing, such as “Sincerely.”",
+            "contactModele": " for a CV template.",
+            "dossier": "Application documents",
+            "lettre": "Cover letter",
+            "cv": "CV, dated and signed",
+            "contion": "Internship agreement and/or letter of recommendation from the training institution",
+            "diplome": "Copies of diplomas and identity cards",
+            "certificat": "Copy of school leaving certificate, various certificates.",
             "nb": "      les pièces demandées peuvent varier selon le recruteur. En tout état de cause, joignez toujours à votre demande tous les documents permettant une bonne analyse et compréhension de votre dossier.",
-            "Postuler": "Postuler  à un premier emploi (débutant uniquement)  "
+            "Postuler": "TIPS TO APPLY FOR AN ENTRY-LEVEL JOB"
       },
       "emploiContent": {
-            "intro": "   Bien qu’il n’existe aucune recette miracle pour trouver un premier emploi, les recruteurs et DRH chevronnés recommandent de minutieusement cibler les offres qui cadrent avec son profil et de déposer des dossiers de candidature de qualité. ",
-            "intro2": " Aux jeunes diplômés qui postulent pour la première fois à un emploi, ci-dessous la démarche méthodique en 5 étapes la plus efficace.",
+            "intro": "Experienced recruiters and HR managers recommend to carefully target jobs that fit your profile and submit quality applications.",
+            "intro2": "For fresh graduates applying for a job for the first time, here is the most effective 5-step approach.",
             "step1": {
-                  "etape": "étape 1",
-                  "title": "  Faire votre bilan de compétences",
-                  "p": "Le bilan de compétences vous rend apte à citer vos principales compétences et qualités ainsi que les points saillants de votre parcours. D’autre part, il vous permet d’identifier vos points faibles ou les domaines dans lesquels vous devez acquérir de nouvelles connaissances. Nous vous suggérons vivement de le faire avant toute candidature à un premier emploi.",
-                  "contact": "   Contactez-nous ",
-                  "info": "  pour savoir comment faire son bilan de compétences."
+                  "etape": "Step 1",
+                  "title": "Self-assessment",
+                  "p": "A self-assessment enables you to learn about occupations that are a good match for you; to write more personal, detailed resumes and cover letters; to name your main skills and qualities and the highlights of your career. On the other hand, it allows you to identify your weak points or areas in which you need to acquire new knowledge or experience.",
+                  "contact": "Contact us ",
+                  "info": "for further information on self-assessment."
             },
             "step2": {
-                  "etape": "étape 2",
-                  "title": "  Trouver les offres d’emplois ou les entreprises à contacter ",
-                  "item1": "Annonces d’emplois",
-                  "consultez": " Consultez la liste des annonces dans notre section",
-                  "stage": "« Offres de stage »",
-                  "ou": " ou lisez le quotidien CameroonTribune.",
-                  "item2": " Candidatures spontanées",
-                  "cherchez": "Cherchez l’entreprise à l’aide des répertoires des organisations patronales, celui du GECAM ou de la Direction Générale des Impôts (disponibles sur leur site web respectif).",
-                  "nb": "Si vous avez l’opportunité d’effectuer un stage pendant ou après votre formation, n’hésitez pas à vous renseigner auprès du responsable RH si la structure envisage de recruter et à l’informer de votre intérêt en cas de vacance de poste."
+                  "etape": "Step 2",
+                  "title": "Searching companies to apply for",
+                  "item1": "Jobs announcements",
+                  "consultez": "Check our section on a daily basis.",
+                  "stage": "“Explore Internships” ",
+                  "ou": " ",
+                  "item2": "Spontaneous application",
+                  "cherchez": "Browse the directories of employers' organisations (GECAM), the Chamber of Commerce (CCIMA) or the General Tax Directorate (available on their respective websites) to find out companies to apply for.",
+                  "nb": " "
             },
             "step3": {
-                  "etape": "étape 3",
-                  "title": "  Rédiger vos CV et lettre de motivation ",
-                  "cv": "CURRICULUM VITAE (CV) ",
-                  "objectif": "Objectif du CV",
-                  "rubriques": " Principales rubriques du CV",
+                  "etape": "Step 3",
+                  "title": "Crafting a winning CV and cover letter",
+                  "cv": "Curriculum Vitae (CV) ",
+                  "objectif": "Aim of the CV: Make the recruiter want to meet you. ",
+                  "rubriques": "Sections of a CV:",
                   "p1": "Susciter chez le recruteur l’envie de vous rencontrer.",
                   "content": [
                         {
-                              "title": " Informations personnelles",
-                              "text": "Noms et Prénoms, Téléphone, E-mail (si necessaire statut marital + nombre d’enfant éventuel) ;"
+                              "title": "Personal information:",
+                              "text": "Name and surname, Phone, Email, Marital status, Driving license (if necessary for the job);"
                         },
                         {
-                              "title": " Objectif professionnel",
-                              "text": "Indiquez ce que vous souhaitez réaliser ainsi que votre ambition en une phrase ;"
+                              "title": " Headline",
+                              "text": "State your job goal such as “Project Manager”."
                         },
                         {
-                              "title": " Formation",
-                              "text": " Indiquez vos diplômes et certifications du plus récent au BAC, en précisant les intitulés, années d’obtention et noms des établissements ; précisez les mentions uniquement si elles sont dignes d’intérêt : bien, très bien…"
+                              "title": " Education:",
+                              "text": "List in chronological order your diplomas and certificates (from the most recent to the GCE, specifying the titles, years obtained and names of the institutions; specify the mentions only if they are noteworthy: good, very good...) "
                         },
                         {
-                              "title": " Expérience professionnelle",
-                              "text": " Listez vos expériences professionnelles (stage ou bénévolat, etc.) en commençant par la plus récente ; Indiquez la période de travail, le nom de l’entreprise, la ville, le poste occupé, vos missions et réalisations dans un style clair et concis ;"
+                              "title": " Work Experience:",
+                              "text": "List your work experience (internship or volunteer work, etc.) starting with the most recent; indicate the period of work, the name of the company, the city, the position held, your tasks and achievements in a clear and concise style;"
                         },
                         {
-                              "title": "Compétences informatiques ",
-                              "text": " Listez les logiciels maîtrisés (outils bureautique, programmation, etc.) ;"
+                              "title": "IT-Skills:",
+                              "text": " List the software mastered (computer programming, etc.);"
                         },
                         {
-                              "title": "Compétences linguistiques",
-                              "text": "Listez les langues maîtrisées en indiquant le niveau de pratique ;"
+                              "title": "Language skills:",
+                              "text": "List all languages mastered; "
                         },
                         {
-                              "title": "Divers",
-                              "text": "Cette rubrique peut contenir plusieurs sous-rubriques à savoir « Centres d’intérêts » comme la lecture, les jeux de société…, « Sport », « Engagement associatif », etc."
+                              "title": "Other",
+                              "text": "This heading may contain several sub-headings, namely 'Interests' such as reading, board games, etc., 'Sport', 'Community involvement', etc"
                         }
                   ],
-                  "notabene1": "Insérez une photo uniquement si elle est requise (au format 4x4 et prise par un professionnel) ;",
-                  "notabene2": "Insérez en bas de page la date du jour et votre signature ;",
-                  "notabene3": " Adaptez votre CV au profil du poste recherché et à l’entreprise. ",
-                  "contact": "Contactez-nous ",
+                  "notabene1": "Insert a photo only if it is required (in this case, in the right format and taken by a professional);",
+                  "notabene2": "Insert the current date and your signature at the bottom of the page;",
+                  "notabene3": "Adapt your CV to the profile of the position sought and to the company.",
+                  "contact": "Contact us",
                   "info": " pour obtenir un modèle de CV pour débutant.",
-                  "lettre": "lettre de motivation",
-                  "lettreIntro": "  La lettre de motivation complète votre CV. Elle doit expliquer les raisons de votre candidature et convaincre le recruteur que vous êtes le candidat idéal. Pour ce faire :",
-                  "p2": "Étayez vos motivations pour le poste sans exagérations dans un style clair, précis et concis ;",
-                  "p3": "Mettez en exergue vos compétences et connaissances indispensables pour le poste et les missions ;",
-                  "p4": "Expliquez comment votre expérience pourrait être utile à l’entreprise ;",
-                  "p5": "Évitez de reproduire votre CV.",
-                  "recommandation": "lettre de motivation",
-                  "r1": "Étayez vos motivations pour le poste sans exagérations dans un style clair, précis et concis ;",
-                  "r2": "Mettez en exergue vos compétences et connaissances indispensables pour le poste et les missions ;",
-                  "r3": "Expliquez comment votre expérience pourrait être utile à l’entreprise ;",
-                  "r4": "Évitez de reproduire votre CV."
+                  "lettre": "COVER LETTER  ",
+                  "lettreIntro": "The cover letter complements your CV; it should explain the reasons for your application and convince the recruiter that you are the right candidate. To do this: ",
+                  "p2": "Support your motivation for the position without exaggeration in a clear, precise and concise style;",
+                  "p3": "Highlight your skills and knowledge that are essential for the position and the tasks;",
+                  "p4": "Explain how your experience could be useful to the company;",
+                  "p5": "Avoid duplicating your CV.",
+                  "recommandation": "ADVICE  ",
+                  "r1": "Unless otherwise instructed by the recruiter, type your letter on a computer; use a structured layout and the same font throughout the document;",
+                  "r2": "Avoid mistakes (grammar, spelling, syntax, etc.), the use of colloquial language and cutting and pasting; have your letter proofread by a more experienced person;",
+                  "r3": "Tailor your cover letter to each company and position you apply for;",
+                  "r4": " "
             },
             "step4": {
-                  "etape": "Étape 4",
-                  "title": "   Envoyer et suivre votre dossier de candidature",
+                  "etape": "Step 4",
+                  "title": "Sending your application & Following-up",
                   "content": [
                         {
-                              "title": "  Réponse à une annonce",
-                              "text": "  Envoyez votre dossier de candidature (CV, Lettre de motivation, copies des diplômes, etc.) dans les délais et par les voies requises : courriel ou dossier physique, en ligne, etc."
+                              "title": "Job announcements: ",
+                              "text": "Send your application (CV, covering letter, copies of diplomas, etc.) before the deadline and by the required means: e-mail or physical file, online, etc. "
                         },
                         {
-                              "title": "Candidature spontanée",
-                              "text": "Envoyez votre candidature au format papier (plus efficace) ou par courriel (plus économique)."
+                              "title": "Spontaneous application:",
+                              "text": " Send your application in paper form or by email (rapid and less expensive)."
                         },
                         {
-                              "title": " Relancez l’entreprise",
-                              "text": "En vous y rendant ou en appelant toutes les deux à trois semaines. Astuce : N’hésitez pas à poliment demander à rencontrer le responsable des ressources humaines ; cela attestera de votre assurance mais également de votre intérêt pour le poste. "
+                              "title": "Follow up",
+                              "text": " with the company by visiting or calling every two to three weeks. Tip: Don't hesitate to politely ask to speak with the HR manager; this will show your self-confidence but also your interest in the job."
                         }
                   ],
-                  "avertissement": "Avertissement !",
-                  "conclu": " Avant de répondre à une offre, prenez le temps de lire attentivement le profil recherché pour vous assurer que votre formation et vos compétences y correspondent. Si l’entreprise recherche par exemple un candidat bilingue possédant impérativement une première expérience professionnelle et que ce n’est pas votre cas, inutile de postuler."
+                  "avertissement": "Warning! ",
+                  "conclu": "Before applying for a job, take the time to carefully read the job description to make sure that your education and skills match it. If, for example, the company is looking for a bilingual candidate with previous professional experience and you do not have this, do not apply."
             },
             "step5": {
-                  "etape": "Étape 5",
-                  "title": "     Préparer votre entretien d’embauche",
-                  "avant": "    Avant l'entretien",
-                  "pendant": "    Avant l'entretien",
-                  "auterme": "    Avant l'entretien",
+                  "etape": "Step 5",
+                  "title": "Preparing for the job interview",
+                  "avant": "BEFORE",
+                  "pendant": "DURING",
+                  "auterme": "AT THE END",
                   "avantContent": [
                         {
-                              "text": "  Renseignez-vous sur l’entreprise via Internet : historique, secteur d’activités, produits, chiffre d’affaires, concurrents, etc."
+                              "text": "Find out about the company via the Internet: history, sector of activity, products, turnover, strategy, competitors, etc."
                         },
                         {
-                              "text": "Exercez-vous à vous présenter en moins de 3 minutes sans répétez votre CV, en synthétisant votre parcours autour de quelques axes majeurs (compétences et qualités, expérience, projet professionnel, etc.) ;"
+                              "text": "Practise presenting yourself in less than 3 minutes without miming your CV, by summarising your background around a few major points (skills and qualities, experience, professional project, etc.)"
                         },
                         {
-                              "text": "Soyez ponctuel ! Portez une tenue décente et formelle et ne vous parfumez pas à outrance. "
+                              "text": "Be punctual; wear decent and formal clothes and do not perfume yourself too much."
                         }
                   ],
                   "pendantContent": [
                         {
-                              "text": "  Ne vous asseyez pas avant d’y avoir été invité ;"
+                              "text": "Do not sit down until you are invited to do so;"
                         },
                         {
-                              "text": "Soyez très attentif aux questions, sachez être à l’écoute et ne coupez pas la parole à vos interlocuteurs ; "
+                              "text": "Pay close attention to questions, be a good listener and do not cut people off;"
                         },
                         {
-                              "text": " Lorsque vous n’avez pas bien entendu ou compris une question ou phrase, demandez toujours poliment à votre interlocuteur de la répéter ! "
+                              "text": "When you have not heard or understood a question or sentence, always politely ask the speaker to repeat it!"
                         },
                         {
-                              "text": "Soyez à même de montrer sans exagérations comment votre expérience, vos compétences et vos qualités vous aiderons dans l’accomplissement des missions du poste et font de vous le candidat idéal ; illustrez chaque argument avancé par un exemple précis, des données chiffrées, des faits, etc."
+                              "text": "Be able to show without exaggeration how your experience, skills and qualities will help you to fulfil the tasks of the job and make you the ideal candidate; illustrate each argument with a specific example, figures, facts, etc."
                         },
                         {
-                              "text": "Préparez quelques questions d’intérêt aux recruteurs comme par exemple : Existe-t-il des perspectives d’évolution pour le poste dans l’entreprise ? Existe-t-il des possibilités de perfectionnement du personnel ? etc.   "
+                              "text": "Prepare a few questions of interest to recruiters, such as: Are there any prospects for the position in the company? Are there opportunities for staff development? Etc."
                         }
                   ],
                   "autermContent": [
                         {
-                              "text": "Si elle ne vous a pas été communiquée par vos interlocuteurs, demandez-leurs poliment la suite du processus de recrutement : serai-je contacté si je suis retenu ou pas ? Y’aura-t-il d’autres entretiens ? "
+                              "text": "If you have not been told this by your interviewers, ask them politely about the rest of the recruitment process: will I be contacted if I am successful or not? Will there be further interviews?"
                         },
                         {
-                              "text": "Remerciez (à nouveau) vos interlocuteurs pour l’intérêt portée à votre candidature et dites au revoir en dernier.  "
+                              "text": "Thank them (again) for their interest in your application and say goodbye last."
                         }
                   ],
                   "arnaque": "Évitez les arnaques !",
@@ -188,32 +188,47 @@
                   ]
             },
            
-                  "reference": "Références bibliographiques",
-                  "postuler": "       Postuler à un stage",
+                  "reference": "Bibliography ",
+                  "postuler": "Apply for an internship",
                  
                   "auteur": [
                         {
-                              "name": "  Christel de Foucault et illustré par Benoît Pouydesseau.",
-                              "title": "50 erreurs à éviter pour trouver un job",
-                              "edition": ", Eyrolles."
+                              "name": "Richard N. Bolles.",
+                              "title": " What color is your Parachute? ",
+                              "edition": " "
                         },
                         {
-                              "name": " Hervé Bommelaer, Philippe Douale, et Nicolas Pavesi. (2018).",
-                              "title": "Recherche d’emploi : secrets de pros",
-                              "edition": ", Eyrolles."
+                              "name": "Lisa Quast.",
+                              "title": " Secrets of a Hiring Manager Turned Career Coach.",
+                              "edition": " "
                         },
                         {
-                              "name": " Karine Averseng. (2015).",
-                              "title": "Les 5 minutes qui comptent pour réussir un entretien d'embauche",
-                              "edition": ", Larousse."
+                              "name": "Scott Smith. ",
+                              "title": "Find Your Perfect Job: The Inside Guide for Young Professionals.",
+                              "edition": " "
                         },
                         {
-                              "name": "Daniel Porot (2018). ",
-                              "title": "50 erreurs à éviter pour trouver un job",
-                              "edition": ", Solar."
+                              "name": "Megan McArdlle.",
+                              "title": " The Up Side of Down: Why Failing Well Is the Key to Success.",
+                              "edition": " "
+                        },
+                        {
+                              "name": "Joe Sweeney. ",
+                              "title": " Moving the Needle: Get Clear, Get Free, and Get Going in Your Career, Business, and Life.",
+                              "edition": " "
+                        },
+                        {
+                              "name": "Paul Tieger. ",
+                              "title": "Do What you Are. Discover the Perfect Career for You Through the Secrets of Personality Type, Scribe.",
+                              "edition": " "
+                        },
+                        {
+                              "name": "Clayton M. Christensen, James Allworth, and Karen Dillon",
+                              "title": "How Will You Measure Your Life.",
+                              "edition": " "
                         }
                   ],
-                    "lien": "Liens utiles",
+                    "lien": "Useful links",
                      "ministere": "Ministère de l’Emploi et de la Formation professionnelle"
             
       }

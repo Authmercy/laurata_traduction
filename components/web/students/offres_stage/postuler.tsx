@@ -4,6 +4,7 @@ import Image from "next/image";
 import { URLS } from "@/service/url";
 import en from '../../../../i18/en/student/internship.json';
 import fr from '../../../../i18/fr/student/internship.json';
+import UseLanguageService from "@/service/language_switch";
 
 
 export default function PostulerAuPost() {
@@ -12,7 +13,12 @@ export default function PostulerAuPost() {
   const { locale } = router;
     const t = locale === 'en' ? en : fr;
 
+  const {
 
+    headers
+
+
+  } = UseLanguageService()
   const [offerDetails, setOfferDetails] = useState<any>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -27,10 +33,7 @@ export default function PostulerAuPost() {
         try {
           const response = await fetch(`${BACKEND_URL}/${id}`, {
             method: 'GET',
-            headers: {
-              'Content-Type': 'application/json',
-              'locale': 'fr',
-            },
+             headers,
           });
 
 
@@ -181,7 +184,7 @@ export default function PostulerAuPost() {
 
             <div className="bg-white pl-8 p-4">
               <div className="mt-4 text-black">
-                <h3 className="text-lg font-bold  text-[#4A62AA]">Postuler</h3>
+                <h3 className="text-lg font-bold  text-[#4A62AA]">{t.searchDescription.Postuler}</h3>
              {offerDetails.application ? ( 
                 offerDetails.application.map((degree: string, index: number) => (
                                             <p key={index}>{degree}</p>

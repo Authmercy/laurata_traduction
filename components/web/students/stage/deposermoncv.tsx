@@ -82,13 +82,13 @@ export default function DeposerMonCV() {
             <form className="mt-6 space-y-1 w-10/12" onSubmit={handleSubmit}>
 
               <input type="text" name="firstname" value={elements.firstname}
-                onChange={handleChange} placeholder={t.cv.input.firstname} className="w-full border placeholder:text-[#4A62AA] bg-white/70  border-gray-300 p-2 px-8 focus:ring-2 focus:ring-[#4A62AA]" />
+                onChange={handleChange} placeholder={t.cv.input.firstname} className="w-full border placeholder:text-[#4A62AA] bg-white/70  border-gray-300 p-2 px-8 focus:ring-2 focus:ring-[#4A62AA]"  required/>
               <input type="text" name="lastname" value={elements.lastname}
-                onChange={handleChange} placeholder={t.cv.input.lastname} className="w-full border placeholder:text-[#4A62AA] bg-white/70  border-gray-300 p-2 px-8  focus:ring-2 focus:ring-[#4A62AA]" />
+                onChange={handleChange} placeholder={t.cv.input.lastname} className="w-full border placeholder:text-[#4A62AA] bg-white/70  border-gray-300 p-2 px-8  focus:ring-2 focus:ring-[#4A62AA]" required />
               <input type="email" value={elements.email}
-                onChange={handleChange} placeholder={t.cv.input.email} name="email" className="w-full border placeholder:text-[#4A62AA] bg-white/70  border-gray-300 p-2 px-8  focus:ring-2 focus:ring-[#4A62AA]" />
+                onChange={handleChange} placeholder={t.cv.input.email} name="email" className="w-full border placeholder:text-[#4A62AA] bg-white/70  border-gray-300 p-2 px-8  focus:ring-2 focus:ring-[#4A62AA]"required />
               <input type="tel" value={elements.phone}
-                onChange={handleChange} placeholder={t.cv.input.phone} name="phone" className="w-full border placeholder:text-[#4A62AA] bg-white/70  border-gray-300 p-2 px-8   focus:ring-2 focus:ring-[#4A62AA]" />
+                onChange={handleChange} placeholder={t.cv.input.phone} name="phone" className="w-full border placeholder:text-[#4A62AA] bg-white/70  border-gray-300 p-2 px-8   focus:ring-2 focus:ring-[#4A62AA]"  required/>
 
 
 

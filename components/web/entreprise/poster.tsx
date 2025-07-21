@@ -2,7 +2,7 @@
 import Image from "next/image";
 import en from '@/i18/en/entreprise/Poster.json';
 import fr from '@/i18/fr/entreprise/Poster.json';
-import { useEffect, useState } from "react";
+
 import { useRouter } from "next/router";
 export default function Poster() {
 

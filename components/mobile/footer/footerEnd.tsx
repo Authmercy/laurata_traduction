@@ -3,9 +3,17 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import UseLanguageService from "@/service/language_switch";
 
 export default function FooterMobile() {
     const [clickedLink, setClickedLink] = useState('');
+    const {
+   
+           changeLanguage, locale
+   
+   
+       } = UseLanguageService()
+   
 
     return (
         <div className="w-full flex justify-center bg-blue-900   py-2 text-white text-center ">
@@ -22,7 +30,7 @@ export default function FooterMobile() {
            `}><p
                             className={`  ${clickedLink ? " text-[#bd7a1d] " : "text-white  " }
            `}
-                        > À propos </p> </Link>
+                        >    {locale === 'en' ? 'About US' : ' À propos '} </p> </Link>
                         <span className="fond-bold text-[#f0b026] text-xl">  &nbsp;|&nbsp; </span> <Link href="/misc/nous_contacter"                 className={`  ${clickedLink ? " text-[#bd7a1d] " : "text-white  " }
            `}> <p className={` 
             ${clickedLink ? " text-[#bd7a1d] " : "text-white  "

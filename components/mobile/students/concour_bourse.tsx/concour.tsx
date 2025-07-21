@@ -10,11 +10,16 @@ import InstitutionsPriveTable from "@/components/web/students/concour_bourse.tsx
 import InstitutionsPublicTable from "@/components/web/students/concour_bourse.tsx/tableInstitutionPublique";
 import InstitutionsTransnationaleTable from "@/components/web/students/concour_bourse.tsx/tableInstitutionTransnationales";
 import LiberaleTable from "@/components/web/students/concour_bourse.tsx/tableLiberales";
-
+import en from '@/i18/en/student/concous_bourse.json';
+import fr from '@/i18/fr/student/concous_bourse.json';
+import { useRouter } from "next/router";
 
 
 export default function ConcourComponentMobile() {
+ const router = useRouter();
 
+    const { locale } = router;
+    const t = locale === 'en' ? en : fr;
     const [open, setOpen] = useState(null);
 
     const handleToggle = (index: any) => {
@@ -40,7 +45,7 @@ export default function ConcourComponentMobile() {
 
                         <p>
 
-                            CONCOURS
+                         {t.concours.subtitle}
                         </p>  </div>
 
 
@@ -55,7 +60,7 @@ export default function ConcourComponentMobile() {
                                     className="w-full  py-2 px-4  bg-white/70 text-[#9b6e0f] flex justify-between "
                         onClick={() => handleToggle(7)}
                     >
-                     <span className="flex-grow text-start">Consignes relatives aux concours</span>
+                     <span className="flex-grow text-start">    {t.concours.instructionsTitle}</span>
                
                                     <span className="sm:ml-10 text-2xl">{open === 7 ? "▲" : "▼"}</span>
                                 </button>
@@ -65,46 +70,28 @@ export default function ConcourComponentMobile() {
                         <div className="bg-white/70   ">
 
 
-                            <div className="w-full  py-4 px-8 text-black">
+                           <div className="w-full  py-4 px-8 text-black">
 
-                                 <p className=" font-bold mb-4">
-                                    Avant de postuler à un concours :
+                                <p className=" font-bold mb-4">
+                                    {t.concours.avant}
                                 </p>
-                                <p>  <span className="text-[#4A62AA] font-bold">
-                                    i)
-                                </span>
-                                    &nbsp;&nbsp;    Lisez attentivement le communiqué pour vous assurer que vous remplissez toutes les conditions ;
-                                </p>
-                                <p> <span className="text-[#4A62AA] font-bold">
-                                    ii)
-                                </span>
-                                    &nbsp;&nbsp;   Montez minutieusement votre dossier de candidature en fournissant toutes les pièces demandées ;
-                                </p>
-                                <p> <span className="text-[#4A62AA] font-bold">
-                                    iii)
-                                </span>
-                                    &nbsp;&nbsp;    Déposez votre dossier dans les délais et les formats requis ;
-                                </p>
-                                <p> <span className="text-[#4A62AA] font-bold">
-                                    iv)
-                                </span>
-                                    &nbsp;&nbsp;   Préparez-vous sérieusement à l’aide d’anciennes épreuves ou dans un cours préparatoire.
-                                </p>
-<div className="space-y-2 mt-4"> 
-    <p className="text-red-600 font-bold ">Avertissement ! <br /></p>
-                                <p className="  ">
-                                    - Nous nous limitons uniquement à publier les communiqués d’ouverture des concours. Pour tout renseignement complémentaire, bien vouloir vous adresser à  l'institution ou  à l’administration concernée.
+                                {t.concours.instructions.map((item, idx) => (
+                                    <p key={idx}>
+                                        <span className="text-[#4A62AA] font-bold">{['i)', 'ii)', 'iii)', 'iv)'][idx]}</span>&nbsp;&nbsp;{item}
+                                    </p>
+                                ))}
 
+                                <p className="mt-4">
+                                    <span className="text-red-600 font-bold">{t.concours.warningTitle}<br /></span>
+                                    - {t.concours.warning1}
                                 </p>
-                                <p> <span className="text-[#4A62AA] font-bold">
-                                    -
-                                </span>
-                                   <span className="text-red-600  "> Ne postulez jamais à un concours avec des faux documents ; ils sont détectés dans 100% des cas. </span>La conséquence sera le rejet votre dossier et l’éventualité de poursuites judiciaires.
+                                <p>
+                                    <span className="text-[#4A62AA] font-bold">-</span>
+                                    <span className="text-red-600"> {t.concours.warning2} </span>
+                                    {t.concours.warning3}
                                 </p>
-                                <p> - En août 2022, le Ministère de la Défense a radié de ses écoles plus de 1 000 recrues en cours de formation ayant postulé avec des faux diplômes !
-                                </p>
+                                <p>- {t.concours.warning4}</p>
                             </div>
-                         </div>
                        
 
 
@@ -119,7 +106,7 @@ export default function ConcourComponentMobile() {
                                     className="w-full  py-2 px-4  bg-[#4c75f0] text-white flex justify-between "
                                     onClick={() => handleToggle(1)}
                                 >
-                                    <span className="flex-grow text-start">Institutions Publiques</span>
+                                    <span className="flex-grow text-start">{t.concours.sections.public}</span>
                                     <span className="sm:ml-10 text-2xl">{open === 1 ? "▲" : "▼"}</span>
                                 </button>
 
@@ -137,8 +124,8 @@ export default function ConcourComponentMobile() {
                                              
                                             </div>
                                             <p className="text-lg text-black p-2 bg-white">
-                                                Consultez le calendrier des concours <b className="underline text-[#4A62AA] ">
-                                                    ici</b>.
+                                                {t.concours.calendarHint}  <b className="underline text-[#4A62AA] ">
+                                                      {locale === 'en' ? 'here' : 'ici'}</b>.
                                             </p>
                                             <InstitutionsPublicTable></InstitutionsPublicTable>
 
@@ -157,7 +144,7 @@ export default function ConcourComponentMobile() {
                                     className="w-full    py-2 px-4  bg-[#4c75f0] text-white  flex justify-between items-center sm:justify-center"
                                     onClick={() => handleToggle(2)}
                                 >
-                                    <span className="flex-grow text-start">Institutions Privées </span>
+                                    <span className="flex-grow text-start">{t.concours.sections.private} </span>
                                     <span className="sm:ml-10 text-2xl">{open === 2 ? "▲" : "▼"}</span>
                                 </button>
 
@@ -190,7 +177,7 @@ export default function ConcourComponentMobile() {
                                     className="w-full    py-2 px-4  bg-[#4c75f0] text-white flex justify-between items-center sm:justify-center"
                                     onClick={() => handleToggle(3)}
                                 >
-                                    <span className="flex-grow text-start"> Institutions Transnationales</span>
+                                    <span className="flex-grow text-start"> {t.concours.sections.transnational}</span>
 
                                     <span className="sm:ml-10 text-2xl">{open === 3 ? "▲" : "▼"}</span>
                                 </button>
@@ -224,7 +211,7 @@ export default function ConcourComponentMobile() {
                                     className="w-full    py-2 px-4  bg-[#4c75f0] text-white flex justify-between items-center sm:justify-center"
                                     onClick={() => handleToggle(4)}
                                 >
-                                    <span className="flex-grow text-start">Professions libérales et réglementées </span>  <span className="sm:ml-10 text-2xl">{open === 4 ? "▲" : "▼"}</span>
+                                    <span className="flex-grow text-start">{t.concours.sections.liberal}</span>  <span className="sm:ml-10 text-2xl">{open === 4 ? "▲" : "▼"}</span>
                                 </button>
 
 
@@ -252,7 +239,7 @@ export default function ConcourComponentMobile() {
                                     className="w-full    py-2 px-4  bg-[#4c75f0] text-white flex justify-between items-center sm:justify-center"
                                     onClick={() => handleToggle(5)}
                                 >
-                                    <span className="flex-grow text-start">Recrutement à la Fonction Publique
+                                    <span className="flex-grow text-start">{t.concours.sections.fonction}
                                     </span>
                                     <span className="sm:ml-10 text-2xl">{open === 5 ? "▲" : "▼"}</span>
                                 </button>
@@ -287,7 +274,7 @@ export default function ConcourComponentMobile() {
                                     className="w-full py-2 px-4  text-center bg-[#4c75f0] text-white flex items-center justify-between"
                                     onClick={() => handleToggle(6)}
                                 >
-                                    <span className="flex-grow text-start">Forces de défense et de sécurité
+                                    <span className="flex-grow text-start">{t.concours.sections.defense}
                                     </span>
                                     <span className="text-2xl">{open === 6 ? "▲" : "▼"}</span>
                                 </button>

@@ -1,12 +1,13 @@
 "use client";
 import { URLS } from "@/service/url";
 import Link from "next/link";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 
-import en from '../../../../i18/en/student/metier.json';
-import fr from '../../../../i18/fr/student/metier.json';
+
 import { useRouter } from "next/router";
-
+import en from '@/i18/en/student/metier.json';
+import fr from '@/i18/fr/student/metier.json';
+import UseLanguageService from "@/service/language_switch";
 type Metier = {
   id: number;
   category: string;
@@ -18,6 +19,12 @@ export default function MetierComponentFormation() {
   const [metiers, setMetier] = useState<Metier[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+   const {
+  
+     headers
+  
+  
+      } = UseLanguageService()
   useEffect(() => {
     async function fetchMetier() {
       try {
@@ -29,10 +36,7 @@ export default function MetierComponentFormation() {
         url.searchParams.append("category", "NOSCHOOL");
         const response = await fetch(url.toString(), {
           method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-            locale: "fr",
-          },
+          headers
         });
 
 

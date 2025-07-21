@@ -1,0 +1,45 @@
+ {
+    "menu": {
+      "students": "Étudiants et diplômés",
+      "companies": "Entreprises et organisations",
+      "institutions": "Institutions du supérieur",
+      "spotlight": "Zoom sur",
+      "news": "Actualités",
+      "partners": "Partenaires",
+      "about": "À propos",
+      "switch_language": "Français"
+    },
+    "links": {
+      "offresStage": "Offres de stage",
+      "formations": "Annuaire des formations",
+      "concoursBourse": "Concours & Bourses",
+      "orientation": "Orientation",
+      "metier": "Métiers",
+      "carrier": "Carrière",
+      "entrepreneuriat": "Entrepreneuriat",
+      "employeur": "Employeur à la une",
+      "classements": "Classements",
+      "jpo": "Journées Portes Ouvertes",
+      "institution": "Institution à la une",
+      "sondage_enquetes": "Sondages",
+      "femme": "Femme d'impact",
+      "parole_expert": "Parole d'expert",
+      "service": "Services",
+      "poster": "Poster un stage",
+      "expertise": "Experts Allemands du SES",
+      "talents": "Trouver des talents",
+      "promotion": "Promouvoir sa structure",
+      "stage": "Obtenir des stages à ses étudiants",
+      "referencer": "Référencer ses formations",
+      "promotion_institution": "Promouvoir son institution"
+    },
+    "auth": {
+      "login": "Se connecter",
+      "signup": "S'inscrire"
+    },
+    "about": {
+      "presentation": "Présentation",
+      "legal": "Mentions Légales",
+      "terms": "Conditions Générales d'Utilisation"
+    }
+  }

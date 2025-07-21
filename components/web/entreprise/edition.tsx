@@ -53,7 +53,9 @@ export default function EditionOffre() {
     const router = useRouter();
     const { locale } = router;
     const t = locale === 'en' ? en : fr;
-
+  const handleClick1 = () => {
+   setEditionOpen(false)
+  };
 
 
     return (
@@ -418,7 +420,7 @@ export default function EditionOffre() {
                             {t.Valider}
                         </button>
 
-                        <button className=" bg-[#5f5d5d] text-white py-3  px-10  rounded-lg font-bold hover:bg-[#a7a2a2]">
+                        <button onClick={handleClick1} className=" bg-[#5f5d5d] text-white py-3  px-10  rounded-lg font-bold hover:bg-[#a7a2a2]">
                             {t.Annuler}
                         </button>
                     </div>

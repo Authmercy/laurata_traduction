@@ -30,9 +30,11 @@ export default function WelcomePage2() {
             <Image src="/images/logo.png" alt="logoSES" width={250} height={150} />
           </div>
           <div className="justify-end mr-8 -mt-16 flex space-x-6 text-white">
-            <Link href="/authentification/signup" className="hover:underline font-bold">S'inscrire</Link>
-            <span>|</span>
-            <Link href="/authentification/login" className="hover:underline font-bold">Se connecter</Link>
+                  <Link href="/authentification/signup" className="hover:underline font-bold">    {locale === 'en' ?  'Sign Up' : 'S\'inscrire ' }</Link>
+                            <span>|</span>
+                            <Link href="/authentification/login" className="hover:underline font-bold">    {locale === 'en' ? 'Login':'Se connecter '  }</Link>
+                      
+        
             <div className="flex space-x-2">
 
               <button

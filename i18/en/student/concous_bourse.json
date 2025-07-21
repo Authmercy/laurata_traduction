@@ -21,6 +21,7 @@
     "warningText": "Ne postulez jamais à une bourse avec des faux documents ou des fausses déclarations ; ils sont détectés dans 100% des cas. La conséquence sera le rejet votre dossier et l’interdiction de repostuler.",
     "tableTitle": "Liste non exhaustive des bourses d’Études",
     "table": {
+      "tous":"Tous pays",
       "country": "Pays",
       "organization": "Organisme",
       "descriptionLink": "Description & Lien",

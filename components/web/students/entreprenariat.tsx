@@ -304,13 +304,13 @@ export default function Entrepreunariat() {
                                                                 <b>{t.content3.plus.item1.title}  </b>{t.content3.plus.item1.text}
                                                             </p>
                                                             <p className="p-2">
-                                                                <b> {t.content3.plus.item2.title}  </b> {t.content3.plus.item1.text}
+                                                                <b> {t.content3.plus.item2.title}  </b> {t.content3.plus.item2.text}
                                                             </p>
                                                             <p className="p-2 bg-[#e6d4bc]/70">
-                                                                <b> {t.content3.plus.item3.title}   </b>{t.content3.plus.item1.text}
+                                                                <b> {t.content3.plus.item3.title}   </b>{t.content3.plus.item3.text}
                                                             </p>
                                                             <p className="p-2">
-                                                                <b>{t.content3.plus.item4.title} </b> {t.content3.plus.item1.text}
+                                                                <b>{t.content3.plus.item4.title} </b> {t.content3.plus.item4.text}
 
                                                             </p>
 
@@ -454,7 +454,7 @@ export default function Entrepreunariat() {
                                                     <p>  <span className="text-[#4A62AA] font-bold">   • {t.content5.item1.title}</span>{t.content5.item1.text} </p>
                                                     <p> <span className="text-[#4A62AA] font-bold">• {t.content5.item2.title}</span> {t.content5.item2.text} </p>
                                                     <p> <span className="text-[#4A62AA] font-bold">• {t.content5.item3.title}</span> {t.content5.item3.text} </p>
-                                                    <p> <span className="text-[#4A62AA] font-bold">• {t.content5.item4.title}r </span> {t.content5.item4.text} </p>
+                                                    <p> <span className="text-[#4A62AA] font-bold">• {t.content5.item4.title} </span> {t.content5.item4.text} </p>
                                                     <p> <span className="text-[#4A62AA] font-bold">• {t.content5.item5.title} </span> {t.content5.item5.text} </p>
                                                     <p>  <span className="text-[#4A62AA] font-bold">• {t.content5.item6.title}  </span>{t.content5.item6.text}</p>
                                                     <p> <span className="text-[#4A62AA] font-bold">• {t.content5.item7.title} </span>{t.content5.item7.text} </p>
@@ -618,90 +618,90 @@ export default function Entrepreunariat() {
                                     {open === 8 && (
                                         <div className="bg-white/80  p-4 ">
 
-                                        <div className="w-full ">
-                                            <p  dangerouslySetInnerHTML={{ __html: t.content8.intro }} /> 
+                                            <div className="w-full ">
+                                                <p dangerouslySetInnerHTML={{ __html: t.content8.intro }} />
 
 
-                                          
-                                        </div>
-   {t.content8.sections.map((section, sectionIndex) => (
-        <div key={sectionIndex} className="bg-white mt-2">
-          <p className="font-bold my-2 text-lg bg-[#dac7ac] p-2">
-            {section.title}
-          </p>
-          
-          <div className="p-4">
-         
-            {section.content && <p>{section.content}</p>}
-            
-         
-            {section.link && (
-              <p>
-                {section.link.text} 
-                <a 
-                  href={section.link.url} 
-                  className="text-blue-600" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                >
-                  <i> {section.link.display}</i>
-                </a>
-              </p>
-            )}
-            
-         
-            {section.subsections && section.subsections.map((subsection, subIndex) => (
-              <div key={subIndex} className="mt-2">
-                <p className="font-bold"> ■  {subsection.title}</p>
-                
-             
-                {'missions' in subsection && subsection.missions && (
-                  <div className="text-black">
-                    Missions :
-                    <div className="mx-4">
-                      {subsection.missions.map((mission, missionIndex) => (
-                        <div key={missionIndex}>- {mission}</div>
-                      ))}
-                    </div>
-                  </div>
-                )}
-                
-              
-                {'description' in subsection && subsection.description && (
-                  <p>{subsection.description}</p>
-                )}
-                
-         
-                {'mission' in subsection && subsection.mission && (
-                  <p>{subsection.mission}</p>
-                )}
-                
-           
-                {'location' in subsection && subsection.location && (
-                  <p className="mt-2">{subsection.location}</p>
-                )}
-                
-            
-                {'link' in subsection && subsection.link && (
-                  <p>
-                    <a 
-                      href={subsection.link.url} 
-                      className="text-blue-600" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                    >
-                      <i>{subsection.link.display}</i>
-                    </a>
-                  </p>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      ))}
-    
 
-                                    </div>)}
+                                            </div>
+                                            {t.content8.sections.map((section, sectionIndex) => (
+                                                <div key={sectionIndex} className="bg-white mt-2">
+                                                    <p className="font-bold my-2 text-lg bg-[#dac7ac] p-2">
+                                                        {section.title}
+                                                    </p>
+
+                                                    <div className="p-4">
+
+                                                        {section.content && <p>{section.content}</p>}
+
+
+                                                        {section.link && (
+                                                            <p>
+                                                                {section.link.text}
+                                                                <a
+                                                                    href={section.link.url}
+                                                                    className="text-blue-600"
+                                                                    target="_blank"
+                                                                    rel="noopener noreferrer"
+                                                                >
+                                                                    <i> {section.link.display}</i>
+                                                                </a>
+                                                            </p>
+                                                        )}
+
+
+                                                        {section.subsections && section.subsections.map((subsection, subIndex) => (
+                                                            <div key={subIndex} className="mt-2">
+                                                                <p className="font-bold"> ■  {subsection.title}</p>
+
+
+                                                                {'missions' in subsection && subsection.missions && (
+                                                                    <div className="text-black">
+                                                                        Missions :
+                                                                        <div className="mx-4">
+                                                                            {subsection.missions.map((mission, missionIndex) => (
+                                                                                <div key={missionIndex}>- {mission}</div>
+                                                                            ))}
+                                                                        </div>
+                                                                    </div>
+                                                                )}
+
+
+                                                                {'description' in subsection && subsection.description && (
+                                                                    <p>{subsection.description}</p>
+                                                                )}
+
+
+                                                                {'mission' in subsection && subsection.mission && (
+                                                                    <p>{subsection.mission}</p>
+                                                                )}
+
+
+                                                                {'location' in subsection && subsection.location && (
+                                                                    <p className="mt-2">{subsection.location}</p>
+                                                                )}
+
+
+                                                                {'link' in subsection && subsection.link && (
+                                                                    <p>
+                                                                        <a
+                                                                            href={subsection.link.url}
+                                                                            className="text-blue-600"
+                                                                            target="_blank"
+                                                                            rel="noopener noreferrer"
+                                                                        >
+                                                                            <i>{subsection.link.display}</i>
+                                                                        </a>
+                                                                    </p>
+                                                                )}
+                                                            </div>
+                                                        ))}
+                                                    </div>
+                                                </div>
+                                            ))}
+
+
+                                        </div>)}
 
 
 

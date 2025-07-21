@@ -5,9 +5,15 @@ import Navbar from "../../navbar/navbar";
 import FooterMobile from "../../footer/footerEnd";
 import { Brand } from "@/service/Brand";
 
+import en from '@/i18/en/student/metier.json';
+import fr from '@/i18/fr/student/metier.json';
+import { useRouter } from "next/router";
 
 export default function MetierHomeMobile() {
+   const router = useRouter();
 
+    const { locale } = router;
+    const t = locale === 'en' ? en : fr;
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobileMenuOpen2, setIsMobileMenuOpen2] = useState(false);
   const [brand, setBrand] = useState<Brand[]>([]);
@@ -43,35 +49,35 @@ export default function MetierHomeMobile() {
           } ${isMobileMenuOpen2 ? "blur-sm " : ""
           } `}>
           <div className="justify-center p-2 text-center text-xl font-bold uppercase bg-[#9b6e0f] text-white">
-            <p>   MÉTIERS </p>
+            <p>   {t.professions} </p>
           </div>
 
           <div className="bg-white/70 mt-8  p-4 shadow-sm mb-2 hover:shadow-md transition-shadow">
             <Link href="/students/metier/fichesMetier">
               <div className="flex items-center gap-2 py-2">
                 <img src="/icons/puces_1.png" alt="" className="w-5" />
-                <p className="text-[#4A62AA] font-bold uppercase hover:text-[#A87A38]">Fiches métiers</p>
+                <p className="text-[#4A62AA] font-bold uppercase hover:text-[#A87A38]"> {t.jobSheets}</p>
               </div>
             </Link>
 
             <Link href="/students/metier/metierSansFormation">
               <div className="flex items-center gap-2 py-2">
                 <img src="/icons/puces_1.png" alt="" className="w-5" />
-                <p className="text-[#4A62AA] font-bold uppercase hover:text-[#A87A38]">Métiers sans offres de formation</p>
+                <p className="text-[#4A62AA] font-bold uppercase hover:text-[#A87A38]">        {t.jobsWithoutTraining}</p>
               </div>
             </Link>
 
             <Link href="/students/metier/metierSansDebouche">
               <div className="flex items-center gap-2 py-2">
                 <img src="/icons/puces_1.png" alt="" className="w-5" />
-                <p className="text-[#4A62AA] font-bold uppercase hover:text-[#A87A38]">Métiers sans débouchés</p>
+                <p className="text-[#4A62AA] font-bold uppercase hover:text-[#A87A38]">{t.jobsWithoutProspects}</p>
               </div>
             </Link>
 
             <Link href="/students/metier/metierPorteur">
               <div className="flex items-center gap-2 py-2">
                 <img src="/icons/puces_1.png" alt="" className="w-5" />
-                <p className="text-[#4A62AA] font-bold uppercase hover:text-[#A87A38]">Métiers porteurs</p>
+                <p className="text-[#4A62AA] font-bold uppercase hover:text-[#A87A38]">   {t.promisingJobs}</p>
               </div>
             </Link>
           </div>

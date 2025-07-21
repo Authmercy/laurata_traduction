@@ -27,7 +27,7 @@ const router = useRouter();
   
   elements,
   
-  open,
+
   
   
     } = UseRegistrationService()

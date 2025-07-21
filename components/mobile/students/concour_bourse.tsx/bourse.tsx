@@ -4,7 +4,9 @@ import {  useState } from "react";
 import Navbar from "../../navbar/navbar";
 import FooterMobile from "../../footer/footerEnd";
 import UseBourseService from "@/service/service_bourse";
-
+import en from '@/i18/en/student/concous_bourse.json';
+import fr from '@/i18/fr/student/concous_bourse.json';
+import { useRouter } from "next/router";
 
 
 
@@ -23,6 +25,10 @@ export default function BourseComponentMobile() {
 
   } = UseBourseService()
 
+ const router = useRouter();
+
+  const { locale } = router;
+  const t = locale === 'en' ? en : fr;
 
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -47,7 +53,7 @@ export default function BourseComponentMobile() {
 
             <p>
 
-              BOURSES D'ÉTUDES
+           {t.scholarships.subtitle}
             </p>  </div>
 
               <div
@@ -58,7 +64,7 @@ export default function BourseComponentMobile() {
                 }}
                 className="py-2 px-4 mt-2 w-full bg-[#6a83cf] text-white font-bold flex justify-between items-center"
               >
-                <span className="font-bold text-center text-xl"> Guide pour postuler à une bourse d’étude</span>
+                <span className="font-bold text-center text-xl">{t.scholarships.guideTitle}</span>
                 <span className="text-xl">{open === 10 ? "▲" : "▼"}</span>
               </div>
 
@@ -66,53 +72,21 @@ export default function BourseComponentMobile() {
             {open === 10 && (
    <div className="mt-1  text-black bg-white/70 p-8 space-y-4">
        
-            <p> <span className="text-[#4A62AA] "> ■
-            </span>
-              &nbsp; &nbsp;Commencez vos recherches et démarches le plus tôt possible (au moins un (1) an avant) ;
-            </p>
-            <p> <span className="text-[#4A62AA] "> ■
-            </span>
-              &nbsp;&nbsp;      Les critères de sélection des organismes attributaires sont multiples : résultats académiques, motivation personnelle, projet professionnel, genre, talents spécifiques (sports, musiques, etc.) ;
-            </p>
+            {t.scholarships.guideTips.map((tip, index) => (
+                <p key={index}>
+                  <span className="text-[#4A62AA]">■</span>&nbsp;&nbsp;{tip}
+                </p>
+              ))}
 
-            <p> <span className="text-[#4A62AA] "> ■
-            </span>
-              &nbsp;&nbsp;    Lisez attentivement l’ensemble des critères d’éligibilité pour vous assurer que vous êtes éligible à la bourse ;
-            </p>
+ <p>
+                <span className="text-[#4A62AA] font-bold">NB:</span> {t.scholarships.note}
+              </p>
 
-            <p> <span className="text-[#4A62AA] "> ■
-            </span>
-              &nbsp;&nbsp;     Remplissez minutieusement et honnêtement les formulaires et questionnaires du dossier de candidature ;
-            </p>
-
-            <p> <span className="text-[#4A62AA] "> ■
-            </span>
-              &nbsp;&nbsp;   Évitez les erreurs dans votre dossier et rangez les pièces et documents dans l’ordre prescrit ;
-            </p>
-            <p> <span className="text-[#4A62AA] "> ■
-            </span>
-              &nbsp;&nbsp;    Insérez des lettres de recommandation pour accroître vos chances de sélection ;
-            </p>
-
-
-            <p> <span className="text-[#4A62AA] "> ■
-            </span>
-              &nbsp;&nbsp;   Déposez votre dossier complet dans les délais et le format requis : e-mail, plateforme en ligne, physique, clé USB, etc. ;
-            </p>
-            <p> <span className="text-[#4A62AA] "> ■
-            </span>
-              &nbsp;&nbsp;   Préparez minutieusement votre entretien : passez en revue vos motivations ; exercez-vous à pouvoir vous présenter en 60 ou 90 secondes en exposant l’essentiel de votre parcours, vos objectifs de carrière, vos points forts, soft skills, etc.
-
-            </p>
-            <p> <span className="text-[#4A62AA] font-bold">  NB :
-            </span>
-              &nbsp;   Il existe des bourses complètes (Full Scholarships) couvrant l’intégralité des frais de scolarité et du coût de la vie et des bourses partielles (Part Scholarships) couvrant une partie des frais de scolarité et/ou du coût de la vie.
-
-            </p>
-            <p> <span className="text-[#e63636]  font-bold"> Avertissement !
-            </span> <br />
-              Ne postulez jamais à une bourse avec des faux documents ou des fausses déclarations ; ils sont détectés dans 100% des cas. La conséquence sera le rejet votre dossier et l’interdiction de repostuler.
-            </p>
+              <p>
+                <span className="text-[#e63636] font-bold">{t.scholarships.warningTitle}</span>
+                <br />
+                {t.scholarships.warningText}
+              </p>
 
 
 
@@ -120,7 +94,7 @@ export default function BourseComponentMobile() {
 )}
           
           <div className="bg-[#4A62AA] text-center p-3 mt-8">
-            <p> <span className="text-white  text-lg uppercase font-bold"> Liste non exhaustive des bourses d’Études
+            <p> <span className="text-white  text-lg uppercase font-bold">  {t.scholarships.tableTitle}
             </span>
 
             </p></div>
@@ -169,25 +143,56 @@ export default function BourseComponentMobile() {
                             <table className="text-start border-collapse w-full">
                               <thead>
                                 <tr>
-                                  <th className="p-4 text-left font-semibold">Pays</th>
-                                  <th className="p-2 text-left font-semibold">Organisme attributaire</th>
-                                  <th className="p-2 text-left font-semibold">Contenu & Lien  Internet</th>
+                                  <th className="p-4 text-left font-semibold">{t.scholarships.table.country}</th>
+                                  <th className="p-2 text-left font-semibold">{t.scholarships.table.organization}</th>
+                                  <th className="p-2 text-left font-semibold">{t.scholarships.table.descriptionLink}</th>
                                 </tr>
                               </thead>
                               <tbody>
-                                {offers.map((offer, index) => (
-                                  <tr key={index} className={`text-black text-start ${index % 2 === 0 ? 'bg-[#f1d9b6]/50' : 'bg-gray-200'
-                                    }`}  >
+                      {offers
 
-                                    <td className="border border-x-0 font-bold  p-4">{offer.countryName}</td>
-                                    <td className="border border-x-0  p-2">{offer.sponsor}</td>
-                                    <td className="border border-x-0  p-2">
-                                      <p>{offer.description}</p>
-                                      <p> Lien: <a href={offer.website} className="text-[#4A62AA] hover:underline ml-1">{offer.website}</a></p>
-                                    </td>
-                                  </tr>
-                                ))}
-                              </tbody>
+                        .map(offer => ({
+                          ...offer,
+                          countryName: offer.countryName || 'Tous pays'
+                        }))
+
+                        .sort((a, b) => {
+
+                          if (a.countryName === 'Tous pays') return -1;
+                          if (b.countryName === 'Tous pays') return 1;
+                          return 0;
+
+
+                        })
+                        .map((offer, index) => (
+                          <tr
+                            key={index}
+                            className={`text-black text-start ${index % 2 === 0 ? 'bg-[#f1d9b6]/70' : 'bg-gray-200'
+                              }`}
+                          >
+                            <td className="border border-x-0 font-bold p-4">
+                              {offer.countryName}
+                            </td>
+                            <td className="border border-x-0 p-2">
+                              {offer.sponsor}
+                            </td>
+                            <td className="border border-x-0 p-2">
+                              <p>{offer.description}</p>
+                              <p> {t.scholarships.table.linkLabel}:
+                                <a
+                                  href={offer.website}
+                                  className="text-[#4A62AA] hover:underline ml-1"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                  {offer.website}
+                                </a>
+                              </p>
+                            </td>
+                          </tr>
+                        ))
+                      }
+                    </tbody>
                             </table>
                           </div>
                         </div>

@@ -177,7 +177,7 @@ export default function PremierEmplois() {
                                                         <div className=" font-bold  text-end ">
                                                             {tip.title} </div>
                                                         <div className="max-w-4xl">
-                                                            <p>    {tip.title}
+                                                            <p>    {tip.text}
                                                             </p>
                                                         </div>
                                                     </div>
@@ -345,7 +345,7 @@ export default function PremierEmplois() {
                                             <span className="text-end ml-10"> {open === 5 ? "▲" : "▼"}</span>
                                         </button>
                                         <div className="w-11/12 text-start   bg-[#4A62AA] text-white  font-bold    flex justify-start items-center"> <p className="ml-8"> 
-                                     {t.emploiContent.step4.title}</p>
+                                     {t.emploiContent.step5.title}</p>
                                         </div></div>
                                     {open === 5 && (
                                         <div className="flex flex-col ">

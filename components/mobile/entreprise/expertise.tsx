@@ -8,7 +8,8 @@ import Navbar from "../navbar/navbar";
 import { useEffect, useState } from "react";
 import FooterMobile from "../footer/footerEnd";
 
-
+import en from '@/i18/en/entreprise/Expert.json';
+import fr from '@/i18/fr/entreprise/Expert.json';
 export default function ExpertiseMobile() {
     const [brand, setBrand] = useState<Brand[]>([]);
     useEffect(() => {
@@ -51,7 +52,9 @@ export default function ExpertiseMobile() {
 
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isMobileMenuOpen2, setIsMobileMenuOpen2] = useState(false);
-
+   const router = useRouter();
+      const { locale } = router;
+      const t = locale === 'en' ? en : fr;
     return (
         <div>
          <div className="min-h-screen   bg-[#34538C]  overflow-auto  w-screen bg-cover  text-justify bg-center bg-no-repeat "  >
@@ -66,7 +69,7 @@ export default function ExpertiseMobile() {
                     } ${isMobileMenuOpen2 ? "blur-sm " : ""
                     } `}>
                     <div className="justify-center p-2 text-center text-xl font-bold uppercase bg-[#414040] text-white">
-                        <p>  EXPERTS ALLEMANDS DU SES</p>
+                        <p>   {t.title}</p>
                     </div>
 
 
@@ -74,14 +77,13 @@ export default function ExpertiseMobile() {
                     <div className="grid grid-cols-1 lg:flex-row flex-grow  justify-center mt-8  ">
 
                         <div className="  bg-white-70  border-1 p-2  text-start border-[#4A62AA]" >
-                            <p className="text-white text-lg font-bold text-center"> Bénéficiez du transfert de technologie et de renforcement de capacités</p>
+                            <p className="text-white text-lg font-bold text-center"> {t.subtitle1}</p>
 
 
                         </div>
 
                         <p className=" text-black p-3 text-justify  bg-white/70 " >
-                            Vous cherchez de l’aide pratique, une solution pour vos problèmes techniques ou organisationnels, de nouvelles perspectives ou un conseil individuel ? Les
-                            experts allemands du SES vous aideront, vous et vos collaborateurs.  </p>
+                            {t.text1}  </p>
 
                         <div className="flex px-4 my-2  bg-white flex-col lg:flex-row flex-grow justify-center border-4 border-orange-700  gap-8 border-x-0 p-4 ">
 
@@ -96,14 +98,13 @@ export default function ExpertiseMobile() {
                             <div >
                                
 
-                                <p className=" text-black  mt-5" >      Le SES c’est 12 000 experts dans plus de 50 secteurs d’activités œuvrant au renforcement des compétences
-                                    locales et au transfert de savoir-faire.</p>
+                                <p className=" text-black  mt-5" >        <b>  {t.expert}</b>  {t.expertText}</p>
 
                             </div>
 
                         </div>
                         <div className="text-center bg-white p-2 ">
-                            <p className="text-[#4A62AA] text-xl">ILS ONT BÉNÉFICIÉ DU SAVOIR-FAIRE DES EXPERTS DU SES</p>
+                            <p className="text-[#4A62AA]  uppercase text-xl">{t.IlsOntBeneficier}</p>
                             <div className="flex justify-center mt-6  ">
 
                                 {brand.map((item, index) => (
@@ -119,8 +120,10 @@ export default function ExpertiseMobile() {
                                     </div>
                                 ))}
                             </div>
-                            <p className="text-black py-5">Vous êtes intéressé ou avez des questions ? <span className="font-extrabold text-[#4A62AA]"><Link href="/misc/nous_contacter" className="  hover:text-xl">     Contactez-nous. </Link>
-                            </span></p>
+                            <p className="text-black py-5">{t.contactText}
+                            <span className="font-extrabold text-[#4A62AA]">
+                                <Link href="/misc/nous_contacter" className="  hover:text-xl">    {t.contact} </Link>
+                        </span></p>
                         </div>
                       
                     </div>

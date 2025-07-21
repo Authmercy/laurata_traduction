@@ -3,8 +3,8 @@ import React from "react";
 
 import ServiceFormationResult from "@/service/service_Formation_Result";
 
-import en from '../../../../i18/fr/student/formation.json';
-import fr from '../../../../i18/fr/student/formation.json';
+import en from '@/i18/en/student/formation.json';
+import fr from '@/i18/fr/student/formation.json';
 export default function SearchResultsFormation() {
 
 
