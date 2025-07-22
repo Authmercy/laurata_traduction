@@ -66,7 +66,7 @@ export default function UsePosterService() {
 
   const {
 
-    headers
+  headers, locale
 
 
   } = UseLanguageService()
@@ -374,9 +374,27 @@ const handleChange = (
     e.preventDefault();
 
     const data = new FormData();
-    data.append("publicationDate", elements.publicationDate ? elements.publicationDate.toISOString() : "");
-    data.append("deadline", elements.deadline ? elements.deadline.toISOString() : "");
-    data.append("startDate", elements.startDate ? elements.startDate.toISOString() : "");
+   data.append(
+  "publicationDate",
+  elements.publicationDate instanceof Date && !isNaN(elements.publicationDate.getTime())
+    ? elements.publicationDate.toISOString().split('T')[0]
+    : ""
+);
+
+ data.append(
+  "deadline",
+  elements.deadline instanceof Date && !isNaN(elements.deadline.getTime())
+    ? elements.deadline.toISOString().split('T')[0]
+    : ""
+);
+
+data.append(
+  "startDate",
+  elements.startDate instanceof Date && !isNaN(elements.startDate.getTime())
+    ? elements.startDate.toISOString().split('T')[0]
+    : ""
+);
+
     data.append("employer", elements.employer ?? "");
     data.append("employerDesc", elements.employerDesc ?? "");
     data.append("city", elements.city ?? "");
@@ -400,7 +418,7 @@ const handleChange = (
     elements.employerType?.forEach((item: string) => data.append("employerType", item));
     elements.adType?.forEach((item: string) => data.append("adType", item));
     elements.sector?.forEach((item: string) => data.append("sector", item));
-
+console.log(data)
    
     try {
       console.log("Envoi de la requête...");
@@ -409,11 +427,24 @@ const handleChange = (
 
       const response = await fetch(BACKEND_URL, {
         method: "POST",
-        headers,
+   headers: {
+    'Accept': 'application/json',
+
+    locale: locale || "fr",  
+  },
         body: data,
       });
 
 
+ if (!response.ok) {
+        const error = new Error(
+          locale === 'en'
+            ? `HTTP error: ${response.status}, Please try later`
+            : `Erreur HTTP: ${response.status}, Erreur serveur, veuillez réessayer plus tard`
+        );
+        (error as any).status = response.status;
+        throw error;
+      }
 
       const result = await response.json();
       setSuccessMessage("🎉 Votre offre a été bien envoyé, Nous vous reconterons  !");
@@ -461,7 +492,7 @@ const handleChange = (
     setOpen,
     foas,
     handleChange,
-
+ successMessage,
 
   }
 }

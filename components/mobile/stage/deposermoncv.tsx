@@ -17,26 +17,27 @@ export default function DeposerMonCVMobile() {
 
        const {
       
- errorMessage,
-  handleChange,
-  successMessage,
+    errorMessage,
+    handleChange,
+    successMessage,
+    setSelectedSectors,
+    selectedSectors,
+    setErrorMessage,
+    setElements,
+    handleCheckboxChange,
+    updateElement,
+    setSuccessMessage,
+    showError,
+    setShowError,
+    setTermsAccepted,
+    termsAccepted,
+    elements,
+    setSectors,
+    handleSubmit,
 
-  setErrorMessage,
-  setElements,
-handleCheckboxChange,
-updateElement,
-  setSuccessMessage,
-showError,
-setShowError,
-setTermsAccepted,
-termsAccepted,
-elements,
-setSectors,
- handleSubmit ,
-
-sectors,
-handleToggle,
-open,
+    foas,
+    handleToggle,
+    open,
    
      } = UseDepotCVService()
 
@@ -109,27 +110,27 @@ open,
                 onChange={handleChange} placeholder={t.cv.input.phone} name="phone" className="w-full border placeholder:text-[#4A62AA] bg-white/70  border-gray-300 p-2 px-8   focus:ring-2 focus:ring-[#4A62AA]" />
 
 
-              <div className="relative w-full border placeholder:text-[#4A62AA] text-[#4A62AA] bg-white/70  border-gray-300 p-2 px-8   focus:ring-2 focus:ring-[#4A62AA]">
+              <div className="relative w-full border placeholder:text-[#4A62AA] text-[#4A62AA] bg-white/70  border-gray-300 p-2   focus:ring-2 focus:ring-[#4A62AA]">
                 <div
-                  className="w-full flex justify-between items-center cursor-pointer"
+                  className="w-full flex justify-between items-center cursor-pointer px-8 "
                   onClick={() => handleToggle(1)}
                 >
                             <span>{t.cv.input.sector}</span>
                   <span className="text-xl">{open === 1 ? "▲" : "▼"}</span>
                 </div>
-                {open === 1 && (
-                  <div className=" text-start mt-2 text-black    ">
-                    <div className="grid grid-cols-2 gap-2">
-                      {sectors.map(sector => (
-                        <label key={sector.id} className="flex items-center gap-2">
+                 {open === 1 && (
+                  <div className=" text-start mt-2 text-black     z-10">
+                    <div className="grid grid-cols-2 gap-4">
+                      {foas.map((foa, index) => (
+                        <label key={foa.key} className="flex items-center gap-2">
                           <input
                             type="checkbox"
-                            value={sector.id}
-                            checked={elements.sector.includes(sector.id)}
-                            onChange={handleCheckboxChange}
+                            value={foa.key}
+                            checked={selectedSectors.includes(foa.key)}
+                            onChange={() => handleCheckboxChange('sector', foa.key)}
                             className="accent-blue-500"
                           />
-                          {sector.text}
+                          {foa.text}
                         </label>
                       ))}
 
@@ -163,7 +164,7 @@ open,
               {showError && (
                 <p className="mt-1 text-red-500 text-sm">{t.cv.termsError}</p>
               )}
-              {/* Buttons */}
+           
               <div className="flex justify-center mt-4">
                 <div className="flex w-1/2 pt-8 justify-center items-center gap-4">
                   <button type="submit" className="px-12  bg-[#A87A38]  text-white font-bold py-2 rounded-lg hover:bg-[#C08B2F]">

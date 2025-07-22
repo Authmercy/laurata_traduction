@@ -10,6 +10,7 @@ import fr from '@/i18/fr/entreprise/Editer.json';
 export default function EditionOffre() {
 
     const {
+        successMessage,
         elements,
         handleRadioChange,
         handleCheckboxChange,
@@ -53,9 +54,9 @@ export default function EditionOffre() {
     const router = useRouter();
     const { locale } = router;
     const t = locale === 'en' ? en : fr;
-  const handleClick1 = () => {
-   setEditionOpen(false)
-  };
+    const handleClick1 = () => {
+        setEditionOpen(false)
+    };
 
 
     return (
@@ -70,6 +71,16 @@ export default function EditionOffre() {
                 </button></div>
             {isEditionOpen && (
                 <form onSubmit={handleSubmit} >
+                    {successMessage && (
+                        <div className="mt-4 p-3 bg-green-100 border border-green-400 text-green-700 rounded">
+                            {successMessage}
+                        </div>
+                    )}
+                    {errorMessage && (
+                        <div className="mt-4 p-3 bg-red-100 border border-red-400 text-red-700 rounded">
+                            {errorMessage}
+                        </div>
+                    )}
                     <div className="grid grid-cols-1  md:ml-10  md:grid-cols-3 gap-6 mt-8 my-4">
                         <div>
 
@@ -79,7 +90,7 @@ export default function EditionOffre() {
                                 placeholder={t.Employeur}
                                 value={elements.employer}
                                 onChange={handleChange}
-                                className="mt-1 w-full font-bold bg-white/70  p-2  placeholder:text-[#4A62AA] shadow-sm   focus:ring-white focus:border-white"
+                                className="mt-1 w-full font-bold bg-white/70  p-2  placeholder:text-[#4A62AA] shadow-sm   focus:ring-white focus:border-white" required
                             />
                         </div>
 
@@ -139,7 +150,7 @@ export default function EditionOffre() {
                             name="title"
                             value={elements.title}
                             onChange={handleChange}
-                            placeholder={t.Poste}
+                            placeholder={t.Poste} required
                             className="mt-1 w-full font-bold bg-white/70  p-2  placeholder:text-[#4A62AA] shadow-sm text-black  focus:ring-white focus:border-white"
                         />
 
@@ -305,15 +316,15 @@ export default function EditionOffre() {
                         <div>
                             <div>
 
-                            <input
-                                type="text"
-                                name="duration"
-                                placeholder={t.Duration}
-                                value={elements.duration}
-                                onChange={handleChange}
-                                className="mt-1 w-full font-bold bg-white/70  p-2  placeholder:text-[#4A62AA] shadow-sm   focus:ring-white focus:border-white"
-                            />
-                        </div>
+                                <input
+                                    type="text"
+                                    name="duration"
+                                    placeholder={t.Duration}
+                                    value={elements.duration}
+                                    onChange={handleChange}
+                                    className="mt-1 w-full font-bold bg-white/70  p-2  placeholder:text-[#4A62AA] shadow-sm   focus:ring-white focus:border-white"
+                                />
+                            </div>
 
                         </div>
                     </div>
@@ -324,7 +335,12 @@ export default function EditionOffre() {
                             <input
                                 type="date"
                                 name="publicationDate"
-                                value={elements.publicationDate ? elements.publicationDate.toISOString().split('T')[0] : ''}
+                                value={
+                                    elements.publicationDate instanceof Date && !isNaN(elements.publicationDate.getTime())
+                                        ? elements.publicationDate.toISOString().split('T')[0]
+                                        : ''
+                                }
+
                                 onChange={handleChange}
                                 className="mt-1 w-full bg-white/70 p-2 placeholder:text-[#4A62AA] shadow-sm focus:ring-white focus:border-white"
                             />
@@ -390,7 +406,12 @@ export default function EditionOffre() {
                                 <input
                                     type="date"
                                     name="deadline"
-                                    value={elements.deadline ? elements.deadline.toISOString().split('T')[0] : ''}
+                                    value={
+                                        elements.deadline instanceof Date && !isNaN(elements.deadline.getTime())
+                                            ? elements.deadline.toISOString().split('T')[0]
+                                            : ''
+                                    }
+
                                     onChange={handleChange}
                                     className="mt-1 w-full border border-gray-300 p-2 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
                                 />
