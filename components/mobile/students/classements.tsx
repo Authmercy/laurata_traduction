@@ -120,19 +120,27 @@ export default function ClassementComponentMobile() {
             <div className="border-4 border-x-0 border-white text-black flex flex-row items-center bg-white/70 p-2 text-center shadow-md relative w-full">
               {categories.length > 0 ? (
                 <div className="slider-container relative w-full h-auto flex justify-center gap-2 transition-opacity duration-200">
-                  {categories.slice(currentIndex, currentIndex + maxImages).map((cat) => (
-                    <div key={cat.id} className="">
-                      <button
-                        onClick={() => handleCategoryClick(cat)}
-                        className={`border rounded-md p-4 border-[#4A62AA] flex items-center w-28 sm:w-44 justify-center h-[80px] text-sm ${selectedCategory?.id === cat.id
+                
+                         {categories.slice(currentIndex, currentIndex + maxImages).map((cat) => {
+  const maxLabelLength = 35; 
+  const truncatedLabel = cat.label.length > maxLabelLength
+    ? cat.label.slice(0, maxLabelLength) + '...'
+    : cat.label;
+
+  return (
+    <div key={cat.id}>
+      <button
+        onClick={() => handleCategoryClick(cat)}
+       className={`border rounded-md p-4 border-[#4A62AA] flex items-center w-28 sm:w-44 justify-center h-[80px] text-sm ${selectedCategory?.id === cat.id
                             ? 'bg-[#4A62AA] text-white'
                             : 'bg-white hover:bg-[#c3cbe4] hover:text-black'
                           }`}
-                      >
-                        {cat.label}
-                      </button>
-                    </div>
-                  ))}
+      >
+        {truncatedLabel}
+      </button>
+    </div>
+  );
+})}
                   {categories.length > maxImages && (
                     <>
                       <button

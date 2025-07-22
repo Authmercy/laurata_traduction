@@ -105,7 +105,7 @@ export default function PremierEmploisMobile() {
                                             <span className="  uppercase font-bold ">  2</span>
                                             <span className="text-start"> {t.emploiContent.step2.title}
                                             </span>
-                                            <span className="sm:ml-10">{open === 2 ? "▲" : "▼"}</span>
+                                            <span className="text-end">{open === 2 ? "▲" : "▼"}</span>
                                         </div> </button>
 
 

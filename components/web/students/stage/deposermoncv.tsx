@@ -17,7 +17,8 @@ export default function DeposerMonCV() {
     errorMessage,
     handleChange,
     successMessage,
-
+    setSelectedSectors,
+    selectedSectors,
     setErrorMessage,
     setElements,
     handleCheckboxChange,
@@ -31,7 +32,7 @@ export default function DeposerMonCV() {
     setSectors,
     handleSubmit,
 
-    sectors,
+    foas,
     handleToggle,
     open,
 
@@ -54,7 +55,7 @@ export default function DeposerMonCV() {
         </div>
         <div className="flex flex-row mt-4 gap-1">
           <div className="flex-4 bg-white/70 text-center font-bold text-[#4A62AA] py-8 px-4">
-           {t.cv.altTitle1}<br /> {t.cv.altTitle2}</div>
+            {t.cv.altTitle1}<br /> {t.cv.altTitle2}</div>
           <div className="flex-1 bg-white/70 pl-24 h-28 mt-2 mb-2  text-black p-6 ">
             <p>{t.cv.option1}<span className="text-[#4A62AA] font-semibold">cv@laurata.com</span> {t.cv.option11}<br /> </p>
             <p className=" mt-4">{t.cv.option2}</p>
@@ -80,13 +81,13 @@ export default function DeposerMonCV() {
             <form className="mt-6 space-y-1 w-10/12" onSubmit={handleSubmit}>
 
               <input type="text" name="firstname" value={elements.firstname}
-                onChange={handleChange} placeholder={t.cv.input.firstname} className="w-full border placeholder:text-[#4A62AA] bg-white/70  border-gray-300 p-2 px-8 focus:ring-2 focus:ring-[#4A62AA]"  required/>
+                onChange={handleChange} placeholder={t.cv.input.firstname} className="w-full border placeholder:text-[#4A62AA] bg-white/70  border-gray-300 p-2 px-8 focus:ring-2 focus:ring-[#4A62AA]" required />
               <input type="text" name="lastname" value={elements.lastname}
                 onChange={handleChange} placeholder={t.cv.input.lastname} className="w-full border placeholder:text-[#4A62AA] bg-white/70  border-gray-300 p-2 px-8  focus:ring-2 focus:ring-[#4A62AA]" required />
               <input type="email" value={elements.email}
-                onChange={handleChange} placeholder={t.cv.input.email} name="email" className="w-full border placeholder:text-[#4A62AA] bg-white/70  border-gray-300 p-2 px-8  focus:ring-2 focus:ring-[#4A62AA]"required />
+                onChange={handleChange} placeholder={t.cv.input.email} name="email" className="w-full border placeholder:text-[#4A62AA] bg-white/70  border-gray-300 p-2 px-8  focus:ring-2 focus:ring-[#4A62AA]" required />
               <input type="tel" value={elements.phone}
-                onChange={handleChange} placeholder={t.cv.input.phone} name="phone" className="w-full border placeholder:text-[#4A62AA] bg-white/70  border-gray-300 p-2 px-8   focus:ring-2 focus:ring-[#4A62AA]"  required/>
+                onChange={handleChange} placeholder={t.cv.input.phone} name="phone" className="w-full border placeholder:text-[#4A62AA] bg-white/70  border-gray-300 p-2 px-8   focus:ring-2 focus:ring-[#4A62AA]" required />
 
 
 
@@ -94,23 +95,26 @@ export default function DeposerMonCV() {
                 <div
                   className="w-full flex justify-between items-center cursor-pointer"
                   onClick={() => handleToggle(1)}
-                >
-                  <span>{t.cv.input.sector}</span>
+                >      {selectedSectors.length
+                  ? foas.filter(f => selectedSectors.includes(f.key)).map(f => f.text).join(', ')
+                  : t.cv.input.sector
+                  }
+                  <span></span>
                   <span className="text-xl">{open === 1 ? "▲" : "▼"}</span>
                 </div>
                 {open === 1 && (
                   <div className=" text-start mt-2 text-black     z-10">
                     <div className="grid grid-cols-4 gap-4">
-                      {sectors.map(sector => (
-                        <label key={sector.id} className="flex items-center gap-2">
+                      {foas.map((foa, index) => (
+                        <label key={foa.key} className="flex items-center gap-2">
                           <input
                             type="checkbox"
-                            value={sector.id}
-                            checked={elements.sector.includes(sector.id)}
-                            onChange={handleCheckboxChange}
+                            value={foa.key}
+                            checked={selectedSectors.includes(foa.key)}
+                            onChange={() => handleCheckboxChange('sector', foa.key)}
                             className="accent-blue-500"
                           />
-                          {sector.text}
+                          {foa.text}
                         </label>
                       ))}
 

@@ -5,7 +5,7 @@ export class CV_Class {
   private _phone: string;
   private _email: string;
   private _cv: File;
-  private _sector: string[];
+   private _sector?: string[];
 
 
   constructor(
@@ -43,9 +43,9 @@ export class CV_Class {
   get email(): string {
     return this._email;
   }
-  get sector(): string[] {
-    return this._sector;
-  }
+get sector(): string[] | undefined {
+  return this._sector;
+}
 
   get cv(): File {
     return this._cv;
