@@ -4,21 +4,21 @@ import { URLS } from './url';
 import { InternshipFilter } from '@/service/Internship-filter';
 import UseLanguageService from './language_switch';
 type Sector = {
-  key: string ;
+  key: string;
   text: string;
-}; 
+};
 type Status = {
-  key: string ;
+  key: string;
   text: string;
-}; 
+};
 type Level = {
-  key: string ;
+  key: string;
   text: string;
-}; 
+};
 type Duration = {
-  key: string ;
+  key: string;
   text: string;
-}; 
+};
 type Contrat = {
   key: string;
   text: string;
@@ -26,9 +26,9 @@ type Contrat = {
 };
 
 type Parution = {
-  key: string ;
+  key: string;
   text: string;
-}; 
+};
 
 export default function ServiceInternshipFilter() {
   const {
@@ -61,9 +61,9 @@ export default function ServiceInternshipFilter() {
   const [selectedOrgTypes, setSelectedOrgTypes] = useState<string[]>([]);
   const [selectedDuration, setSelectedDuration] = useState<string | null>(null);
   const [selectedPublication, setSelectedPublication] = useState<string | null>(null);
-  
+
   const allInternships = ["INTERNSHIP_PRO", "INTERNSHIP_ACAD", "INTERNSHIP_FREE"];
-const allEmplois = ["PERMANENT", "FIXED_TERM"];
+  const allEmplois = ["PERMANENT", "FIXED_TERM"];
   const handleError = (error: any, context?: string) => {
     console.error(`Error in ${context || 'operation'}:`, error);
     let message = error.message || "Une erreur inconnue est survenue.";
@@ -309,37 +309,37 @@ const allEmplois = ["PERMANENT", "FIXED_TERM"];
     }
   };
 
-const handlePresetSelection = (type: "stage" | "emploi") => {
-  const allInternships = ["INTERNSHIP_PRO", "INTERNSHIP_ACAD", "INTERNSHIP_FREE"];
-  const allEmplois = ["PERMANENT", "FIXED_TERM"];
+  const handlePresetSelection = (type: "stage" | "emploi") => {
+    const allInternships = ["INTERNSHIP_PRO", "INTERNSHIP_ACAD", "INTERNSHIP_FREE"];
+    const allEmplois = ["PERMANENT", "FIXED_TERM"];
 
-  if (type === "stage") {
-    
-    const allSelected = allInternships.every(v => selectedContracts.includes(v));
-    
-    setSelectedContracts(prev => 
-      allSelected
-        ? prev.filter(v => !allInternships.includes(v)) 
-        : [
+    if (type === "stage") {
+
+      const allSelected = allInternships.every(v => selectedContracts.includes(v));
+
+      setSelectedContracts(prev =>
+        allSelected
+          ? prev.filter(v => !allInternships.includes(v))
+          : [
             ...prev.filter(v => !allInternships.includes(v) && !allEmplois.includes(v)),
             ...allInternships
-          ] 
-    );
-  } 
-  else if (type === "emploi") {
-    
-    const allSelected = allEmplois.every(v => selectedContracts.includes(v));
-    
-    setSelectedContracts(prev => 
-      allSelected
-        ? prev.filter(v => !allEmplois.includes(v)) 
-        : [
+          ]
+      );
+    }
+    else if (type === "emploi") {
+
+      const allSelected = allEmplois.every(v => selectedContracts.includes(v));
+
+      setSelectedContracts(prev =>
+        allSelected
+          ? prev.filter(v => !allEmplois.includes(v))
+          : [
             ...prev.filter(v => !allEmplois.includes(v) && !allInternships.includes(v)),
             ...allEmplois
-          ] 
-    );
-  }
-};
+          ]
+      );
+    }
+  };
 
 
 
@@ -378,48 +378,48 @@ const handlePresetSelection = (type: "stage" | "emploi") => {
 
 
 
-const isFormEmpty = () => {
-  return (
-    !filters.keywords &&
-    !filters.city &&
-    selectedSectors.length === 0 &&
-    selectedLevels.length === 0 &&
-    !selectedDuration &&
-    selectedOrgTypes.length === 0 &&
-    selectedContracts.length === 0 &&
-    !selectedPublication
-  );
-};
+  const isFormEmpty = () => {
+    return (
+      !filters.keywords &&
+      !filters.city &&
+      selectedSectors.length === 0 &&
+      selectedLevels.length === 0 &&
+      !selectedDuration &&
+      selectedOrgTypes.length === 0 &&
+      selectedContracts.length === 0 &&
+      !selectedPublication
+    );
+  };
 
 
-const isSearchDisabled = () => {
-  const hasKeywords = filters.keywords.trim() !== "";
-  const hasCity = filters.city.trim() !== "";
-  const hasSectors = selectedSectors.length > 0;
-  const hasLevels = selectedLevels.length > 0;
-  const hasContracts = selectedContracts.length > 0;
-  const hasOrgTypes = selectedOrgTypes.length > 0;
-  const hasDuration = selectedDuration !== "";
-  const hasPublication = selectedPublication !== "";
-  
-  
-  return !(
-    hasKeywords ||
-    hasCity ||
-    hasSectors ||
-    hasLevels ||
-    hasContracts ||
-    hasOrgTypes ||
-    hasDuration ||
-    hasPublication
-  );
-};
+  const isSearchDisabled = () => {
+    const hasKeywords = filters.keywords.trim() !== "";
+    const hasCity = filters.city.trim() !== "";
+    const hasSectors = selectedSectors.length > 0;
+    const hasLevels = selectedLevels.length > 0;
+    const hasContracts = selectedContracts.length > 0;
+    const hasOrgTypes = selectedOrgTypes.length > 0;
+    const hasDuration = selectedDuration !== "";
+    const hasPublication = selectedPublication !== "";
+
+
+    return !(
+      hasKeywords ||
+      hasCity ||
+      hasSectors ||
+      hasLevels ||
+      hasContracts ||
+      hasOrgTypes ||
+      hasDuration ||
+      hasPublication
+    );
+  };
 
 
 
   const handleSearch = async (e: FormEvent) => {
     e.preventDefault();
-  setClicked(true);
+    setClicked(true); 
     const newFilters = new InternshipFilter(
       filters.keywords,
       filters.city,
@@ -481,6 +481,7 @@ const isSearchDisabled = () => {
 
 
 
+  setTimeout(() => setClicked(false), 200);
       setInternships(internshipsArray);
 
       router.push({
@@ -518,7 +519,7 @@ const isSearchDisabled = () => {
     foas,
     setSectors,
     status,
-    setStatus,                                                                                                  
+    setStatus,
     degreeLevels,
     setLevels,
     setDurations,
@@ -545,11 +546,11 @@ const isSearchDisabled = () => {
     handleChange,
     isSearchDisabled,
     handleSearch,
-handlePresetSelection,
-clicked,
-isFormEmpty,
-allEmplois,
-allInternships
+    handlePresetSelection,
+    clicked,
+    isFormEmpty,
+    allEmplois,
+    allInternships
 
   }
 

@@ -44,12 +44,7 @@ export default function Partenaire() {
                     path: "/images/logo/woodpivot.jpg"
                 },
 
-{
-                  id: 1,
-                    name: "Orange",
-                    url: "",
-                    path: "/images/logo/orange.jpg"
-                },
+
 
                 {
                     id: 2,
@@ -66,13 +61,7 @@ export default function Partenaire() {
 
                
 
-                {
-                    id: 1,
-                    name: "TIPSON",
-                    url: "",
-                    path: "/images/logo/tipson.png"
-                },
-
+            
                 
                 
                  {
@@ -116,12 +105,7 @@ export default function Partenaire() {
                 },
                
                 
-                {
-                    id: 1,
-                    name: "Provac",
-                    url: "",
-                    path: "/images/logo/provac.jpg"
-                },
+                
               
                  {
                     id: 2,
@@ -156,7 +140,7 @@ export default function Partenaire() {
 
             <div className="w-full  h-[35%] py-2 pb-4 bg-white ">
                 <p className="text-center  uppercase p-1 pb-4 text-[#4A62AA] ">  {locale === 'en' ? 'Partners' : ' Partenaires'}  </p>
-                <div className=" grid grid-cols-9 pl-10  ">
+                <div className=" grid grid-cols-8 pl-10  ">
 
                     {brand.map((item, index) => (
                         <div

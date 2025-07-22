@@ -84,13 +84,13 @@ export default function SearchResults() {
                     </div>
                 ) : (jobOffers.length > 0 ? (
 
-                    <p className="py-2 px-2 bg-white text-[#4A62AA] text-center flex-1">
+                    <p className="py-2 px-2 bg-white text-[#A87A38] text-center flex-1">
                         <b>{total} </b> {t.searchResult.found}
                     </p>
 
 
                 ) : (<div>
-                    <p className="py-2 px-2 bg-white text-[#4A62AA] text-center flex-1">
+                    <p className="py-2 px-2 bg-white text-[#A87A38] text-center flex-1">
                         <b>{total}  </b> {t.searchResult.found}
                     </p>
                 </div>
