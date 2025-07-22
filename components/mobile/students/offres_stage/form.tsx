@@ -461,25 +461,25 @@ export default function OffreStageMobile() {
                 className={`w-full py-4 text-xs rounded-3xl  font-bold transition-transform  duration-200 
           ${clicked1 ? 'bg-gray-400  text-[#4A62AA] border-white' : ' bg-[#2348b6]  text-white  border-[#4A62AA]'}
          ] '`}>
-                POSTER UN STAGE
+          {  t.buttons.postInternship}
               </button>
               <button onClick={handleClick}
                 className={`w-full py-4 text-xs rounded-3xl  font-bold transition-transform  duration-200 
           ${clicked2 ? 'bg-gray-400  text-[#4A62AA]  border-[#4A62AA]' : 'bg-orange-400  text-white border-white'}
          ] '`}>
-                DÉPOSER MON CV
+            {t.buttons.submitCV}
               </button>
               <button onClick={handleClick2}
                 className={`w-full py-2 text-xs rounded-3xl  font-bold transition-transform  duration-200 
           ${clicked3 ? 'bg-gray-400  text-[#4A62AA] border-[#4A62AA]' : 'bg-orange-400  text-white border-white'}
-         ] '`}>      GUIDE POUR POSTULER À UNE OFFRE
+         ] '`}>     {      t.buttons.applyGuide}
               </button>
               <button onClick={handleClick1}
 
                 className={`w-full py-2 text-xs rounded-3xl  font-bold  transition-transform  duration-200  
           ${clicked4 ? 'bg-gray-400   text-[#4A62AA] border-white' : ' bg-[#2348b6]  text-white  border-[#4A62AA]'}
          ] '`}>
-                CONSEILS POUR RÉUSSIR SON STAGE
+             {      t.buttons.succeedTips}
               </button>
             </div>
 

@@ -1,4 +1,4 @@
-{
+{"title":"EXPLORE INTERNSHIPS",
   "searchForm": {
     "internship": "I’m looking for an internship",
     "firstJob": " I’m looking for an Entry-level Job",
@@ -12,6 +12,12 @@
     "city": "City",
     "submit": "Search"
   },
+     "buttons": {
+      "postInternship": "POST AN INTERNSHIP",
+      "submitCV": "SUBMIT MY RESUME",
+      "applyGuide": "GUIDE TO APPLY FOR A POSITION",
+      "succeedTips": "TIPS TO SUCCEED IN YOUR INTERNSHIP"
+    },
   "searchResult": {
     "result": "SEARCH RESULTS",
     "published": " Published",

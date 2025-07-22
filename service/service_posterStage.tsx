@@ -60,6 +60,15 @@ type Parution = {
   key: string;
   text: string;
 };
+type Employer = {
+  id: string;
+  name: string;
+  type: string;
+  typeText: string;
+  description: string;
+  city: string;
+
+};
 
 
 export default function UsePosterService() {
@@ -78,7 +87,7 @@ export default function UsePosterService() {
   const [durations, setDurations] = useState<Duration[]>([]);
   const [contrats, setContrats] = useState<Contrat[]>([]);
   const [parutions, setParutions] = useState<Parution[]>([]);
-
+  const [employer, setEmployer] = useState<Employer[]>([]);
   const [selectedSectors, setSelectedSectors] = useState<string[]>([]);
   const [selectedLevels, setSelectedLevels] = useState<string[]>([]);
   const [selectedContracts, setSelectedContracts] = useState<string[]>([]);
@@ -294,6 +303,37 @@ export default function UsePosterService() {
     }
 
     fetchParutions();
+  }, []);
+
+   useEffect(() => {
+    async function fetchEmployer() {
+      try {
+
+
+        const BACKEND_URL = URLS.GET_EMPLOYERS_UPLOAD;
+        if (!BACKEND_URL) {
+          throw new Error("Environment variable URLS.GET_EMPLOYERS_UPLOAD is not defined");
+        }
+        const response = await fetch(BACKEND_URL, {
+          method: "GET",
+          headers,
+        });
+        if (!response.ok) {
+          throw new Error(`Erreur HTTP: ${response.status},
+              Erreur serveur, veuillez réessayer plus tard`);
+        }
+
+        const data = await response.json();
+        setEmployer(data);
+
+
+
+      } catch (error: any) {
+        handleError(error, "fetching employer");
+      }
+    }
+
+    fetchEmployer();
   }, []);
   const [open, setOpen] = useState<number | null>(null);
 

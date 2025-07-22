@@ -39,6 +39,12 @@
 "Postuler":"     Postuler"
 
   },
+"buttons": {
+      "postInternship": "POSTER UN STAGE",
+      "submitCV": "DÉPOSER MON CV",
+      "applyGuide": "GUIDE POUR POSTULER À UNE OFFRE",
+      "succeedTips": "CONSEILS POUR RÉUSSIR SON STAGE"
+    },
   "postuler":"  POstuler au poste"
 
 
