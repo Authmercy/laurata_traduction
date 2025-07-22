@@ -3,6 +3,7 @@ import { URLS } from "@/service/url";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { SetStateAction, useEffect, useState } from "react";
+import ButtonAccueil from "../buttons/buttonAccueil";
 
 export default function ActuComponent() {
     const router = useRouter();
@@ -136,15 +137,12 @@ export default function ActuComponent() {
 
 
             <div className="my-10 flex flex-row justify-center gap-4">
-                <button onClick={() => handleClick()} className="bg-[#4A62AA] text-white px-12 py-2 rounded-md">Institutions du <br />
-                    Supérieur</button>
-                <button onClick={() => handleClick()} className="bg-[#969696] text-white  px-12  py-2  rounded-md">Entreprises &<br />
-                    Organisations</button>
-                <button onClick={() => handleClick()} className="bg-[#A38340] text-white px-12  py-2  rounded-md">Étudiants &<br />
-                    Diplômés</button>
-                <button onClick={() => handleClick1()} className="bg-[#E1C32F] text-white  px-12   py-2 rounded-md">Offres <br />
-                    de stage</button>
-            </div>
+ 
+             
+                                  <ButtonAccueil />
+                                
+                     </div>
+     
         </div>
 
 

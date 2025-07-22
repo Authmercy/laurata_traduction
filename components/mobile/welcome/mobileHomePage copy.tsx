@@ -7,7 +7,7 @@ import BandeauMobile from "../footer/footer";
 import FooterMobile from "../footer/footerEnd";
 import Navbar from "../navbar/navbar";
 
-import en from '@/i18/fr/moreInfo.json';
+import en from '@/i18/en/moreInfo.json';
 import fr from '@/i18/fr/moreInfo.json';
 
 export default function MobileHomePage1() {
@@ -109,7 +109,7 @@ export default function MobileHomePage1() {
 
 
                 <p className="text-[#A38340] font-bold text-center">
-                  Étudiants & Diplômés
+                  {t.sections.students.title}
                 </p>
               </div>
 

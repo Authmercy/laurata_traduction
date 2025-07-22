@@ -1,14 +1,12 @@
- {
-    "menu": {
-      "students": "Students & Recent Graduates",
-      "companies": "Companies & Organizations",
-      "institutions": "Higher Education Institutions",
-      "spotlight": "Focus On",
-      "news": "News",
-      "partners": "Partners",
-      "about": "About",
-      "switch_language": "English"
-    },
+{
+    "errorCode": "404",
+    "pageNotFound": "Page not found",
+    "errorMessage": "Sorry, we couldn't find the page you were looking for.",
+    "backToHome": "← Back to home",
+    "previousPage": "Previous page:",
+    "suggestionsTitle": "Maybe you're looking for:",
+    "home": "Home",
+    "contactUs": "Contact Us",
     "links": {
       "offresStage": "Explore Internships",
       "formations": "Find a program ",
@@ -31,15 +29,8 @@
       "promotion": "Promote your company",
       "stage": "Guanrantee your students internships",
       "referencer": "Get your programs listed",
-      "promotion_institution": "Promote your institution"
-    },
-    "auth": {
-      "login": "Login",
-      "signup": "Sign up"
-    },
-    "about": {
-      "presentation": "Presentation",
-      "legal": "Legal Notice",
-      "terms": "Terms of Service"
+      "promotion_institution": "Promote your institution",
+      "home":"Home",
+      "contact":"Contact Us"
     }
   }

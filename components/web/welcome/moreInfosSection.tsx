@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/router";
 import Image from "next/image";
-import en from '@/i18/fr/moreInfo.json';
+import en from '@/i18/en/moreInfo.json';
 import fr from '@/i18/fr/moreInfo.json';
 
 export default function MoreInfosSection() {

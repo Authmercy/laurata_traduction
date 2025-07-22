@@ -152,7 +152,7 @@ export default function PremierEmplois() {
                                         <div className="flex flex-col ">
                                             <div className="bg-white/60 pt-4 px-4 grid grid-cols-[1fr_3fr] gap-8">
 
-                                                <div > <p className=" font-bold text-[#A87A38] text-center ">{t.emploiContent.step3.cv} </p>
+                                                <div > <p className=" font-bold text-[#A87A38] text-center uppercase ">{t.emploiContent.step3.cv} </p>
                                                     <p className=" text-[#4A62AA] font-bold text-end"> {t.emploiContent.step3.objectif}</p>
                                                     <br />
                                                     <p className=" text-[#4A62AA] font-bold text-end"> {t.emploiContent.step3.rubriques}</p>
@@ -170,10 +170,10 @@ export default function PremierEmplois() {
                                             <div className="bg-white/60 p-4 ">
                                                 {t.emploiContent.step3.content.map((tip, index) => (
 
-                                                    <div key={index} 
-                                                     className={`p-4 grid grid-cols-[1fr_3fr] gap-8  ${index % 2 === 0 ? 'bg-white' : ''
-                  }`}
-                                                  >
+                                                    <div key={index}
+                                                        className={`p-4 grid grid-cols-[1fr_3fr] gap-8  ${index % 2 === 0 ? 'bg-white' : ''
+                                                            }`}
+                                                    >
                                                         <div className=" font-bold  text-end ">
                                                             {tip.title} </div>
                                                         <div className="max-w-4xl">
@@ -297,9 +297,9 @@ export default function PremierEmplois() {
                                             <div className="bg-white/60 p-4 ">
                                                 {t.emploiContent.step4.content.map((tip, index) => (
 
-                                                    <div key={index}                            className={`p-4 grid grid-cols-[1fr_3fr] gap-8  ${index % 2 === 0 ? 'bg-white' : ''
-                  }`}
-                              >
+                                                    <div key={index} className={`p-4 grid grid-cols-[1fr_3fr] gap-8  ${index % 2 === 0 ? 'bg-white' : ''
+                                                        }`}
+                                                    >
                                                         <div className=" font-bold  text-end ">
                                                             {tip.title} </div>
                                                         <div className="max-w-4xl">
@@ -344,8 +344,8 @@ export default function PremierEmplois() {
                                             <span>{t.emploiContent.step5.etape}</span>
                                             <span className="text-end ml-10"> {open === 5 ? "▲" : "▼"}</span>
                                         </button>
-                                        <div className="w-11/12 text-start   bg-[#4A62AA] text-white  font-bold    flex justify-start items-center"> <p className="ml-8"> 
-                                     {t.emploiContent.step5.title}</p>
+                                        <div className="w-11/12 text-start   bg-[#4A62AA] text-white  font-bold    flex justify-start items-center"> <p className="ml-8">
+                                            {t.emploiContent.step5.title}</p>
                                         </div></div>
                                     {open === 5 && (
                                         <div className="flex flex-col ">
@@ -353,14 +353,14 @@ export default function PremierEmplois() {
 
                                             <div className="bg-white/60 p-4 mt-1 text-start ">
                                                 <div className=" font-bold uppercase text-[#A87A38] text-start  ">
-                                                {t.emploiContent.step5.avant} </div>
+                                                    {t.emploiContent.step5.avant} </div>
                                                 <div className="bg-white p-3 mt-1 ">
 
                                                     <div className="">
                                                         {t.emploiContent.step5.avantContent.map((tip, index) => (
 
                                                             <p key={index} className="  ">
-                                                           -     {tip.text} </p>
+                                                                -     {tip.text} </p>
 
 
 
@@ -384,17 +384,17 @@ export default function PremierEmplois() {
                                                 <div className="bg-white p-3 mt-1 ">
 
                                                     <div className="">
-                                                       {t.emploiContent.step5.pendantContent.map((tip, index) => (
+                                                        {t.emploiContent.step5.pendantContent.map((tip, index) => (
 
                                                             <p key={index} className="  ">
-                                                             -   {tip.text} </p>
+                                                                -   {tip.text} </p>
 
 
 
 
                                                         ))}
 
-  </div>
+                                                    </div>
 
                                                 </div>
 
@@ -404,14 +404,14 @@ export default function PremierEmplois() {
                                             </div>
                                             <div className="bg-white/60 p-4 mt-1 text-start ">
                                                 <div className=" font-bold uppercase text-[#A87A38] text-start  ">
-                                                     {t.emploiContent.step5.auterme}  </div>
+                                                    {t.emploiContent.step5.auterme}  </div>
                                                 <div className="bg-white p-3 mt-1 ">
 
                                                     <div className="">
-                                                       {t.emploiContent.step5.autermContent.map((tip, index) => (
+                                                        {t.emploiContent.step5.autermContent.map((tip, index) => (
 
                                                             <p key={index} className="   ">
-                                                             -   {tip.text} </p>
+                                                                -   {tip.text} </p>
 
 
 
@@ -437,13 +437,13 @@ export default function PremierEmplois() {
                                         <div className="max-w-4xl p-2">
                                             {t.emploiContent.step5.arnaqueContent.map((tip, index) => (
 
-                                                            <p key={index} className="  ">
-                                                             -   {tip.text} </p>
+                                                <p key={index} className="  ">
+                                                    -   {tip.text} </p>
 
 
 
 
-                                                        ))}
+                                            ))}
 
 
 
@@ -455,11 +455,11 @@ export default function PremierEmplois() {
                                 </div>
                                 <div className="px-6 py-2 flex justify-end ">
                                     <button onClick={handleClick2} className="px-6 py-2 flex   justify-end  ml-16 my-10 md:ml-[50%] bg-[#A87A38] text-white font-bold rounded-lg ">
-                                       {t.emploiContent.postuler}
+                                        {t.emploiContent.postuler}
                                     </button>  </div>
                                 <div className="bg-white/60 p-2 mt-1">
                                     <div className=" font-bold uppercase text-[#4A62AA] text-center  ">
-                                         {t.emploiContent.reference}</div>
+                                        {t.emploiContent.reference}</div>
 
 
                                 </div>
@@ -467,14 +467,14 @@ export default function PremierEmplois() {
 
 
                                     <div className="">
-                                  {t.emploiContent.auteur.map((tip, index) => (
-                                                    <p
-                                                        key={index}
+                                        {t.emploiContent.auteur.map((tip, index) => (
+                                            <p
+                                                key={index}
 
-                                                    >
-                                                        -  {tip.name}<i className="text-[#4A62AA]"> {tip.title}</i> {tip.edition}
-                                                    </p>
-                                                ))}
+                                            >
+                                                -  {tip.name}<i className="text-[#4A62AA]"> {tip.title}</i> {tip.edition}
+                                            </p>
+                                        ))}
 
                                     </div>
 

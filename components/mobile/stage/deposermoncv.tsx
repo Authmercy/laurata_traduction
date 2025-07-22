@@ -3,20 +3,17 @@
 
 import { useRouter } from "next/router";
 import Navbar from "../navbar/navbar";
-import { CV_Class } from "@/service/CV";
 import FooterMobile from "../footer/footerEnd";
-import { URLS } from "@/service/url";
-
 import { useEffect, useState } from "react";
 import UseDepotCVService from "@/service/service_DeposCV";
+import fr from '@/i18/fr/student/depotCV.json';
+import en from '@/i18/en/student/depotCV.json';
 
-type Sector = {
-  id: string;
-  text: string;
-
-};
 export default function DeposerMonCVMobile() {
+
   const router = useRouter();
+  const { locale } = router;
+  const t = locale === 'en' ? en : fr;
 
        const {
       
@@ -59,7 +56,7 @@ open,
         <div className={`${isMobileMenuOpen ? "blur-sm " : ""
           }`}>
           <div className="justify-center p-2 text-center text-xl font-bold uppercase bg-[#9b6e0f] text-white">
-            <p>Déposer mon cv</p>
+            <p>{t.cv.title}</p>
           </div>
 
 
@@ -69,21 +66,20 @@ open,
             className="bg-white/70 text-justify   mt-8 p-2 py-4 shadow-sm mb-2 hover:shadow-md transition-shadow"
           >
             <p className=" text-center text-lg font-semibold text-[#4A62AA]">
-              Ayez la primeur de l’information sur les nouvelles annonces
+        {t.cv.infoTitle}
             </p>
             <p className="mt-2  text-black">
-              Déposer votre CV vous permet de recevoir les annonces de stage ou d’emploi pour débutants dans votre boîte mail  d'une part et, de le rendre consultable par  les entreprises et organisations partenaires d'autre part.
-            </p>
+            {t.cv.infoText}</p>
 
 
           </div>
-          <p className="text-white  text-center  mt-8 font-bold"> Deux options   pour envoyer votre CV </p>
+          <p className="text-white  text-center  mt-8 font-bold"> {t.cv.altTitle1}  {t.cv.altTitle2} </p>
           <div className="flex flex-row mt-4 gap-1">
 
 
             <div className=" bg-white/70 py-2 p-2  text-black pt-8 text-start">
-              <b> 1. </b>  Au format PDF, Word ou JPEG à <span className="text-blue-600 font-semibold">cv@laurata.com</span> en précisant vos domaines d'intéret ; OU <br />
-              <p className="  mt-4">  <b> 2. </b>  Remplir et envoyer le formulaire ci-dessous.</p>
+              <b> 1. </b>  {t.cv.option1}<span className="text-blue-600 font-semibold">cv@laurata.com</span>  {t.cv.option11} <br />
+              <p className="  mt-4">  <b> 2. </b>  {t.cv.option2}</p>
 
             </div>
 
@@ -104,13 +100,13 @@ open,
             <form className="mt-6 space-y-1 w-10/12" onSubmit={handleSubmit}>
 
               <input type="text" name="firstname" value={elements.firstname}
-                onChange={handleChange} placeholder="Nom *"  className="w-full border placeholder:text-[#4A62AA] bg-white/70  border-gray-300 p-2 px-8 focus:ring-2 focus:ring-[#4A62AA]" />
+                onChange={handleChange} placeholder={t.cv.input.firstname}  className="w-full border placeholder:text-[#4A62AA] bg-white/70  border-gray-300 p-2 px-8 focus:ring-2 focus:ring-[#4A62AA]" />
               <input type="text" name="lastname" value={elements.lastname}
-                onChange={handleChange} placeholder="Prénom *" className="w-full border placeholder:text-[#4A62AA] bg-white/70  border-gray-300 p-2 px-8  focus:ring-2 focus:ring-[#4A62AA]" />
+                onChange={handleChange} placeholder={t.cv.input.lastname} className="w-full border placeholder:text-[#4A62AA] bg-white/70  border-gray-300 p-2 px-8  focus:ring-2 focus:ring-[#4A62AA]" />
               <input type="email" value={elements.email}
-                onChange={handleChange} placeholder="Email *" name="email" className="w-full border placeholder:text-[#4A62AA] bg-white/70  border-gray-300 p-2 px-8  focus:ring-2 focus:ring-[#4A62AA]" />
+                onChange={handleChange} placeholder={t.cv.input.email} name="email" className="w-full border placeholder:text-[#4A62AA] bg-white/70  border-gray-300 p-2 px-8  focus:ring-2 focus:ring-[#4A62AA]" />
               <input type="tel" value={elements.phone}
-                onChange={handleChange} placeholder="Téléphone *" name="phone" className="w-full border placeholder:text-[#4A62AA] bg-white/70  border-gray-300 p-2 px-8   focus:ring-2 focus:ring-[#4A62AA]" />
+                onChange={handleChange} placeholder={t.cv.input.phone} name="phone" className="w-full border placeholder:text-[#4A62AA] bg-white/70  border-gray-300 p-2 px-8   focus:ring-2 focus:ring-[#4A62AA]" />
 
 
               <div className="relative w-full border placeholder:text-[#4A62AA] text-[#4A62AA] bg-white/70  border-gray-300 p-2 px-8   focus:ring-2 focus:ring-[#4A62AA]">
@@ -118,7 +114,7 @@ open,
                   className="w-full flex justify-between items-center cursor-pointer"
                   onClick={() => handleToggle(1)}
                 >
-                  <span>Secteur</span>
+                            <span>{t.cv.input.sector}</span>
                   <span className="text-xl">{open === 1 ? "▲" : "▼"}</span>
                 </div>
                 {open === 1 && (
@@ -143,12 +139,12 @@ open,
 
               </div>
               <input type="text" value={elements.job}
-                onChange={handleChange} name="job" placeholder="Métier recherché" className="w-full placeholder:text-[#4A62AA]  px-8 border bg-white/70  border-gray-300 p-2  focus:ring-2 focus:ring-[#4A62AA]" />
+                onChange={handleChange} name="job" placeholder={t.cv.input.job}  className="w-full placeholder:text-[#4A62AA]  px-8 border bg-white/70  border-gray-300 p-2  focus:ring-2 focus:ring-[#4A62AA]" />
 
 
               <div className="p-3  bg-gray-100 border rounded-2xl border-gray-300">
                 <label className="   text-[#344474]">
-                  <span className="font-bold text-[#4A62AA]">   Télécharger votre CV * <br /></span> <span className="text-sm">(.doc, .docx, .pdf) Taille : Max 2MB</span>
+                  <span className="font-bold text-[#4A62AA]">   {t.cv.input.upload} <br /></span> <span className="text-sm">(.doc, .docx, .pdf) Taille : Max 2MB</span>
                 </label>
                 <input type="file" name="cv"
                   accept=".doc,.docx,.pdf"
@@ -162,19 +158,19 @@ open,
                     setTermsAccepted(e.target.checked);
                     if (showError) setShowError(false);
                   }} className="w-4 h-4 text-[#4A62AA] border-gray-300 rounded focus:ring-[#4A62AA]" />
-                <label htmlFor="terms" className="ml-2 text-white  px-2">J’accepte les conditions générales d’utilisation</label>
+                <label htmlFor="terms" className="ml-2 text-white  px-2">     {t.cv.terms}</label>
               </div>
               {showError && (
-                <p className="mt-1 text-red-500 text-sm">Veuillez accepter les conditions générales d'utilisation</p>
+                <p className="mt-1 text-red-500 text-sm">{t.cv.termsError}</p>
               )}
               {/* Buttons */}
               <div className="flex justify-center mt-4">
                 <div className="flex w-1/2 pt-8 justify-center items-center gap-4">
                   <button type="submit" className="px-12  bg-[#A87A38]  text-white font-bold py-2 rounded-lg hover:bg-[#C08B2F]">
-                    Envoyer
+                      {t.cv.submit}
                   </button>
                   <button onClick={() => router.back()} type="reset" className="px-12 bg-[#1b40ad] text-white  font-bold py-2 rounded-lg hover:bg-gray-400">
-                    Annuler
+                  {t.cv.back}
                   </button>
                 </div>
               </div>

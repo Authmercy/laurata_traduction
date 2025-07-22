@@ -1,15 +1,19 @@
 "use client";
 
 import Link from "next/link";
-import { useRouter } from "next/router";
+
 import Navbar from "../navbar/navbar";
-import Image from "next/image";
+import fr from '@/i18/fr/student/guide.json';
+import en from '@/i18/en/student/guide.json';
+import { useRouter } from "next/router";
 import { useState } from "react";
 import FooterMobile from "../footer/footerEnd";
 export default function FondamentauxPourPostulerMobile() {
 
 
-
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === 'en' ? en : fr;
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobileMenuOpen2, setIsMobileMenuOpen2] = useState(false);
@@ -29,7 +33,7 @@ export default function FondamentauxPourPostulerMobile() {
           } ${isMobileMenuOpen2 ? "blur-sm " : ""
           } `}>
           <div className="justify-center p-2 text-center text-xl font-bold uppercase bg-[#9b6e0f] text-white">
-            <p>  GUIDE POUR POSTULER À UNE OFFRE</p>
+            <p> {t.title}</p>
           </div>
 
 
@@ -40,7 +44,7 @@ export default function FondamentauxPourPostulerMobile() {
               <Link href="/students/postulerStage">
               <div className="flex items-center gap-2 py-2">
                 <img src="/icons/puces_1.png" alt="" className="w-5 " />
-                <p className="text-[#4A62AA]  font-bold uppercase hover:text-[#A87A38] "> POstuler À un  stage</p>
+                <p className="text-[#4A62AA]  font-bold uppercase hover:text-[#A87A38] ">  {t.stage}</p>
               </div>
             </Link>
             
@@ -49,7 +53,7 @@ export default function FondamentauxPourPostulerMobile() {
 
 
                 <img src="/icons/puces_1.png" alt="" className="w-5" />
-                <p className="text-[#4A62AA] font-bold uppercase hover:text-[#A87A38] ">   Postuler À un premier emploi </p>
+                <p className="text-[#4A62AA] font-bold uppercase hover:text-[#A87A38] ">  {t.emploi} </p>
               </div>
             </Link>
           

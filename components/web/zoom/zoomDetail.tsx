@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import ButtonAccueil from "../buttons/buttonAccueil";
 type NewsFeed = {
     id: number;
     year: number;
@@ -98,14 +99,9 @@ export default function ZoomDetail() {
             </div>
 
             <div className=" flex my-6 flex-row justify-center gap-4">
-                <button onClick={() => handleClick()} className="bg-[#2e76b1] text-white px-12 py-2 rounded-md">Institutions du <br />
-                    Supérieur</button>
-                <button onClick={() => handleClick()} className="bg-[#969696] text-white  px-12  py-2  rounded-md">Entreprises &<br />
-                    Organisations</button>
-                <button onClick={() => handleClick()} className="bg-[#A38340] text-white px-12  py-2  rounded-md">Étudiants &<br />
-                    Diplômés</button>
-                <button onClick={() => handleClick1()} className="bg-[#E1C32F] text-white  px-12   py-2 rounded-md">Offres <br />
-                    de stage</button>
+    
+                         <ButtonAccueil />
+                       
             </div>
         </div>
 

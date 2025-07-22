@@ -7,7 +7,7 @@ import BandeauMobile from "../footer/footer";
 import Navbar2 from "../navbar/navbar2";
 import FooterMobile from "../footer/footerEnd";
 import Navbar from "../navbar/navbar";
-import en from '@/i18/fr/moreInfo.json';
+import en from '@/i18/en/moreInfo.json';
 import fr from '@/i18/fr/moreInfo.json';
 
 export default function MobileHomePage() {
@@ -53,10 +53,9 @@ export default function MobileHomePage() {
                <div>
 
              
-              <p className="text-end px-4 pl-[40%]  text-3xl font-bold w-full  text-white mt-4">
-               Vitrine  des <br /> offres de  <br />
-               stage  au<br />  Cameroun
-              </p> 
+              <p className="text-end px-4 pl-[40%]  text-3xl font-bold w-full  text-white mt-4"  dangerouslySetInnerHTML={{ __html: t.vitrine }}/>
+               
+          
                </div>
               <div className="flex text-center items-center justify-center">
                 <button
@@ -64,8 +63,8 @@ export default function MobileHomePage() {
                   className={`px-3 py-2 my-8 mt-20 ml-[47%]  font-bold rounded-lg border transition-transform  duration-200 
           ${clicked ? 'bg-white text-[#4A62AA] border-[#4A62AA]' : 'bg-[#34538C] text-white border-white'}
           hover:bg-white hover:text-[#4A62AA] '`}
-                >
-                  Offres de stage
+                > {t.button}
+                 
                 </button>
               </div>
             </div>

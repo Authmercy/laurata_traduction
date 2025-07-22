@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 ;
 
-
+  
 
 export default function ZoomComponent() {
   const router = useRouter();
@@ -89,14 +89,14 @@ export default function ZoomComponent() {
 
         </div>
         <div className="my-10 flex flex-row justify-center gap-4">
-          <button onClick={() => handleClick()} className="bg-[#2e76b1] text-white px-12 py-2 rounded-md">Institutions du <br />
-            Supérieur</button>
-          <button onClick={() => handleClick()} className="bg-[#969696] text-white  px-12  py-2  rounded-md">Entreprises &<br />
-            Organisations</button>
-          <button onClick={() => handleClick()} className="bg-[#A38340] text-white px-12  py-2  rounded-md">Étudiants &<br />
-            Diplômés</button>
-          <button onClick={() => handleClick1()} className="bg-[#E1C32F] text-white  px-12   py-2 rounded-md">Offres <br />
-            de stage</button>
+          <button onClick={() => handleClick()} className="bg-[#2e76b1] text-white px-12 py-2 rounded-md">Higher Education<br />
+            Institutions</button>
+          <button onClick={() => handleClick()} className="bg-[#969696] text-white  px-12  py-2  rounded-md">Companies &<br />
+            Organizations</button>
+          <button onClick={() => handleClick()} className="bg-[#A38340] text-white px-12  py-2  rounded-md">Students &<br />
+            Recent Graduates</button>
+          <button onClick={() => handleClick1()} className="bg-[#E1C32F] text-white  px-12   py-2 rounded-md">Explore <br />
+            Internships</button>
         </div>
       </div>
     </div>

@@ -1,10 +1,8 @@
 "use client";
 
-import { CV_Class } from "@/service/CV";
-import { URLS } from "@/service/url";
+
 import UseDepotCVService from "@/service/service_DeposCV";
 import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
 import fr from '@/i18/fr/student/depotCV.json';
 import en from '@/i18/en/student/depotCV.json';
 

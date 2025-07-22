@@ -1,0 +1,34 @@
+ { 
+    "sections": {
+      "students": {
+        "title": "Students & Recent Graduates",
+        "points": [
+          "Find an internship and gain real-work experience to be ready for the world of work.",
+          "Guide for mastering your internship.",
+          "Must read guides for choosing the training program or career path that suits to you."
+        ],
+        "button": "Explore Internships"
+      },
+      "companies": {
+        "title": "Entreprises & Organisations",
+        "points": [
+          "Post your internships or jobs free of charge. Receive resumes from talented graduates.",
+          "Raise awareness on your products and services or scholarships.",
+          "Promote your sector, events and achievements."
+        ],
+        "button": "Promote your Company"
+      },
+      "institutions": {
+        "title": "Higher Education Institutions",
+        "points": [
+          "Guarantee your students and graduates internships or entry level jobs.",
+          "Enhance your institution’ and programs Online visibility.",
+          "Reach our thousands of subscribers (students, parents, educators)."
+        ],
+        "button": "Get your Programs listed"
+      }
+    },
+    "button":"Explore Internships",
+    "vitrine":" The unique <br /> Internship <br />  Search Platform <br />  for Cameroon"
+    
+  }

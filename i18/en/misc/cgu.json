@@ -7,6 +7,8 @@
       },
       "purpose": {
         "title": "2. General information purpose of the site",
+          "text":"",
+        
         "points": [
           "Provide each Cameroonian or foreign student with essential information on all the courses offered by higher education institutions in Cameroon.",
           "Assist all Cameroonian and foreign students in identifying a course of study and/or a career that suits their ambitions, desires and aptitudes.",
@@ -79,10 +81,10 @@
       }
     },
     "buttons": {
-      "institutions": "Institutions du<br />Supérieur",
-      "companies": "Entreprises &<br />Organisations",
-      "students": "Étudiants &<br />Diplômés",
-      "internships": "Offres<br />de stage"
+      "institutions": "Higher Education <br />Institutions",
+      "companies": "Companies &<br />Organizations",
+      "students": "Students & <br />Recent Graduates",
+      "internships": "Explore<br />Internships"
     }
   
 }
