@@ -17,7 +17,9 @@ export const URLS = {
   PROGRAM_SEARCH: `${BASE_URL}/studyprogs/search`,
   GET_PROGRAM_DETAIL: `${BASE_URL}/studyprogs/v`,
 
-    POST_UPLOAD: `${BASE_URL}/internships/uploads`,
+  POST_UPLOAD: `${BASE_URL}/internships/uploads`,
+  GET_EMPLOYERS_UPLOAD: `${BASE_URL}/internships/employers`,
+
 
   GET_PROGRAM_DOMAIN: `${BASE_URL}/studyprogs/studyfields`,
   GET_PROGRAM_TRAINING: `${BASE_URL}/studyprogs/trainingstypes`,
@@ -74,7 +76,7 @@ export const URLS = {
   ONDISPLAY_LADIES: `${BASE_URL}/ondisplay/ladies`,
 
 
-   EXAMS: `${BASE_URL}/exams/ads`,
+  EXAMS: `${BASE_URL}/exams/ads`,
 
-      MESSAGE: `${BASE_URL}/messages`,
+  MESSAGE: `${BASE_URL}/messages`,
 };

@@ -67,7 +67,7 @@ type Employer = {
   typeText: string;
   description: string;
   city: string;
-
+  logo: File;
 };
 
 
@@ -75,7 +75,7 @@ export default function UsePosterService() {
 
   const {
 
-  headers, locale
+    headers, locale
 
 
   } = UseLanguageService()
@@ -88,6 +88,10 @@ export default function UsePosterService() {
   const [contrats, setContrats] = useState<Contrat[]>([]);
   const [parutions, setParutions] = useState<Parution[]>([]);
   const [employer, setEmployer] = useState<Employer[]>([]);
+  const [employerSuggestions, setEmployerSuggestions] = useState<Employer[]>([]);
+  const [showSuggestions, setShowSuggestions] = useState(false);
+  let typingTimeout: NodeJS.Timeout;
+
   const [selectedSectors, setSelectedSectors] = useState<string[]>([]);
   const [selectedLevels, setSelectedLevels] = useState<string[]>([]);
   const [selectedContracts, setSelectedContracts] = useState<string[]>([]);
@@ -305,37 +309,41 @@ export default function UsePosterService() {
     fetchParutions();
   }, []);
 
-   useEffect(() => {
-    async function fetchEmployer() {
-      try {
-
-
-        const BACKEND_URL = URLS.GET_EMPLOYERS_UPLOAD;
-        if (!BACKEND_URL) {
-          throw new Error("Environment variable URLS.GET_EMPLOYERS_UPLOAD is not defined");
-        }
-        const response = await fetch(BACKEND_URL, {
-          method: "GET",
-          headers,
-        });
-        if (!response.ok) {
-          throw new Error(`Erreur HTTP: ${response.status},
-              Erreur serveur, veuillez réessayer plus tard`);
-        }
-
-        const data = await response.json();
-        setEmployer(data);
-
-
-
-      } catch (error: any) {
-        handleError(error, "fetching employer");
-      }
+  async function searchEmployers(name: string) {
+    if (name.length < 3) {
+      setEmployerSuggestions([]);
+      setShowSuggestions(false);
+      return;
     }
 
-    fetchEmployer();
-  }, []);
+    try {
+      const BACKEND_URL = `${URLS.GET_EMPLOYERS_UPLOAD}?name=${encodeURIComponent(name)}`;
+      const response = await fetch(BACKEND_URL, {
+        method: "GET",
+        headers,
+      });
+
+      if (!response.ok) throw new Error("Erreur lors de la recherche d'employeurs");
+
+      const data = await response.json();
+      setEmployerSuggestions(data);
+      setShowSuggestions(true);
+    } catch (error) {
+      console.error("Erreur recherche employeur :", error);
+      setEmployerSuggestions([]);
+      setShowSuggestions(false);
+    }
+  }
+
   const [open, setOpen] = useState<number | null>(null);
+  useEffect(() => {
+    function handleClickOutside() {
+      setShowSuggestions(false);
+    }
+
+    document.addEventListener("click", handleClickOutside);
+    return () => document.removeEventListener("click", handleClickOutside);
+  }, []);
 
 
   const handleCheckboxChange = (
@@ -377,24 +385,32 @@ export default function UsePosterService() {
   const handleToggle = (index: any) => {
     setOpen(open === index ? null : index);
   };
-const handleChange = (
-  e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-) => {
-  const { name, value, type } = e.target;
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value, type } = e.target;
 
-  if (type === 'file') {
-    const target = e.target as HTMLInputElement;
-    if (target.files && target.files[0]) {
-      setElements(prev => updateElement(prev, { [name]: target.files![0] }));
+    if (type === 'file') {
+      const target = e.target as HTMLInputElement;
+      if (target.files && target.files[0]) {
+        setElements(prev => updateElement(prev, { [name]: target.files![0] }));
+      }
+    } else {
+      setElements(prev => updateElement(prev, { [name]: value }));
     }
-  } else {
-    setElements(prev => updateElement(prev, { [name]: value }));
-  }
-  if (type === 'date') {
-  setElements(prev => updateElement(prev, { [name]: new Date(value) }));
-}
 
-};
+    if (type === 'date') {
+      setElements(prev => updateElement(prev, { [name]: new Date(value) }));
+    }
+
+    if (name === "employer") {
+      clearTimeout(typingTimeout);
+      typingTimeout = setTimeout(() => {
+        searchEmployers(value);
+      }, 300); // debounce 300ms
+    }
+  };
+
 
   const [elements, setElements] = useState(new PostInternship());
   function updateElement(
@@ -414,26 +430,26 @@ const handleChange = (
     e.preventDefault();
 
     const data = new FormData();
-   data.append(
-  "publicationDate",
-  elements.publicationDate instanceof Date && !isNaN(elements.publicationDate.getTime())
-    ? elements.publicationDate.toISOString().split('T')[0]
-    : ""
-);
+    data.append(
+      "publicationDate",
+      elements.publicationDate instanceof Date && !isNaN(elements.publicationDate.getTime())
+        ? elements.publicationDate.toISOString().split('T')[0]
+        : ""
+    );
 
- data.append(
-  "deadline",
-  elements.deadline instanceof Date && !isNaN(elements.deadline.getTime())
-    ? elements.deadline.toISOString().split('T')[0]
-    : ""
-);
+    data.append(
+      "deadline",
+      elements.deadline instanceof Date && !isNaN(elements.deadline.getTime())
+        ? elements.deadline.toISOString().split('T')[0]
+        : ""
+    );
 
-data.append(
-  "startDate",
-  elements.startDate instanceof Date && !isNaN(elements.startDate.getTime())
-    ? elements.startDate.toISOString().split('T')[0]
-    : ""
-);
+    data.append(
+      "startDate",
+      elements.startDate instanceof Date && !isNaN(elements.startDate.getTime())
+        ? elements.startDate.toISOString().split('T')[0]
+        : ""
+    );
 
     data.append("employer", elements.employer ?? "");
     data.append("employerDesc", elements.employerDesc ?? "");
@@ -453,13 +469,13 @@ data.append(
     data.append("lastname", elements.lastname ?? "");
     data.append("phone", elements.phone ?? "");
     data.append("email", elements.email ?? "");
-   data.append("logo", elements.logo ?? "");
+    data.append("logo", elements.logo ?? "");
     elements.level?.forEach((item: string) => data.append("level", item));
     elements.employerType?.forEach((item: string) => data.append("employerType", item));
     elements.adType?.forEach((item: string) => data.append("adType", item));
     elements.sector?.forEach((item: string) => data.append("sector", item));
-console.log(data)
-   
+    console.log(data)
+
     try {
       console.log("Envoi de la requête...");
       const BACKEND_URL = URLS.POST_UPLOAD;
@@ -467,16 +483,16 @@ console.log(data)
 
       const response = await fetch(BACKEND_URL, {
         method: "POST",
-   headers: {
-    'Accept': 'application/json',
+        headers: {
+          'Accept': 'application/json',
 
-    locale: locale || "fr",  
-  },
+          locale: locale || "fr",
+        },
         body: data,
       });
 
 
- if (!response.ok) {
+      if (!response.ok) {
         const error = new Error(
           locale === 'en'
             ? `HTTP error: ${response.status}, Please try later`
@@ -518,6 +534,8 @@ console.log(data)
     selectedDuration,
     setSectors,
     status,
+    setSelectedOrgTypes, updateElement,
+    setElements,
     setStatus,
     Levels,
     handleToggle,
@@ -532,7 +550,10 @@ console.log(data)
     setOpen,
     foas,
     handleChange,
- successMessage,
-
+    successMessage,
+    employerSuggestions,
+    setEmployerSuggestions,
+    showSuggestions,
+    setShowSuggestions,
   }
 }

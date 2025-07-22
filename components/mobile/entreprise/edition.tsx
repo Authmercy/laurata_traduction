@@ -14,37 +14,43 @@ export default function EditionOffreMobile() {
 
    const {
            successMessage,
-          elements,
-          handleRadioChange,
-          handleCheckboxChange,
-          errorMessage,
-          setErrorMessage,
-          setSelectedSectors,
-          selectedSectors,
-          setSelectedLevels,
-          selectedLevels,
-          selectedContracts,
-          setSelectedContracts,
-          selectedOrgTypes,
-          setSelectedPublication,
-          selectedPublication,
-          selectedDuration,
-          setSectors,
-          status,
-          setStatus,
-          Levels,
-          handleToggle,
-          setLevels,
-          setDurations,
-          durations,
-          contrats,
-          setContrats,
-          parutions,
-          setParutions,
-          open,
-          setOpen,
-          foas, handleSubmit,
-          handleChange,
+        elements,
+        handleRadioChange,
+        handleCheckboxChange,
+        errorMessage,
+        setErrorMessage,
+        setSelectedSectors,
+        selectedSectors,
+        setSelectedLevels,
+        selectedLevels,
+        selectedContracts,
+        setSelectedContracts,
+        selectedOrgTypes,
+        setSelectedPublication,
+        selectedPublication,
+        selectedDuration,
+        setSectors,
+        status,
+        employerSuggestions,
+        setEmployerSuggestions,
+        showSuggestions,
+        setShowSuggestions,
+        setStatus,
+        Levels,
+        handleToggle,
+        setLevels,
+        setDurations,
+        durations,
+        contrats,
+        setContrats,
+        parutions,
+        setParutions,
+        open,
+        setOpen,
+        foas, handleSubmit,
+        handleChange,
+ setSelectedOrgTypes,updateElement,
+    setElements,
   
   
       } = UsePosterService()
@@ -93,7 +99,7 @@ export default function EditionOffreMobile() {
                         </div>
                     )}
                     <div className="grid grid-cols-1   gap-2 mt-8 ">
-                        <div>
+                    <div className="relative">
 
                             <input
                                 type="text"
@@ -103,6 +109,31 @@ export default function EditionOffreMobile() {
                                 onChange={handleChange}
                                 className="mt-1 w-full font-bold bg-white/70  p-2  placeholder:text-[#4A62AA] shadow-sm   focus:ring-white focus:border-white" required
                             />
+                              {showSuggestions && employerSuggestions.length > 0 && (
+    <ul className="absolute z-10 bg-white border w-full mt-1 shadow-md max-h-40 overflow-y-auto">
+      {employerSuggestions.map(emp => (
+        <li
+          key={emp.id}
+          className="p-2 hover:bg-blue-100 cursor-pointer text-sm"
+          onClick={() => {
+            setElements(prev =>
+              updateElement(prev, {
+                employer: emp.name,
+                city: emp.city,
+                employerDesc: emp.description,
+                  logo: emp.logo,
+                employerType: [emp.type]
+              })
+            );
+            setSelectedOrgTypes(emp.type);
+            setShowSuggestions(false);
+          }}
+        >
+          {emp.name} — {emp.city}
+        </li>
+      ))}
+    </ul>
+  )}
                         </div>
 
                         <div>

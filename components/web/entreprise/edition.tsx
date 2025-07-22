@@ -28,6 +28,10 @@ export default function EditionOffre() {
         selectedDuration,
         setSectors,
         status,
+        employerSuggestions,
+        setEmployerSuggestions,
+        showSuggestions,
+        setShowSuggestions,
         setStatus,
         Levels,
         handleToggle,
@@ -42,7 +46,8 @@ export default function EditionOffre() {
         setOpen,
         foas, handleSubmit,
         handleChange,
-
+ setSelectedOrgTypes,updateElement,
+    setElements,
 
     } = UsePosterService()
 
@@ -82,17 +87,45 @@ export default function EditionOffre() {
                         </div>
                     )}
                     <div className="grid grid-cols-1  md:ml-10  md:grid-cols-3 gap-6 mt-8 my-4">
-                        <div>
+                       <div className="relative">
+  <input
+    type="text"
+    name="employer"
+    placeholder={t.Employeur}
+    value={elements.employer}
+    onChange={handleChange}
+    className="mt-1 w-full font-bold bg-white/70 p-2 placeholder:text-[#4A62AA] shadow-sm focus:ring-white focus:border-white"
+    required
+    autoComplete="off"
+  />
 
-                            <input
-                                type="text"
-                                name="employer"
-                                placeholder={t.Employeur}
-                                value={elements.employer}
-                                onChange={handleChange}
-                                className="mt-1 w-full font-bold bg-white/70  p-2  placeholder:text-[#4A62AA] shadow-sm   focus:ring-white focus:border-white" required
-                            />
-                        </div>
+  {showSuggestions && employerSuggestions.length > 0 && (
+    <ul className="absolute z-10 bg-white border w-full mt-1 shadow-md max-h-40 overflow-y-auto">
+      {employerSuggestions.map(emp => (
+        <li
+          key={emp.id}
+          className="p-2 hover:bg-blue-100 cursor-pointer text-sm"
+          onClick={() => {
+            setElements(prev =>
+              updateElement(prev, {
+                employer: emp.name,
+                city: emp.city,
+                employerDesc: emp.description,
+                  logo: emp.logo,
+                employerType: [emp.type]
+              })
+            );
+            setSelectedOrgTypes(emp.type);
+            setShowSuggestions(false);
+          }}
+        >
+          {emp.name} — {emp.city}
+        </li>
+      ))}
+    </ul>
+  )}
+</div>
+
 
                         <div>
 
