@@ -233,12 +233,12 @@ export default function OffreFormationMobile() {
     disabled={isFormEmpty()}
                     className={`w-[62%] sm:w-[50%]       
                             font-bold rounded-md py-1 transition-transform  duration-200 
-          ${clicked ? 'bg-[#4A62AA]  text-[#293c75] border-white' : ' '}
+         
            ${isFormEmpty()
                     ? "bg-gray-400 cursor-not-allowed"
                     : " bg-white  text-[#293c75] hover:text-white"
                     }
-         ] '`}
+                ${clicked && !isFormEmpty() ?  'bg-[#4A62AA]  text-[#293c75] border-white' : '  bg-white  text-[#293c75]'}`}
                   >
                 {t.searchForm.submit}
                   </button>

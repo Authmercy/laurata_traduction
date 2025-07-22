@@ -66,13 +66,14 @@ export default function WelcomePage2() {
 
 
           <div className="flex    mt-44   justify-end text-end   text-white ">
-            <p className="text-5xl  text-end uppercase ">Vitrine des <b>
-          <span className="underline decoration-dotted decoration-[#f1ab49]  ">  offres de stage </span>    </b> <br /> au Cameroun</p>
+            <p className="text-5xl  text-end uppercase "> {locale === 'en' ?  'Cameroon\'s #1 ' : 'Vitrine des ' } <b>
+          <span className="underline decoration-dotted decoration-[#f1ab49]  ">  {locale === 'en' ?  'DIGITAL PLATEFORMS' : 'offres de stage' }  </span>    </b> <br /> 
+           {locale === 'en' ?  'FOR INTERNSHIPS' : 'au Cameroun ' }</p>
           </div>
 
           <div className="flex mr-2   mt-36   justify-end text-end   text-white ">
             <p className=" text-end text-white text-xl ">
-              <b>  Étudiants & Jeunes diplômés </b> <br /> Trouve ton stage et jette les bases d’une carrière réussie.
+              <b>  {locale === 'en' ?  'Students & Recent Graduates' : 'Étudiants & Jeunes diplômés   ' } </b> <br />  {locale === 'en' ?  'Find an intership, gain hands-on experience and build your network ' : ' Trouve ton stage et jette les bases d’une carrière réussie.  ' } 
             </p>
           </div>
         </div>
@@ -80,7 +81,7 @@ export default function WelcomePage2() {
         <div>
            <div className="flex mr-2   px-4 my-20   justify-end text-end   text-[#4A62AA] ">
             <p className=" text-end text-xl ">
-              <b>Secteurs public & privé </b> <br /> Ensemble, œuvrons pour leur insertion dans l'emploi.
+              <b>  {locale === 'en' ?  'Public & Private Sectors ' : 'Secteurs public & privé  ' } </b> <br /> {locale === 'en' ?  'Together, Let\'s improve Youth Employability' : ' Ensemble, œuvrons pour leur insertion dans l\'emploi.   ' } 
             </p>
           </div>
         </div>

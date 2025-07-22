@@ -180,7 +180,7 @@ export default function OffreStageMobile() {
                   <span className="truncate text-sm max-w-[250px]" title={selectedSectors.map(k => foas.find(f => f.key === k)?.text).join(', ')}>
                     {selectedSectors.length
                       ? foas.filter(f => selectedSectors.includes(f.key)).map(f => f.text).join(', ')
-                      :  t.searchForm.sector}
+                      : t.searchForm.sector}
                   </span>
                   <span className="text-xl">{open === 1 ? "▲" : "▼"}</span>
                 </div>
@@ -308,7 +308,7 @@ export default function OffreStageMobile() {
                         .filter(c => selectedContracts.includes(c.key))
                         .map(c => c.text)
                         .join(', ')
-                      :  t.searchForm.contract}
+                      : t.searchForm.contract}
 
                   </span>
                   <span className="text-xl">{open === 5 ? "▲" : "▼"}</span>
@@ -382,7 +382,7 @@ export default function OffreStageMobile() {
                   <span className="truncate ">
                     {selectedPublication
                       ? parutions.find(p => p.key === selectedPublication)?.text
-                      :  t.searchForm.publication}
+                      : t.searchForm.publication}
                   </span>
                   <span className="text-xl">{open === 6 ? "▲" : "▼"}</span>
                 </div>
@@ -414,7 +414,7 @@ export default function OffreStageMobile() {
                 <input
                   type="text"
                   name="city"
-                 placeholder={t.searchForm.city}
+                  placeholder={t.searchForm.city}
                   className="border bg-white/70 0    p-2 px-4  placeholder-[#4A62AA]  border-[#7b92d6] "
                   value={filters.city}
 
@@ -439,14 +439,14 @@ export default function OffreStageMobile() {
                     disabled={isFormEmpty()}
                     className={`w-[62%] sm:w-[50%]       
                             font-bold rounded-md py-1 transition-transform  duration-200 
-  ${clicked ? 'bg-orange-400  text-[#293c75] border-white' : ''}
+
            ${isFormEmpty()
                         ? "bg-gray-400  cursor-not-allowed"
                         : " bg-white  text-[#293c75] hover:text-white"
                       }
-         ] '`}
-                  >
-            {t.searchForm.submit}
+            ${clicked && !isFormEmpty() ? 'bg-orange-400  text-[#293c75] border-white' : 'bg-white  text-[#293c75]'}`}>
+          
+                    {t.searchForm.submit}
                   </button>
                 </div>
 
@@ -461,25 +461,25 @@ export default function OffreStageMobile() {
                 className={`w-full py-4 text-xs rounded-3xl  font-bold transition-transform  duration-200 
           ${clicked1 ? 'bg-gray-400  text-[#4A62AA] border-white' : ' bg-[#2348b6]  text-white  border-[#4A62AA]'}
          ] '`}>
-          {  t.buttons.postInternship}
+                {t.buttons.postInternship}
               </button>
               <button onClick={handleClick}
                 className={`w-full py-4 text-xs rounded-3xl  font-bold transition-transform  duration-200 
           ${clicked2 ? 'bg-gray-400  text-[#4A62AA]  border-[#4A62AA]' : 'bg-orange-400  text-white border-white'}
          ] '`}>
-            {t.buttons.submitCV}
+                {t.buttons.submitCV}
               </button>
               <button onClick={handleClick2}
                 className={`w-full py-2 text-xs rounded-3xl  font-bold transition-transform  duration-200 
           ${clicked3 ? 'bg-gray-400  text-[#4A62AA] border-[#4A62AA]' : 'bg-orange-400  text-white border-white'}
-         ] '`}>     {      t.buttons.applyGuide}
+         ] '`}>     {t.buttons.applyGuide}
               </button>
               <button onClick={handleClick1}
 
                 className={`w-full py-2 text-xs rounded-3xl  font-bold  transition-transform  duration-200  
           ${clicked4 ? 'bg-gray-400   text-[#4A62AA] border-white' : ' bg-[#2348b6]  text-white  border-[#4A62AA]'}
          ] '`}>
-             {      t.buttons.succeedTips}
+                {t.buttons.succeedTips}
               </button>
             </div>
 
